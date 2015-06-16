@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            id="Command.WordCount"
+            name="Wordcount">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="Definition.IsInECL">
+         <with
+               variable="activeEditorId">
+            <equals
+                  value="ecl_editor.editor">
+            </equals>
+         </with>
+      </definition>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="wordcount.handlers.WordCount_Handler"
+            commandId="Command.WordCount">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="Wordcount_Toolbar">
+            <command
+                  commandId="Command.WordCount"
+                  icon="wc_letter_logo_20142.jpg"
+                  style="push"
+                  tooltip="Get the word count for the document">
+               <visibleWhen>
+                  <reference
+                        definitionId="Definition.IsInECL">
+                  </reference>
+               </visibleWhen>
+            </command>
+         </toolbar>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               label="Word Count">
+            <command
+                  commandId="Command.WordCount"
+                  label="Word Count"
+                  style="push">
+               <visibleWhen>
+                  <reference
+                        definitionId="Definition.IsInECL">
+                  </reference>
+               </visibleWhen>
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            allPopups="false"
+            locationURI="popup:ecl_editor.editor.EditorContext?after=additions">
+         <command
+               commandId="Command.WordCount"
+               label="Word Count"
+               style="push">
+            <visibleWhen>
+               <reference
+                     definitionId="Definition.IsInECL">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+   </extension>
+
+</plugin>
