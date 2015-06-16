@@ -5,7 +5,7 @@
          point="org.eclipse.ui.commands">
       <command
             id="Command.WordCount"
-            name="Wordcount">
+            name="Word-Count">
       </command>
    </extension>
    <extension
@@ -25,6 +25,12 @@
       <handler
             class="wordcount.handlers.WordCount_Handler"
             commandId="Command.WordCount">
+         <enabledWhen>
+            <test
+                  forcePluginActivation="true"
+                  property="name.editor.empty.IsECLEmpty">
+            </test>
+         </enabledWhen>
       </handler>
    </extension>
    <extension
@@ -48,7 +54,6 @@
          </toolbar>
       </menuContribution>
       <menuContribution
-            allPopups="false"
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
                label="Word Count">
@@ -61,6 +66,11 @@
                         definitionId="Definition.IsInECL">
                   </reference>
                </visibleWhen>
+            </command>
+            <command
+                  commandId="org.eclipse.ui.file.exit"
+                  label="Exit"
+                  style="push">
             </command>
          </menu>
       </menuContribution>
@@ -78,6 +88,16 @@
             </visibleWhen>
          </command>
       </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.core.expressions.propertyTesters">
+      <propertyTester
+            class="wordcount.proptesters.EmptyPropertyTester"
+            id="IsEditorEmpty"
+            namespace="name.editor.empty"
+            properties="IsECLEmpty"
+            type="java.lang.Object">
+      </propertyTester>
    </extension>
 
 </plugin>

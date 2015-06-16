@@ -17,8 +17,7 @@ public class WordCount_Handler implements IHandler {
 
 	@Override
 	public void addHandlerListener(IHandlerListener handlerListener) {
-		// TODO Auto-generated method stub
-
+		;
 	}
 
 	@Override
@@ -62,14 +61,13 @@ public class WordCount_Handler implements IHandler {
 
 	@Override
 	public boolean isEnabled() {
-		// TODO Auto-generated method stub
-		return true;
+		return true ;
 	}
 
 	@Override
 	public boolean isHandled() {
 		// TODO Auto-generated method stub
-		return true;
+		return true; 
 	}
 
 	@Override
