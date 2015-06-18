@@ -10,7 +10,14 @@ public class Ecl_editor extends TextEditor {
 	
 	public Ecl_editor()
 	{
-		;
+			;
+	}
+	
+	@Override
+	protected void initializeEditor() 
+	{
+	    super.initializeEditor();
+	    setSourceViewerConfiguration(new ECLSourceViewerConfig());
 	}
 
 }
