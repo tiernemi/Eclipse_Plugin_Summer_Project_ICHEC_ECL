@@ -29,7 +29,7 @@ public class WordCount_Handler implements IHandler {
 	@Override
 	public Object execute(ExecutionEvent event) throws ExecutionException {
 		IEditorPart ecl_editor = HandlerUtil.getActiveEditor(event) ;
-		if (ecl_editor instanceof ITextEditor)
+		if (ecl_editor instanceof ITextEditor && ecl_editor != null)
 		{
 			ITextEditor ecl_editor_text = (ITextEditor) ecl_editor ;
 			IDocument ecl_editor_content = (IDocument) ecl_editor_text.getDocumentProvider().getDocument(ecl_editor_text.getEditorInput()) ;

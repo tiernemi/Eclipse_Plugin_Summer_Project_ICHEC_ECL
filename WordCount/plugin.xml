@@ -7,6 +7,10 @@
             id="Command.WordCount"
             name="Word-Count">
       </command>
+      <command
+            id="Command.WordCountPackage"
+            name="Package Wordcount">
+      </command>
    </extension>
    <extension
          point="org.eclipse.core.expressions.definitions">
@@ -32,6 +36,33 @@
             </test>
          </enabledWhen>
       </handler>
+      <handler
+            class="wordcount.handlers.WordCountPackage"
+            commandId="Command.WordCountPackage">
+         <enabledWhen>
+            <and>
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <and>
+                           <test
+                                 property="org.eclipse.core.resources.extension"
+                                 value="ecl">
+                           </test>
+                           <test
+                                 forcePluginActivation="true"
+                                 property="name.file.empty.IsECLFileEmpty">
+                           </test>
+                        </and>
+                     </adapt>
+                  </iterate>
+               </with>
+            </and>
+         </enabledWhen>
+      </handler>
    </extension>
    <extension
          point="org.eclipse.ui.menus">
@@ -54,9 +85,10 @@
          </toolbar>
       </menuContribution>
       <menuContribution
+            allPopups="false"
             locationURI="menu:org.eclipse.ui.main.menu?after=additions">
          <menu
-               label="Word Count">
+               label="ECL">
             <command
                   commandId="Command.WordCount"
                   label="Word Count"
@@ -67,11 +99,11 @@
                   </reference>
                </visibleWhen>
             </command>
-            <command
-                  commandId="org.eclipse.ui.file.exit"
-                  label="Exit"
-                  style="push">
-            </command>
+            <visibleWhen>
+               <reference
+                     definitionId="Definition.IsInECL">
+               </reference>
+            </visibleWhen>
          </menu>
       </menuContribution>
       <menuContribution
@@ -88,6 +120,42 @@
             </visibleWhen>
          </command>
       </menuContribution>
+      <menuContribution
+            locationURI="menu:edit?after=additions">
+         <command
+               commandId="Command.WordCount"
+               label="Word Count"
+               style="push">
+            <visibleWhen>
+               <reference
+                     definitionId="Definition.IsInECL">
+               </reference>
+            </visibleWhen>
+         </command>
+      </menuContribution>
+      <menuContribution
+            locationURI="popup:org.eclipse.jdt.ui.PackageExplorer?after=additions">
+         <command
+               commandId="Command.WordCountPackage"
+               label="Word Count"
+               style="push">
+            <visibleWhen>
+               <with
+                     variable="activeMenuSelection">
+                  <iterate
+                        ifEmpty="false">
+                     <adapt
+                           type="org.eclipse.core.resources.IResource">
+                        <test
+                              property="org.eclipse.core.resources.extension"
+                              value="ecl">
+                        </test>
+                     </adapt>
+                  </iterate>
+               </with>
+            </visibleWhen>
+         </command>
+      </menuContribution>
    </extension>
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
@@ -97,6 +165,13 @@
             namespace="name.editor.empty"
             properties="IsECLEmpty"
             type="java.lang.Object">
+      </propertyTester>
+      <propertyTester
+            class="wordcount.proptesters.EmptyFilePropertyTester"
+            id="Tester.IsECLFileEmpty"
+            namespace="name.file.empty"
+            properties="IsECLFileEmpty"
+            type="java.lang.Object ">
       </propertyTester>
    </extension>
 

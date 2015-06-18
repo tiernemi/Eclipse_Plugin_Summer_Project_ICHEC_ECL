@@ -10,7 +10,7 @@ public class Ecl_editor extends TextEditor {
 	
 	public Ecl_editor()
 	{
-			;
+		;
 	}
 	
 	@Override

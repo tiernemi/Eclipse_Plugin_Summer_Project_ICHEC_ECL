@@ -21,8 +21,9 @@ public class EmptyPropertyTester extends PropertyTester {
 			Object expectedValue) {		
 		if (PROPERTY_IS_Ecl_Empty.equals(property)) 
 		{
+			
 			IEditorPart ecl_editor = PlatformUI.getWorkbench().getActiveWorkbenchWindow().getActivePage().getActiveEditor() ;
-			if (ecl_editor instanceof ITextEditor)
+			if (ecl_editor instanceof ITextEditor && ecl_editor != null)
 			{
 				ITextEditor ecl_editor_text = (ITextEditor) ecl_editor ;
 				IDocument ecl_editor_content = (IDocument) ecl_editor_text.getDocumentProvider().getDocument(ecl_editor_text.getEditorInput()) ;

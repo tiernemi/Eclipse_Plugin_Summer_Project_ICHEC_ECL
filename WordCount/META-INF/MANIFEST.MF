@@ -3,10 +3,14 @@ Bundle-ManifestVersion: 2
 Bundle-Name: WordCount
 Bundle-SymbolicName: WordCount;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: WordCount
 Require-Bundle: org.eclipse.ui,
  org.eclipse.core.expressions,
  org.eclipse.ui.workbench,
  org.eclipse.core.runtime,
  org.eclipse.ui.editors,
- org.eclipse.jface.text
+ org.eclipse.jface.text,
+ org.eclipse.core.resources;bundle-version="3.9.1",
+ org.eclipse.swt,
+ org.eclipse.equinox.registry
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7

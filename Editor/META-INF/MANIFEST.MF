@@ -3,8 +3,9 @@ Bundle-ManifestVersion: 2
 Bundle-Name: Editor
 Bundle-SymbolicName: Editor;singleton:=true
 Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ClassPath: Editor
 Require-Bundle: org.eclipse.ui,
  org.eclipse.ui.editors,
  org.eclipse.jface.text,
  org.eclipse.core.runtime
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
