@@ -27,17 +27,17 @@
    <extension
          point="org.eclipse.ui.handlers">
       <handler
-            class="wordcount.handlers.WordCount_Handler"
+            class="wordcount.handlers.WordCount_Menu"
             commandId="Command.WordCount">
          <enabledWhen>
             <test
                   forcePluginActivation="true"
-                  property="name.editor.empty.IsECLEmpty">
+                  property="name.editor.empty.IsECLEditorNotEmpty">
             </test>
          </enabledWhen>
       </handler>
       <handler
-            class="wordcount.handlers.WordCountPackage"
+            class="wordcount.handlers.WordCount_Package"
             commandId="Command.WordCountPackage">
          <enabledWhen>
             <and>
@@ -54,7 +54,7 @@
                            </test>
                            <test
                                  forcePluginActivation="true"
-                                 property="name.file.empty.IsECLFileEmpty">
+                                 property="name.file.empty.IsECLFileNotEmpty">
                            </test>
                         </and>
                      </adapt>
@@ -160,18 +160,18 @@
    <extension
          point="org.eclipse.core.expressions.propertyTesters">
       <propertyTester
-            class="wordcount.proptesters.EmptyPropertyTester"
-            id="IsEditorEmpty"
+            class="wordcount.proptesters.EmptyEditorPropertyTester"
+            id="Tester.IsECLEditorNotEmpty"
             namespace="name.editor.empty"
-            properties="IsECLEmpty"
+            properties="IsECLEditorNotEmpty"
             type="java.lang.Object">
       </propertyTester>
       <propertyTester
             class="wordcount.proptesters.EmptyFilePropertyTester"
-            id="Tester.IsECLFileEmpty"
+            id="Tester.IsECLFileNotEmpty"
             namespace="name.file.empty"
-            properties="IsECLFileEmpty"
-            type="java.lang.Object ">
+            properties="IsECLFileNotEmpty"
+            type="org.eclipse.core.resources.IResource">
       </propertyTester>
    </extension>
 
