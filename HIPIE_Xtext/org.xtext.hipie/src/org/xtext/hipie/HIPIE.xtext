@@ -1,0 +1,125 @@
+grammar org.xtext.hipie.HIPIE with org.eclipse.xtext.common.Terminals
+
+generate hIPIE "http://www.xtext.org/hipie/HIPIE"
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+ 
+program : {program}
+	composition_header? 
+	base_prop+
+	contract_instance* 
+	input_section? 
+	output_section? 
+	visual_section* 
+	generate_section? 
+	custom_section? 
+	resource_section?
+	// EOF won't work, need to fix
+;
+ 
+ 
+ base_prop: ( 'NAME' | 'DESCRIPTION' | 'AUTHOR' |  'LICENSE' | 'COPYRIGHT' | 'VERSION' | 'LABEL' | 'ID' ) value_list ';' |
+				'CATEGORY' category_type_list ';';
+      
+category_type: ('CLEAN'|'INPUT'|'APPEND'|'LINK'|'ANALYSIS'|'CUSTOM'|'VISUALIZE'|'OUTPUT');
+category_type_list: category_type (',' category_type)*;
+
+value : TOKEN | INT | STRING;
+
+value_list: value ( ',' value )*;
+
+token_list: TOKEN ( ',' TOKEN )*;
+
+assign: value '=' value_list;
+
+assign_list: assign ( ',' assign)*;
+
+composition_header:'HEADER' assign* 'END';
+
+contract_instance: 'INSTANCE' (TOKEN ':')? value '(' value ')' assign* 'END';
+
+field_decl: 'FIELD' TOKEN input_options? ';';
+
+enum_decl: 'ENUM' '(' (value_list|assign_list) ')';
+
+input_section: 'INPUTS' input_value+ 'END';
+
+input_value: ('BOOL'|'INT'|enum_decl|'STRING'|'RECORD'|'DATASET') TOKEN input_options? ';' |
+             'DATASET' TOKEN input_options? field_decl* 'END' |
+             'GROUP' TOKEN input_options? input_value* 'END'  ; 
+      
+input_options: ':' input_option ( ',' input_option )*;
+
+input_option: ('OPTIONAL'|'DEFINED'|'DISABLED'|'MAPBYTYPE'|'MAPBYNAME'|'MANY') |
+				'FORMFIELD' '(' formfield_option ')' | 
+				'ENABLE' '('  (assign_list)  ')' | 
+            	'TYPE' '(' inputtype_options ')' | 
+              ('RANGE'|'DEFAULT'|'MAXLENGTH'|'DISABLED' | 'DESCRIPTION' |'NULL'| 'FIELDLENGTH' | 'ROWS'  | 'COLS' | '_HTML_STYLECLASS' | 'LABEL') '(' value_list ')';
+
+formfield_option: ('CHECKBOX'|'RADIO'|'SELECT'|'MULTIPLESELECT'|'TEXTAREA'|'HIDDEN'|'TEXT');
+inputtype_option: ('STRING'|'UNICODE'|'UNISTR'|'INTEGER'|'DECIMAL'|'NUMERIC'|'REAL');
+inputtype_options: inputtype_option ( ',' inputtype_option )*;
+
+output_section : 'OUTPUTS' output_value+ 'END';
+
+outfield_decl: ('INT'|'BOOL'|'STRING'|'FIELD') TOKEN;
+
+                             
+eclfield_type: ('INTEGER'|'UNSIGNED'|'STRING'|'QSTRING'|'VARSTRING'|'UNICODE'|'VARUNICODE') INT? |
+				('DATA' | 'REAL');
+ecloutput_decl: eclfield_type TOKEN output_options? ';';
+
+output_option: ('SIDE'|'LARGE'|'SMALL'|'FEW'|'WUID') |
+               ('FROM') '(' TOKEN ')' |
+                ('DESCRIPTION') '(' value ')';
+output_options: ':' output_option ( ',' output_option )*;
+
+ output_value: ('BOOL'|'INT'|'STRING'|'ACTION')? value output_options? ';' |
+              'DATASET' TOKEN output_base? output_options? ecloutput_decl* 'END' |
+              'DATASET' TOKEN output_base? output_options? ';' ;
+              
+output_base: '(' TOKEN ')';
+               
+generate_section: 'GENERATES' generate_body 'ENDGENERATES';
+
+generate_body: 'INLINE' ('.'|'-')+ /* ? here */  |
+               'SALT' '(' TOKEN ')' ':' ('SCOREDSEARCH'|'PROFILE') ;
+
+visual_section: 'VISUALIZE' TOKEN visual_section_options? visualization+ 'END';
+visualization: ('CHORO'|'LINE'|'TIMELINE'|'PIE'|'BAR'|'TABLE') TOKEN '(' vis_basis ')' visual_options? ';' |
+               ('SLIDER') TOKEN visual_options? ';';
+vis_basis: TOKEN vis_basis_qualifiers?;
+vis_basis_qualifiers: '{' function ( ',' function )* '}';
+function: value |
+          'SUM' '(' TOKEN  ')' |
+           'SCALE' '(' TOKEN ',' INT ')';
+
+visual_section_options: ':' visual_section_option ( ',' visual_section_option )*;
+visual_section_option: ('LABEL') '(' value ')';
+                
+
+visual_options: ':' visual_option ( ',' visual_option )*;
+visual_option: ('TITLE'|'DATE'|'DESCRIPTION'|'PICTURE'|'STATE'|'COUNTY'|'WEIGHT'|'SIZE') '(' function ')' |
+                 visual_multival '(' function ( ',' function )* ')'|
+                'SELECTS' '(' TOKEN '->' TOKEN ')';
+visual_multival: ('X'|'Y'|'COLOR'|'RANGE'|'FILTER'|'LABEL'|'VALUE');
+        
+custom_section: 'CUSTOM' custom_value* 'END';
+custom_value:TOKEN value ';';
+
+resource_option:        ('DESCRIPTION' |'FILE'  | 'LABEL'| '_HTML_STYLECLASS') '(' value ')';
+resource_options:  resource_option ( ',' resource_option )*;
+resource_value: value ':' resource_options? ';' ;
+resource_section: 'RESOURCES' resource_value+ 'END';
+ 
+
+terminal WS :  (' '|'\t'|'\r'|'\n')+ ;
+
+terminal INT returns ecore::EInt:
+('0'..'9')+;
+
+terminal STRING :
+'"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+"'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
+
+terminal TOKEN : !('\r' | '\n' | '\t' | ' ' | ';' | '(' | ')' | ',' | ':' | '=' | '{' | '}' | '-')+ ;
