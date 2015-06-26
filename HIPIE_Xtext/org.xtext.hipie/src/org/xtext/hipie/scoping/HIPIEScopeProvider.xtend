@@ -3,6 +3,9 @@
  */
 package org.xtext.hipie.scoping
 
+import org.eclipse.xtext.scoping.IScope
+import org.eclipse.emf.ecore.EReference
+
 /**
  * This class contains custom scoping description.
  * 
@@ -12,4 +15,9 @@ package org.xtext.hipie.scoping
  */
 class HIPIEScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider {
 
+	
+	
+  //  IScope scope_outputbase_actions(outputbase ctx , EReference ref) {
+	//	 Iterable<LocalVariable> vars = findAll
+    //}
 }

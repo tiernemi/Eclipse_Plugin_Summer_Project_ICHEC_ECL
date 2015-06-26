@@ -10,6 +10,8 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.GroupAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -20,133 +22,134 @@ import org.xtext.hipie.services.HIPIEGrammarAccess;
 public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected HIPIEGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_program_Base_propParserRuleCall_2_p;
-	protected AbstractElementAlias match_program_Composition_headerParserRuleCall_1_q;
-	protected AbstractElementAlias match_program_Contract_instanceParserRuleCall_3_a;
-	protected AbstractElementAlias match_program_Custom_sectionParserRuleCall_8_q;
-	protected AbstractElementAlias match_program_Generate_sectionParserRuleCall_7_q;
-	protected AbstractElementAlias match_program_Input_sectionParserRuleCall_4_q;
-	protected AbstractElementAlias match_program_Output_sectionParserRuleCall_5_q;
-	protected AbstractElementAlias match_program_Resource_sectionParserRuleCall_9_q;
-	protected AbstractElementAlias match_program_Visual_sectionParserRuleCall_6_a;
+	protected AbstractElementAlias match_category_type_list___CommaKeyword_1_0_Category_typeParserRuleCall_1_1__a;
+	protected AbstractElementAlias match_contract_instance___IDTerminalRuleCall_1_0_ColonKeyword_1_1__q;
+	protected AbstractElementAlias match_ecl_integer_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_ecl_qstring_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_ecl_string_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_ecl_unicode_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_ecl_unsigned_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_ecl_varstring_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_ecl_varunicode_INTTerminalRuleCall_1_q;
+	protected AbstractElementAlias match_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0;
+	protected AbstractElementAlias match_generate_body___ColonKeyword_0_1_10_or_CommaKeyword_0_1_9_or_ECL_CODETerminalRuleCall_0_1_4_or_EqualsSignKeyword_0_1_11_or_FullStopKeyword_0_1_6_or_HyphenMinusKeyword_0_1_14_or_IDTerminalRuleCall_0_1_0_or_INTTerminalRuleCall_0_1_1_or_LeftCurlyBracketKeyword_0_1_12_or_LeftParenthesisKeyword_0_1_7_or_RightCurlyBracketKeyword_0_1_13_or_RightParenthesisKeyword_0_1_8_or_STRINGTerminalRuleCall_0_1_3_or_SemicolonKeyword_0_1_5_or_WSTerminalRuleCall_0_1_2__a;
+	protected AbstractElementAlias match_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q;
+	protected AbstractElementAlias match_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (HIPIEGrammarAccess) access;
-		match_program_Base_propParserRuleCall_2_p = new TokenAlias(true, false, grammarAccess.getProgramAccess().getBase_propParserRuleCall_2());
-		match_program_Composition_headerParserRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getProgramAccess().getComposition_headerParserRuleCall_1());
-		match_program_Contract_instanceParserRuleCall_3_a = new TokenAlias(true, true, grammarAccess.getProgramAccess().getContract_instanceParserRuleCall_3());
-		match_program_Custom_sectionParserRuleCall_8_q = new TokenAlias(false, true, grammarAccess.getProgramAccess().getCustom_sectionParserRuleCall_8());
-		match_program_Generate_sectionParserRuleCall_7_q = new TokenAlias(false, true, grammarAccess.getProgramAccess().getGenerate_sectionParserRuleCall_7());
-		match_program_Input_sectionParserRuleCall_4_q = new TokenAlias(false, true, grammarAccess.getProgramAccess().getInput_sectionParserRuleCall_4());
-		match_program_Output_sectionParserRuleCall_5_q = new TokenAlias(false, true, grammarAccess.getProgramAccess().getOutput_sectionParserRuleCall_5());
-		match_program_Resource_sectionParserRuleCall_9_q = new TokenAlias(false, true, grammarAccess.getProgramAccess().getResource_sectionParserRuleCall_9());
-		match_program_Visual_sectionParserRuleCall_6_a = new TokenAlias(true, true, grammarAccess.getProgramAccess().getVisual_sectionParserRuleCall_6());
+		match_category_type_list___CommaKeyword_1_0_Category_typeParserRuleCall_1_1__a = new GroupAlias(true, true, new TokenAlias(false, false, grammarAccess.getCategory_type_listAccess().getCommaKeyword_1_0()), new TokenAlias(false, false, grammarAccess.getCategory_type_listAccess().getCategory_typeParserRuleCall_1_1()));
+		match_contract_instance___IDTerminalRuleCall_1_0_ColonKeyword_1_1__q = new GroupAlias(false, true, new TokenAlias(false, false, grammarAccess.getContract_instanceAccess().getIDTerminalRuleCall_1_0()), new TokenAlias(false, false, grammarAccess.getContract_instanceAccess().getColonKeyword_1_1()));
+		match_ecl_integer_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_integerAccess().getINTTerminalRuleCall_1());
+		match_ecl_qstring_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_qstringAccess().getINTTerminalRuleCall_1());
+		match_ecl_string_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_stringAccess().getINTTerminalRuleCall_1());
+		match_ecl_unicode_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_unicodeAccess().getINTTerminalRuleCall_1());
+		match_ecl_unsigned_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_unsignedAccess().getINTTerminalRuleCall_1());
+		match_ecl_varstring_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_varstringAccess().getINTTerminalRuleCall_1());
+		match_ecl_varunicode_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_varunicodeAccess().getINTTerminalRuleCall_1());
+		match_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0()));
+		match_generate_body___ColonKeyword_0_1_10_or_CommaKeyword_0_1_9_or_ECL_CODETerminalRuleCall_0_1_4_or_EqualsSignKeyword_0_1_11_or_FullStopKeyword_0_1_6_or_HyphenMinusKeyword_0_1_14_or_IDTerminalRuleCall_0_1_0_or_INTTerminalRuleCall_0_1_1_or_LeftCurlyBracketKeyword_0_1_12_or_LeftParenthesisKeyword_0_1_7_or_RightCurlyBracketKeyword_0_1_13_or_RightParenthesisKeyword_0_1_8_or_STRINGTerminalRuleCall_0_1_3_or_SemicolonKeyword_0_1_5_or_WSTerminalRuleCall_0_1_2__a = new AlternativeAlias(true, true, new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getColonKeyword_0_1_10()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getCommaKeyword_0_1_9()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getECL_CODETerminalRuleCall_0_1_4()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getEqualsSignKeyword_0_1_11()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getFullStopKeyword_0_1_6()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getHyphenMinusKeyword_0_1_14()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_0_1_0()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getINTTerminalRuleCall_0_1_1()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getLeftCurlyBracketKeyword_0_1_12()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_0_1_7()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getRightCurlyBracketKeyword_0_1_13()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_0_1_8()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getSTRINGTerminalRuleCall_0_1_3()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getSemicolonKeyword_0_1_5()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getWSTerminalRuleCall_0_1_2()));
+		match_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getACTIONKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getBOOLKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getINTKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getSTRINGKeyword_0_2()));
+		match_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getBARKeyword_0_0_4()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getCHOROKeyword_0_0_0()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getLINEKeyword_0_0_1()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getPIEKeyword_0_0_3()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getTABLEKeyword_0_0_5()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getTIMELINEKeyword_0_0_2()));
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getBase_propRule())
-			return getbase_propToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getComposition_headerRule())
-			return getcomposition_headerToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getContract_instanceRule())
-			return getcontract_instanceToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getCustom_sectionRule())
-			return getcustom_sectionToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getGenerate_sectionRule())
-			return getgenerate_sectionToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getInput_sectionRule())
-			return getinput_sectionToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getOutput_sectionRule())
-			return getoutput_sectionToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getResource_sectionRule())
-			return getresource_sectionToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getVisual_sectionRule())
-			return getvisual_sectionToken(semanticObject, ruleCall, node);
+		if(ruleCall.getRule() == grammarAccess.getECL_CODERule())
+			return getECL_CODEToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getIDRule())
+			return getIDToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getINTRule())
+			return getINTToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getSTRINGRule())
+			return getSTRINGToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getWSRule())
+			return getWSToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getCategory_typeRule())
+			return getcategory_typeToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getFormfield_optionRule())
+			return getformfield_optionToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getInputtype_optionsRule())
+			return getinputtype_optionsToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
 	/**
-	 * base_prop: ( 'NAME' | 'DESCRIPTION' | 'AUTHOR' |  'LICENSE' | 'COPYRIGHT' | 'VERSION' | 'LABEL' | 'ID' ) value_list ';' |
-	 * 				'CATEGORY' category_type_list ';';
+	 * terminal ECL_CODE :
+	 * '%' (!'%')* '%'
+	 * ;
 	 */
-	protected String getbase_propToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getECL_CODEToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "NAME;";
+		return "%%";
 	}
 	
 	/**
-	 * composition_header:'HEADER' assign* 'END';
+	 * terminal ID  		: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 	 */
-	protected String getcomposition_headerToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getIDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "HEADEREND";
+		return "";
 	}
 	
 	/**
-	 * contract_instance: 'INSTANCE' (TOKEN ':')? value '(' value ')' assign* 'END';
+	 * terminal INT returns ecore::EInt:
+	 * ('0'..'9')+;
 	 */
-	protected String getcontract_instanceToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getINTToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "INSTANCE()END";
+		return "";
 	}
 	
 	/**
-	 * custom_section: 'CUSTOM' custom_value* 'END';
+	 * terminal STRING :
+	 * '"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
+	 * "'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
 	 */
-	protected String getcustom_sectionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getSTRINGToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "CUSTOMEND";
+		return "\"\"";
 	}
 	
 	/**
-	 * generate_section: 'GENERATES' generate_body 'ENDGENERATES';
+	 * terminal WS :  (' '|'\t'|'\r'|'\n')+ ;
 	 */
-	protected String getgenerate_sectionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getWSToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "GENERATESINLINE.ENDGENERATES";
+		return " ";
 	}
 	
 	/**
-	 * input_section: 'INPUTS' input_value+ 'END';
+	 * category_type: 'CLEAN' | 'INPUT' | 'APPEND' | 'LINK' | 'ANALYSIS' | 'CUSTOM' | 'VISUALIZE' | 'OUTPUT' ;
 	 */
-	protected String getinput_sectionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getcategory_typeToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "INPUTSBOOL;END";
+		return "CLEAN";
 	}
 	
 	/**
-	 * output_section : 'OUTPUTS' output_value+ 'END';
+	 * formfield_option: ('CHECKBOX'|'RADIO'|'SELECT'|'MULTIPLESELECT'|'TEXTAREA'|'HIDDEN'|'TEXT');
 	 */
-	protected String getoutput_sectionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getformfield_optionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "OUTPUTS;END";
+		return "CHECKBOX";
 	}
 	
 	/**
-	 * resource_section: 'RESOURCES' resource_value+ 'END';
+	 * inputtype_options: inputtype_option ( ',' inputtype_option )*;
 	 */
-	protected String getresource_sectionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+	protected String getinputtype_optionsToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
 			return getTokenText(node);
-		return "RESOURCES:;END";
-	}
-	
-	/**
-	 * visual_section: 'VISUALIZE' TOKEN visual_section_options? visualization+ 'END';
-	 */
-	protected String getvisual_sectionToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "VISUALIZECHORO();END";
+		return "STRING";
 	}
 	
 	@Override
@@ -155,124 +158,201 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if(match_program_Base_propParserRuleCall_2_p.equals(syntax))
-				emit_program_Base_propParserRuleCall_2_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Composition_headerParserRuleCall_1_q.equals(syntax))
-				emit_program_Composition_headerParserRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Contract_instanceParserRuleCall_3_a.equals(syntax))
-				emit_program_Contract_instanceParserRuleCall_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Custom_sectionParserRuleCall_8_q.equals(syntax))
-				emit_program_Custom_sectionParserRuleCall_8_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Generate_sectionParserRuleCall_7_q.equals(syntax))
-				emit_program_Generate_sectionParserRuleCall_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Input_sectionParserRuleCall_4_q.equals(syntax))
-				emit_program_Input_sectionParserRuleCall_4_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Output_sectionParserRuleCall_5_q.equals(syntax))
-				emit_program_Output_sectionParserRuleCall_5_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Resource_sectionParserRuleCall_9_q.equals(syntax))
-				emit_program_Resource_sectionParserRuleCall_9_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_program_Visual_sectionParserRuleCall_6_a.equals(syntax))
-				emit_program_Visual_sectionParserRuleCall_6_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			if(match_category_type_list___CommaKeyword_1_0_Category_typeParserRuleCall_1_1__a.equals(syntax))
+				emit_category_type_list___CommaKeyword_1_0_Category_typeParserRuleCall_1_1__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_contract_instance___IDTerminalRuleCall_1_0_ColonKeyword_1_1__q.equals(syntax))
+				emit_contract_instance___IDTerminalRuleCall_1_0_ColonKeyword_1_1__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_integer_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_integer_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_qstring_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_qstring_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_string_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_string_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_unicode_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_unicode_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_unsigned_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_unsigned_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_varstring_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_varstring_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_ecl_varunicode_INTTerminalRuleCall_1_q.equals(syntax))
+				emit_ecl_varunicode_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0.equals(syntax))
+				emit_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_generate_body___ColonKeyword_0_1_10_or_CommaKeyword_0_1_9_or_ECL_CODETerminalRuleCall_0_1_4_or_EqualsSignKeyword_0_1_11_or_FullStopKeyword_0_1_6_or_HyphenMinusKeyword_0_1_14_or_IDTerminalRuleCall_0_1_0_or_INTTerminalRuleCall_0_1_1_or_LeftCurlyBracketKeyword_0_1_12_or_LeftParenthesisKeyword_0_1_7_or_RightCurlyBracketKeyword_0_1_13_or_RightParenthesisKeyword_0_1_8_or_STRINGTerminalRuleCall_0_1_3_or_SemicolonKeyword_0_1_5_or_WSTerminalRuleCall_0_1_2__a.equals(syntax))
+				emit_generate_body___ColonKeyword_0_1_10_or_CommaKeyword_0_1_9_or_ECL_CODETerminalRuleCall_0_1_4_or_EqualsSignKeyword_0_1_11_or_FullStopKeyword_0_1_6_or_HyphenMinusKeyword_0_1_14_or_IDTerminalRuleCall_0_1_0_or_INTTerminalRuleCall_0_1_1_or_LeftCurlyBracketKeyword_0_1_12_or_LeftParenthesisKeyword_0_1_7_or_RightCurlyBracketKeyword_0_1_13_or_RightParenthesisKeyword_0_1_8_or_STRINGTerminalRuleCall_0_1_3_or_SemicolonKeyword_0_1_5_or_WSTerminalRuleCall_0_1_2__a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q.equals(syntax))
+				emit_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2.equals(syntax))
+				emit_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
 	/**
 	 * Ambiguous syntax:
-	 *     base_prop+
+	 *     (',' category_type)*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? (ambiguity) contract_instance* input_section? output_section? visual_section* generate_section? custom_section? resource_section? (rule start)
+	 *     name=category_type (ambiguity) (rule end)
 	 */
-	protected void emit_program_Base_propParserRuleCall_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_category_type_list___CommaKeyword_1_0_Category_typeParserRuleCall_1_1__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     composition_header?
+	 *     (ID ':')?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) base_prop+ contract_instance* input_section? output_section? visual_section* generate_section? custom_section? resource_section? (rule start)
+	 *     name='INSTANCE' (ambiguity) vals+=value
 	 */
-	protected void emit_program_Composition_headerParserRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_contract_instance___IDTerminalRuleCall_1_0_ColonKeyword_1_1__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     contract_instance*
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ (ambiguity) input_section? output_section? visual_section* generate_section? custom_section? resource_section? (rule start)
+	 *     (rule start) 'INTEGER' (ambiguity) name=ID
 	 */
-	protected void emit_program_Contract_instanceParserRuleCall_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_integer_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     custom_section?
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ contract_instance* input_section? output_section? visual_section* generate_section? (ambiguity) resource_section? (rule start)
+	 *     (rule start) 'QSTRING' (ambiguity) name=ID
 	 */
-	protected void emit_program_Custom_sectionParserRuleCall_8_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_qstring_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     generate_section?
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ contract_instance* input_section? output_section? visual_section* (ambiguity) custom_section? resource_section? (rule start)
+	 *     (rule start) 'STRING' (ambiguity) name=ID
 	 */
-	protected void emit_program_Generate_sectionParserRuleCall_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_string_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     input_section?
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ contract_instance* (ambiguity) output_section? visual_section* generate_section? custom_section? resource_section? (rule start)
+	 *     (rule start) 'UNICODE' (ambiguity) name=ID
 	 */
-	protected void emit_program_Input_sectionParserRuleCall_4_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_unicode_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     output_section?
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ contract_instance* input_section? (ambiguity) visual_section* generate_section? custom_section? resource_section? (rule start)
+	 *     (rule start) 'UNSIGNED' (ambiguity) name=ID
 	 */
-	protected void emit_program_Output_sectionParserRuleCall_5_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_unsigned_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     resource_section?
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ contract_instance* input_section? output_section? visual_section* generate_section? custom_section? (ambiguity) (rule start)
+	 *     (rule start) 'VARSTRING' (ambiguity) name=ID
 	 */
-	protected void emit_program_Resource_sectionParserRuleCall_9_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_varstring_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     visual_section*
+	 *     INT?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) composition_header? base_prop+ contract_instance* input_section? output_section? (ambiguity) generate_section? custom_section? resource_section? (rule start)
+	 *     (rule start) 'VARUNICODE' (ambiguity) name=ID
 	 */
-	protected void emit_program_Visual_sectionParserRuleCall_6_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_ecl_varunicode_INTTerminalRuleCall_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'SCOREDSEARCH' | 'PROFILE'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name='SALT' '(' ID ')' ':' (ambiguity) (rule end)
+	 */
+	protected void emit_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (
+	  *         ID | 
+	  *         INT | 
+	  *         WS | 
+	  *         STRING | 
+	  *         ECL_CODE | 
+	  *         ';' | 
+	  *         '.' | 
+	  *         '(' | 
+	  *         ')' | 
+	  *         ',' | 
+	  *         ':' | 
+	  *         '=' | 
+	  *         '{' | 
+	  *         '}' | 
+	  *         '-'
+	  *     )*
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name='INLINE' (ambiguity) (rule end)
+	 */
+	protected void emit_generate_body___ColonKeyword_0_1_10_or_CommaKeyword_0_1_9_or_ECL_CODETerminalRuleCall_0_1_4_or_EqualsSignKeyword_0_1_11_or_FullStopKeyword_0_1_6_or_HyphenMinusKeyword_0_1_14_or_IDTerminalRuleCall_0_1_0_or_INTTerminalRuleCall_0_1_1_or_LeftCurlyBracketKeyword_0_1_12_or_LeftParenthesisKeyword_0_1_7_or_RightCurlyBracketKeyword_0_1_13_or_RightParenthesisKeyword_0_1_8_or_STRINGTerminalRuleCall_0_1_3_or_SemicolonKeyword_0_1_5_or_WSTerminalRuleCall_0_1_2__a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('BOOL' | 'INT' | 'STRING' | 'ACTION')?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) name=ID
+	 *     (rule start) (ambiguity) name=STRING
+	 *     (rule start) (ambiguity) type=INT
+	 */
+	protected void emit_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     (
+	  *         'CHORO' | 
+	  *         'LINE' | 
+	  *         'TIMELINE' | 
+	  *         'PIE' | 
+	  *         'BAR' | 
+	  *         'TABLE'
+	  *     )
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) name=ID
+	 */
+	protected void emit_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
