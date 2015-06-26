@@ -3459,110 +3459,135 @@ rulegenerate_section returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
+(
+    { 
+        newCompositeNode(grammarAccess.getGenerate_sectionAccess().getGenerate_body_inlineParserRuleCall_0()); 
+    }
+    this_generate_body_inline_0=rulegenerate_body_inline
+    { 
+        $current = $this_generate_body_inline_0.current; 
+        afterParserOrEnumRuleCall();
+    }
+
+    |
+    { 
+        newCompositeNode(grammarAccess.getGenerate_sectionAccess().getGenerate_body_saltParserRuleCall_1()); 
+    }
+    this_generate_body_salt_1=rulegenerate_body_salt
+    { 
+        $current = $this_generate_body_salt_1.current; 
+        afterParserOrEnumRuleCall();
+    }
+)
+;
+
+
+
+
+
+// Entry rule entryRulegenerate_body_inline
+entryRulegenerate_body_inline returns [EObject current=null] 
+	:
+	{ newCompositeNode(grammarAccess.getGenerate_body_inlineRule()); }
+	 iv_rulegenerate_body_inline=rulegenerate_body_inline 
+	 { $current=$iv_rulegenerate_body_inline.current; } 
+	 EOF 
+;
+
+// Rule generate_body_inline
+rulegenerate_body_inline returns [EObject current=null] 
+    @init { enterRule(); 
+    }
+    @after { leaveRule(); }:
 ((
 (
 		lv_name_0_0=	'GENERATES' 
     {
-        newLeafNode(lv_name_0_0, grammarAccess.getGenerate_sectionAccess().getNameGENERATESKeyword_0_0());
+        newLeafNode(lv_name_0_0, grammarAccess.getGenerate_body_inlineAccess().getNameGENERATESKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getGenerate_sectionRule());
+	            $current = createModelElement(grammarAccess.getGenerate_body_inlineRule());
 	        }
        		setWithLastConsumed($current, "name", lv_name_0_0, "GENERATES");
 	    }
 
 )
-)(
-(
-		{ 
-	        newCompositeNode(grammarAccess.getGenerate_sectionAccess().getBodyGenerate_bodyParserRuleCall_1_0()); 
-	    }
-		lv_body_1_0=rulegenerate_body		{
-	        if ($current==null) {
-	            $current = createModelElementForParent(grammarAccess.getGenerate_sectionRule());
-	        }
-       		set(
-       			$current, 
-       			"body",
-        		lv_body_1_0, 
-        		"generate_body");
-	        afterParserOrEnumRuleCall();
-	    }
-
+)this_GEN_BLOCK_1=RULE_GEN_BLOCK
+    { 
+    newLeafNode(this_GEN_BLOCK_1, grammarAccess.getGenerate_body_inlineAccess().getGEN_BLOCKTerminalRuleCall_1()); 
+    }
 )
-))
 ;
 
 
 
 
 
-// Entry rule entryRulegenerate_body
-entryRulegenerate_body returns [EObject current=null] 
+// Entry rule entryRulegenerate_body_salt
+entryRulegenerate_body_salt returns [EObject current=null] 
 	:
-	{ newCompositeNode(grammarAccess.getGenerate_bodyRule()); }
-	 iv_rulegenerate_body=rulegenerate_body 
-	 { $current=$iv_rulegenerate_body.current; } 
+	{ newCompositeNode(grammarAccess.getGenerate_body_saltRule()); }
+	 iv_rulegenerate_body_salt=rulegenerate_body_salt 
+	 { $current=$iv_rulegenerate_body_salt.current; } 
 	 EOF 
 ;
 
-// Rule generate_body
-rulegenerate_body returns [EObject current=null] 
+// Rule generate_body_salt
+rulegenerate_body_salt returns [EObject current=null] 
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(this_GEN_BLOCK_0=RULE_GEN_BLOCK
-    { 
-    newLeafNode(this_GEN_BLOCK_0, grammarAccess.getGenerate_bodyAccess().getGEN_BLOCKTerminalRuleCall_0()); 
-    }
-
-    |((
+((
 (
-		lv_name_1_0=	'SALT' 
+		lv_name_0_0=	'GENERATES' 
     {
-        newLeafNode(lv_name_1_0, grammarAccess.getGenerate_bodyAccess().getNameSALTKeyword_1_0_0());
+        newLeafNode(lv_name_0_0, grammarAccess.getGenerate_body_saltAccess().getNameGENERATESKeyword_0_0());
     }
  
 	    {
 	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getGenerate_bodyRule());
+	            $current = createModelElement(grammarAccess.getGenerate_body_saltRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_1_0, "SALT");
+       		setWithLastConsumed($current, "name", lv_name_0_0, "GENERATES");
 	    }
 
 )
-)	otherlv_2='(' 
+)	otherlv_1='SALT' 
     {
-    	newLeafNode(otherlv_2, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_1_1());
+    	newLeafNode(otherlv_1, grammarAccess.getGenerate_body_saltAccess().getSALTKeyword_1());
+    }
+	otherlv_2='(' 
+    {
+    	newLeafNode(otherlv_2, grammarAccess.getGenerate_body_saltAccess().getLeftParenthesisKeyword_2());
     }
 this_ID_3=RULE_ID
     { 
-    newLeafNode(this_ID_3, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_1_2()); 
+    newLeafNode(this_ID_3, grammarAccess.getGenerate_body_saltAccess().getIDTerminalRuleCall_3()); 
     }
 	otherlv_4=')' 
     {
-    	newLeafNode(otherlv_4, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_1_3());
+    	newLeafNode(otherlv_4, grammarAccess.getGenerate_body_saltAccess().getRightParenthesisKeyword_4());
     }
 	otherlv_5=':' 
     {
-    	newLeafNode(otherlv_5, grammarAccess.getGenerate_bodyAccess().getColonKeyword_1_4());
+    	newLeafNode(otherlv_5, grammarAccess.getGenerate_body_saltAccess().getColonKeyword_5());
     }
 (	otherlv_6='SCOREDSEARCH' 
     {
-    	newLeafNode(otherlv_6, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0());
+    	newLeafNode(otherlv_6, grammarAccess.getGenerate_body_saltAccess().getSCOREDSEARCHKeyword_6_0());
     }
 
     |	otherlv_7='PROFILE' 
     {
-    	newLeafNode(otherlv_7, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1());
+    	newLeafNode(otherlv_7, grammarAccess.getGenerate_body_saltAccess().getPROFILEKeyword_6_1());
     }
 )	otherlv_8='ENDGENERATES' 
     {
-    	newLeafNode(otherlv_8, grammarAccess.getGenerate_bodyAccess().getENDGENERATESKeyword_1_6());
+    	newLeafNode(otherlv_8, grammarAccess.getGenerate_body_saltAccess().getENDGENERATESKeyword_7());
     }
-))
+)
 ;
 
 

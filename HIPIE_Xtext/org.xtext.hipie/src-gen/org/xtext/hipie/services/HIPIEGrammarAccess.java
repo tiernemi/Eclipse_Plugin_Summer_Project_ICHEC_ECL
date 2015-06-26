@@ -2086,17 +2086,36 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 
 	public class Generate_sectionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "generate_section");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final RuleCall cGenerate_body_inlineParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
+		private final RuleCall cGenerate_body_saltParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
+		
+		//generate_section:
+		//	generate_body_inline | generate_body_salt;
+		@Override public ParserRule getRule() { return rule; }
+
+		//generate_body_inline | generate_body_salt
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//generate_body_inline
+		public RuleCall getGenerate_body_inlineParserRuleCall_0() { return cGenerate_body_inlineParserRuleCall_0; }
+
+		//generate_body_salt
+		public RuleCall getGenerate_body_saltParserRuleCall_1() { return cGenerate_body_saltParserRuleCall_1; }
+	}
+
+	public class Generate_body_inlineElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "generate_body_inline");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
 		private final Keyword cNameGENERATESKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
-		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cBodyGenerate_bodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
+		private final RuleCall cGEN_BLOCKTerminalRuleCall_1 = (RuleCall)cGroup.eContents().get(1);
 		
-		//generate_section:
-		//	name="GENERATES" body=generate_body;
+		//generate_body_inline:
+		//	name="GENERATES" GEN_BLOCK;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name="GENERATES" body=generate_body
+		//name="GENERATES" GEN_BLOCK
 		public Group getGroup() { return cGroup; }
 
 		//name="GENERATES"
@@ -2105,71 +2124,64 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		//"GENERATES"
 		public Keyword getNameGENERATESKeyword_0_0() { return cNameGENERATESKeyword_0_0; }
 
-		//body=generate_body
-		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
-
-		//generate_body
-		public RuleCall getBodyGenerate_bodyParserRuleCall_1_0() { return cBodyGenerate_bodyParserRuleCall_1_0; }
+		//GEN_BLOCK
+		public RuleCall getGEN_BLOCKTerminalRuleCall_1() { return cGEN_BLOCKTerminalRuleCall_1; }
 	}
 
-	public class Generate_bodyElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "generate_body");
-		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final RuleCall cGEN_BLOCKTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
-		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
-		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
-		private final Keyword cNameSALTKeyword_1_0_0 = (Keyword)cNameAssignment_1_0.eContents().get(0);
-		private final Keyword cLeftParenthesisKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_1_2 = (RuleCall)cGroup_1.eContents().get(2);
-		private final Keyword cRightParenthesisKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
-		private final Keyword cColonKeyword_1_4 = (Keyword)cGroup_1.eContents().get(4);
-		private final Alternatives cAlternatives_1_5 = (Alternatives)cGroup_1.eContents().get(5);
-		private final Keyword cSCOREDSEARCHKeyword_1_5_0 = (Keyword)cAlternatives_1_5.eContents().get(0);
-		private final Keyword cPROFILEKeyword_1_5_1 = (Keyword)cAlternatives_1_5.eContents().get(1);
-		private final Keyword cENDGENERATESKeyword_1_6 = (Keyword)cGroup_1.eContents().get(6);
+	public class Generate_body_saltElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "generate_body_salt");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cNameAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final Keyword cNameGENERATESKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
+		private final Keyword cSALTKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Keyword cLeftParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final RuleCall cIDTerminalRuleCall_3 = (RuleCall)cGroup.eContents().get(3);
+		private final Keyword cRightParenthesisKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Alternatives cAlternatives_6 = (Alternatives)cGroup.eContents().get(6);
+		private final Keyword cSCOREDSEARCHKeyword_6_0 = (Keyword)cAlternatives_6.eContents().get(0);
+		private final Keyword cPROFILEKeyword_6_1 = (Keyword)cAlternatives_6.eContents().get(1);
+		private final Keyword cENDGENERATESKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
-		//generate_body:
-		//	GEN_BLOCK | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
+		//generate_body_salt:
+		//	name="GENERATES" "SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
 		@Override public ParserRule getRule() { return rule; }
 
-		//GEN_BLOCK | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
-		public Alternatives getAlternatives() { return cAlternatives; }
+		//name="GENERATES" "SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
+		public Group getGroup() { return cGroup; }
 
-		//GEN_BLOCK
-		public RuleCall getGEN_BLOCKTerminalRuleCall_0() { return cGEN_BLOCKTerminalRuleCall_0; }
+		//name="GENERATES"
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
-		//name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
-		public Group getGroup_1() { return cGroup_1; }
-
-		//name="SALT"
-		public Assignment getNameAssignment_1_0() { return cNameAssignment_1_0; }
+		//"GENERATES"
+		public Keyword getNameGENERATESKeyword_0_0() { return cNameGENERATESKeyword_0_0; }
 
 		//"SALT"
-		public Keyword getNameSALTKeyword_1_0_0() { return cNameSALTKeyword_1_0_0; }
+		public Keyword getSALTKeyword_1() { return cSALTKeyword_1; }
 
 		//"("
-		public Keyword getLeftParenthesisKeyword_1_1() { return cLeftParenthesisKeyword_1_1; }
+		public Keyword getLeftParenthesisKeyword_2() { return cLeftParenthesisKeyword_2; }
 
 		//ID
-		public RuleCall getIDTerminalRuleCall_1_2() { return cIDTerminalRuleCall_1_2; }
+		public RuleCall getIDTerminalRuleCall_3() { return cIDTerminalRuleCall_3; }
 
 		//")"
-		public Keyword getRightParenthesisKeyword_1_3() { return cRightParenthesisKeyword_1_3; }
+		public Keyword getRightParenthesisKeyword_4() { return cRightParenthesisKeyword_4; }
 
 		//":"
-		public Keyword getColonKeyword_1_4() { return cColonKeyword_1_4; }
+		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
 
 		//"SCOREDSEARCH" | "PROFILE"
-		public Alternatives getAlternatives_1_5() { return cAlternatives_1_5; }
+		public Alternatives getAlternatives_6() { return cAlternatives_6; }
 
 		//"SCOREDSEARCH"
-		public Keyword getSCOREDSEARCHKeyword_1_5_0() { return cSCOREDSEARCHKeyword_1_5_0; }
+		public Keyword getSCOREDSEARCHKeyword_6_0() { return cSCOREDSEARCHKeyword_6_0; }
 
 		//"PROFILE"
-		public Keyword getPROFILEKeyword_1_5_1() { return cPROFILEKeyword_1_5_1; }
+		public Keyword getPROFILEKeyword_6_1() { return cPROFILEKeyword_6_1; }
 
 		//"ENDGENERATES"
-		public Keyword getENDGENERATESKeyword_1_6() { return cENDGENERATESKeyword_1_6; }
+		public Keyword getENDGENERATESKeyword_7() { return cENDGENERATESKeyword_7; }
 	}
 
 	public class Visual_sectionElements extends AbstractParserRuleElementFinder {
@@ -3087,7 +3099,8 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	private final Output_valueElements pOutput_value;
 	private final OutputbaseElements pOutputbase;
 	private final Generate_sectionElements pGenerate_section;
-	private final Generate_bodyElements pGenerate_body;
+	private final Generate_body_inlineElements pGenerate_body_inline;
+	private final Generate_body_saltElements pGenerate_body_salt;
 	private final Visual_sectionElements pVisual_section;
 	private final VisualizationElements pVisualization;
 	private final Vis_basisElements pVis_basis;
@@ -3164,7 +3177,8 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		this.pOutput_value = new Output_valueElements();
 		this.pOutputbase = new OutputbaseElements();
 		this.pGenerate_section = new Generate_sectionElements();
-		this.pGenerate_body = new Generate_bodyElements();
+		this.pGenerate_body_inline = new Generate_body_inlineElements();
+		this.pGenerate_body_salt = new Generate_body_saltElements();
 		this.pVisual_section = new Visual_sectionElements();
 		this.pVisualization = new VisualizationElements();
 		this.pVis_basis = new Vis_basisElements();
@@ -3676,7 +3690,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//generate_section:
-	//	name="GENERATES" body=generate_body;
+	//	generate_body_inline | generate_body_salt;
 	public Generate_sectionElements getGenerate_sectionAccess() {
 		return pGenerate_section;
 	}
@@ -3685,14 +3699,24 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		return getGenerate_sectionAccess().getRule();
 	}
 
-	//generate_body:
-	//	GEN_BLOCK | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
-	public Generate_bodyElements getGenerate_bodyAccess() {
-		return pGenerate_body;
+	//generate_body_inline:
+	//	name="GENERATES" GEN_BLOCK;
+	public Generate_body_inlineElements getGenerate_body_inlineAccess() {
+		return pGenerate_body_inline;
 	}
 	
-	public ParserRule getGenerate_bodyRule() {
-		return getGenerate_bodyAccess().getRule();
+	public ParserRule getGenerate_body_inlineRule() {
+		return getGenerate_body_inlineAccess().getRule();
+	}
+
+	//generate_body_salt:
+	//	name="GENERATES" "SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
+	public Generate_body_saltElements getGenerate_body_saltAccess() {
+		return pGenerate_body_salt;
+	}
+	
+	public ParserRule getGenerate_body_saltRule() {
+		return getGenerate_body_saltAccess().getRule();
 	}
 
 	//visual_section:

@@ -130,11 +130,9 @@
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//generate_section">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//generate_section/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//generate_section/body"/>
     </genClasses>
-    <genClasses ecoreClass="HIPIE.ecore#//generate_body">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//generate_body/name"/>
-    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//generate_body_inline"/>
+    <genClasses ecoreClass="HIPIE.ecore#//generate_body_salt"/>
     <genClasses ecoreClass="HIPIE.ecore#//visual_section">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//visual_section/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//visual_section/vis_ops"/>

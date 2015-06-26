@@ -407,10 +407,19 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case HIPIEPackage.GENERATE_BODY:
+      case HIPIEPackage.GENERATE_BODY_INLINE:
       {
-        generate_body generate_body = (generate_body)theEObject;
-        T result = casegenerate_body(generate_body);
+        generate_body_inline generate_body_inline = (generate_body_inline)theEObject;
+        T result = casegenerate_body_inline(generate_body_inline);
+        if (result == null) result = casegenerate_section(generate_body_inline);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.GENERATE_BODY_SALT:
+      {
+        generate_body_salt generate_body_salt = (generate_body_salt)theEObject;
+        T result = casegenerate_body_salt(generate_body_salt);
+        if (result == null) result = casegenerate_section(generate_body_salt);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1193,17 +1202,33 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>generate body</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>generate body inline</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>generate body</em>'.
+   * @return the result of interpreting the object as an instance of '<em>generate body inline</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T casegenerate_body(generate_body object)
+  public T casegenerate_body_inline(generate_body_inline object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>generate body salt</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>generate body salt</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casegenerate_body_salt(generate_body_salt object)
   {
     return null;
   }

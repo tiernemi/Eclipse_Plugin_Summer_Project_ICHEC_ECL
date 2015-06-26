@@ -36,7 +36,8 @@ import org.xtext.hipie.hIPIE.ecloutput_decl;
 import org.xtext.hipie.hIPIE.enum_decl;
 import org.xtext.hipie.hIPIE.field_decl;
 import org.xtext.hipie.hIPIE.function;
-import org.xtext.hipie.hIPIE.generate_body;
+import org.xtext.hipie.hIPIE.generate_body_inline;
+import org.xtext.hipie.hIPIE.generate_body_salt;
 import org.xtext.hipie.hIPIE.generate_section;
 import org.xtext.hipie.hIPIE.group;
 import org.xtext.hipie.hIPIE.input_option;
@@ -370,7 +371,14 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass generate_bodyEClass = null;
+  private EClass generate_body_inlineEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass generate_body_saltEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1542,9 +1550,9 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getgenerate_section_Body()
+  public EClass getgenerate_body_inline()
   {
-    return (EReference)generate_sectionEClass.getEStructuralFeatures().get(1);
+    return generate_body_inlineEClass;
   }
 
   /**
@@ -1552,19 +1560,9 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getgenerate_body()
+  public EClass getgenerate_body_salt()
   {
-    return generate_bodyEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EAttribute getgenerate_body_Name()
-  {
-    return (EAttribute)generate_bodyEClass.getEStructuralFeatures().get(0);
+    return generate_body_saltEClass;
   }
 
   /**
@@ -2126,10 +2124,10 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
 
     generate_sectionEClass = createEClass(GENERATE_SECTION);
     createEAttribute(generate_sectionEClass, GENERATE_SECTION__NAME);
-    createEReference(generate_sectionEClass, GENERATE_SECTION__BODY);
 
-    generate_bodyEClass = createEClass(GENERATE_BODY);
-    createEAttribute(generate_bodyEClass, GENERATE_BODY__NAME);
+    generate_body_inlineEClass = createEClass(GENERATE_BODY_INLINE);
+
+    generate_body_saltEClass = createEClass(GENERATE_BODY_SALT);
 
     visual_sectionEClass = createEClass(VISUAL_SECTION);
     createEAttribute(visual_sectionEClass, VISUAL_SECTION__NAME);
@@ -2252,6 +2250,8 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
     eclfield_typeEClass.getESuperTypes().add(this.getecloutput_decl());
     output_optionEClass.getESuperTypes().add(this.getoutput_options());
     out_typeEClass.getESuperTypes().add(this.getoutput_value());
+    generate_body_inlineEClass.getESuperTypes().add(this.getgenerate_section());
+    generate_body_saltEClass.getESuperTypes().add(this.getgenerate_section());
     functionEClass.getESuperTypes().add(this.getvis_basis_qualifiers());
     visual_section_optionEClass.getESuperTypes().add(this.getvisual_section_options());
     visual_optionEClass.getESuperTypes().add(this.getvisual_options());
@@ -2398,10 +2398,10 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
 
     initEClass(generate_sectionEClass, generate_section.class, "generate_section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getgenerate_section_Name(), ecorePackage.getEString(), "name", null, 0, 1, generate_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getgenerate_section_Body(), this.getgenerate_body(), null, "body", null, 0, 1, generate_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(generate_bodyEClass, generate_body.class, "generate_body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getgenerate_body_Name(), ecorePackage.getEString(), "name", null, 0, 1, generate_body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEClass(generate_body_inlineEClass, generate_body_inline.class, "generate_body_inline", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(generate_body_saltEClass, generate_body_salt.class, "generate_body_salt", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(visual_sectionEClass, visual_section.class, "visual_section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getvisual_section_Name(), ecorePackage.getEString(), "name", null, 0, 1, visual_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

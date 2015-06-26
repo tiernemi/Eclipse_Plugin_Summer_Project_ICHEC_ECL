@@ -105,7 +105,8 @@ public class HIPIEFactoryImpl extends EFactoryImpl implements HIPIEFactory
       case HIPIEPackage.OUTPUT_VALUE: return createoutput_value();
       case HIPIEPackage.OUTPUTBASE: return createoutputbase();
       case HIPIEPackage.GENERATE_SECTION: return creategenerate_section();
-      case HIPIEPackage.GENERATE_BODY: return creategenerate_body();
+      case HIPIEPackage.GENERATE_BODY_INLINE: return creategenerate_body_inline();
+      case HIPIEPackage.GENERATE_BODY_SALT: return creategenerate_body_salt();
       case HIPIEPackage.VISUAL_SECTION: return createvisual_section();
       case HIPIEPackage.VISUALIZATION: return createvisualization();
       case HIPIEPackage.VIS_BASIS: return createvis_basis();
@@ -583,10 +584,21 @@ public class HIPIEFactoryImpl extends EFactoryImpl implements HIPIEFactory
    * <!-- end-user-doc -->
    * @generated
    */
-  public generate_body creategenerate_body()
+  public generate_body_inline creategenerate_body_inline()
   {
-    generate_bodyImpl generate_body = new generate_bodyImpl();
-    return generate_body;
+    generate_body_inlineImpl generate_body_inline = new generate_body_inlineImpl();
+    return generate_body_inline;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public generate_body_salt creategenerate_body_salt()
+  {
+    generate_body_saltImpl generate_body_salt = new generate_body_saltImpl();
+    return generate_body_salt;
   }
 
   /**

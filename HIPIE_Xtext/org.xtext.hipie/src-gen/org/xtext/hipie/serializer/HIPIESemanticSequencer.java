@@ -36,8 +36,8 @@ import org.xtext.hipie.hIPIE.ecl_varunicode;
 import org.xtext.hipie.hIPIE.enum_decl;
 import org.xtext.hipie.hIPIE.field_decl;
 import org.xtext.hipie.hIPIE.function;
-import org.xtext.hipie.hIPIE.generate_body;
-import org.xtext.hipie.hIPIE.generate_section;
+import org.xtext.hipie.hIPIE.generate_body_inline;
+import org.xtext.hipie.hIPIE.generate_body_salt;
 import org.xtext.hipie.hIPIE.group;
 import org.xtext.hipie.hIPIE.input_option;
 import org.xtext.hipie.hIPIE.input_section;
@@ -233,11 +233,11 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
-			case HIPIEPackage.GENERATE_BODY:
-				sequence_generate_body(context, (generate_body) semanticObject); 
+			case HIPIEPackage.GENERATE_BODY_INLINE:
+				sequence_generate_body_inline(context, (generate_body_inline) semanticObject); 
 				return; 
-			case HIPIEPackage.GENERATE_SECTION:
-				sequence_generate_section(context, (generate_section) semanticObject); 
+			case HIPIEPackage.GENERATE_BODY_SALT:
+				sequence_generate_body_salt(context, (generate_body_salt) semanticObject); 
 				return; 
 			case HIPIEPackage.GROUP:
 				if(context == grammarAccess.getGroupRule()) {
@@ -751,28 +751,32 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name='SALT'?
+	 *     name='GENERATES'
 	 */
-	protected void sequence_generate_body(EObject context, generate_body semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+	protected void sequence_generate_body_inline(EObject context, generate_body_inline semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getGenerate_body_inlineAccess().getNameGENERATESKeyword_0_0(), semanticObject.getName());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name='GENERATES' body=generate_body)
+	 *     name='GENERATES'
 	 */
-	protected void sequence_generate_section(EObject context, generate_section semanticObject) {
+	protected void sequence_generate_body_salt(EObject context, generate_body_salt semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME));
-			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__BODY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__BODY));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getGenerate_sectionAccess().getNameGENERATESKeyword_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getGenerate_sectionAccess().getBodyGenerate_bodyParserRuleCall_1_0(), semanticObject.getBody());
+		feeder.accept(grammarAccess.getGenerate_body_saltAccess().getNameGENERATESKeyword_0_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

@@ -1655,32 +1655,23 @@ public interface HIPIEPackage extends EPackage
   int GENERATE_SECTION__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Body</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int GENERATE_SECTION__BODY = 1;
-
-  /**
    * The number of structural features of the '<em>generate section</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GENERATE_SECTION_FEATURE_COUNT = 2;
+  int GENERATE_SECTION_FEATURE_COUNT = 1;
 
   /**
-   * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.generate_bodyImpl <em>generate body</em>}' class.
+   * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.generate_body_inlineImpl <em>generate body inline</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see org.xtext.hipie.hIPIE.impl.generate_bodyImpl
-   * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getgenerate_body()
+   * @see org.xtext.hipie.hIPIE.impl.generate_body_inlineImpl
+   * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getgenerate_body_inline()
    * @generated
    */
-  int GENERATE_BODY = 41;
+  int GENERATE_BODY_INLINE = 41;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1689,16 +1680,44 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int GENERATE_BODY__NAME = 0;
+  int GENERATE_BODY_INLINE__NAME = GENERATE_SECTION__NAME;
 
   /**
-   * The number of structural features of the '<em>generate body</em>' class.
+   * The number of structural features of the '<em>generate body inline</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int GENERATE_BODY_FEATURE_COUNT = 1;
+  int GENERATE_BODY_INLINE_FEATURE_COUNT = GENERATE_SECTION_FEATURE_COUNT + 0;
+
+  /**
+   * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.generate_body_saltImpl <em>generate body salt</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.hipie.hIPIE.impl.generate_body_saltImpl
+   * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getgenerate_body_salt()
+   * @generated
+   */
+  int GENERATE_BODY_SALT = 42;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATE_BODY_SALT__NAME = GENERATE_SECTION__NAME;
+
+  /**
+   * The number of structural features of the '<em>generate body salt</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int GENERATE_BODY_SALT_FEATURE_COUNT = GENERATE_SECTION_FEATURE_COUNT + 0;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.visual_sectionImpl <em>visual section</em>}' class.
@@ -1708,7 +1727,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisual_section()
    * @generated
    */
-  int VISUAL_SECTION = 42;
+  int VISUAL_SECTION = 43;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1754,7 +1773,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisualization()
    * @generated
    */
-  int VISUALIZATION = 43;
+  int VISUALIZATION = 44;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1800,7 +1819,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvis_basis()
    * @generated
    */
-  int VIS_BASIS = 44;
+  int VIS_BASIS = 45;
 
   /**
    * The feature id for the '<em><b>Vars</b></em>' reference list.
@@ -1837,7 +1856,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvis_basis_qualifiers()
    * @generated
    */
-  int VIS_BASIS_QUALIFIERS = 45;
+  int VIS_BASIS_QUALIFIERS = 46;
 
   /**
    * The number of structural features of the '<em>vis basis qualifiers</em>' class.
@@ -1856,7 +1875,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getfunction()
    * @generated
    */
-  int FUNCTION = 46;
+  int FUNCTION = 47;
 
   /**
    * The feature id for the '<em><b>Funcs</b></em>' containment reference list.
@@ -1893,7 +1912,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisual_section_options()
    * @generated
    */
-  int VISUAL_SECTION_OPTIONS = 47;
+  int VISUAL_SECTION_OPTIONS = 48;
 
   /**
    * The number of structural features of the '<em>visual section options</em>' class.
@@ -1912,7 +1931,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisual_section_option()
    * @generated
    */
-  int VISUAL_SECTION_OPTION = 48;
+  int VISUAL_SECTION_OPTION = 49;
 
   /**
    * The feature id for the '<em><b>Vis ops</b></em>' containment reference list.
@@ -1958,7 +1977,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisual_options()
    * @generated
    */
-  int VISUAL_OPTIONS = 49;
+  int VISUAL_OPTIONS = 50;
 
   /**
    * The number of structural features of the '<em>visual options</em>' class.
@@ -1977,7 +1996,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisual_option()
    * @generated
    */
-  int VISUAL_OPTION = 50;
+  int VISUAL_OPTION = 51;
 
   /**
    * The feature id for the '<em><b>Vis ops</b></em>' containment reference list.
@@ -2023,7 +2042,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getvisual_multival()
    * @generated
    */
-  int VISUAL_MULTIVAL = 51;
+  int VISUAL_MULTIVAL = 52;
 
   /**
    * The feature id for the '<em><b>Vis ops</b></em>' containment reference list.
@@ -2069,7 +2088,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getcustom_section()
    * @generated
    */
-  int CUSTOM_SECTION = 52;
+  int CUSTOM_SECTION = 53;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2106,7 +2125,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getcustom_value()
    * @generated
    */
-  int CUSTOM_VALUE = 53;
+  int CUSTOM_VALUE = 54;
 
   /**
    * The number of structural features of the '<em>custom value</em>' class.
@@ -2125,7 +2144,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getresource_options()
    * @generated
    */
-  int RESOURCE_OPTIONS = 55;
+  int RESOURCE_OPTIONS = 56;
 
   /**
    * The number of structural features of the '<em>resource options</em>' class.
@@ -2144,7 +2163,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getresource_option()
    * @generated
    */
-  int RESOURCE_OPTION = 54;
+  int RESOURCE_OPTION = 55;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2190,7 +2209,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getresource_value()
    * @generated
    */
-  int RESOURCE_VALUE = 56;
+  int RESOURCE_VALUE = 57;
 
   /**
    * The number of structural features of the '<em>resource value</em>' class.
@@ -2209,7 +2228,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getresource_section()
    * @generated
    */
-  int RESOURCE_SECTION = 57;
+  int RESOURCE_SECTION = 58;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3288,36 +3307,24 @@ public interface HIPIEPackage extends EPackage
   EAttribute getgenerate_section_Name();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.generate_section#getBody <em>Body</em>}'.
+   * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.generate_body_inline <em>generate body inline</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Body</em>'.
-   * @see org.xtext.hipie.hIPIE.generate_section#getBody()
-   * @see #getgenerate_section()
+   * @return the meta object for class '<em>generate body inline</em>'.
+   * @see org.xtext.hipie.hIPIE.generate_body_inline
    * @generated
    */
-  EReference getgenerate_section_Body();
+  EClass getgenerate_body_inline();
 
   /**
-   * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.generate_body <em>generate body</em>}'.
+   * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.generate_body_salt <em>generate body salt</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for class '<em>generate body</em>'.
-   * @see org.xtext.hipie.hIPIE.generate_body
+   * @return the meta object for class '<em>generate body salt</em>'.
+   * @see org.xtext.hipie.hIPIE.generate_body_salt
    * @generated
    */
-  EClass getgenerate_body();
-
-  /**
-   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.generate_body#getName <em>Name</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.hipie.hIPIE.generate_body#getName()
-   * @see #getgenerate_body()
-   * @generated
-   */
-  EAttribute getgenerate_body_Name();
+  EClass getgenerate_body_salt();
 
   /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.visual_section <em>visual section</em>}'.
@@ -4630,30 +4637,24 @@ public interface HIPIEPackage extends EPackage
     EAttribute GENERATE_SECTION__NAME = eINSTANCE.getgenerate_section_Name();
 
     /**
-     * The meta object literal for the '<em><b>Body</b></em>' containment reference feature.
+     * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.generate_body_inlineImpl <em>generate body inline</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
+     * @see org.xtext.hipie.hIPIE.impl.generate_body_inlineImpl
+     * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getgenerate_body_inline()
      * @generated
      */
-    EReference GENERATE_SECTION__BODY = eINSTANCE.getgenerate_section_Body();
+    EClass GENERATE_BODY_INLINE = eINSTANCE.getgenerate_body_inline();
 
     /**
-     * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.generate_bodyImpl <em>generate body</em>}' class.
+     * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.generate_body_saltImpl <em>generate body salt</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
-     * @see org.xtext.hipie.hIPIE.impl.generate_bodyImpl
-     * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getgenerate_body()
+     * @see org.xtext.hipie.hIPIE.impl.generate_body_saltImpl
+     * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getgenerate_body_salt()
      * @generated
      */
-    EClass GENERATE_BODY = eINSTANCE.getgenerate_body();
-
-    /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EAttribute GENERATE_BODY__NAME = eINSTANCE.getgenerate_body_Name();
+    EClass GENERATE_BODY_SALT = eINSTANCE.getgenerate_body_salt();
 
     /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.visual_sectionImpl <em>visual section</em>}' class.

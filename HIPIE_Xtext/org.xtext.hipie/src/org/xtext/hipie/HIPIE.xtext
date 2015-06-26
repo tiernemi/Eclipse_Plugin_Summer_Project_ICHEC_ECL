@@ -162,10 +162,15 @@ outputbase:  '(' actions=[datatype] ')';
  
 
                
-generate_section: name='GENERATES' body=generate_body ;
+generate_section: (generate_body_inline | generate_body_salt) ;
+   
+generate_body_inline : 
+	name='GENERATES'  GEN_BLOCK
+;  
 
-generate_body: GEN_BLOCK |
-               name='SALT' '(' ID ')' ':' ('SCOREDSEARCH'|'PROFILE') 'ENDGENERATES' ;
+generate_body_salt :
+	name='GENERATES' 'SALT' '(' ID ')' ':' ('SCOREDSEARCH'|'PROFILE') 'ENDGENERATES'               
+;
 
 
 visual_section: name='VISUALIZE' ID (vis_ops+=visual_section_options)? (vis_elements+=visualization)+ 'END';

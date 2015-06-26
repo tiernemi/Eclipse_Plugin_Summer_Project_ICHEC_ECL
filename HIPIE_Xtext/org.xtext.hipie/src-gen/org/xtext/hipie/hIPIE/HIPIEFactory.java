@@ -392,13 +392,22 @@ public interface HIPIEFactory extends EFactory
   generate_section creategenerate_section();
 
   /**
-   * Returns a new object of class '<em>generate body</em>'.
+   * Returns a new object of class '<em>generate body inline</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>generate body</em>'.
+   * @return a new object of class '<em>generate body inline</em>'.
    * @generated
    */
-  generate_body creategenerate_body();
+  generate_body_inline creategenerate_body_inline();
+
+  /**
+   * Returns a new object of class '<em>generate body salt</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>generate body salt</em>'.
+   * @generated
+   */
+  generate_body_salt creategenerate_body_salt();
 
   /**
    * Returns a new object of class '<em>visual section</em>'.

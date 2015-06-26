@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalHIPIELexer extends Lexer {
-    public static final int RULE_ID=5;
+    public static final int RULE_ID=4;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -58,7 +58,7 @@ public class InternalHIPIELexer extends Lexer {
     public static final int T__71=71;
     public static final int T__72=72;
     public static final int T__70=70;
-    public static final int RULE_GEN_BLOCK=4;
+    public static final int RULE_GEN_BLOCK=6;
     public static final int T__76=76;
     public static final int T__75=75;
     public static final int T__74=74;
@@ -103,7 +103,7 @@ public class InternalHIPIELexer extends Lexer {
     public static final int T__111=111;
     public static final int T__110=110;
     public static final int T__113=113;
-    public static final int RULE_INT=6;
+    public static final int RULE_INT=5;
     public static final int T__112=112;
     public static final int T__50=50;
     public static final int T__42=42;
@@ -1173,10 +1173,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__61;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:60:7: ( 'ENDGENERATES' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:60:9: 'ENDGENERATES'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:60:7: ( 'SALT' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:60:9: 'SALT'
             {
-            match("ENDGENERATES"); 
+            match("SALT"); 
 
 
             }
@@ -1194,10 +1194,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__62;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:61:7: ( 'SLIDER' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:61:9: 'SLIDER'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:61:7: ( 'ENDGENERATES' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:61:9: 'ENDGENERATES'
             {
-            match("SLIDER"); 
+            match("ENDGENERATES"); 
 
 
             }
@@ -1215,10 +1215,11 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__63;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:62:7: ( '{' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:62:9: '{'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:62:7: ( 'SLIDER' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:62:9: 'SLIDER'
             {
-            match('{'); 
+            match("SLIDER"); 
+
 
             }
 
@@ -1235,10 +1236,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__64;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:63:7: ( '}' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:63:9: '}'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:63:7: ( '{' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:63:9: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -1255,11 +1256,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__65;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:64:7: ( 'SUM' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:64:9: 'SUM'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:64:7: ( '}' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:64:9: '}'
             {
-            match("SUM"); 
-
+            match('}'); 
 
             }
 
@@ -1276,10 +1276,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__66;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:65:7: ( 'SCALE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:65:9: 'SCALE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:65:7: ( 'SUM' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:65:9: 'SUM'
             {
-            match("SCALE"); 
+            match("SUM"); 
 
 
             }
@@ -1297,10 +1297,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__67;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:66:7: ( '->' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:66:9: '->'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:66:7: ( 'SCALE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:66:9: 'SCALE'
             {
-            match("->"); 
+            match("SCALE"); 
 
 
             }
@@ -1318,10 +1318,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__68;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:67:7: ( 'NAME' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:67:9: 'NAME'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:67:7: ( '->' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:67:9: '->'
             {
-            match("NAME"); 
+            match("->"); 
 
 
             }
@@ -1339,10 +1339,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__69;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:68:7: ( 'DESCRIPTION' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:68:9: 'DESCRIPTION'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:68:7: ( 'NAME' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:68:9: 'NAME'
             {
-            match("DESCRIPTION"); 
+            match("NAME"); 
 
 
             }
@@ -1360,10 +1360,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__70;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:69:7: ( 'AUTHOR' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:69:9: 'AUTHOR'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:69:7: ( 'DESCRIPTION' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:69:9: 'DESCRIPTION'
             {
-            match("AUTHOR"); 
+            match("DESCRIPTION"); 
 
 
             }
@@ -1381,10 +1381,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__71;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:70:7: ( 'LICENSE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:70:9: 'LICENSE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:70:7: ( 'AUTHOR' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:70:9: 'AUTHOR'
             {
-            match("LICENSE"); 
+            match("AUTHOR"); 
 
 
             }
@@ -1402,10 +1402,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__72;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:71:7: ( 'COPYRIGHT' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:71:9: 'COPYRIGHT'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:71:7: ( 'LICENSE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:71:9: 'LICENSE'
             {
-            match("COPYRIGHT"); 
+            match("LICENSE"); 
 
 
             }
@@ -1423,10 +1423,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__73;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:72:7: ( 'VERSION' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:72:9: 'VERSION'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:72:7: ( 'COPYRIGHT' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:72:9: 'COPYRIGHT'
             {
-            match("VERSION"); 
+            match("COPYRIGHT"); 
 
 
             }
@@ -1444,10 +1444,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__74;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:73:7: ( 'LABEL' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:73:9: 'LABEL'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:73:7: ( 'VERSION' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:73:9: 'VERSION'
             {
-            match("LABEL"); 
+            match("VERSION"); 
 
 
             }
@@ -1465,10 +1465,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__75;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:74:7: ( 'ID' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:74:9: 'ID'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:74:7: ( 'LABEL' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:74:9: 'LABEL'
             {
-            match("ID"); 
+            match("LABEL"); 
 
 
             }
@@ -1486,10 +1486,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__76;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:75:7: ( 'CATEGORY' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:75:9: 'CATEGORY'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:75:7: ( 'ID' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:75:9: 'ID'
             {
-            match("CATEGORY"); 
+            match("ID"); 
 
 
             }
@@ -1507,10 +1507,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__77;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:76:7: ( 'HEADER' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:76:9: 'HEADER'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:76:7: ( 'CATEGORY' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:76:9: 'CATEGORY'
             {
-            match("HEADER"); 
+            match("CATEGORY"); 
 
 
             }
@@ -1528,10 +1528,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__78;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:77:7: ( 'INSTANCE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:77:9: 'INSTANCE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:77:7: ( 'HEADER' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:77:9: 'HEADER'
             {
-            match("INSTANCE"); 
+            match("HEADER"); 
 
 
             }
@@ -1549,10 +1549,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__79;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:78:7: ( 'ENUM' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:78:9: 'ENUM'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:78:7: ( 'INSTANCE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:78:9: 'INSTANCE'
             {
-            match("ENUM"); 
+            match("INSTANCE"); 
 
 
             }
@@ -1570,10 +1570,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__80;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:79:7: ( 'INPUTS' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:79:9: 'INPUTS'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:79:7: ( 'ENUM' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:79:9: 'ENUM'
             {
-            match("INPUTS"); 
+            match("ENUM"); 
 
 
             }
@@ -1591,10 +1591,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__81;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:80:7: ( 'OPTIONAL' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:80:9: 'OPTIONAL'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:80:7: ( 'INPUTS' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:80:9: 'INPUTS'
             {
-            match("OPTIONAL"); 
+            match("INPUTS"); 
 
 
             }
@@ -1612,10 +1612,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__82;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:81:7: ( 'DEFINED' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:81:9: 'DEFINED'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:81:7: ( 'OPTIONAL' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:81:9: 'OPTIONAL'
             {
-            match("DEFINED"); 
+            match("OPTIONAL"); 
 
 
             }
@@ -1633,10 +1633,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__83;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:82:7: ( 'DISABLED' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:82:9: 'DISABLED'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:82:7: ( 'DEFINED' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:82:9: 'DEFINED'
             {
-            match("DISABLED"); 
+            match("DEFINED"); 
 
 
             }
@@ -1654,10 +1654,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__84;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:83:7: ( 'MAPBYTYPE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:83:9: 'MAPBYTYPE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:83:7: ( 'DISABLED' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:83:9: 'DISABLED'
             {
-            match("MAPBYTYPE"); 
+            match("DISABLED"); 
 
 
             }
@@ -1675,10 +1675,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__85;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:84:7: ( 'MAPBYNAME' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:84:9: 'MAPBYNAME'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:84:7: ( 'MAPBYTYPE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:84:9: 'MAPBYTYPE'
             {
-            match("MAPBYNAME"); 
+            match("MAPBYTYPE"); 
 
 
             }
@@ -1696,10 +1696,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__86;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:85:7: ( 'MANY' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:85:9: 'MANY'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:85:7: ( 'MAPBYNAME' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:85:9: 'MAPBYNAME'
             {
-            match("MANY"); 
+            match("MAPBYNAME"); 
 
 
             }
@@ -1717,10 +1717,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__87;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:86:7: ( 'FORMFIELD' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:86:9: 'FORMFIELD'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:86:7: ( 'MANY' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:86:9: 'MANY'
             {
-            match("FORMFIELD"); 
+            match("MANY"); 
 
 
             }
@@ -1738,10 +1738,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__88;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:87:7: ( 'ENABLE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:87:9: 'ENABLE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:87:7: ( 'FORMFIELD' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:87:9: 'FORMFIELD'
             {
-            match("ENABLE"); 
+            match("FORMFIELD"); 
 
 
             }
@@ -1759,10 +1759,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__89;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:88:7: ( 'TYPE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:88:9: 'TYPE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:88:7: ( 'ENABLE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:88:9: 'ENABLE'
             {
-            match("TYPE"); 
+            match("ENABLE"); 
 
 
             }
@@ -1780,10 +1780,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__90;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:89:7: ( 'RANGE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:89:9: 'RANGE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:89:7: ( 'TYPE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:89:9: 'TYPE'
             {
-            match("RANGE"); 
+            match("TYPE"); 
 
 
             }
@@ -1801,10 +1801,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__91;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:90:7: ( 'DEFAULT' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:90:9: 'DEFAULT'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:90:7: ( 'RANGE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:90:9: 'RANGE'
             {
-            match("DEFAULT"); 
+            match("RANGE"); 
 
 
             }
@@ -1822,10 +1822,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__92;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:91:7: ( 'MAXLENGTH' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:91:9: 'MAXLENGTH'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:91:7: ( 'DEFAULT' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:91:9: 'DEFAULT'
             {
-            match("MAXLENGTH"); 
+            match("DEFAULT"); 
 
 
             }
@@ -1843,10 +1843,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__93;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:92:7: ( 'NULL' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:92:9: 'NULL'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:92:7: ( 'MAXLENGTH' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:92:9: 'MAXLENGTH'
             {
-            match("NULL"); 
+            match("MAXLENGTH"); 
 
 
             }
@@ -1864,10 +1864,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__94;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:93:7: ( 'FIELDLENGTH' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:93:9: 'FIELDLENGTH'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:93:7: ( 'NULL' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:93:9: 'NULL'
             {
-            match("FIELDLENGTH"); 
+            match("NULL"); 
 
 
             }
@@ -1885,10 +1885,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__95;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:94:7: ( 'ROWS' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:94:9: 'ROWS'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:94:7: ( 'FIELDLENGTH' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:94:9: 'FIELDLENGTH'
             {
-            match("ROWS"); 
+            match("FIELDLENGTH"); 
 
 
             }
@@ -1906,10 +1906,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__96;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:95:7: ( 'COLS' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:95:9: 'COLS'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:95:7: ( 'ROWS' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:95:9: 'ROWS'
             {
-            match("COLS"); 
+            match("ROWS"); 
 
 
             }
@@ -1927,10 +1927,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__97;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:96:7: ( '_HTML_STYLECLASS' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:96:9: '_HTML_STYLECLASS'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:96:7: ( 'COLS' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:96:9: 'COLS'
             {
-            match("_HTML_STYLECLASS"); 
+            match("COLS"); 
 
 
             }
@@ -1948,10 +1948,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__98;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:97:7: ( 'OUTPUTS' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:97:9: 'OUTPUTS'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:97:7: ( '_HTML_STYLECLASS' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:97:9: '_HTML_STYLECLASS'
             {
-            match("OUTPUTS"); 
+            match("_HTML_STYLECLASS"); 
 
 
             }
@@ -1969,10 +1969,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__99;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:98:7: ( 'SIDE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:98:9: 'SIDE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:98:7: ( 'OUTPUTS' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:98:9: 'OUTPUTS'
             {
-            match("SIDE"); 
+            match("OUTPUTS"); 
 
 
             }
@@ -1990,10 +1990,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__100;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:99:8: ( 'LARGE' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:99:10: 'LARGE'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:99:8: ( 'SIDE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:99:10: 'SIDE'
             {
-            match("LARGE"); 
+            match("SIDE"); 
 
 
             }
@@ -2011,10 +2011,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__101;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:100:8: ( 'SMALL' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:100:10: 'SMALL'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:100:8: ( 'LARGE' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:100:10: 'LARGE'
             {
-            match("SMALL"); 
+            match("LARGE"); 
 
 
             }
@@ -2032,10 +2032,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__102;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:101:8: ( 'FEW' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:101:10: 'FEW'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:101:8: ( 'SMALL' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:101:10: 'SMALL'
             {
-            match("FEW"); 
+            match("SMALL"); 
 
 
             }
@@ -2053,10 +2053,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__103;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:102:8: ( 'WUID' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:102:10: 'WUID'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:102:8: ( 'FEW' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:102:10: 'FEW'
             {
-            match("WUID"); 
+            match("FEW"); 
 
 
             }
@@ -2074,10 +2074,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__104;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:103:8: ( 'FROM' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:103:10: 'FROM'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:103:8: ( 'WUID' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:103:10: 'WUID'
             {
-            match("FROM"); 
+            match("WUID"); 
 
 
             }
@@ -2095,10 +2095,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__105;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:104:8: ( 'GENERATES' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:104:10: 'GENERATES'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:104:8: ( 'FROM' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:104:10: 'FROM'
             {
-            match("GENERATES"); 
+            match("FROM"); 
 
 
             }
@@ -2116,10 +2116,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = T__106;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:105:8: ( 'SALT' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:105:10: 'SALT'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:105:8: ( 'GENERATES' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:105:10: 'GENERATES'
             {
-            match("SALT"); 
+            match("GENERATES"); 
 
 
             }
@@ -2450,10 +2450,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13858:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13858:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13904:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13904:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13858:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13904:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt1=0;
             loop1:
             do {
@@ -2507,10 +2507,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13860:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13860:12: ( '0' .. '9' )+
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13906:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13906:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13860:12: ( '0' .. '9' )+
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13906:12: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -2524,7 +2524,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13860:13: '0' .. '9'
+            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13906:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -2556,10 +2556,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -2577,10 +2577,10 @@ public class InternalHIPIELexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop3:
                     do {
                         int alt3=3;
@@ -2596,7 +2596,7 @@ public class InternalHIPIELexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2612,7 +2612,7 @@ public class InternalHIPIELexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2637,10 +2637,10 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -2656,7 +2656,7 @@ public class InternalHIPIELexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -2672,7 +2672,7 @@ public class InternalHIPIELexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13862:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13908:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -2715,19 +2715,19 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_GEN_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13864:16: ( 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13864:18: 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13910:16: ( 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13910:18: 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES'
             {
             match("INLINE"); 
 
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13864:27: ( options {greedy=false; } : . )*
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13910:27: ( options {greedy=false; } : . )*
             loop6:
             do {
                 int alt6=2;
                 alt6 = dfa6.predict(input);
                 switch (alt6) {
             	case 1 :
-            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13864:55: .
+            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13910:55: .
             	    {
             	    matchAny(); 
 
@@ -2757,10 +2757,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13866:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13866:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13912:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13912:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13866:11: ( '^' )?
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13912:11: ( '^' )?
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -2769,7 +2769,7 @@ public class InternalHIPIELexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13866:11: '^'
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13912:11: '^'
                     {
                     match('^'); 
 
@@ -2787,7 +2787,7 @@ public class InternalHIPIELexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13866:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13912:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop8:
             do {
                 int alt8=2;
@@ -2836,12 +2836,12 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13868:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13868:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13914:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13914:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13868:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13914:24: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
@@ -2866,7 +2866,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13868:52: .
+            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13914:52: .
             	    {
             	    matchAny(); 
 
@@ -2896,12 +2896,12 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop10:
             do {
                 int alt10=2;
@@ -2914,7 +2914,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt10) {
             	case 1 :
-            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -2934,7 +2934,7 @@ public class InternalHIPIELexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:40: ( ( '\\r' )? '\\n' )?
             int alt12=2;
             int LA12_0 = input.LA(1);
 
@@ -2943,9 +2943,9 @@ public class InternalHIPIELexer extends Lexer {
             }
             switch (alt12) {
                 case 1 :
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:41: ( '\\r' )?
+                    // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:41: ( '\\r' )?
                     int alt11=2;
                     int LA11_0 = input.LA(1);
 
@@ -2954,7 +2954,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     switch (alt11) {
                         case 1 :
-                            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13870:41: '\\r'
+                            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13916:41: '\\r'
                             {
                             match('\r'); 
 
@@ -2986,8 +2986,8 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13872:16: ( . )
-            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13872:18: .
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13918:16: ( . )
+            // ../org.xtext.hipie.ui/src-gen/org/xtext/hipie/ui/contentassist/antlr/internal/InternalHIPIE.g:13918:18: .
             {
             matchAny(); 
 
@@ -3899,7 +3899,7 @@ public class InternalHIPIELexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "()* loopback of 13864:27: ( options {greedy=false; } : . )*";
+            return "()* loopback of 13910:27: ( options {greedy=false; } : . )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -4033,17 +4033,17 @@ public class InternalHIPIELexer extends Lexer {
         }
     }
     static final String DFA13_eotS =
-        "\1\uffff\20\57\3\uffff\1\57\3\uffff\3\57\2\uffff\1\51\2\57\1\156\1\157\2\uffff\3\51\1\uffff\1\51\1\uffff\5\57\1\uffff\1\57\1\u0081\50\57\3\uffff\1\57\3\uffff\7\57\3\uffff\3\57\7\uffff\11\57\1\u00d4\2\57\1\uffff\32\57\1\u00f3\32\57\1\u0111\1\57\1\u0113\1\57\1\u0116\5\57\1\u011d\14\57\1\u012a\5\57\1\uffff\6\57\1\u0136\1\u0137\14\57\1\u0144\2\57\1\u0147\6\57\1\uffff\1\u014e\1\u014f\1\57\1\u0151\2\57\1\u0154\1\57\1\u0157\3\57\1\u015b\11\57\1\u0166\1\u0167\2\57\1\u016a\1\u016b\1\u016c\1\uffff\1\57\1\uffff\2\57\1\uffff\1\u0170\3\57\1\u0174\1\57\1\uffff\1\u0176\4\57\1\u017b\1\57\1\u017d\2\57\1\u0180\1\57\1\uffff\1\u0182\2\57\1\u0186\7\57\2\uffff\1\57\1\u018f\1\u0190\3\57\1\u0194\3\57\1\u0198\1\u0199\1\uffff\2\57\1\uffff\2\57\1\u019e\1\57\1\u01a0\1\57\2\uffff\1\u01a2\1\uffff\2\57\1\uffff\2\57\1\uffff\1\57\1\u01a9\1\u01aa\1\uffff\12\57\2\uffff\2\57\3\uffff\3\57\1\uffff\1\57\1\u01bc\1\57\1\uffff\1\57\1\uffff\1\u01bf\3\57\1\uffff\1\57\1\uffff\1\u01c4\1\57\1\uffff\1\57\1\uffff\1\u01c7\1\57\1\u01c9\1\uffff\3\57\1\u01cf\1\57\1\u01d1\1\u01d2\1\57\2\uffff\3\57\1\uffff\1\57\1\u01d9\1\57\2\uffff\1\u01db\1\57\1\u01de\1\u01df\1\uffff\1\57\1\uffff\1\u01e1\1\uffff\6\57\2\uffff\1\u01e8\1\u01e9\1\57\1\u01eb\13\57\1\u01f7\1\57\1\uffff\1\u01f9\1\57\1\uffff\3\57\1\u01fe\1\uffff\2\57\1\uffff\1\57\1\uffff\1\u0202\3\57\2\uffff\1\57\2\uffff\1\u0206\3\57\1\u020a\1\u020b\1\uffff\1\57\1\uffff\1\57\1\u020e\2\uffff\1\57\1\uffff\6\57\2\uffff\1\u0216\1\uffff\1\57\1\u0218\1\57\1\u021a\1\u021b\1\u021c\1\57\1\u021e\1\u021f\1\u0220\1\57\1\uffff\1\57\1\uffff\2\57\1\u0225\1\57\1\uffff\1\u0227\1\57\1\u0229\1\uffff\1\u022a\1\57\1\u022c\1\uffff\3\57\2\uffff\1\u0230\1\57\1\uffff\5\57\1\u0237\1\u0238\1\uffff\1\u0239\1\uffff\1\57\3\uffff\1\u023b\3\uffff\4\57\1\uffff\1\57\1\uffff\1\u0241\2\uffff\1\57\1\uffff\1\u0243\1\u0244\1\57\1\uffff\1\u0246\2\57\1\u0249\1\u024a\1\u024b\3\uffff\1\57\1\uffff\2\57\1\u024f\1\u0250\1\57\1\uffff\1\57\2\uffff\1\u0253\1\uffff\2\57\3\uffff\3\57\2\uffff\2\57\1\uffff\2\57\1\u025d\1\57\1\u025f\2\57\1\u0262\1\57\1\uffff\1\u0264\1\uffff\2\57\1\uffff\1\57\1\uffff\2\57\1\u026a\2\57\1\uffff\2\57\1\u026f\1\57\1\uffff\1\u01ce";
+        "\1\uffff\20\57\3\uffff\1\57\3\uffff\3\57\2\uffff\1\51\2\57\1\156\1\157\2\uffff\3\51\1\uffff\1\51\1\uffff\5\57\1\uffff\1\57\1\u0081\50\57\3\uffff\1\57\3\uffff\7\57\3\uffff\3\57\7\uffff\11\57\1\u00d4\2\57\1\uffff\33\57\1\u00f4\31\57\1\u0111\1\57\1\u0113\1\57\1\u0116\5\57\1\u011d\14\57\1\u012a\5\57\1\uffff\6\57\1\u0136\1\u0137\14\57\1\u0144\2\57\1\u0147\5\57\1\u014d\1\57\1\uffff\1\u014f\1\u0150\3\57\1\u0154\1\57\1\u0157\3\57\1\u015b\11\57\1\u0166\1\u0167\2\57\1\u016a\1\u016b\1\u016c\1\uffff\1\57\1\uffff\2\57\1\uffff\1\u0170\3\57\1\u0174\1\57\1\uffff\1\u0176\4\57\1\u017b\1\57\1\u017d\2\57\1\u0180\1\57\1\uffff\1\u0182\2\57\1\u0186\7\57\2\uffff\1\57\1\u018f\1\u0190\3\57\1\u0194\3\57\1\u0198\1\u0199\1\uffff\2\57\1\uffff\2\57\1\u019e\1\57\1\u01a0\1\uffff\1\57\2\uffff\1\u01a2\2\57\1\uffff\2\57\1\uffff\1\57\1\u01a9\1\u01aa\1\uffff\12\57\2\uffff\2\57\3\uffff\3\57\1\uffff\1\57\1\u01bc\1\57\1\uffff\1\57\1\uffff\1\u01bf\3\57\1\uffff\1\57\1\uffff\1\u01c4\1\57\1\uffff\1\57\1\uffff\1\u01c7\1\57\1\u01c9\1\uffff\3\57\1\u01cf\1\57\1\u01d1\1\u01d2\1\57\2\uffff\3\57\1\uffff\1\57\1\u01d9\1\57\2\uffff\1\u01db\1\57\1\u01de\1\u01df\1\uffff\1\57\1\uffff\1\u01e1\1\uffff\6\57\2\uffff\1\u01e8\1\u01e9\1\57\1\u01eb\13\57\1\u01f7\1\57\1\uffff\1\u01f9\1\57\1\uffff\3\57\1\u01fe\1\uffff\2\57\1\uffff\1\57\1\uffff\1\u0202\3\57\2\uffff\1\57\2\uffff\1\u0206\3\57\1\u020a\1\u020b\1\uffff\1\57\1\uffff\1\57\1\u020e\2\uffff\1\57\1\uffff\6\57\2\uffff\1\u0216\1\uffff\1\57\1\u0218\1\57\1\u021a\1\u021b\1\u021c\1\57\1\u021e\1\u021f\1\u0220\1\57\1\uffff\1\57\1\uffff\2\57\1\u0225\1\57\1\uffff\1\u0227\1\57\1\u0229\1\uffff\1\u022a\1\57\1\u022c\1\uffff\3\57\2\uffff\1\u0230\1\57\1\uffff\5\57\1\u0237\1\u0238\1\uffff\1\u0239\1\uffff\1\57\3\uffff\1\u023b\3\uffff\4\57\1\uffff\1\57\1\uffff\1\u0241\2\uffff\1\57\1\uffff\1\u0243\1\u0244\1\57\1\uffff\1\u0246\2\57\1\u0249\1\u024a\1\u024b\3\uffff\1\57\1\uffff\2\57\1\u024f\1\u0250\1\57\1\uffff\1\57\2\uffff\1\u0253\1\uffff\2\57\3\uffff\3\57\2\uffff\2\57\1\uffff\2\57\1\u025d\1\57\1\u025f\2\57\1\u0262\1\57\1\uffff\1\u0264\1\uffff\2\57\1\uffff\1\57\1\uffff\2\57\1\u026a\2\57\1\uffff\2\57\1\u026f\1\57\1\uffff\1\u01ce";
     static final String DFA13_eofS =
         "\u0271\uffff";
     static final String DFA13_minS =
-        "\1\0\1\101\1\104\1\103\2\101\1\120\4\101\1\105\1\116\3\101\1\111\3\uffff\1\116\3\uffff\2\105\1\123\2\uffff\1\76\1\110\1\105\2\60\2\uffff\2\0\1\101\1\uffff\1\52\1\uffff\1\105\1\123\1\105\1\114\1\124\1\uffff\1\114\1\60\1\120\1\101\2\124\1\103\1\102\1\123\1\114\1\122\2\124\1\104\1\101\1\127\1\114\2\101\1\111\1\115\1\104\1\101\2\114\1\116\1\130\1\115\1\102\1\120\1\104\1\101\1\111\1\103\1\124\1\123\1\114\1\115\1\117\1\122\1\117\1\103\3\uffff\1\101\3\uffff\1\105\1\122\1\127\2\117\1\116\1\124\3\uffff\1\124\2\111\7\uffff\1\101\1\124\1\103\1\122\1\131\1\117\1\116\1\105\1\125\1\60\1\124\1\111\1\uffff\1\105\1\114\1\111\1\110\3\105\1\107\1\125\1\123\1\125\1\123\1\120\2\111\1\107\1\114\2\117\1\123\1\105\1\111\1\124\1\122\1\114\1\104\1\60\2\105\1\114\2\124\1\102\1\131\1\114\1\124\1\105\2\114\1\105\2\104\1\103\2\111\1\103\3\101\1\105\1\114\1\105\1\114\1\60\1\106\1\60\1\124\1\60\1\115\1\102\1\114\1\105\1\115\1\60\1\115\1\125\1\105\1\122\1\115\1\104\1\107\1\116\1\117\1\113\1\117\1\122\1\60\1\122\1\124\1\107\1\124\1\107\1\uffff\1\101\2\116\1\131\2\117\2\60\1\116\1\114\1\105\1\101\1\124\1\116\1\105\1\111\1\125\2\117\1\105\1\60\1\122\1\125\1\60\1\103\1\116\4\105\1\uffff\2\60\1\114\1\60\1\111\1\131\1\60\1\105\1\60\1\114\2\105\1\60\2\105\1\117\1\124\1\107\1\115\1\122\1\116\1\125\2\60\1\102\1\122\3\60\1\uffff\1\111\1\uffff\1\125\1\105\1\uffff\1\60\1\114\1\104\1\105\1\60\1\106\1\uffff\1\60\1\120\1\122\1\111\1\114\1\60\1\110\1\60\1\115\1\102\1\60\1\111\1\uffff\1\60\1\131\1\117\1\60\1\105\1\116\1\105\1\104\1\123\1\116\1\122\2\uffff\1\123\2\60\1\114\1\122\1\111\1\60\1\117\1\124\1\116\2\60\1\uffff\1\104\1\122\1\uffff\1\124\1\107\1\60\1\104\1\60\1\122\2\uffff\1\60\1\uffff\1\120\1\116\1\uffff\1\116\1\122\1\uffff\1\111\2\60\1\uffff\1\116\1\122\1\104\1\122\1\116\1\101\1\111\1\105\1\114\1\105\2\uffff\1\114\1\111\3\uffff\1\114\1\122\1\116\1\uffff\1\105\1\60\1\122\1\uffff\1\111\1\uffff\1\60\1\101\1\116\1\137\1\uffff\1\124\1\uffff\1\60\1\117\1\uffff\1\107\1\uffff\1\60\1\122\1\60\1\uffff\1\122\1\103\1\0\1\60\1\111\2\60\1\105\2\uffff\2\111\1\103\1\uffff\1\116\1\60\1\101\2\uffff\1\60\1\103\2\60\1\uffff\1\123\1\uffff\1\60\1\uffff\1\114\1\131\1\101\1\107\1\105\1\116\2\uffff\2\60\1\105\1\60\1\105\1\114\1\120\1\104\2\124\1\105\1\103\3\105\1\60\1\105\1\uffff\1\60\1\105\1\uffff\1\124\1\107\1\123\1\60\1\uffff\1\130\1\110\1\uffff\1\131\1\uffff\1\60\1\105\2\0\2\uffff\1\123\2\uffff\1\60\1\132\1\116\1\117\2\60\1\uffff\1\114\1\uffff\1\105\1\60\2\uffff\1\105\1\uffff\1\105\1\120\1\115\1\124\1\101\1\105\2\uffff\1\60\1\uffff\1\104\1\60\1\124\3\60\1\104\3\60\1\122\1\uffff\1\116\1\uffff\1\114\1\105\1\60\1\124\1\uffff\1\60\1\124\1\60\1\uffff\1\60\1\0\1\60\1\uffff\1\105\1\107\1\104\2\uffff\1\60\1\123\1\uffff\1\101\1\123\2\105\1\110\2\60\1\uffff\1\60\1\uffff\1\111\3\uffff\1\60\3\uffff\1\101\1\107\1\104\1\123\1\uffff\1\131\1\uffff\1\60\2\uffff\1\0\1\uffff\2\60\1\105\1\uffff\1\60\1\122\1\105\3\60\3\uffff\1\117\1\uffff\2\124\2\60\1\114\1\uffff\1\0\2\uffff\1\60\1\uffff\1\103\1\114\3\uffff\1\116\1\105\1\110\2\uffff\1\105\1\0\1\uffff\1\110\1\105\1\60\1\123\1\60\1\103\1\0\1\60\1\103\1\uffff\1\60\1\uffff\1\114\1\0\1\uffff\1\124\1\uffff\1\101\1\0\1\60\1\123\1\0\1\uffff\1\123\1\0\1\60\1\0\1\uffff\1\60";
+        "\1\0\1\101\1\104\1\103\2\101\1\120\4\101\1\105\1\116\3\101\1\111\3\uffff\1\116\3\uffff\2\105\1\123\2\uffff\1\76\1\110\1\105\2\60\2\uffff\2\0\1\101\1\uffff\1\52\1\uffff\1\105\1\123\1\105\1\114\1\124\1\uffff\1\114\1\60\1\120\1\101\2\124\1\103\1\102\1\123\1\114\1\122\2\124\1\104\1\101\1\127\1\114\2\101\1\114\1\111\1\115\1\104\1\101\1\114\1\116\1\130\1\115\1\102\1\120\1\104\1\101\1\111\1\103\1\124\1\123\1\114\1\115\1\117\1\122\1\117\1\103\3\uffff\1\101\3\uffff\1\105\1\122\1\127\2\117\1\116\1\124\3\uffff\1\124\2\111\7\uffff\1\101\1\124\1\103\1\122\1\131\1\117\1\116\1\105\1\125\1\60\1\124\1\111\1\uffff\1\105\1\114\1\111\1\110\3\105\1\107\1\125\1\123\1\125\1\123\1\120\2\111\1\107\1\114\2\117\1\123\1\105\1\111\1\124\1\122\1\114\1\124\1\104\1\60\2\105\1\114\1\124\1\102\1\131\1\114\1\124\1\105\2\114\1\105\2\104\1\103\2\111\1\103\3\101\1\105\1\114\1\105\1\114\1\60\1\106\1\60\1\124\1\60\1\115\1\102\1\114\1\105\1\115\1\60\1\115\1\125\1\105\1\122\1\115\1\104\1\107\1\116\1\117\1\113\1\117\1\122\1\60\1\122\1\124\1\107\1\124\1\107\1\uffff\1\101\2\116\1\131\2\117\2\60\1\116\1\114\1\105\1\101\1\124\1\116\1\105\1\111\1\125\2\117\1\105\1\60\1\122\1\125\1\60\1\103\1\116\3\105\1\60\1\105\1\uffff\2\60\1\114\1\111\1\131\1\60\1\105\1\60\1\114\2\105\1\60\2\105\1\117\1\124\1\107\1\115\1\122\1\116\1\125\2\60\1\102\1\122\3\60\1\uffff\1\111\1\uffff\1\125\1\105\1\uffff\1\60\1\114\1\104\1\105\1\60\1\106\1\uffff\1\60\1\120\1\122\1\111\1\114\1\60\1\110\1\60\1\115\1\102\1\60\1\111\1\uffff\1\60\1\131\1\117\1\60\1\105\1\116\1\105\1\104\1\123\1\116\1\122\2\uffff\1\123\2\60\1\114\1\122\1\111\1\60\1\117\1\124\1\116\2\60\1\uffff\1\104\1\122\1\uffff\1\124\1\107\1\60\1\104\1\60\1\uffff\1\122\2\uffff\1\60\1\120\1\116\1\uffff\1\116\1\122\1\uffff\1\111\2\60\1\uffff\1\116\1\122\1\104\1\122\1\116\1\101\1\111\1\105\1\114\1\105\2\uffff\1\114\1\111\3\uffff\1\114\1\122\1\116\1\uffff\1\105\1\60\1\122\1\uffff\1\111\1\uffff\1\60\1\101\1\116\1\137\1\uffff\1\124\1\uffff\1\60\1\117\1\uffff\1\107\1\uffff\1\60\1\122\1\60\1\uffff\1\122\1\103\1\0\1\60\1\111\2\60\1\105\2\uffff\2\111\1\103\1\uffff\1\116\1\60\1\101\2\uffff\1\60\1\103\2\60\1\uffff\1\123\1\uffff\1\60\1\uffff\1\114\1\131\1\101\1\107\1\105\1\116\2\uffff\2\60\1\105\1\60\1\105\1\114\1\120\1\104\2\124\1\105\1\103\3\105\1\60\1\105\1\uffff\1\60\1\105\1\uffff\1\124\1\107\1\123\1\60\1\uffff\1\130\1\110\1\uffff\1\131\1\uffff\1\60\1\105\2\0\2\uffff\1\123\2\uffff\1\60\1\132\1\116\1\117\2\60\1\uffff\1\114\1\uffff\1\105\1\60\2\uffff\1\105\1\uffff\1\105\1\120\1\115\1\124\1\101\1\105\2\uffff\1\60\1\uffff\1\104\1\60\1\124\3\60\1\104\3\60\1\122\1\uffff\1\116\1\uffff\1\114\1\105\1\60\1\124\1\uffff\1\60\1\124\1\60\1\uffff\1\60\1\0\1\60\1\uffff\1\105\1\107\1\104\2\uffff\1\60\1\123\1\uffff\1\101\1\123\2\105\1\110\2\60\1\uffff\1\60\1\uffff\1\111\3\uffff\1\60\3\uffff\1\101\1\107\1\104\1\123\1\uffff\1\131\1\uffff\1\60\2\uffff\1\0\1\uffff\2\60\1\105\1\uffff\1\60\1\122\1\105\3\60\3\uffff\1\117\1\uffff\2\124\2\60\1\114\1\uffff\1\0\2\uffff\1\60\1\uffff\1\103\1\114\3\uffff\1\116\1\105\1\110\2\uffff\1\105\1\0\1\uffff\1\110\1\105\1\60\1\123\1\60\1\103\1\0\1\60\1\103\1\uffff\1\60\1\uffff\1\114\1\0\1\uffff\1\124\1\uffff\1\101\1\0\1\60\1\123\1\0\1\uffff\1\123\1\0\1\60\1\0\1\uffff\1\60";
     static final String DFA13_maxS =
-        "\1\uffff\1\125\1\116\1\125\2\111\1\125\1\117\2\125\1\131\1\111\1\116\1\111\1\125\1\117\1\122\3\uffff\1\116\3\uffff\2\122\1\123\2\uffff\1\76\1\110\1\125\2\172\2\uffff\2\uffff\1\172\1\uffff\1\57\1\uffff\1\105\1\123\1\117\1\125\1\124\1\uffff\1\124\1\172\1\120\1\101\2\124\1\116\1\122\1\123\2\122\2\124\1\116\1\123\1\127\1\114\1\122\1\117\1\111\1\115\1\132\1\101\2\114\2\130\1\124\1\102\1\120\1\104\1\101\2\123\1\124\1\123\2\115\1\117\1\122\1\117\1\105\3\uffff\1\125\3\uffff\1\114\1\122\1\127\2\117\1\116\1\124\3\uffff\1\124\2\111\7\uffff\1\101\1\124\1\103\1\122\1\131\1\123\1\116\1\105\1\125\1\172\1\124\1\111\1\uffff\1\105\1\114\1\111\1\110\1\113\2\105\1\107\3\125\1\123\1\120\2\111\1\107\1\114\2\117\1\123\1\105\1\111\1\124\1\122\1\114\1\104\1\172\2\105\1\114\2\124\1\102\1\131\1\114\1\124\1\105\2\114\1\105\2\104\1\123\2\111\1\103\1\111\1\105\1\101\1\105\1\114\1\105\1\114\1\172\1\106\1\172\1\124\1\172\1\115\1\102\1\114\1\124\1\115\1\172\1\115\1\125\1\105\1\122\1\115\1\104\1\107\1\116\1\117\1\113\1\117\1\122\1\172\1\122\1\124\1\107\1\124\1\107\1\uffff\1\101\2\116\1\131\2\117\2\172\1\116\1\114\1\105\1\101\1\124\1\116\1\105\1\111\1\125\2\117\1\105\1\172\1\122\1\125\1\172\1\103\1\116\4\105\1\uffff\2\172\1\114\1\172\1\111\1\131\1\172\1\105\1\172\1\114\2\105\1\172\2\105\1\117\1\124\1\107\1\115\1\122\1\116\1\125\2\172\1\102\1\122\3\172\1\uffff\1\111\1\uffff\1\125\1\105\1\uffff\1\172\1\114\1\104\1\105\1\172\1\106\1\uffff\1\172\1\120\1\122\1\111\1\114\1\172\1\110\1\172\1\115\1\102\1\172\1\111\1\uffff\1\172\1\131\1\117\1\172\1\105\1\116\1\105\1\104\1\123\1\116\1\122\2\uffff\1\123\2\172\1\114\1\122\1\111\1\172\1\117\1\124\1\116\2\172\1\uffff\1\104\1\122\1\uffff\1\124\1\107\1\172\1\104\1\172\1\122\2\uffff\1\172\1\uffff\1\120\1\124\1\uffff\1\116\1\122\1\uffff\1\111\2\172\1\uffff\1\116\1\122\1\104\1\122\1\116\1\101\1\111\1\105\1\114\1\105\2\uffff\1\114\1\111\3\uffff\1\114\1\122\1\116\1\uffff\1\105\1\172\1\122\1\uffff\1\111\1\uffff\1\172\1\101\1\116\1\137\1\uffff\1\124\1\uffff\1\172\1\117\1\uffff\1\107\1\uffff\1\172\1\122\1\172\1\uffff\1\122\1\103\1\uffff\1\172\1\111\2\172\1\105\2\uffff\2\111\1\103\1\uffff\1\116\1\172\1\101\2\uffff\1\172\1\103\2\172\1\uffff\1\123\1\uffff\1\172\1\uffff\1\114\1\131\1\101\1\107\1\105\1\116\2\uffff\2\172\1\105\1\172\1\105\1\114\1\120\1\104\2\124\1\105\1\103\3\105\1\172\1\105\1\uffff\1\172\1\105\1\uffff\1\124\1\107\1\123\1\172\1\uffff\1\130\1\110\1\uffff\1\131\1\uffff\1\172\1\105\2\uffff\2\uffff\1\123\2\uffff\1\172\1\132\1\116\1\117\2\172\1\uffff\1\114\1\uffff\1\105\1\172\2\uffff\1\105\1\uffff\1\105\1\120\1\115\1\124\1\101\1\105\2\uffff\1\172\1\uffff\1\104\1\172\1\124\3\172\1\104\3\172\1\122\1\uffff\1\116\1\uffff\1\114\1\105\1\172\1\124\1\uffff\1\172\1\124\1\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\105\1\107\1\104\2\uffff\1\172\1\123\1\uffff\1\101\1\123\2\105\1\110\2\172\1\uffff\1\172\1\uffff\1\111\3\uffff\1\172\3\uffff\1\101\1\107\1\104\1\123\1\uffff\1\131\1\uffff\1\172\2\uffff\1\uffff\1\uffff\2\172\1\105\1\uffff\1\172\1\122\1\105\3\172\3\uffff\1\117\1\uffff\2\124\2\172\1\114\1\uffff\1\uffff\2\uffff\1\172\1\uffff\1\103\1\114\3\uffff\1\116\1\105\1\110\2\uffff\1\105\1\uffff\1\uffff\1\110\1\105\1\172\1\123\1\172\1\103\1\uffff\1\172\1\103\1\uffff\1\172\1\uffff\1\114\1\uffff\1\uffff\1\124\1\uffff\1\101\1\uffff\1\172\1\123\1\uffff\1\uffff\1\123\1\uffff\1\172\1\uffff\1\uffff\1\172";
+        "\1\uffff\1\125\1\116\1\125\2\111\1\125\1\117\2\125\1\131\1\111\1\116\1\111\1\125\1\117\1\122\3\uffff\1\116\3\uffff\2\122\1\123\2\uffff\1\76\1\110\1\125\2\172\2\uffff\2\uffff\1\172\1\uffff\1\57\1\uffff\1\105\1\123\1\117\1\125\1\124\1\uffff\1\124\1\172\1\120\1\101\2\124\1\116\1\122\1\123\2\122\2\124\1\116\1\123\1\127\1\114\1\122\1\117\1\114\1\111\1\115\1\132\1\101\1\114\2\130\1\124\1\102\1\120\1\104\1\101\2\123\1\124\1\123\2\115\1\117\1\122\1\117\1\105\3\uffff\1\125\3\uffff\1\114\1\122\1\127\2\117\1\116\1\124\3\uffff\1\124\2\111\7\uffff\1\101\1\124\1\103\1\122\1\131\1\123\1\116\1\105\1\125\1\172\1\124\1\111\1\uffff\1\105\1\114\1\111\1\110\1\113\2\105\1\107\3\125\1\123\1\120\2\111\1\107\1\114\2\117\1\123\1\105\1\111\1\124\1\122\1\114\1\124\1\104\1\172\2\105\1\114\1\124\1\102\1\131\1\114\1\124\1\105\2\114\1\105\2\104\1\123\2\111\1\103\1\111\1\105\1\101\1\105\1\114\1\105\1\114\1\172\1\106\1\172\1\124\1\172\1\115\1\102\1\114\1\124\1\115\1\172\1\115\1\125\1\105\1\122\1\115\1\104\1\107\1\116\1\117\1\113\1\117\1\122\1\172\1\122\1\124\1\107\1\124\1\107\1\uffff\1\101\2\116\1\131\2\117\2\172\1\116\1\114\1\105\1\101\1\124\1\116\1\105\1\111\1\125\2\117\1\105\1\172\1\122\1\125\1\172\1\103\1\116\3\105\1\172\1\105\1\uffff\2\172\1\114\1\111\1\131\1\172\1\105\1\172\1\114\2\105\1\172\2\105\1\117\1\124\1\107\1\115\1\122\1\116\1\125\2\172\1\102\1\122\3\172\1\uffff\1\111\1\uffff\1\125\1\105\1\uffff\1\172\1\114\1\104\1\105\1\172\1\106\1\uffff\1\172\1\120\1\122\1\111\1\114\1\172\1\110\1\172\1\115\1\102\1\172\1\111\1\uffff\1\172\1\131\1\117\1\172\1\105\1\116\1\105\1\104\1\123\1\116\1\122\2\uffff\1\123\2\172\1\114\1\122\1\111\1\172\1\117\1\124\1\116\2\172\1\uffff\1\104\1\122\1\uffff\1\124\1\107\1\172\1\104\1\172\1\uffff\1\122\2\uffff\1\172\1\120\1\124\1\uffff\1\116\1\122\1\uffff\1\111\2\172\1\uffff\1\116\1\122\1\104\1\122\1\116\1\101\1\111\1\105\1\114\1\105\2\uffff\1\114\1\111\3\uffff\1\114\1\122\1\116\1\uffff\1\105\1\172\1\122\1\uffff\1\111\1\uffff\1\172\1\101\1\116\1\137\1\uffff\1\124\1\uffff\1\172\1\117\1\uffff\1\107\1\uffff\1\172\1\122\1\172\1\uffff\1\122\1\103\1\uffff\1\172\1\111\2\172\1\105\2\uffff\2\111\1\103\1\uffff\1\116\1\172\1\101\2\uffff\1\172\1\103\2\172\1\uffff\1\123\1\uffff\1\172\1\uffff\1\114\1\131\1\101\1\107\1\105\1\116\2\uffff\2\172\1\105\1\172\1\105\1\114\1\120\1\104\2\124\1\105\1\103\3\105\1\172\1\105\1\uffff\1\172\1\105\1\uffff\1\124\1\107\1\123\1\172\1\uffff\1\130\1\110\1\uffff\1\131\1\uffff\1\172\1\105\2\uffff\2\uffff\1\123\2\uffff\1\172\1\132\1\116\1\117\2\172\1\uffff\1\114\1\uffff\1\105\1\172\2\uffff\1\105\1\uffff\1\105\1\120\1\115\1\124\1\101\1\105\2\uffff\1\172\1\uffff\1\104\1\172\1\124\3\172\1\104\3\172\1\122\1\uffff\1\116\1\uffff\1\114\1\105\1\172\1\124\1\uffff\1\172\1\124\1\172\1\uffff\1\172\1\uffff\1\172\1\uffff\1\105\1\107\1\104\2\uffff\1\172\1\123\1\uffff\1\101\1\123\2\105\1\110\2\172\1\uffff\1\172\1\uffff\1\111\3\uffff\1\172\3\uffff\1\101\1\107\1\104\1\123\1\uffff\1\131\1\uffff\1\172\2\uffff\1\uffff\1\uffff\2\172\1\105\1\uffff\1\172\1\122\1\105\3\172\3\uffff\1\117\1\uffff\2\124\2\172\1\114\1\uffff\1\uffff\2\uffff\1\172\1\uffff\1\103\1\114\3\uffff\1\116\1\105\1\110\2\uffff\1\105\1\uffff\1\uffff\1\110\1\105\1\172\1\123\1\172\1\103\1\uffff\1\172\1\103\1\uffff\1\172\1\uffff\1\114\1\uffff\1\uffff\1\124\1\uffff\1\101\1\uffff\1\172\1\123\1\uffff\1\uffff\1\123\1\uffff\1\172\1\uffff\1\uffff\1\172";
     static final String DFA13_acceptS =
-        "\21\uffff\1\42\1\43\1\44\1\uffff\1\46\1\47\1\50\3\uffff\1\64\1\65\5\uffff\1\157\1\160\3\uffff\1\163\1\uffff\1\166\5\uffff\1\163\52\uffff\1\42\1\43\1\44\1\uffff\1\46\1\47\1\50\7\uffff\1\64\1\65\1\70\3\uffff\1\150\1\151\1\157\1\160\1\161\1\164\1\165\14\uffff\1\100\122\uffff\1\30\36\uffff\1\66\35\uffff\1\40\1\uffff\1\37\2\uffff\1\45\6\uffff\1\133\14\uffff\1\125\13\uffff\1\4\1\35\14\uffff\1\26\2\uffff\1\124\6\uffff\1\130\1\146\1\uffff\1\137\2\uffff\1\113\2\uffff\1\17\3\uffff\1\116\12\uffff\1\61\1\141\2\uffff\1\122\1\71\1\27\3\uffff\1\104\3\uffff\1\155\1\uffff\1\135\4\uffff\1\134\1\uffff\1\1\2\uffff\1\34\1\uffff\1\152\3\uffff\1\2\10\uffff\1\77\1\131\3\uffff\1\154\3\uffff\1\12\1\117\4\uffff\1\143\1\uffff\1\67\1\uffff\1\132\6\uffff\1\140\1\41\21\uffff\1\51\2\uffff\1\54\4\uffff\1\6\2\uffff\1\144\1\uffff\1\105\4\uffff\1\162\1\3\1\uffff\1\31\1\73\6\uffff\1\10\1\uffff\1\52\2\uffff\1\13\1\20\1\uffff\1\63\6\uffff\1\16\1\102\1\uffff\1\22\13\uffff\1\115\1\uffff\1\153\4\uffff\1\145\3\uffff\1\23\3\uffff\1\74\3\uffff\1\76\1\127\2\uffff\1\147\7\uffff\1\21\1\uffff\1\24\1\uffff\1\107\1\120\1\53\1\uffff\1\25\1\33\1\142\4\uffff\1\56\1\uffff\1\11\1\uffff\1\101\1\103\1\uffff\1\5\3\uffff\1\106\6\uffff\1\15\1\36\1\55\1\uffff\1\110\5\uffff\1\75\1\uffff\1\7\1\57\1\uffff\1\156\2\uffff\1\111\1\112\1\121\3\uffff\1\114\1\136\2\uffff\1\60\11\uffff\1\72\1\uffff\1\123\2\uffff\1\32\1\uffff\1\62\5\uffff\1\14\4\uffff\1\126\1\uffff";
+        "\21\uffff\1\42\1\43\1\44\1\uffff\1\46\1\47\1\50\3\uffff\1\65\1\66\5\uffff\1\157\1\160\3\uffff\1\163\1\uffff\1\166\5\uffff\1\163\52\uffff\1\42\1\43\1\44\1\uffff\1\46\1\47\1\50\7\uffff\1\65\1\66\1\71\3\uffff\1\150\1\151\1\157\1\160\1\161\1\164\1\165\14\uffff\1\101\122\uffff\1\30\37\uffff\1\67\34\uffff\1\40\1\uffff\1\37\2\uffff\1\45\6\uffff\1\134\14\uffff\1\126\13\uffff\1\4\1\35\14\uffff\1\26\2\uffff\1\125\5\uffff\1\62\1\uffff\1\131\1\146\3\uffff\1\114\2\uffff\1\17\3\uffff\1\117\12\uffff\1\61\1\141\2\uffff\1\123\1\72\1\27\3\uffff\1\105\3\uffff\1\155\1\uffff\1\136\4\uffff\1\135\1\uffff\1\1\2\uffff\1\34\1\uffff\1\152\3\uffff\1\2\10\uffff\1\100\1\132\3\uffff\1\154\3\uffff\1\12\1\120\4\uffff\1\143\1\uffff\1\70\1\uffff\1\133\6\uffff\1\140\1\41\21\uffff\1\51\2\uffff\1\54\4\uffff\1\6\2\uffff\1\144\1\uffff\1\106\4\uffff\1\162\1\3\1\uffff\1\31\1\74\6\uffff\1\10\1\uffff\1\52\2\uffff\1\13\1\20\1\uffff\1\64\6\uffff\1\16\1\103\1\uffff\1\22\13\uffff\1\116\1\uffff\1\153\4\uffff\1\145\3\uffff\1\23\3\uffff\1\75\3\uffff\1\77\1\130\2\uffff\1\147\7\uffff\1\21\1\uffff\1\24\1\uffff\1\110\1\121\1\53\1\uffff\1\25\1\33\1\142\4\uffff\1\56\1\uffff\1\11\1\uffff\1\102\1\104\1\uffff\1\5\3\uffff\1\107\6\uffff\1\15\1\36\1\55\1\uffff\1\111\5\uffff\1\76\1\uffff\1\7\1\57\1\uffff\1\156\2\uffff\1\112\1\113\1\122\3\uffff\1\115\1\137\2\uffff\1\60\11\uffff\1\73\1\uffff\1\124\2\uffff\1\32\1\uffff\1\63\5\uffff\1\14\4\uffff\1\127\1\uffff";
     static final String DFA13_specialS =
-        "\1\0\43\uffff\1\4\1\3\u0163\uffff\1\2\102\uffff\1\17\1\1\66\uffff\1\16\46\uffff\1\15\26\uffff\1\14\17\uffff\1\10\7\uffff\1\7\6\uffff\1\6\4\uffff\1\11\2\uffff\1\12\2\uffff\1\13\1\uffff\1\5\2\uffff}>";
+        "\1\3\43\uffff\1\4\1\2\u0163\uffff\1\1\102\uffff\1\17\1\0\66\uffff\1\16\46\uffff\1\15\26\uffff\1\14\17\uffff\1\10\7\uffff\1\7\6\uffff\1\6\4\uffff\1\11\2\uffff\1\12\2\uffff\1\13\1\uffff\1\5\2\uffff}>";
     static final String[] DFA13_transitionS = {
             "\11\51\2\42\2\51\1\42\22\51\1\42\1\51\1\44\4\51\1\45\1\25\1\26\2\51\1\22\1\35\1\51\1\50\12\43\1\27\1\21\1\51\1\23\3\51\1\3\1\17\1\1\1\15\1\24\1\30\1\31\1\13\1\2\2\47\1\4\1\11\1\16\1\6\1\20\1\32\1\7\1\10\1\12\1\14\1\5\1\37\1\40\1\41\1\47\3\51\1\46\1\36\1\51\32\47\1\33\1\51\1\34\uff82\51",
             "\1\56\6\uffff\1\54\3\uffff\1\52\2\uffff\1\55\5\uffff\1\53",
@@ -4053,7 +4053,7 @@ public class InternalHIPIELexer extends Lexer {
             "\1\71\3\uffff\1\72\3\uffff\1\70",
             "\1\74\4\uffff\1\73",
             "\1\75\3\uffff\1\76\11\uffff\1\77",
-            "\1\107\1\uffff\1\102\1\uffff\1\100\3\uffff\1\105\2\uffff\1\103\1\106\6\uffff\1\101\1\104",
+            "\1\103\1\uffff\1\102\1\uffff\1\100\3\uffff\1\106\2\uffff\1\104\1\107\6\uffff\1\101\1\105",
             "\1\111\23\uffff\1\110",
             "\1\114\3\uffff\1\112\3\uffff\1\113\17\uffff\1\115",
             "\1\117\3\uffff\1\116",
@@ -4114,8 +4114,8 @@ public class InternalHIPIELexer extends Lexer {
             "\1\u009a\15\uffff\1\u0099",
             "\1\u009b",
             "\1\u009c",
-            "\1\u009d\25\uffff\1\u009e",
-            "\1\u009f",
+            "\1\u009d",
+            "\1\u009e\25\uffff\1\u009f",
             "\1\u00a0",
             "\1\u00a1",
             "\1\u00a3\1\uffff\1\u00a2\7\uffff\1\u00a4",
@@ -4201,8 +4201,8 @@ public class InternalHIPIELexer extends Lexer {
             "\1\u00f0",
             "\1\u00f1",
             "\1\u00f2",
+            "\1\u00f3",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
-            "\1\u00f4",
             "\1\u00f5",
             "\1\u00f6",
             "\1\u00f7",
@@ -4287,12 +4287,12 @@ public class InternalHIPIELexer extends Lexer {
             "\1\u014a",
             "\1\u014b",
             "\1\u014c",
-            "\1\u014d",
+            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u014e",
             "",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
-            "\1\u0150",
-            "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "\1\u0151",
             "\1\u0152",
             "\1\u0153",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
@@ -4378,11 +4378,11 @@ public class InternalHIPIELexer extends Lexer {
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
             "\1\u019f",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
+            "",
             "\1\u01a1",
             "",
             "",
             "\12\57\7\uffff\32\57\4\uffff\1\57\1\uffff\32\57",
-            "",
             "\1\u01a3",
             "\1\u01a5\5\uffff\1\u01a4",
             "",
@@ -4709,6 +4709,44 @@ public class InternalHIPIELexer extends Lexer {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
+                        int LA13_461 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA13_461=='E') ) {s = 460;}
+
+                        else if ( ((LA13_461>='0' && LA13_461<='9')||(LA13_461>='A' && LA13_461<='D')||(LA13_461>='F' && LA13_461<='Z')||LA13_461=='_'||(LA13_461>='a' && LA13_461<='z')) ) {s = 461;}
+
+                        else if ( ((LA13_461>='\u0000' && LA13_461<='/')||(LA13_461>=':' && LA13_461<='@')||(LA13_461>='[' && LA13_461<='^')||LA13_461=='`'||(LA13_461>='{' && LA13_461<='\uFFFF')) ) {s = 462;}
+
+                        else s = 47;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 1 : 
+                        int LA13_393 = input.LA(1);
+
+                        s = -1;
+                        if ( (LA13_393=='E') ) {s = 460;}
+
+                        else if ( ((LA13_393>='0' && LA13_393<='9')||(LA13_393>='A' && LA13_393<='D')||(LA13_393>='F' && LA13_393<='Z')||LA13_393=='_'||(LA13_393>='a' && LA13_393<='z')) ) {s = 461;}
+
+                        else if ( ((LA13_393>='\u0000' && LA13_393<='/')||(LA13_393>=':' && LA13_393<='@')||(LA13_393>='[' && LA13_393<='^')||LA13_393=='`'||(LA13_393>='{' && LA13_393<='\uFFFF')) ) {s = 462;}
+
+                        else s = 47;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 2 : 
+                        int LA13_37 = input.LA(1);
+
+                        s = -1;
+                        if ( ((LA13_37>='\u0000' && LA13_37<='\uFFFF')) ) {s = 114;}
+
+                        else s = 41;
+
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
                         int LA13_0 = input.LA(1);
 
                         s = -1;
@@ -4793,44 +4831,6 @@ public class InternalHIPIELexer extends Lexer {
                         else if ( (LA13_0=='/') ) {s = 40;}
 
                         else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='&')||(LA13_0>='*' && LA13_0<='+')||LA13_0=='.'||LA13_0=='<'||(LA13_0>='>' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||LA13_0=='|'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 41;}
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA13_461 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA13_461=='E') ) {s = 460;}
-
-                        else if ( ((LA13_461>='0' && LA13_461<='9')||(LA13_461>='A' && LA13_461<='D')||(LA13_461>='F' && LA13_461<='Z')||LA13_461=='_'||(LA13_461>='a' && LA13_461<='z')) ) {s = 461;}
-
-                        else if ( ((LA13_461>='\u0000' && LA13_461<='/')||(LA13_461>=':' && LA13_461<='@')||(LA13_461>='[' && LA13_461<='^')||LA13_461=='`'||(LA13_461>='{' && LA13_461<='\uFFFF')) ) {s = 462;}
-
-                        else s = 47;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
-                        int LA13_393 = input.LA(1);
-
-                        s = -1;
-                        if ( (LA13_393=='E') ) {s = 460;}
-
-                        else if ( ((LA13_393>='0' && LA13_393<='9')||(LA13_393>='A' && LA13_393<='D')||(LA13_393>='F' && LA13_393<='Z')||LA13_393=='_'||(LA13_393>='a' && LA13_393<='z')) ) {s = 461;}
-
-                        else if ( ((LA13_393>='\u0000' && LA13_393<='/')||(LA13_393>=':' && LA13_393<='@')||(LA13_393>='[' && LA13_393<='^')||LA13_393=='`'||(LA13_393>='{' && LA13_393<='\uFFFF')) ) {s = 462;}
-
-                        else s = 47;
-
-                        if ( s>=0 ) return s;
-                        break;
-                    case 3 : 
-                        int LA13_37 = input.LA(1);
-
-                        s = -1;
-                        if ( ((LA13_37>='\u0000' && LA13_37<='\uFFFF')) ) {s = 114;}
-
-                        else s = 41;
 
                         if ( s>=0 ) return s;
                         break;

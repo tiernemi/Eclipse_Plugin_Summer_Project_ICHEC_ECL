@@ -31,7 +31,7 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_ecl_unsigned_INTTerminalRuleCall_1_q;
 	protected AbstractElementAlias match_ecl_varstring_INTTerminalRuleCall_1_q;
 	protected AbstractElementAlias match_ecl_varunicode_INTTerminalRuleCall_1_q;
-	protected AbstractElementAlias match_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0;
+	protected AbstractElementAlias match_generate_body_salt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0;
 	protected AbstractElementAlias match_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q;
 	protected AbstractElementAlias match_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2;
 	
@@ -47,7 +47,7 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 		match_ecl_unsigned_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_unsignedAccess().getINTTerminalRuleCall_1());
 		match_ecl_varstring_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_varstringAccess().getINTTerminalRuleCall_1());
 		match_ecl_varunicode_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getEcl_varunicodeAccess().getINTTerminalRuleCall_1());
-		match_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1()), new TokenAlias(false, false, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0()));
+		match_generate_body_salt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGenerate_body_saltAccess().getPROFILEKeyword_6_1()), new TokenAlias(false, false, grammarAccess.getGenerate_body_saltAccess().getSCOREDSEARCHKeyword_6_0()));
 		match_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getACTIONKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getBOOLKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getINTKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getOut_typeAccess().getSTRINGKeyword_0_2()));
 		match_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getBARKeyword_0_0_4()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getCHOROKeyword_0_0_0()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getLINEKeyword_0_0_1()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getPIEKeyword_0_0_3()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getTABLEKeyword_0_0_5()), new TokenAlias(false, false, grammarAccess.getVisualizationAccess().getTIMELINEKeyword_0_0_2()));
 	}
@@ -150,8 +150,8 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_ecl_varstring_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ecl_varunicode_INTTerminalRuleCall_1_q.equals(syntax))
 				emit_ecl_varunicode_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0.equals(syntax))
-				emit_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_generate_body_salt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0.equals(syntax))
+				emit_generate_body_salt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q.equals(syntax))
 				emit_out_type___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_visualization_BARKeyword_0_0_4_or_CHOROKeyword_0_0_0_or_LINEKeyword_0_0_1_or_PIEKeyword_0_0_3_or_TABLEKeyword_0_0_5_or_TIMELINEKeyword_0_0_2.equals(syntax))
@@ -264,9 +264,9 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     'SCOREDSEARCH' | 'PROFILE'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     name='SALT' '(' ID ')' ':' (ambiguity) 'ENDGENERATES' (rule end)
+	 *     name='GENERATES' 'SALT' '(' ID ')' ':' (ambiguity) 'ENDGENERATES' (rule end)
 	 */
-	protected void emit_generate_body_PROFILEKeyword_1_5_1_or_SCOREDSEARCHKeyword_1_5_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_generate_body_salt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

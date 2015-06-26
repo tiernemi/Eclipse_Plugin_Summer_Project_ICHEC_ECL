@@ -280,9 +280,14 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return creategenerate_sectionAdapter();
       }
       @Override
-      public Adapter casegenerate_body(generate_body object)
+      public Adapter casegenerate_body_inline(generate_body_inline object)
       {
-        return creategenerate_bodyAdapter();
+        return creategenerate_body_inlineAdapter();
+      }
+      @Override
+      public Adapter casegenerate_body_salt(generate_body_salt object)
+      {
+        return creategenerate_body_saltAdapter();
       }
       @Override
       public Adapter casevisual_section(visual_section object)
@@ -1002,16 +1007,31 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.generate_body <em>generate body</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.generate_body_inline <em>generate body inline</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.hipie.hIPIE.generate_body
+   * @see org.xtext.hipie.hIPIE.generate_body_inline
    * @generated
    */
-  public Adapter creategenerate_bodyAdapter()
+  public Adapter creategenerate_body_inlineAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.generate_body_salt <em>generate body salt</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.generate_body_salt
+   * @generated
+   */
+  public Adapter creategenerate_body_saltAdapter()
   {
     return null;
   }
