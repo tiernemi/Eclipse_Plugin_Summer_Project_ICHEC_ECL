@@ -2057,28 +2057,28 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cLeftParenthesisKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cActionsAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final CrossReference cActionsDatasetCrossReference_1_0 = (CrossReference)cActionsAssignment_1.eContents().get(0);
-		private final RuleCall cActionsDatasetIDTerminalRuleCall_1_0_1 = (RuleCall)cActionsDatasetCrossReference_1_0.eContents().get(1);
+		private final CrossReference cActionsDatatypeCrossReference_1_0 = (CrossReference)cActionsAssignment_1.eContents().get(0);
+		private final RuleCall cActionsDatatypeIDTerminalRuleCall_1_0_1 = (RuleCall)cActionsDatatypeCrossReference_1_0.eContents().get(1);
 		private final Keyword cRightParenthesisKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//outputbase:
-		//	"(" actions=[dataset] ")";
+		//	"(" actions=[datatype] ")";
 		@Override public ParserRule getRule() { return rule; }
 
-		//"(" actions=[dataset] ")"
+		//"(" actions=[datatype] ")"
 		public Group getGroup() { return cGroup; }
 
 		//"("
 		public Keyword getLeftParenthesisKeyword_0() { return cLeftParenthesisKeyword_0; }
 
-		//actions=[dataset]
+		//actions=[datatype]
 		public Assignment getActionsAssignment_1() { return cActionsAssignment_1; }
 
-		//[dataset]
-		public CrossReference getActionsDatasetCrossReference_1_0() { return cActionsDatasetCrossReference_1_0; }
+		//[datatype]
+		public CrossReference getActionsDatatypeCrossReference_1_0() { return cActionsDatatypeCrossReference_1_0; }
 
 		//ID
-		public RuleCall getActionsDatasetIDTerminalRuleCall_1_0_1() { return cActionsDatasetIDTerminalRuleCall_1_0_1; }
+		public RuleCall getActionsDatatypeIDTerminalRuleCall_1_0_1() { return cActionsDatatypeIDTerminalRuleCall_1_0_1; }
 
 		//")"
 		public Keyword getRightParenthesisKeyword_2() { return cRightParenthesisKeyword_2; }
@@ -2091,13 +2091,12 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cNameGENERATESKeyword_0_0 = (Keyword)cNameAssignment_0.eContents().get(0);
 		private final Assignment cBodyAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cBodyGenerate_bodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
-		private final Keyword cENDGENERATESKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//generate_section:
-		//	name="GENERATES" body+=generate_body "ENDGENERATES";
+		//	name="GENERATES" body+=generate_body;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name="GENERATES" body+=generate_body "ENDGENERATES"
+		//name="GENERATES" body+=generate_body
 		public Group getGroup() { return cGroup; }
 
 		//name="GENERATES"
@@ -2111,33 +2110,13 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 
 		//generate_body
 		public RuleCall getBodyGenerate_bodyParserRuleCall_1_0() { return cBodyGenerate_bodyParserRuleCall_1_0; }
-
-		//"ENDGENERATES"
-		public Keyword getENDGENERATESKeyword_2() { return cENDGENERATESKeyword_2; }
 	}
 
 	public class Generate_bodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "generate_body");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
-		private final Assignment cNameAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
-		private final Keyword cNameINLINEKeyword_0_0_0 = (Keyword)cNameAssignment_0_0.eContents().get(0);
-		private final Alternatives cAlternatives_0_1 = (Alternatives)cGroup_0.eContents().get(1);
-		private final RuleCall cIDTerminalRuleCall_0_1_0 = (RuleCall)cAlternatives_0_1.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_0_1_1 = (RuleCall)cAlternatives_0_1.eContents().get(1);
-		private final RuleCall cWSTerminalRuleCall_0_1_2 = (RuleCall)cAlternatives_0_1.eContents().get(2);
-		private final RuleCall cSTRINGTerminalRuleCall_0_1_3 = (RuleCall)cAlternatives_0_1.eContents().get(3);
-		private final RuleCall cECL_CODETerminalRuleCall_0_1_4 = (RuleCall)cAlternatives_0_1.eContents().get(4);
-		private final Keyword cSemicolonKeyword_0_1_5 = (Keyword)cAlternatives_0_1.eContents().get(5);
-		private final Keyword cFullStopKeyword_0_1_6 = (Keyword)cAlternatives_0_1.eContents().get(6);
-		private final Keyword cLeftParenthesisKeyword_0_1_7 = (Keyword)cAlternatives_0_1.eContents().get(7);
-		private final Keyword cRightParenthesisKeyword_0_1_8 = (Keyword)cAlternatives_0_1.eContents().get(8);
-		private final Keyword cCommaKeyword_0_1_9 = (Keyword)cAlternatives_0_1.eContents().get(9);
-		private final Keyword cColonKeyword_0_1_10 = (Keyword)cAlternatives_0_1.eContents().get(10);
-		private final Keyword cEqualsSignKeyword_0_1_11 = (Keyword)cAlternatives_0_1.eContents().get(11);
-		private final Keyword cLeftCurlyBracketKeyword_0_1_12 = (Keyword)cAlternatives_0_1.eContents().get(12);
-		private final Keyword cRightCurlyBracketKeyword_0_1_13 = (Keyword)cAlternatives_0_1.eContents().get(13);
-		private final Keyword cHyphenMinusKeyword_0_1_14 = (Keyword)cAlternatives_0_1.eContents().get(14);
+		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final RuleCall cNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final Keyword cNameSALTKeyword_1_0_0 = (Keyword)cNameAssignment_1_0.eContents().get(0);
@@ -2148,74 +2127,22 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Alternatives cAlternatives_1_5 = (Alternatives)cGroup_1.eContents().get(5);
 		private final Keyword cSCOREDSEARCHKeyword_1_5_0 = (Keyword)cAlternatives_1_5.eContents().get(0);
 		private final Keyword cPROFILEKeyword_1_5_1 = (Keyword)cAlternatives_1_5.eContents().get(1);
+		private final Keyword cENDGENERATESKeyword_1_6 = (Keyword)cGroup_1.eContents().get(6);
 		
 		//generate_body:
-		//	name="INLINE" (ID | INT | WS | STRING | ECL_CODE | ";" | "." | "(" | ")" | "," | ":" | "=" | "{" | "}" | "-")* |
-		//	name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE");
+		//	name=STRING | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
 		@Override public ParserRule getRule() { return rule; }
 
-		//name="INLINE" (ID | INT | WS | STRING | ECL_CODE | ";" | "." | "(" | ")" | "," | ":" | "=" | "{" | "}" | "-")* |
-		//name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE")
+		//name=STRING | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//name="INLINE" (ID | INT | WS | STRING | ECL_CODE | ";" | "." | "(" | ")" | "," | ":" | "=" | "{" | "}" | "-")*
-		public Group getGroup_0() { return cGroup_0; }
-
-		//name="INLINE"
-		public Assignment getNameAssignment_0_0() { return cNameAssignment_0_0; }
-
-		//"INLINE"
-		public Keyword getNameINLINEKeyword_0_0_0() { return cNameINLINEKeyword_0_0_0; }
-
-		//(ID | INT | WS | STRING | ECL_CODE | ";" | "." | "(" | ")" | "," | ":" | "=" | "{" | "}" | "-")*
-		public Alternatives getAlternatives_0_1() { return cAlternatives_0_1; }
-
-		//ID
-		public RuleCall getIDTerminalRuleCall_0_1_0() { return cIDTerminalRuleCall_0_1_0; }
-
-		//INT
-		public RuleCall getINTTerminalRuleCall_0_1_1() { return cINTTerminalRuleCall_0_1_1; }
-
-		//WS
-		public RuleCall getWSTerminalRuleCall_0_1_2() { return cWSTerminalRuleCall_0_1_2; }
+		//name=STRING
+		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
 
 		//STRING
-		public RuleCall getSTRINGTerminalRuleCall_0_1_3() { return cSTRINGTerminalRuleCall_0_1_3; }
+		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
 
-		//ECL_CODE
-		public RuleCall getECL_CODETerminalRuleCall_0_1_4() { return cECL_CODETerminalRuleCall_0_1_4; }
-
-		//";"
-		public Keyword getSemicolonKeyword_0_1_5() { return cSemicolonKeyword_0_1_5; }
-
-		//"."
-		public Keyword getFullStopKeyword_0_1_6() { return cFullStopKeyword_0_1_6; }
-
-		//"("
-		public Keyword getLeftParenthesisKeyword_0_1_7() { return cLeftParenthesisKeyword_0_1_7; }
-
-		//")"
-		public Keyword getRightParenthesisKeyword_0_1_8() { return cRightParenthesisKeyword_0_1_8; }
-
-		//","
-		public Keyword getCommaKeyword_0_1_9() { return cCommaKeyword_0_1_9; }
-
-		//":"
-		public Keyword getColonKeyword_0_1_10() { return cColonKeyword_0_1_10; }
-
-		//"="
-		public Keyword getEqualsSignKeyword_0_1_11() { return cEqualsSignKeyword_0_1_11; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_0_1_12() { return cLeftCurlyBracketKeyword_0_1_12; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_0_1_13() { return cRightCurlyBracketKeyword_0_1_13; }
-
-		//"-"
-		public Keyword getHyphenMinusKeyword_0_1_14() { return cHyphenMinusKeyword_0_1_14; }
-
-		//name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE")
+		//name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
 		public Group getGroup_1() { return cGroup_1; }
 
 		//name="SALT"
@@ -2244,6 +2171,9 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 
 		//"PROFILE"
 		public Keyword getPROFILEKeyword_1_5_1() { return cPROFILEKeyword_1_5_1; }
+
+		//"ENDGENERATES"
+		public Keyword getENDGENERATESKeyword_1_6() { return cENDGENERATESKeyword_1_6; }
 	}
 
 	public class Visual_sectionElements extends AbstractParserRuleElementFinder {
@@ -2404,26 +2334,26 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "vis_basis");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cVarsAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cVarsDatasetCrossReference_0_0 = (CrossReference)cVarsAssignment_0.eContents().get(0);
-		private final RuleCall cVarsDatasetIDTerminalRuleCall_0_0_1 = (RuleCall)cVarsDatasetCrossReference_0_0.eContents().get(1);
+		private final CrossReference cVarsDatatypeCrossReference_0_0 = (CrossReference)cVarsAssignment_0.eContents().get(0);
+		private final RuleCall cVarsDatatypeIDTerminalRuleCall_0_0_1 = (RuleCall)cVarsDatatypeCrossReference_0_0.eContents().get(1);
 		private final Assignment cQualsAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cQualsVis_basis_qualifiersParserRuleCall_1_0 = (RuleCall)cQualsAssignment_1.eContents().get(0);
 		
 		//vis_basis:
-		//	vars+=[dataset] quals+=vis_basis_qualifiers?;
+		//	vars+=[datatype] quals+=vis_basis_qualifiers?;
 		@Override public ParserRule getRule() { return rule; }
 
-		//vars+=[dataset] quals+=vis_basis_qualifiers?
+		//vars+=[datatype] quals+=vis_basis_qualifiers?
 		public Group getGroup() { return cGroup; }
 
-		//vars+=[dataset]
+		//vars+=[datatype]
 		public Assignment getVarsAssignment_0() { return cVarsAssignment_0; }
 
-		//[dataset]
-		public CrossReference getVarsDatasetCrossReference_0_0() { return cVarsDatasetCrossReference_0_0; }
+		//[datatype]
+		public CrossReference getVarsDatatypeCrossReference_0_0() { return cVarsDatatypeCrossReference_0_0; }
 
 		//ID
-		public RuleCall getVarsDatasetIDTerminalRuleCall_0_0_1() { return cVarsDatasetIDTerminalRuleCall_0_0_1; }
+		public RuleCall getVarsDatatypeIDTerminalRuleCall_0_0_1() { return cVarsDatatypeIDTerminalRuleCall_0_0_1; }
 
 		//quals+=vis_basis_qualifiers?
 		public Assignment getQualsAssignment_1() { return cQualsAssignment_1; }
@@ -3181,7 +3111,6 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tWS;
 	private final TerminalRule tINT;
 	private final TerminalRule tSTRING;
-	private final TerminalRule tECL_CODE;
 	
 	private final Grammar grammar;
 
@@ -3258,7 +3187,6 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		this.tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING");
-		this.tECL_CODE = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "ECL_CODE");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -3740,7 +3668,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//outputbase:
-	//	"(" actions=[dataset] ")";
+	//	"(" actions=[datatype] ")";
 	public OutputbaseElements getOutputbaseAccess() {
 		return pOutputbase;
 	}
@@ -3750,7 +3678,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//generate_section:
-	//	name="GENERATES" body+=generate_body "ENDGENERATES";
+	//	name="GENERATES" body+=generate_body;
 	public Generate_sectionElements getGenerate_sectionAccess() {
 		return pGenerate_section;
 	}
@@ -3760,8 +3688,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//generate_body:
-	//	name="INLINE" (ID | INT | WS | STRING | ECL_CODE | ";" | "." | "(" | ")" | "," | ":" | "=" | "{" | "}" | "-")* |
-	//	name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE");
+	//	name=STRING | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
 	public Generate_bodyElements getGenerate_bodyAccess() {
 		return pGenerate_body;
 	}
@@ -3792,7 +3719,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//vis_basis:
-	//	vars+=[dataset] quals+=vis_basis_qualifiers?;
+	//	vars+=[datatype] quals+=vis_basis_qualifiers?;
 	public Vis_basisElements getVis_basisAccess() {
 		return pVis_basis;
 	}
@@ -3947,15 +3874,9 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 
 	//terminal STRING:
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
+	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'" | "INLINE"->"ENDGENERATES";
 	public TerminalRule getSTRINGRule() {
 		return tSTRING;
-	} 
-
-	//terminal ECL_CODE:
-	//	"%" !"%"* "%";
-	public TerminalRule getECL_CODERule() {
-		return tECL_CODE;
 	} 
 
 	//terminal ID:

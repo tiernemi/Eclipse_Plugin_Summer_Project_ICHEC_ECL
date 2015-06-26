@@ -3430,7 +3430,7 @@ ruleoutputbase returns [EObject current=null]
         }
 	otherlv_1=RULE_ID
 	{
-		newLeafNode(otherlv_1, grammarAccess.getOutputbaseAccess().getActionsDatasetCrossReference_1_0()); 
+		newLeafNode(otherlv_1, grammarAccess.getOutputbaseAccess().getActionsDatatypeCrossReference_1_0()); 
 	}
 
 )
@@ -3492,11 +3492,7 @@ rulegenerate_section returns [EObject current=null]
 	    }
 
 )
-)	otherlv_2='ENDGENERATES' 
-    {
-    	newLeafNode(otherlv_2, grammarAccess.getGenerate_sectionAccess().getENDGENERATESKeyword_2());
-    }
-)
+))
 ;
 
 
@@ -3517,137 +3513,70 @@ rulegenerate_body returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-(((
+((
 (
-		lv_name_0_0=	'INLINE' 
-    {
-        newLeafNode(lv_name_0_0, grammarAccess.getGenerate_bodyAccess().getNameINLINEKeyword_0_0_0());
-    }
- 
-	    {
+		lv_name_0_0=RULE_STRING
+		{
+			newLeafNode(lv_name_0_0, grammarAccess.getGenerate_bodyAccess().getNameSTRINGTerminalRuleCall_0_0()); 
+		}
+		{
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getGenerate_bodyRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_0_0, "INLINE");
+       		setWithLastConsumed(
+       			$current, 
+       			"name",
+        		lv_name_0_0, 
+        		"STRING");
 	    }
 
 )
-)(this_ID_1=RULE_ID
-    { 
-    newLeafNode(this_ID_1, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_0_1_0()); 
-    }
-
-    |this_INT_2=RULE_INT
-    { 
-    newLeafNode(this_INT_2, grammarAccess.getGenerate_bodyAccess().getINTTerminalRuleCall_0_1_1()); 
-    }
-
-    |this_WS_3=RULE_WS
-    { 
-    newLeafNode(this_WS_3, grammarAccess.getGenerate_bodyAccess().getWSTerminalRuleCall_0_1_2()); 
-    }
-
-    |this_STRING_4=RULE_STRING
-    { 
-    newLeafNode(this_STRING_4, grammarAccess.getGenerate_bodyAccess().getSTRINGTerminalRuleCall_0_1_3()); 
-    }
-
-    |this_ECL_CODE_5=RULE_ECL_CODE
-    { 
-    newLeafNode(this_ECL_CODE_5, grammarAccess.getGenerate_bodyAccess().getECL_CODETerminalRuleCall_0_1_4()); 
-    }
-
-    |	otherlv_6=';' 
-    {
-    	newLeafNode(otherlv_6, grammarAccess.getGenerate_bodyAccess().getSemicolonKeyword_0_1_5());
-    }
-
-    |	otherlv_7='.' 
-    {
-    	newLeafNode(otherlv_7, grammarAccess.getGenerate_bodyAccess().getFullStopKeyword_0_1_6());
-    }
-
-    |	otherlv_8='(' 
-    {
-    	newLeafNode(otherlv_8, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_0_1_7());
-    }
-
-    |	otherlv_9=')' 
-    {
-    	newLeafNode(otherlv_9, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_0_1_8());
-    }
-
-    |	otherlv_10=',' 
-    {
-    	newLeafNode(otherlv_10, grammarAccess.getGenerate_bodyAccess().getCommaKeyword_0_1_9());
-    }
-
-    |	otherlv_11=':' 
-    {
-    	newLeafNode(otherlv_11, grammarAccess.getGenerate_bodyAccess().getColonKeyword_0_1_10());
-    }
-
-    |	otherlv_12='=' 
-    {
-    	newLeafNode(otherlv_12, grammarAccess.getGenerate_bodyAccess().getEqualsSignKeyword_0_1_11());
-    }
-
-    |	otherlv_13='{' 
-    {
-    	newLeafNode(otherlv_13, grammarAccess.getGenerate_bodyAccess().getLeftCurlyBracketKeyword_0_1_12());
-    }
-
-    |	otherlv_14='}' 
-    {
-    	newLeafNode(otherlv_14, grammarAccess.getGenerate_bodyAccess().getRightCurlyBracketKeyword_0_1_13());
-    }
-
-    |	otherlv_15='-' 
-    {
-    	newLeafNode(otherlv_15, grammarAccess.getGenerate_bodyAccess().getHyphenMinusKeyword_0_1_14());
-    }
-)*)
+)
     |((
 (
-		lv_name_16_0=	'SALT' 
+		lv_name_1_0=	'SALT' 
     {
-        newLeafNode(lv_name_16_0, grammarAccess.getGenerate_bodyAccess().getNameSALTKeyword_1_0_0());
+        newLeafNode(lv_name_1_0, grammarAccess.getGenerate_bodyAccess().getNameSALTKeyword_1_0_0());
     }
  
 	    {
 	        if ($current==null) {
 	            $current = createModelElement(grammarAccess.getGenerate_bodyRule());
 	        }
-       		setWithLastConsumed($current, "name", lv_name_16_0, "SALT");
+       		setWithLastConsumed($current, "name", lv_name_1_0, "SALT");
 	    }
 
 )
-)	otherlv_17='(' 
+)	otherlv_2='(' 
     {
-    	newLeafNode(otherlv_17, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_1_1());
+    	newLeafNode(otherlv_2, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_1_1());
     }
-this_ID_18=RULE_ID
+this_ID_3=RULE_ID
     { 
-    newLeafNode(this_ID_18, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_1_2()); 
+    newLeafNode(this_ID_3, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_1_2()); 
     }
-	otherlv_19=')' 
+	otherlv_4=')' 
     {
-    	newLeafNode(otherlv_19, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_1_3());
+    	newLeafNode(otherlv_4, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_1_3());
     }
-	otherlv_20=':' 
+	otherlv_5=':' 
     {
-    	newLeafNode(otherlv_20, grammarAccess.getGenerate_bodyAccess().getColonKeyword_1_4());
+    	newLeafNode(otherlv_5, grammarAccess.getGenerate_bodyAccess().getColonKeyword_1_4());
     }
-(	otherlv_21='SCOREDSEARCH' 
+(	otherlv_6='SCOREDSEARCH' 
     {
-    	newLeafNode(otherlv_21, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0());
+    	newLeafNode(otherlv_6, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0());
     }
 
-    |	otherlv_22='PROFILE' 
+    |	otherlv_7='PROFILE' 
     {
-    	newLeafNode(otherlv_22, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1());
+    	newLeafNode(otherlv_7, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1());
     }
-)))
+)	otherlv_8='ENDGENERATES' 
+    {
+    	newLeafNode(otherlv_8, grammarAccess.getGenerate_bodyAccess().getENDGENERATESKeyword_1_6());
+    }
+))
 ;
 
 
@@ -3918,7 +3847,7 @@ rulevis_basis returns [EObject current=null]
         }
 	otherlv_0=RULE_ID
 	{
-		newLeafNode(otherlv_0, grammarAccess.getVis_basisAccess().getVarsDatasetCrossReference_0_0()); 
+		newLeafNode(otherlv_0, grammarAccess.getVis_basisAccess().getVarsDatatypeCrossReference_0_0()); 
 	}
 
 )
@@ -5057,9 +4986,7 @@ RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
 RULE_INT : ('0'..'9')+;
 
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
-
-RULE_ECL_CODE : '%' ~('%')* '%';
+RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\''|'INLINE' ( options {greedy=false;} : . )*'ENDGENERATES');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

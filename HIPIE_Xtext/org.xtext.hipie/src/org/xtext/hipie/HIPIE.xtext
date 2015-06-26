@@ -158,14 +158,14 @@ out_type :
               dataset (out_base+=outputbase)? (ops+=output_options)? (ecl_vars+=ecloutput_decl)* 'END' |
               dataset (op_base+=outputbase)? (ops+=output_options)? ';' ;
               
-outputbase:  '(' actions=[dataset] ')';
+outputbase:  '(' actions=[datatype] ')';
  
 
                
-generate_section: name='GENERATES' body+=generate_body 'ENDGENERATES';
+generate_section: name='GENERATES' body+=generate_body ;
 
-generate_body: name='INLINE'  (ID | INT | WS | STRING | ECL_CODE | ';' | '.' | '(' | ')' | ',' | ':' | '=' | '{' | '}' | '-')* |
-               name='SALT' '(' ID ')' ':' ('SCOREDSEARCH'|'PROFILE') ;
+generate_body: name=STRING  |
+               name='SALT' '(' ID ')' ':' ('SCOREDSEARCH'|'PROFILE') 'ENDGENERATES';
 
 
 visual_section: name='VISUALIZE' ID (vis_ops+=visual_section_options)? (vis_elements+=visualization)+ 'END';
@@ -173,7 +173,7 @@ visual_section: name='VISUALIZE' ID (vis_ops+=visual_section_options)? (vis_elem
 
 visualization: ('CHORO'|'LINE'|'TIMELINE'|'PIE'|'BAR'|'TABLE') name=ID '(' inputs+=vis_basis ')' (vis_ops+=visual_options)? ';' |
                ('SLIDER') name=ID (vis_ops+=visual_options)? ';';
-vis_basis: vars+=[dataset] (quals+=vis_basis_qualifiers)?;
+vis_basis: vars+=[datatype] (quals+=vis_basis_qualifiers)?;
 vis_basis_qualifiers: '{' function ( ',' funcs+=function )* '}';
 function: value |
           'SUM' '(' name=ID  ')' |
@@ -206,9 +206,6 @@ terminal INT returns ecore::EInt:
 
 terminal STRING :
 '"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
-"'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'";
-
-terminal ECL_CODE :
-'%' (!'%')* '%'
-;
+"'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'" |
+'INLINE' -> 'ENDGENERATES' ;
 

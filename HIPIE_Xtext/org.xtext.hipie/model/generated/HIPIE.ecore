@@ -164,7 +164,7 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="outputbase">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//dataset"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actions" eType="#//datatype"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="generate_section">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -190,7 +190,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="vis_basis">
     <eStructuralFeatures xsi:type="ecore:EReference" name="vars" unique="false" upperBound="-1"
-        eType="#//dataset"/>
+        eType="#//datatype"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="quals" upperBound="-1"
         eType="#//vis_basis_qualifiers" containment="true"/>
   </eClassifiers>

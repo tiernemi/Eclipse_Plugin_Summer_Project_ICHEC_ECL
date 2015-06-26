@@ -27,7 +27,7 @@ public interface vis_basis extends EObject
 {
   /**
    * Returns the value of the '<em><b>Vars</b></em>' reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.dataset}.
+   * The list contents are of type {@link org.xtext.hipie.hIPIE.datatype}.
    * <!-- begin-user-doc -->
    * <p>
    * If the meaning of the '<em>Vars</em>' reference list isn't clear,
@@ -39,7 +39,7 @@ public interface vis_basis extends EObject
    * @model
    * @generated
    */
-  EList<dataset> getVars();
+  EList<datatype> getVars();
 
   /**
    * Returns the value of the '<em><b>Quals</b></em>' containment reference list.

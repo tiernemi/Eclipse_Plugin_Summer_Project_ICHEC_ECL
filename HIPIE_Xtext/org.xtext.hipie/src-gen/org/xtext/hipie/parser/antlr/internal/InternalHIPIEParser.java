@@ -21,7 +21,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_WS", "RULE_ECL_CODE", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'NAME'", "'DESCRIPTION'", "'AUTHOR'", "'LICENSE'", "'COPYRIGHT'", "'VERSION'", "'LABEL'", "'ID'", "';'", "'CATEGORY'", "'CLEAN'", "'INPUT'", "'APPEND'", "'LINK'", "'ANALYSIS'", "'CUSTOM'", "'VISUALIZE'", "'OUTPUT'", "','", "'='", "'HEADER'", "'END'", "'INSTANCE'", "':'", "'('", "')'", "'FIELD'", "'ENUM'", "'INPUTS'", "'BOOL'", "'INT'", "'STRING'", "'RECORD'", "'DATASET'", "'GROUP'", "'OPTIONAL'", "'DEFINED'", "'DISABLED'", "'MAPBYTYPE'", "'MAPBYNAME'", "'MANY'", "'FORMFIELD'", "'ENABLE'", "'TYPE'", "'RANGE'", "'DEFAULT'", "'MAXLENGTH'", "'NULL'", "'FIELDLENGTH'", "'ROWS'", "'COLS'", "'_HTML_STYLECLASS'", "'CHECKBOX'", "'RADIO'", "'SELECT'", "'MULTIPLESELECT'", "'TEXTAREA'", "'HIDDEN'", "'TEXT'", "'UNICODE'", "'UNISTR'", "'INTEGER'", "'DECIMAL'", "'NUMERIC'", "'REAL'", "'OUTPUTS'", "'UNSIGNED'", "'QSTRING'", "'VARSTRING'", "'VARUNICODE'", "'DATA'", "'SIDE'", "'LARGE'", "'SMALL'", "'FEW'", "'WUID'", "'FROM'", "'ACTION'", "'GENERATES'", "'ENDGENERATES'", "'INLINE'", "'.'", "'{'", "'}'", "'-'", "'SALT'", "'SCOREDSEARCH'", "'PROFILE'", "'CHORO'", "'LINE'", "'TIMELINE'", "'PIE'", "'BAR'", "'TABLE'", "'SLIDER'", "'SUM'", "'SCALE'", "'TITLE'", "'DATE'", "'PICTURE'", "'STATE'", "'COUNTY'", "'WEIGHT'", "'SIZE'", "'SELECTS'", "'->'", "'X'", "'Y'", "'COLOR'", "'FILTER'", "'VALUE'", "'FILE'", "'RESOURCES'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_INT", "RULE_STRING", "RULE_WS", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_ANY_OTHER", "'NAME'", "'DESCRIPTION'", "'AUTHOR'", "'LICENSE'", "'COPYRIGHT'", "'VERSION'", "'LABEL'", "'ID'", "';'", "'CATEGORY'", "'CLEAN'", "'INPUT'", "'APPEND'", "'LINK'", "'ANALYSIS'", "'CUSTOM'", "'VISUALIZE'", "'OUTPUT'", "','", "'='", "'HEADER'", "'END'", "'INSTANCE'", "':'", "'('", "')'", "'FIELD'", "'ENUM'", "'INPUTS'", "'BOOL'", "'INT'", "'STRING'", "'RECORD'", "'DATASET'", "'GROUP'", "'OPTIONAL'", "'DEFINED'", "'DISABLED'", "'MAPBYTYPE'", "'MAPBYNAME'", "'MANY'", "'FORMFIELD'", "'ENABLE'", "'TYPE'", "'RANGE'", "'DEFAULT'", "'MAXLENGTH'", "'NULL'", "'FIELDLENGTH'", "'ROWS'", "'COLS'", "'_HTML_STYLECLASS'", "'CHECKBOX'", "'RADIO'", "'SELECT'", "'MULTIPLESELECT'", "'TEXTAREA'", "'HIDDEN'", "'TEXT'", "'UNICODE'", "'UNISTR'", "'INTEGER'", "'DECIMAL'", "'NUMERIC'", "'REAL'", "'OUTPUTS'", "'UNSIGNED'", "'QSTRING'", "'VARSTRING'", "'VARUNICODE'", "'DATA'", "'SIDE'", "'LARGE'", "'SMALL'", "'FEW'", "'WUID'", "'FROM'", "'ACTION'", "'GENERATES'", "'SALT'", "'SCOREDSEARCH'", "'PROFILE'", "'ENDGENERATES'", "'CHORO'", "'LINE'", "'TIMELINE'", "'PIE'", "'BAR'", "'TABLE'", "'SLIDER'", "'{'", "'}'", "'SUM'", "'SCALE'", "'TITLE'", "'DATE'", "'PICTURE'", "'STATE'", "'COUNTY'", "'WEIGHT'", "'SIZE'", "'SELECTS'", "'->'", "'X'", "'Y'", "'COLOR'", "'FILTER'", "'VALUE'", "'FILE'", "'RESOURCES'"
     };
     public static final int RULE_ID=4;
     public static final int T__29=29;
@@ -32,7 +32,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final int T__24=24;
     public static final int T__23=23;
     public static final int T__22=22;
-    public static final int RULE_ANY_OTHER=11;
+    public static final int RULE_ANY_OTHER=10;
     public static final int T__21=21;
     public static final int T__20=20;
     public static final int EOF=-1;
@@ -47,6 +47,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final int T__18=18;
     public static final int T__17=17;
     public static final int T__12=12;
+    public static final int T__11=11;
     public static final int T__14=14;
     public static final int T__13=13;
     public static final int T__99=99;
@@ -64,7 +65,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final int T__86=86;
     public static final int T__89=89;
     public static final int T__88=88;
-    public static final int RULE_ML_COMMENT=9;
+    public static final int RULE_ML_COMMENT=8;
     public static final int RULE_STRING=6;
     public static final int T__71=71;
     public static final int T__72=72;
@@ -90,10 +91,6 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final int T__117=117;
     public static final int T__114=114;
     public static final int T__115=115;
-    public static final int T__124=124;
-    public static final int T__123=123;
-    public static final int T__122=122;
-    public static final int T__121=121;
     public static final int T__120=120;
     public static final int T__61=61;
     public static final int T__60=60;
@@ -115,7 +112,6 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final int T__106=106;
     public static final int T__111=111;
     public static final int T__110=110;
-    public static final int RULE_ECL_CODE=8;
     public static final int RULE_INT=5;
     public static final int T__113=113;
     public static final int T__112=112;
@@ -133,7 +129,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final int T__102=102;
     public static final int T__101=101;
     public static final int T__100=100;
-    public static final int RULE_SL_COMMENT=10;
+    public static final int RULE_SL_COMMENT=9;
     public static final int T__30=30;
     public static final int T__31=31;
     public static final int T__32=32;
@@ -257,7 +253,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt1=2;
             int LA1_0 = input.LA(1);
 
-            if ( (LA1_0==32) ) {
+            if ( (LA1_0==31) ) {
                 alt1=1;
             }
             switch (alt1) {
@@ -302,7 +298,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt2=2;
                 int LA2_0 = input.LA(1);
 
-                if ( ((LA2_0>=12 && LA2_0<=19)||LA2_0==21) ) {
+                if ( ((LA2_0>=11 && LA2_0<=18)||LA2_0==20) ) {
                     alt2=1;
                 }
 
@@ -355,7 +351,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt3=2;
                 int LA3_0 = input.LA(1);
 
-                if ( (LA3_0==34) ) {
+                if ( (LA3_0==33) ) {
                     alt3=1;
                 }
 
@@ -402,7 +398,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt4=2;
             int LA4_0 = input.LA(1);
 
-            if ( (LA4_0==40) ) {
+            if ( (LA4_0==39) ) {
                 alt4=1;
             }
             switch (alt4) {
@@ -444,7 +440,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt5=2;
             int LA5_0 = input.LA(1);
 
-            if ( (LA5_0==77) ) {
+            if ( (LA5_0==76) ) {
                 alt5=1;
             }
             switch (alt5) {
@@ -488,7 +484,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt6=2;
                 int LA6_0 = input.LA(1);
 
-                if ( (LA6_0==28) ) {
+                if ( (LA6_0==27) ) {
                     alt6=1;
                 }
 
@@ -535,7 +531,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt7=2;
             int LA7_0 = input.LA(1);
 
-            if ( (LA7_0==90) ) {
+            if ( (LA7_0==89) ) {
                 alt7=1;
             }
             switch (alt7) {
@@ -577,7 +573,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt8=2;
             int LA8_0 = input.LA(1);
 
-            if ( (LA8_0==27) ) {
+            if ( (LA8_0==26) ) {
                 alt8=1;
             }
             switch (alt8) {
@@ -619,7 +615,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt9=2;
             int LA9_0 = input.LA(1);
 
-            if ( (LA9_0==124) ) {
+            if ( (LA9_0==120) ) {
                 alt9=1;
             }
             switch (alt9) {
@@ -744,10 +740,10 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt11=2;
             int LA11_0 = input.LA(1);
 
-            if ( ((LA11_0>=12 && LA11_0<=19)) ) {
+            if ( ((LA11_0>=11 && LA11_0<=18)) ) {
                 alt11=1;
             }
-            else if ( (LA11_0==21) ) {
+            else if ( (LA11_0==20) ) {
                 alt11=2;
             }
             else {
@@ -766,42 +762,42 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:263:3: ( ( (lv_name_0_0= 'NAME' ) ) | ( (lv_name_1_0= 'DESCRIPTION' ) ) | ( (lv_name_2_0= 'AUTHOR' ) ) | ( (lv_name_3_0= 'LICENSE' ) ) | ( (lv_name_4_0= 'COPYRIGHT' ) ) | ( (lv_name_5_0= 'VERSION' ) ) | ( (lv_name_6_0= 'LABEL' ) ) | ( (lv_name_7_0= 'ID' ) ) )
                     int alt10=8;
                     switch ( input.LA(1) ) {
-                    case 12:
+                    case 11:
                         {
                         alt10=1;
                         }
                         break;
-                    case 13:
+                    case 12:
                         {
                         alt10=2;
                         }
                         break;
-                    case 14:
+                    case 13:
                         {
                         alt10=3;
                         }
                         break;
-                    case 15:
+                    case 14:
                         {
                         alt10=4;
                         }
                         break;
-                    case 16:
+                    case 15:
                         {
                         alt10=5;
                         }
                         break;
-                    case 17:
+                    case 16:
                         {
                         alt10=6;
                         }
                         break;
-                    case 18:
+                    case 17:
                         {
                         alt10=7;
                         }
                         break;
-                    case 19:
+                    case 18:
                         {
                         alt10=8;
                         }
@@ -823,7 +819,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:264:1: (lv_name_0_0= 'NAME' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:265:3: lv_name_0_0= 'NAME'
                             {
-                            lv_name_0_0=(Token)match(input,12,FOLLOW_12_in_rulebase_prop399); 
+                            lv_name_0_0=(Token)match(input,11,FOLLOW_11_in_rulebase_prop399); 
 
                                     newLeafNode(lv_name_0_0, grammarAccess.getBase_propAccess().getNameNAMEKeyword_0_0_0_0());
                                 
@@ -851,7 +847,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:280:1: (lv_name_1_0= 'DESCRIPTION' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:281:3: lv_name_1_0= 'DESCRIPTION'
                             {
-                            lv_name_1_0=(Token)match(input,13,FOLLOW_13_in_rulebase_prop436); 
+                            lv_name_1_0=(Token)match(input,12,FOLLOW_12_in_rulebase_prop436); 
 
                                     newLeafNode(lv_name_1_0, grammarAccess.getBase_propAccess().getNameDESCRIPTIONKeyword_0_0_1_0());
                                 
@@ -879,7 +875,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:296:1: (lv_name_2_0= 'AUTHOR' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:297:3: lv_name_2_0= 'AUTHOR'
                             {
-                            lv_name_2_0=(Token)match(input,14,FOLLOW_14_in_rulebase_prop473); 
+                            lv_name_2_0=(Token)match(input,13,FOLLOW_13_in_rulebase_prop473); 
 
                                     newLeafNode(lv_name_2_0, grammarAccess.getBase_propAccess().getNameAUTHORKeyword_0_0_2_0());
                                 
@@ -907,7 +903,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:312:1: (lv_name_3_0= 'LICENSE' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:313:3: lv_name_3_0= 'LICENSE'
                             {
-                            lv_name_3_0=(Token)match(input,15,FOLLOW_15_in_rulebase_prop510); 
+                            lv_name_3_0=(Token)match(input,14,FOLLOW_14_in_rulebase_prop510); 
 
                                     newLeafNode(lv_name_3_0, grammarAccess.getBase_propAccess().getNameLICENSEKeyword_0_0_3_0());
                                 
@@ -935,7 +931,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:328:1: (lv_name_4_0= 'COPYRIGHT' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:329:3: lv_name_4_0= 'COPYRIGHT'
                             {
-                            lv_name_4_0=(Token)match(input,16,FOLLOW_16_in_rulebase_prop547); 
+                            lv_name_4_0=(Token)match(input,15,FOLLOW_15_in_rulebase_prop547); 
 
                                     newLeafNode(lv_name_4_0, grammarAccess.getBase_propAccess().getNameCOPYRIGHTKeyword_0_0_4_0());
                                 
@@ -963,7 +959,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:344:1: (lv_name_5_0= 'VERSION' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:345:3: lv_name_5_0= 'VERSION'
                             {
-                            lv_name_5_0=(Token)match(input,17,FOLLOW_17_in_rulebase_prop584); 
+                            lv_name_5_0=(Token)match(input,16,FOLLOW_16_in_rulebase_prop584); 
 
                                     newLeafNode(lv_name_5_0, grammarAccess.getBase_propAccess().getNameVERSIONKeyword_0_0_5_0());
                                 
@@ -991,7 +987,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:360:1: (lv_name_6_0= 'LABEL' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:361:3: lv_name_6_0= 'LABEL'
                             {
-                            lv_name_6_0=(Token)match(input,18,FOLLOW_18_in_rulebase_prop621); 
+                            lv_name_6_0=(Token)match(input,17,FOLLOW_17_in_rulebase_prop621); 
 
                                     newLeafNode(lv_name_6_0, grammarAccess.getBase_propAccess().getNameLABELKeyword_0_0_6_0());
                                 
@@ -1019,7 +1015,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:376:1: (lv_name_7_0= 'ID' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:377:3: lv_name_7_0= 'ID'
                             {
-                            lv_name_7_0=(Token)match(input,19,FOLLOW_19_in_rulebase_prop658); 
+                            lv_name_7_0=(Token)match(input,18,FOLLOW_18_in_rulebase_prop658); 
 
                                     newLeafNode(lv_name_7_0, grammarAccess.getBase_propAccess().getNameIDKeyword_0_0_7_0());
                                 
@@ -1072,7 +1068,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,20,FOLLOW_20_in_rulebase_prop705); 
+                    otherlv_9=(Token)match(input,19,FOLLOW_19_in_rulebase_prop705); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getBase_propAccess().getSemicolonKeyword_0_2());
                         
@@ -1094,7 +1090,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:414:1: (lv_name_10_0= 'CATEGORY' )
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:415:3: lv_name_10_0= 'CATEGORY'
                     {
-                    lv_name_10_0=(Token)match(input,21,FOLLOW_21_in_rulebase_prop731); 
+                    lv_name_10_0=(Token)match(input,20,FOLLOW_20_in_rulebase_prop731); 
 
                             newLeafNode(lv_name_10_0, grammarAccess.getBase_propAccess().getNameCATEGORYKeyword_1_0_0());
                         
@@ -1141,7 +1137,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,20,FOLLOW_20_in_rulebase_prop777); 
+                    otherlv_12=(Token)match(input,19,FOLLOW_19_in_rulebase_prop777); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getBase_propAccess().getSemicolonKeyword_1_2());
                         
@@ -1223,42 +1219,42 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:471:1: (kw= 'CLEAN' | kw= 'INPUT' | kw= 'APPEND' | kw= 'LINK' | kw= 'ANALYSIS' | kw= 'CUSTOM' | kw= 'VISUALIZE' | kw= 'OUTPUT' )
             int alt12=8;
             switch ( input.LA(1) ) {
-            case 22:
+            case 21:
                 {
                 alt12=1;
                 }
                 break;
-            case 23:
+            case 22:
                 {
                 alt12=2;
                 }
                 break;
-            case 24:
+            case 23:
                 {
                 alt12=3;
                 }
                 break;
-            case 25:
+            case 24:
                 {
                 alt12=4;
                 }
                 break;
-            case 26:
+            case 25:
                 {
                 alt12=5;
                 }
                 break;
-            case 27:
+            case 26:
                 {
                 alt12=6;
                 }
                 break;
-            case 28:
+            case 27:
                 {
                 alt12=7;
                 }
                 break;
-            case 29:
+            case 28:
                 {
                 alt12=8;
                 }
@@ -1274,7 +1270,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:472:2: kw= 'CLEAN'
                     {
-                    kw=(Token)match(input,22,FOLLOW_22_in_rulecategory_type864); 
+                    kw=(Token)match(input,21,FOLLOW_21_in_rulecategory_type864); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getCLEANKeyword_0()); 
@@ -1285,7 +1281,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:479:2: kw= 'INPUT'
                     {
-                    kw=(Token)match(input,23,FOLLOW_23_in_rulecategory_type883); 
+                    kw=(Token)match(input,22,FOLLOW_22_in_rulecategory_type883); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getINPUTKeyword_1()); 
@@ -1296,7 +1292,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:486:2: kw= 'APPEND'
                     {
-                    kw=(Token)match(input,24,FOLLOW_24_in_rulecategory_type902); 
+                    kw=(Token)match(input,23,FOLLOW_23_in_rulecategory_type902); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getAPPENDKeyword_2()); 
@@ -1307,7 +1303,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 4 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:493:2: kw= 'LINK'
                     {
-                    kw=(Token)match(input,25,FOLLOW_25_in_rulecategory_type921); 
+                    kw=(Token)match(input,24,FOLLOW_24_in_rulecategory_type921); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getLINKKeyword_3()); 
@@ -1318,7 +1314,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 5 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:500:2: kw= 'ANALYSIS'
                     {
-                    kw=(Token)match(input,26,FOLLOW_26_in_rulecategory_type940); 
+                    kw=(Token)match(input,25,FOLLOW_25_in_rulecategory_type940); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getANALYSISKeyword_4()); 
@@ -1329,7 +1325,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 6 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:507:2: kw= 'CUSTOM'
                     {
-                    kw=(Token)match(input,27,FOLLOW_27_in_rulecategory_type959); 
+                    kw=(Token)match(input,26,FOLLOW_26_in_rulecategory_type959); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getCUSTOMKeyword_5()); 
@@ -1340,7 +1336,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 7 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:514:2: kw= 'VISUALIZE'
                     {
-                    kw=(Token)match(input,28,FOLLOW_28_in_rulecategory_type978); 
+                    kw=(Token)match(input,27,FOLLOW_27_in_rulecategory_type978); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getVISUALIZEKeyword_6()); 
@@ -1351,7 +1347,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 8 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:521:2: kw= 'OUTPUT'
                     {
-                    kw=(Token)match(input,29,FOLLOW_29_in_rulecategory_type997); 
+                    kw=(Token)match(input,28,FOLLOW_28_in_rulecategory_type997); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getCategory_typeAccess().getOUTPUTKeyword_7()); 
@@ -1470,7 +1466,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt13=2;
                 int LA13_0 = input.LA(1);
 
-                if ( (LA13_0==30) ) {
+                if ( (LA13_0==29) ) {
                     alt13=1;
                 }
 
@@ -1479,7 +1475,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:565:4: otherlv_1= ',' rulecategory_type
             	    {
-            	    otherlv_1=(Token)match(input,30,FOLLOW_30_in_rulecategory_type_list1106); 
+            	    otherlv_1=(Token)match(input,29,FOLLOW_29_in_rulecategory_type_list1106); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getCategory_type_listAccess().getCommaKeyword_1_0());
             	        
@@ -1790,13 +1786,13 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt15=2;
                 int LA15_0 = input.LA(1);
 
-                if ( (LA15_0==30) ) {
+                if ( (LA15_0==29) ) {
                     switch ( input.LA(2) ) {
                     case RULE_ID:
                         {
                         int LA15_3 = input.LA(3);
 
-                        if ( (LA15_3==EOF||(LA15_3>=RULE_ID && LA15_3<=RULE_STRING)||LA15_3==20||LA15_3==30||LA15_3==33||LA15_3==37) ) {
+                        if ( (LA15_3==EOF||(LA15_3>=RULE_ID && LA15_3<=RULE_STRING)||LA15_3==19||LA15_3==29||LA15_3==32||LA15_3==36) ) {
                             alt15=1;
                         }
 
@@ -1807,7 +1803,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         {
                         int LA15_4 = input.LA(3);
 
-                        if ( (LA15_4==EOF||(LA15_4>=RULE_ID && LA15_4<=RULE_STRING)||LA15_4==20||LA15_4==30||LA15_4==33||LA15_4==37) ) {
+                        if ( (LA15_4==EOF||(LA15_4>=RULE_ID && LA15_4<=RULE_STRING)||LA15_4==19||LA15_4==29||LA15_4==32||LA15_4==36) ) {
                             alt15=1;
                         }
 
@@ -1818,7 +1814,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         {
                         int LA15_5 = input.LA(3);
 
-                        if ( (LA15_5==EOF||(LA15_5>=RULE_ID && LA15_5<=RULE_STRING)||LA15_5==20||LA15_5==30||LA15_5==33||LA15_5==37) ) {
+                        if ( (LA15_5==EOF||(LA15_5>=RULE_ID && LA15_5<=RULE_STRING)||LA15_5==19||LA15_5==29||LA15_5==32||LA15_5==36) ) {
                             alt15=1;
                         }
 
@@ -1835,7 +1831,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:684:3: otherlv_1= ',' ( (lv_vals_2_0= rulevalue ) )
             	    {
-            	    otherlv_1=(Token)match(input,30,FOLLOW_30_in_rulevalue_list1377); 
+            	    otherlv_1=(Token)match(input,29,FOLLOW_29_in_rulevalue_list1377); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getValue_listAccess().getCommaKeyword_1_0());
             	        
@@ -1967,7 +1963,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     current = this_value_0; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_1=(Token)match(input,31,FOLLOW_31_in_ruleassign1506); 
+            otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleassign1506); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getAssignAccess().getEqualsSignKeyword_1());
                 
@@ -2096,7 +2092,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt16=2;
                 int LA16_0 = input.LA(1);
 
-                if ( (LA16_0==30) ) {
+                if ( (LA16_0==29) ) {
                     alt16=1;
                 }
 
@@ -2105,7 +2101,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:790:3: otherlv_1= ',' ( (lv_assign_internal_2_0= ruleassign ) )
             	    {
-            	    otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleassign_list1632); 
+            	    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleassign_list1632); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getAssign_listAccess().getCommaKeyword_1_0());
             	        
@@ -2230,7 +2226,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:834:1: (lv_name_0_0= 'HEADER' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:835:3: lv_name_0_0= 'HEADER'
             {
-            lv_name_0_0=(Token)match(input,32,FOLLOW_32_in_rulecomposition_header1744); 
+            lv_name_0_0=(Token)match(input,31,FOLLOW_31_in_rulecomposition_header1744); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getComposition_headerAccess().getNameHEADERKeyword_0_0());
                 
@@ -2295,7 +2291,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_rulecomposition_header1791); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_rulecomposition_header1791); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getComposition_headerAccess().getENDKeyword_2());
                 
@@ -2387,7 +2383,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:892:1: (lv_name_0_0= 'INSTANCE' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:893:3: lv_name_0_0= 'INSTANCE'
             {
-            lv_name_0_0=(Token)match(input,34,FOLLOW_34_in_rulecontract_instance1880); 
+            lv_name_0_0=(Token)match(input,33,FOLLOW_33_in_rulecontract_instance1880); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getContract_instanceAccess().getNameINSTANCEKeyword_0_0());
                 
@@ -2410,7 +2406,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             if ( (LA18_0==RULE_ID) ) {
                 int LA18_1 = input.LA(2);
 
-                if ( (LA18_1==35) ) {
+                if ( (LA18_1==34) ) {
                     alt18=1;
                 }
             }
@@ -2422,7 +2418,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                      
                         newLeafNode(this_ID_1, grammarAccess.getContract_instanceAccess().getIDTerminalRuleCall_1_0()); 
                         
-                    otherlv_2=(Token)match(input,35,FOLLOW_35_in_rulecontract_instance1916); 
+                    otherlv_2=(Token)match(input,34,FOLLOW_34_in_rulecontract_instance1916); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getContract_instanceAccess().getColonKeyword_1_1());
                         
@@ -2463,7 +2459,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,36,FOLLOW_36_in_rulecontract_instance1951); 
+            otherlv_4=(Token)match(input,35,FOLLOW_35_in_rulecontract_instance1951); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getContract_instanceAccess().getLeftParenthesisKeyword_3());
                 
@@ -2488,7 +2484,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,37,FOLLOW_37_in_rulecontract_instance1983); 
+            otherlv_6=(Token)match(input,36,FOLLOW_36_in_rulecontract_instance1983); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getContract_instanceAccess().getRightParenthesisKeyword_5());
                 
@@ -2541,7 +2537,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 }
             } while (true);
 
-            otherlv_8=(Token)match(input,33,FOLLOW_33_in_rulecontract_instance2017); 
+            otherlv_8=(Token)match(input,32,FOLLOW_32_in_rulecontract_instance2017); 
 
                 	newLeafNode(otherlv_8, grammarAccess.getContract_instanceAccess().getENDKeyword_7());
                 
@@ -2621,7 +2617,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:996:1: (otherlv_0= 'FIELD' ( (lv_name_1_0= RULE_ID ) ) ( (lv_input_internal_2_0= ruleinput_options ) )? otherlv_3= ';' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:996:3: otherlv_0= 'FIELD' ( (lv_name_1_0= RULE_ID ) ) ( (lv_input_internal_2_0= ruleinput_options ) )? otherlv_3= ';'
             {
-            otherlv_0=(Token)match(input,38,FOLLOW_38_in_rulefield_decl2100); 
+            otherlv_0=(Token)match(input,37,FOLLOW_37_in_rulefield_decl2100); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getField_declAccess().getFIELDKeyword_0());
                 
@@ -2655,7 +2651,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt20=2;
             int LA20_0 = input.LA(1);
 
-            if ( (LA20_0==35) ) {
+            if ( (LA20_0==34) ) {
                 alt20=1;
             }
             switch (alt20) {
@@ -2693,7 +2689,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_20_in_rulefield_decl2156); 
+            otherlv_3=(Token)match(input,19,FOLLOW_19_in_rulefield_decl2156); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getField_declAccess().getSemicolonKeyword_3());
                 
@@ -2781,7 +2777,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1062:1: (lv_name_0_0= 'ENUM' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1063:3: lv_name_0_0= 'ENUM'
             {
-            lv_name_0_0=(Token)match(input,39,FOLLOW_39_in_ruleenum_decl2245); 
+            lv_name_0_0=(Token)match(input,38,FOLLOW_38_in_ruleenum_decl2245); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getEnum_declAccess().getNameENUMKeyword_0_0());
                 
@@ -2797,7 +2793,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_1=(Token)match(input,36,FOLLOW_36_in_ruleenum_decl2270); 
+            otherlv_1=(Token)match(input,35,FOLLOW_35_in_ruleenum_decl2270); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getEnum_declAccess().getLeftParenthesisKeyword_1());
                 
@@ -2808,10 +2804,10 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 {
                 int LA21_1 = input.LA(2);
 
-                if ( (LA21_1==31) ) {
+                if ( (LA21_1==30) ) {
                     alt21=2;
                 }
-                else if ( (LA21_1==30||LA21_1==37) ) {
+                else if ( (LA21_1==29||LA21_1==36) ) {
                     alt21=1;
                 }
                 else {
@@ -2826,10 +2822,10 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 {
                 int LA21_2 = input.LA(2);
 
-                if ( (LA21_2==31) ) {
+                if ( (LA21_2==30) ) {
                     alt21=2;
                 }
-                else if ( (LA21_2==30||LA21_2==37) ) {
+                else if ( (LA21_2==29||LA21_2==36) ) {
                     alt21=1;
                 }
                 else {
@@ -2844,10 +2840,10 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 {
                 int LA21_3 = input.LA(2);
 
-                if ( (LA21_3==30||LA21_3==37) ) {
+                if ( (LA21_3==29||LA21_3==36) ) {
                     alt21=1;
                 }
-                else if ( (LA21_3==31) ) {
+                else if ( (LA21_3==30) ) {
                     alt21=2;
                 }
                 else {
@@ -2943,7 +2939,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,37,FOLLOW_37_in_ruleenum_decl2332); 
+            otherlv_4=(Token)match(input,36,FOLLOW_36_in_ruleenum_decl2332); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getEnum_declAccess().getRightParenthesisKeyword_3());
                 
@@ -3028,7 +3024,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1143:1: (lv_name_0_0= 'INPUTS' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1144:3: lv_name_0_0= 'INPUTS'
             {
-            lv_name_0_0=(Token)match(input,40,FOLLOW_40_in_ruleinput_section2421); 
+            lv_name_0_0=(Token)match(input,39,FOLLOW_39_in_ruleinput_section2421); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getInput_sectionAccess().getNameINPUTSKeyword_0_0());
                 
@@ -3051,7 +3047,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt22=2;
                 int LA22_0 = input.LA(1);
 
-                if ( (LA22_0==39||(LA22_0>=41 && LA22_0<=46)) ) {
+                if ( (LA22_0==38||(LA22_0>=40 && LA22_0<=45)) ) {
                     alt22=1;
                 }
 
@@ -3098,7 +3094,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 cnt22++;
             } while (true);
 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_ruleinput_section2468); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleinput_section2468); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getInput_sectionAccess().getENDKeyword_2());
                 
@@ -3175,7 +3171,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1200:1: (otherlv_0= 'BOOL' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1200:3: otherlv_0= 'BOOL' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,41,FOLLOW_41_in_rulebool2551); 
+            otherlv_0=(Token)match(input,40,FOLLOW_40_in_rulebool2551); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getBoolAccess().getBOOLKeyword_0());
                 
@@ -3278,7 +3274,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1243:1: (otherlv_0= 'INT' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1243:3: otherlv_0= 'INT' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleint_var2656); 
+            otherlv_0=(Token)match(input,41,FOLLOW_41_in_ruleint_var2656); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInt_varAccess().getINTKeyword_0());
                 
@@ -3381,7 +3377,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1286:1: (otherlv_0= 'STRING' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1286:3: otherlv_0= 'STRING' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,43,FOLLOW_43_in_rulestring_var2761); 
+            otherlv_0=(Token)match(input,42,FOLLOW_42_in_rulestring_var2761); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getString_varAccess().getSTRINGKeyword_0());
                 
@@ -3484,7 +3480,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1329:1: (otherlv_0= 'RECORD' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1329:3: otherlv_0= 'RECORD' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,44,FOLLOW_44_in_rulerecord2866); 
+            otherlv_0=(Token)match(input,43,FOLLOW_43_in_rulerecord2866); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getRecordAccess().getRECORDKeyword_0());
                 
@@ -3587,7 +3583,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1372:1: (otherlv_0= 'DATASET' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1372:3: otherlv_0= 'DATASET' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,45,FOLLOW_45_in_ruledataset2971); 
+            otherlv_0=(Token)match(input,44,FOLLOW_44_in_ruledataset2971); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getDatasetAccess().getDATASETKeyword_0());
                 
@@ -3690,7 +3686,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1415:1: (otherlv_0= 'GROUP' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1415:3: otherlv_0= 'GROUP' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,46,FOLLOW_46_in_rulegroup3076); 
+            otherlv_0=(Token)match(input,45,FOLLOW_45_in_rulegroup3076); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getGroupAccess().getGROUPKeyword_0());
                 
@@ -3830,32 +3826,32 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1460:3: (this_bool_0= rulebool | this_int_var_1= ruleint_var | this_enum_decl_2= ruleenum_decl | this_string_var_3= rulestring_var | this_record_4= rulerecord | this_dataset_5= ruledataset )
                     int alt23=6;
                     switch ( input.LA(1) ) {
-                    case 41:
+                    case 40:
                         {
                         alt23=1;
                         }
                         break;
-                    case 42:
+                    case 41:
                         {
                         alt23=2;
                         }
                         break;
-                    case 39:
+                    case 38:
                         {
                         alt23=3;
                         }
                         break;
-                    case 43:
+                    case 42:
                         {
                         alt23=4;
                         }
                         break;
-                    case 44:
+                    case 43:
                         {
                         alt23=5;
                         }
                         break;
-                    case 45:
+                    case 44:
                         {
                         alt23=6;
                         }
@@ -3983,7 +3979,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt24=2;
                     int LA24_0 = input.LA(1);
 
-                    if ( (LA24_0==35) ) {
+                    if ( (LA24_0==34) ) {
                         alt24=1;
                     }
                     switch (alt24) {
@@ -4021,7 +4017,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,20,FOLLOW_20_in_ruleinput_value3364); 
+                    otherlv_7=(Token)match(input,19,FOLLOW_19_in_ruleinput_value3364); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getInput_valueAccess().getSemicolonKeyword_0_2());
                         
@@ -4053,7 +4049,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt25=2;
                     int LA25_0 = input.LA(1);
 
-                    if ( (LA25_0==35) ) {
+                    if ( (LA25_0==34) ) {
                         alt25=1;
                     }
                     switch (alt25) {
@@ -4097,7 +4093,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         int alt26=2;
                         int LA26_0 = input.LA(1);
 
-                        if ( (LA26_0==38) ) {
+                        if ( (LA26_0==37) ) {
                             alt26=1;
                         }
 
@@ -4140,7 +4136,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_11=(Token)match(input,33,FOLLOW_33_in_ruleinput_value3449); 
+                    otherlv_11=(Token)match(input,32,FOLLOW_32_in_ruleinput_value3449); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getInput_valueAccess().getENDKeyword_1_3());
                         
@@ -4172,7 +4168,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt27=2;
                     int LA27_0 = input.LA(1);
 
-                    if ( (LA27_0==35) ) {
+                    if ( (LA27_0==34) ) {
                         alt27=1;
                     }
                     switch (alt27) {
@@ -4216,7 +4212,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         int alt28=2;
                         int LA28_0 = input.LA(1);
 
-                        if ( (LA28_0==39||(LA28_0>=41 && LA28_0<=46)) ) {
+                        if ( (LA28_0==38||(LA28_0>=40 && LA28_0<=45)) ) {
                             alt28=1;
                         }
 
@@ -4259,7 +4255,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_15=(Token)match(input,33,FOLLOW_33_in_ruleinput_value3534); 
+                    otherlv_15=(Token)match(input,32,FOLLOW_32_in_ruleinput_value3534); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getInput_valueAccess().getENDKeyword_2_3());
                         
@@ -4346,7 +4342,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1662:1: (otherlv_0= ':' this_input_option_1= ruleinput_option (otherlv_2= ',' ( (lv_input_internal_3_0= ruleinput_option ) ) )* )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1662:3: otherlv_0= ':' this_input_option_1= ruleinput_option (otherlv_2= ',' ( (lv_input_internal_3_0= ruleinput_option ) ) )*
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleinput_options3618); 
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleinput_options3618); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getInput_optionsAccess().getColonKeyword_0());
                 
@@ -4368,7 +4364,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt30=2;
                 int LA30_0 = input.LA(1);
 
-                if ( (LA30_0==30) ) {
+                if ( (LA30_0==29) ) {
                     alt30=1;
                 }
 
@@ -4377,7 +4373,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1675:3: otherlv_2= ',' ( (lv_input_internal_3_0= ruleinput_option ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleinput_options3652); 
+            	    otherlv_2=(Token)match(input,29,FOLLOW_29_in_ruleinput_options3652); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getInput_optionsAccess().getCommaKeyword_2_0());
             	        
@@ -4524,23 +4520,23 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1718:1: ( ( ( (lv_name_0_0= 'OPTIONAL' ) ) | ( (lv_name_1_0= 'DEFINED' ) ) | ( (lv_name_2_0= 'DISABLED' ) ) | ( (lv_name_3_0= 'MAPBYTYPE' ) ) | ( (lv_name_4_0= 'MAPBYNAME' ) ) | ( (lv_name_5_0= 'MANY' ) ) ) | ( ( (lv_name_6_0= 'FORMFIELD' ) ) otherlv_7= '(' ruleformfield_option otherlv_9= ')' ) | ( ( (lv_name_10_0= 'ENABLE' ) ) otherlv_11= '(' ( (lv_assigns_internal_12_0= ruleassign_list ) ) otherlv_13= ')' ) | ( ( (lv_name_14_0= 'TYPE' ) ) otherlv_15= '(' ruleinputtype_options otherlv_17= ')' ) | ( ( ( (lv_name_18_0= 'RANGE' ) ) | ( (lv_name_19_0= 'DEFAULT' ) ) | ( (lv_name_20_0= 'MAXLENGTH' ) ) | ( (lv_name_21_0= 'DISABLED' ) ) | ( (lv_name_22_0= 'DESCRIPTION' ) ) | ( (lv_name_23_0= 'NULL' ) ) | ( (lv_name_24_0= 'FIELDLENGTH' ) ) | ( (lv_name_25_0= 'ROWS' ) ) | ( (lv_name_26_0= 'COLS' ) ) | ( (lv_name_27_0= '_HTML_STYLECLASS' ) ) | ( (lv_name_28_0= 'LABEL' ) ) ) otherlv_29= '(' ( (lv_vals_30_0= rulevalue_list ) ) otherlv_31= ')' ) )
             int alt33=5;
             switch ( input.LA(1) ) {
+            case 46:
             case 47:
-            case 48:
+            case 49:
             case 50:
             case 51:
-            case 52:
                 {
                 alt33=1;
                 }
                 break;
-            case 49:
+            case 48:
                 {
                 int LA33_2 = input.LA(2);
 
-                if ( (LA33_2==36) ) {
+                if ( (LA33_2==35) ) {
                     alt33=5;
                 }
-                else if ( (LA33_2==EOF||LA33_2==20||LA33_2==30||LA33_2==33||(LA33_2>=38 && LA33_2<=39)||(LA33_2>=41 && LA33_2<=46)) ) {
+                else if ( (LA33_2==EOF||LA33_2==19||LA33_2==29||LA33_2==32||(LA33_2>=37 && LA33_2<=38)||(LA33_2>=40 && LA33_2<=45)) ) {
                     alt33=1;
                 }
                 else {
@@ -4551,23 +4547,24 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 }
                 }
                 break;
-            case 53:
+            case 52:
                 {
                 alt33=2;
                 }
                 break;
-            case 54:
+            case 53:
                 {
                 alt33=3;
                 }
                 break;
-            case 55:
+            case 54:
                 {
                 alt33=4;
                 }
                 break;
-            case 13:
-            case 18:
+            case 12:
+            case 17:
+            case 55:
             case 56:
             case 57:
             case 58:
@@ -4575,7 +4572,6 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             case 60:
             case 61:
             case 62:
-            case 63:
                 {
                 alt33=5;
                 }
@@ -4594,32 +4590,32 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1718:2: ( ( (lv_name_0_0= 'OPTIONAL' ) ) | ( (lv_name_1_0= 'DEFINED' ) ) | ( (lv_name_2_0= 'DISABLED' ) ) | ( (lv_name_3_0= 'MAPBYTYPE' ) ) | ( (lv_name_4_0= 'MAPBYNAME' ) ) | ( (lv_name_5_0= 'MANY' ) ) )
                     int alt31=6;
                     switch ( input.LA(1) ) {
-                    case 47:
+                    case 46:
                         {
                         alt31=1;
                         }
                         break;
-                    case 48:
+                    case 47:
                         {
                         alt31=2;
                         }
                         break;
-                    case 49:
+                    case 48:
                         {
                         alt31=3;
                         }
                         break;
-                    case 50:
+                    case 49:
                         {
                         alt31=4;
                         }
                         break;
-                    case 51:
+                    case 50:
                         {
                         alt31=5;
                         }
                         break;
-                    case 52:
+                    case 51:
                         {
                         alt31=6;
                         }
@@ -4641,7 +4637,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1719:1: (lv_name_0_0= 'OPTIONAL' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1720:3: lv_name_0_0= 'OPTIONAL'
                             {
-                            lv_name_0_0=(Token)match(input,47,FOLLOW_47_in_ruleinput_option3765); 
+                            lv_name_0_0=(Token)match(input,46,FOLLOW_46_in_ruleinput_option3765); 
 
                                     newLeafNode(lv_name_0_0, grammarAccess.getInput_optionAccess().getNameOPTIONALKeyword_0_0_0());
                                 
@@ -4669,7 +4665,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1735:1: (lv_name_1_0= 'DEFINED' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1736:3: lv_name_1_0= 'DEFINED'
                             {
-                            lv_name_1_0=(Token)match(input,48,FOLLOW_48_in_ruleinput_option3802); 
+                            lv_name_1_0=(Token)match(input,47,FOLLOW_47_in_ruleinput_option3802); 
 
                                     newLeafNode(lv_name_1_0, grammarAccess.getInput_optionAccess().getNameDEFINEDKeyword_0_1_0());
                                 
@@ -4697,7 +4693,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1751:1: (lv_name_2_0= 'DISABLED' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1752:3: lv_name_2_0= 'DISABLED'
                             {
-                            lv_name_2_0=(Token)match(input,49,FOLLOW_49_in_ruleinput_option3839); 
+                            lv_name_2_0=(Token)match(input,48,FOLLOW_48_in_ruleinput_option3839); 
 
                                     newLeafNode(lv_name_2_0, grammarAccess.getInput_optionAccess().getNameDISABLEDKeyword_0_2_0());
                                 
@@ -4725,7 +4721,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1767:1: (lv_name_3_0= 'MAPBYTYPE' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1768:3: lv_name_3_0= 'MAPBYTYPE'
                             {
-                            lv_name_3_0=(Token)match(input,50,FOLLOW_50_in_ruleinput_option3876); 
+                            lv_name_3_0=(Token)match(input,49,FOLLOW_49_in_ruleinput_option3876); 
 
                                     newLeafNode(lv_name_3_0, grammarAccess.getInput_optionAccess().getNameMAPBYTYPEKeyword_0_3_0());
                                 
@@ -4753,7 +4749,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1783:1: (lv_name_4_0= 'MAPBYNAME' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1784:3: lv_name_4_0= 'MAPBYNAME'
                             {
-                            lv_name_4_0=(Token)match(input,51,FOLLOW_51_in_ruleinput_option3913); 
+                            lv_name_4_0=(Token)match(input,50,FOLLOW_50_in_ruleinput_option3913); 
 
                                     newLeafNode(lv_name_4_0, grammarAccess.getInput_optionAccess().getNameMAPBYNAMEKeyword_0_4_0());
                                 
@@ -4781,7 +4777,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1799:1: (lv_name_5_0= 'MANY' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1800:3: lv_name_5_0= 'MANY'
                             {
-                            lv_name_5_0=(Token)match(input,52,FOLLOW_52_in_ruleinput_option3950); 
+                            lv_name_5_0=(Token)match(input,51,FOLLOW_51_in_ruleinput_option3950); 
 
                                     newLeafNode(lv_name_5_0, grammarAccess.getInput_optionAccess().getNameMANYKeyword_0_5_0());
                                 
@@ -4818,7 +4814,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1815:1: (lv_name_6_0= 'FORMFIELD' )
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1816:3: lv_name_6_0= 'FORMFIELD'
                     {
-                    lv_name_6_0=(Token)match(input,53,FOLLOW_53_in_ruleinput_option3989); 
+                    lv_name_6_0=(Token)match(input,52,FOLLOW_52_in_ruleinput_option3989); 
 
                             newLeafNode(lv_name_6_0, grammarAccess.getInput_optionAccess().getNameFORMFIELDKeyword_1_0_0());
                         
@@ -4834,7 +4830,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4014); 
+                    otherlv_7=(Token)match(input,35,FOLLOW_35_in_ruleinput_option4014); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getInput_optionAccess().getLeftParenthesisKeyword_1_1());
                         
@@ -4849,7 +4845,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
-                    otherlv_9=(Token)match(input,37,FOLLOW_37_in_ruleinput_option4041); 
+                    otherlv_9=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4041); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getInput_optionAccess().getRightParenthesisKeyword_1_3());
                         
@@ -4871,7 +4867,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1847:1: (lv_name_10_0= 'ENABLE' )
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1848:3: lv_name_10_0= 'ENABLE'
                     {
-                    lv_name_10_0=(Token)match(input,54,FOLLOW_54_in_ruleinput_option4067); 
+                    lv_name_10_0=(Token)match(input,53,FOLLOW_53_in_ruleinput_option4067); 
 
                             newLeafNode(lv_name_10_0, grammarAccess.getInput_optionAccess().getNameENABLEKeyword_2_0_0());
                         
@@ -4887,7 +4883,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4092); 
+                    otherlv_11=(Token)match(input,35,FOLLOW_35_in_ruleinput_option4092); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getInput_optionAccess().getLeftParenthesisKeyword_2_1());
                         
@@ -4922,7 +4918,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_13=(Token)match(input,37,FOLLOW_37_in_ruleinput_option4125); 
+                    otherlv_13=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4125); 
 
                         	newLeafNode(otherlv_13, grammarAccess.getInput_optionAccess().getRightParenthesisKeyword_2_3());
                         
@@ -4944,7 +4940,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1889:1: (lv_name_14_0= 'TYPE' )
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1890:3: lv_name_14_0= 'TYPE'
                     {
-                    lv_name_14_0=(Token)match(input,55,FOLLOW_55_in_ruleinput_option4151); 
+                    lv_name_14_0=(Token)match(input,54,FOLLOW_54_in_ruleinput_option4151); 
 
                             newLeafNode(lv_name_14_0, grammarAccess.getInput_optionAccess().getNameTYPEKeyword_3_0_0());
                         
@@ -4960,7 +4956,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_15=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4176); 
+                    otherlv_15=(Token)match(input,35,FOLLOW_35_in_ruleinput_option4176); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getInput_optionAccess().getLeftParenthesisKeyword_3_1());
                         
@@ -4975,7 +4971,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                      
                             afterParserOrEnumRuleCall();
                         
-                    otherlv_17=(Token)match(input,37,FOLLOW_37_in_ruleinput_option4203); 
+                    otherlv_17=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4203); 
 
                         	newLeafNode(otherlv_17, grammarAccess.getInput_optionAccess().getRightParenthesisKeyword_3_3());
                         
@@ -4994,57 +4990,57 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1920:7: ( ( (lv_name_18_0= 'RANGE' ) ) | ( (lv_name_19_0= 'DEFAULT' ) ) | ( (lv_name_20_0= 'MAXLENGTH' ) ) | ( (lv_name_21_0= 'DISABLED' ) ) | ( (lv_name_22_0= 'DESCRIPTION' ) ) | ( (lv_name_23_0= 'NULL' ) ) | ( (lv_name_24_0= 'FIELDLENGTH' ) ) | ( (lv_name_25_0= 'ROWS' ) ) | ( (lv_name_26_0= 'COLS' ) ) | ( (lv_name_27_0= '_HTML_STYLECLASS' ) ) | ( (lv_name_28_0= 'LABEL' ) ) )
                     int alt32=11;
                     switch ( input.LA(1) ) {
-                    case 56:
+                    case 55:
                         {
                         alt32=1;
                         }
                         break;
-                    case 57:
+                    case 56:
                         {
                         alt32=2;
                         }
                         break;
-                    case 58:
+                    case 57:
                         {
                         alt32=3;
                         }
                         break;
-                    case 49:
+                    case 48:
                         {
                         alt32=4;
                         }
                         break;
-                    case 13:
+                    case 12:
                         {
                         alt32=5;
                         }
                         break;
-                    case 59:
+                    case 58:
                         {
                         alt32=6;
                         }
                         break;
-                    case 60:
+                    case 59:
                         {
                         alt32=7;
                         }
                         break;
-                    case 61:
+                    case 60:
                         {
                         alt32=8;
                         }
                         break;
-                    case 62:
+                    case 61:
                         {
                         alt32=9;
                         }
                         break;
-                    case 63:
+                    case 62:
                         {
                         alt32=10;
                         }
                         break;
-                    case 18:
+                    case 17:
                         {
                         alt32=11;
                         }
@@ -5066,7 +5062,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1921:1: (lv_name_18_0= 'RANGE' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1922:3: lv_name_18_0= 'RANGE'
                             {
-                            lv_name_18_0=(Token)match(input,56,FOLLOW_56_in_ruleinput_option4230); 
+                            lv_name_18_0=(Token)match(input,55,FOLLOW_55_in_ruleinput_option4230); 
 
                                     newLeafNode(lv_name_18_0, grammarAccess.getInput_optionAccess().getNameRANGEKeyword_4_0_0_0());
                                 
@@ -5094,7 +5090,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1937:1: (lv_name_19_0= 'DEFAULT' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1938:3: lv_name_19_0= 'DEFAULT'
                             {
-                            lv_name_19_0=(Token)match(input,57,FOLLOW_57_in_ruleinput_option4267); 
+                            lv_name_19_0=(Token)match(input,56,FOLLOW_56_in_ruleinput_option4267); 
 
                                     newLeafNode(lv_name_19_0, grammarAccess.getInput_optionAccess().getNameDEFAULTKeyword_4_0_1_0());
                                 
@@ -5122,7 +5118,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1953:1: (lv_name_20_0= 'MAXLENGTH' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1954:3: lv_name_20_0= 'MAXLENGTH'
                             {
-                            lv_name_20_0=(Token)match(input,58,FOLLOW_58_in_ruleinput_option4304); 
+                            lv_name_20_0=(Token)match(input,57,FOLLOW_57_in_ruleinput_option4304); 
 
                                     newLeafNode(lv_name_20_0, grammarAccess.getInput_optionAccess().getNameMAXLENGTHKeyword_4_0_2_0());
                                 
@@ -5150,7 +5146,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1969:1: (lv_name_21_0= 'DISABLED' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1970:3: lv_name_21_0= 'DISABLED'
                             {
-                            lv_name_21_0=(Token)match(input,49,FOLLOW_49_in_ruleinput_option4341); 
+                            lv_name_21_0=(Token)match(input,48,FOLLOW_48_in_ruleinput_option4341); 
 
                                     newLeafNode(lv_name_21_0, grammarAccess.getInput_optionAccess().getNameDISABLEDKeyword_4_0_3_0());
                                 
@@ -5178,7 +5174,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1985:1: (lv_name_22_0= 'DESCRIPTION' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:1986:3: lv_name_22_0= 'DESCRIPTION'
                             {
-                            lv_name_22_0=(Token)match(input,13,FOLLOW_13_in_ruleinput_option4378); 
+                            lv_name_22_0=(Token)match(input,12,FOLLOW_12_in_ruleinput_option4378); 
 
                                     newLeafNode(lv_name_22_0, grammarAccess.getInput_optionAccess().getNameDESCRIPTIONKeyword_4_0_4_0());
                                 
@@ -5206,7 +5202,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2001:1: (lv_name_23_0= 'NULL' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2002:3: lv_name_23_0= 'NULL'
                             {
-                            lv_name_23_0=(Token)match(input,59,FOLLOW_59_in_ruleinput_option4415); 
+                            lv_name_23_0=(Token)match(input,58,FOLLOW_58_in_ruleinput_option4415); 
 
                                     newLeafNode(lv_name_23_0, grammarAccess.getInput_optionAccess().getNameNULLKeyword_4_0_5_0());
                                 
@@ -5234,7 +5230,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2017:1: (lv_name_24_0= 'FIELDLENGTH' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2018:3: lv_name_24_0= 'FIELDLENGTH'
                             {
-                            lv_name_24_0=(Token)match(input,60,FOLLOW_60_in_ruleinput_option4452); 
+                            lv_name_24_0=(Token)match(input,59,FOLLOW_59_in_ruleinput_option4452); 
 
                                     newLeafNode(lv_name_24_0, grammarAccess.getInput_optionAccess().getNameFIELDLENGTHKeyword_4_0_6_0());
                                 
@@ -5262,7 +5258,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2033:1: (lv_name_25_0= 'ROWS' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2034:3: lv_name_25_0= 'ROWS'
                             {
-                            lv_name_25_0=(Token)match(input,61,FOLLOW_61_in_ruleinput_option4489); 
+                            lv_name_25_0=(Token)match(input,60,FOLLOW_60_in_ruleinput_option4489); 
 
                                     newLeafNode(lv_name_25_0, grammarAccess.getInput_optionAccess().getNameROWSKeyword_4_0_7_0());
                                 
@@ -5290,7 +5286,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2049:1: (lv_name_26_0= 'COLS' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2050:3: lv_name_26_0= 'COLS'
                             {
-                            lv_name_26_0=(Token)match(input,62,FOLLOW_62_in_ruleinput_option4526); 
+                            lv_name_26_0=(Token)match(input,61,FOLLOW_61_in_ruleinput_option4526); 
 
                                     newLeafNode(lv_name_26_0, grammarAccess.getInput_optionAccess().getNameCOLSKeyword_4_0_8_0());
                                 
@@ -5318,7 +5314,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2065:1: (lv_name_27_0= '_HTML_STYLECLASS' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2066:3: lv_name_27_0= '_HTML_STYLECLASS'
                             {
-                            lv_name_27_0=(Token)match(input,63,FOLLOW_63_in_ruleinput_option4563); 
+                            lv_name_27_0=(Token)match(input,62,FOLLOW_62_in_ruleinput_option4563); 
 
                                     newLeafNode(lv_name_27_0, grammarAccess.getInput_optionAccess().getName_HTML_STYLECLASSKeyword_4_0_9_0());
                                 
@@ -5346,7 +5342,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2081:1: (lv_name_28_0= 'LABEL' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2082:3: lv_name_28_0= 'LABEL'
                             {
-                            lv_name_28_0=(Token)match(input,18,FOLLOW_18_in_ruleinput_option4600); 
+                            lv_name_28_0=(Token)match(input,17,FOLLOW_17_in_ruleinput_option4600); 
 
                                     newLeafNode(lv_name_28_0, grammarAccess.getInput_optionAccess().getNameLABELKeyword_4_0_10_0());
                                 
@@ -5368,7 +5364,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_29=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4626); 
+                    otherlv_29=(Token)match(input,35,FOLLOW_35_in_ruleinput_option4626); 
 
                         	newLeafNode(otherlv_29, grammarAccess.getInput_optionAccess().getLeftParenthesisKeyword_4_1());
                         
@@ -5403,7 +5399,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_31=(Token)match(input,37,FOLLOW_37_in_ruleinput_option4659); 
+                    otherlv_31=(Token)match(input,36,FOLLOW_36_in_ruleinput_option4659); 
 
                         	newLeafNode(otherlv_31, grammarAccess.getInput_optionAccess().getRightParenthesisKeyword_4_3());
                         
@@ -5485,37 +5481,37 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2142:1: (kw= 'CHECKBOX' | kw= 'RADIO' | kw= 'SELECT' | kw= 'MULTIPLESELECT' | kw= 'TEXTAREA' | kw= 'HIDDEN' | kw= 'TEXT' )
             int alt34=7;
             switch ( input.LA(1) ) {
-            case 64:
+            case 63:
                 {
                 alt34=1;
                 }
                 break;
-            case 65:
+            case 64:
                 {
                 alt34=2;
                 }
                 break;
-            case 66:
+            case 65:
                 {
                 alt34=3;
                 }
                 break;
-            case 67:
+            case 66:
                 {
                 alt34=4;
                 }
                 break;
-            case 68:
+            case 67:
                 {
                 alt34=5;
                 }
                 break;
-            case 69:
+            case 68:
                 {
                 alt34=6;
                 }
                 break;
-            case 70:
+            case 69:
                 {
                 alt34=7;
                 }
@@ -5531,7 +5527,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2143:2: kw= 'CHECKBOX'
                     {
-                    kw=(Token)match(input,64,FOLLOW_64_in_ruleformfield_option4746); 
+                    kw=(Token)match(input,63,FOLLOW_63_in_ruleformfield_option4746); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getCHECKBOXKeyword_0()); 
@@ -5542,7 +5538,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2150:2: kw= 'RADIO'
                     {
-                    kw=(Token)match(input,65,FOLLOW_65_in_ruleformfield_option4765); 
+                    kw=(Token)match(input,64,FOLLOW_64_in_ruleformfield_option4765); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getRADIOKeyword_1()); 
@@ -5553,7 +5549,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2157:2: kw= 'SELECT'
                     {
-                    kw=(Token)match(input,66,FOLLOW_66_in_ruleformfield_option4784); 
+                    kw=(Token)match(input,65,FOLLOW_65_in_ruleformfield_option4784); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getSELECTKeyword_2()); 
@@ -5564,7 +5560,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 4 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2164:2: kw= 'MULTIPLESELECT'
                     {
-                    kw=(Token)match(input,67,FOLLOW_67_in_ruleformfield_option4803); 
+                    kw=(Token)match(input,66,FOLLOW_66_in_ruleformfield_option4803); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getMULTIPLESELECTKeyword_3()); 
@@ -5575,7 +5571,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 5 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2171:2: kw= 'TEXTAREA'
                     {
-                    kw=(Token)match(input,68,FOLLOW_68_in_ruleformfield_option4822); 
+                    kw=(Token)match(input,67,FOLLOW_67_in_ruleformfield_option4822); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getTEXTAREAKeyword_4()); 
@@ -5586,7 +5582,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 6 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2178:2: kw= 'HIDDEN'
                     {
-                    kw=(Token)match(input,69,FOLLOW_69_in_ruleformfield_option4841); 
+                    kw=(Token)match(input,68,FOLLOW_68_in_ruleformfield_option4841); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getHIDDENKeyword_5()); 
@@ -5597,7 +5593,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 7 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2185:2: kw= 'TEXT'
                     {
-                    kw=(Token)match(input,70,FOLLOW_70_in_ruleformfield_option4860); 
+                    kw=(Token)match(input,69,FOLLOW_69_in_ruleformfield_option4860); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getFormfield_optionAccess().getTEXTKeyword_6()); 
@@ -5677,37 +5673,37 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2211:1: (kw= 'STRING' | kw= 'UNICODE' | kw= 'UNISTR' | kw= 'INTEGER' | kw= 'DECIMAL' | kw= 'NUMERIC' | kw= 'REAL' )
             int alt35=7;
             switch ( input.LA(1) ) {
-            case 43:
+            case 42:
                 {
                 alt35=1;
                 }
                 break;
-            case 71:
+            case 70:
                 {
                 alt35=2;
                 }
                 break;
-            case 72:
+            case 71:
                 {
                 alt35=3;
                 }
                 break;
-            case 73:
+            case 72:
                 {
                 alt35=4;
                 }
                 break;
-            case 74:
+            case 73:
                 {
                 alt35=5;
                 }
                 break;
-            case 75:
+            case 74:
                 {
                 alt35=6;
                 }
                 break;
-            case 76:
+            case 75:
                 {
                 alt35=7;
                 }
@@ -5723,7 +5719,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2212:2: kw= 'STRING'
                     {
-                    kw=(Token)match(input,43,FOLLOW_43_in_ruleinputtype_option4950); 
+                    kw=(Token)match(input,42,FOLLOW_42_in_ruleinputtype_option4950); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getSTRINGKeyword_0()); 
@@ -5734,7 +5730,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2219:2: kw= 'UNICODE'
                     {
-                    kw=(Token)match(input,71,FOLLOW_71_in_ruleinputtype_option4969); 
+                    kw=(Token)match(input,70,FOLLOW_70_in_ruleinputtype_option4969); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getUNICODEKeyword_1()); 
@@ -5745,7 +5741,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2226:2: kw= 'UNISTR'
                     {
-                    kw=(Token)match(input,72,FOLLOW_72_in_ruleinputtype_option4988); 
+                    kw=(Token)match(input,71,FOLLOW_71_in_ruleinputtype_option4988); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getUNISTRKeyword_2()); 
@@ -5756,7 +5752,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 4 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2233:2: kw= 'INTEGER'
                     {
-                    kw=(Token)match(input,73,FOLLOW_73_in_ruleinputtype_option5007); 
+                    kw=(Token)match(input,72,FOLLOW_72_in_ruleinputtype_option5007); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getINTEGERKeyword_3()); 
@@ -5767,7 +5763,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 5 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2240:2: kw= 'DECIMAL'
                     {
-                    kw=(Token)match(input,74,FOLLOW_74_in_ruleinputtype_option5026); 
+                    kw=(Token)match(input,73,FOLLOW_73_in_ruleinputtype_option5026); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getDECIMALKeyword_4()); 
@@ -5778,7 +5774,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 6 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2247:2: kw= 'NUMERIC'
                     {
-                    kw=(Token)match(input,75,FOLLOW_75_in_ruleinputtype_option5045); 
+                    kw=(Token)match(input,74,FOLLOW_74_in_ruleinputtype_option5045); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getNUMERICKeyword_5()); 
@@ -5789,7 +5785,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 7 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2254:2: kw= 'REAL'
                     {
-                    kw=(Token)match(input,76,FOLLOW_76_in_ruleinputtype_option5064); 
+                    kw=(Token)match(input,75,FOLLOW_75_in_ruleinputtype_option5064); 
 
                             current.merge(kw);
                             newLeafNode(kw, grammarAccess.getInputtype_optionAccess().getREALKeyword_6()); 
@@ -5893,7 +5889,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt36=2;
                 int LA36_0 = input.LA(1);
 
-                if ( (LA36_0==30) ) {
+                if ( (LA36_0==29) ) {
                     alt36=1;
                 }
 
@@ -5902,7 +5898,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2292:2: kw= ',' this_inputtype_option_2= ruleinputtype_option
             	    {
-            	    kw=(Token)match(input,30,FOLLOW_30_in_ruleinputtype_options5182); 
+            	    kw=(Token)match(input,29,FOLLOW_29_in_ruleinputtype_options5182); 
 
             	            current.merge(kw);
             	            newLeafNode(kw, grammarAccess.getInputtype_optionsAccess().getCommaKeyword_1_0()); 
@@ -6011,7 +6007,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2330:1: (lv_name_0_0= 'OUTPUTS' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2331:3: lv_name_0_0= 'OUTPUTS'
             {
-            lv_name_0_0=(Token)match(input,77,FOLLOW_77_in_ruleoutput_section5304); 
+            lv_name_0_0=(Token)match(input,76,FOLLOW_76_in_ruleoutput_section5304); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getOutput_sectionAccess().getNameOUTPUTSKeyword_0_0());
                 
@@ -6034,7 +6030,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt37=2;
                 int LA37_0 = input.LA(1);
 
-                if ( ((LA37_0>=RULE_ID && LA37_0<=RULE_STRING)||(LA37_0>=41 && LA37_0<=43)||LA37_0==45||LA37_0==89) ) {
+                if ( ((LA37_0>=RULE_ID && LA37_0<=RULE_STRING)||(LA37_0>=40 && LA37_0<=42)||LA37_0==44||LA37_0==88) ) {
                     alt37=1;
                 }
 
@@ -6081,7 +6077,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 cnt37++;
             } while (true);
 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_ruleoutput_section5351); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleoutput_section5351); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getOutput_sectionAccess().getENDKeyword_2());
                 
@@ -6159,7 +6155,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2389:1: (otherlv_0= 'INTEGER' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2389:3: otherlv_0= 'INTEGER' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,73,FOLLOW_73_in_ruleecl_integer5436); 
+            otherlv_0=(Token)match(input,72,FOLLOW_72_in_ruleecl_integer5436); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_integerAccess().getINTEGERKeyword_0());
                 
@@ -6284,7 +6280,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2436:1: (otherlv_0= 'UNSIGNED' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2436:3: otherlv_0= 'UNSIGNED' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,78,FOLLOW_78_in_ruleecl_unsigned5554); 
+            otherlv_0=(Token)match(input,77,FOLLOW_77_in_ruleecl_unsigned5554); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_unsignedAccess().getUNSIGNEDKeyword_0());
                 
@@ -6409,7 +6405,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2483:1: (otherlv_0= 'STRING' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2483:3: otherlv_0= 'STRING' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,43,FOLLOW_43_in_ruleecl_string5672); 
+            otherlv_0=(Token)match(input,42,FOLLOW_42_in_ruleecl_string5672); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_stringAccess().getSTRINGKeyword_0());
                 
@@ -6534,7 +6530,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2530:1: (otherlv_0= 'QSTRING' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2530:3: otherlv_0= 'QSTRING' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,79,FOLLOW_79_in_ruleecl_qstring5790); 
+            otherlv_0=(Token)match(input,78,FOLLOW_78_in_ruleecl_qstring5790); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_qstringAccess().getQSTRINGKeyword_0());
                 
@@ -6659,7 +6655,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2577:1: (otherlv_0= 'VARSTRING' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2577:3: otherlv_0= 'VARSTRING' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,80,FOLLOW_80_in_ruleecl_varstring5908); 
+            otherlv_0=(Token)match(input,79,FOLLOW_79_in_ruleecl_varstring5908); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_varstringAccess().getVARSTRINGKeyword_0());
                 
@@ -6784,7 +6780,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2624:1: (otherlv_0= 'UNICODE' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2624:3: otherlv_0= 'UNICODE' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,71,FOLLOW_71_in_ruleecl_unicode6026); 
+            otherlv_0=(Token)match(input,70,FOLLOW_70_in_ruleecl_unicode6026); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_unicodeAccess().getUNICODEKeyword_0());
                 
@@ -6909,7 +6905,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2671:1: (otherlv_0= 'VARUNICODE' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2671:3: otherlv_0= 'VARUNICODE' (this_INT_1= RULE_INT )? ( (lv_name_2_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,81,FOLLOW_81_in_ruleecl_varunicode6144); 
+            otherlv_0=(Token)match(input,80,FOLLOW_80_in_ruleecl_varunicode6144); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_varunicodeAccess().getVARUNICODEKeyword_0());
                 
@@ -7033,7 +7029,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2718:1: (otherlv_0= 'DATA' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2718:3: otherlv_0= 'DATA' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,82,FOLLOW_82_in_ruleecl_data6262); 
+            otherlv_0=(Token)match(input,81,FOLLOW_81_in_ruleecl_data6262); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_dataAccess().getDATAKeyword_0());
                 
@@ -7136,7 +7132,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2761:1: (otherlv_0= 'REAL' ( (lv_name_1_0= RULE_ID ) ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2761:3: otherlv_0= 'REAL' ( (lv_name_1_0= RULE_ID ) )
             {
-            otherlv_0=(Token)match(input,76,FOLLOW_76_in_ruleecl_real6367); 
+            otherlv_0=(Token)match(input,75,FOLLOW_75_in_ruleecl_real6367); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getEcl_realAccess().getREALKeyword_0());
                 
@@ -7255,47 +7251,47 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2804:1: (this_ecl_integer_0= ruleecl_integer | this_ecl_qstring_1= ruleecl_qstring | this_ecl_string_2= ruleecl_string | this_ecl_real_3= ruleecl_real | this_ecl_unicode_4= ruleecl_unicode | this_ecl_data_5= ruleecl_data | this_ecl_varstring_6= ruleecl_varstring | this_ecl_varunicode_7= ruleecl_varunicode | this_ecl_unsigned_8= ruleecl_unsigned )
             int alt45=9;
             switch ( input.LA(1) ) {
-            case 73:
+            case 72:
                 {
                 alt45=1;
                 }
                 break;
-            case 79:
+            case 78:
                 {
                 alt45=2;
                 }
                 break;
-            case 43:
+            case 42:
                 {
                 alt45=3;
                 }
                 break;
-            case 76:
+            case 75:
                 {
                 alt45=4;
                 }
                 break;
-            case 71:
+            case 70:
                 {
                 alt45=5;
                 }
                 break;
-            case 82:
+            case 81:
                 {
                 alt45=6;
                 }
                 break;
-            case 80:
+            case 79:
                 {
                 alt45=7;
                 }
                 break;
-            case 81:
+            case 80:
                 {
                 alt45=8;
                 }
                 break;
-            case 78:
+            case 77:
                 {
                 alt45=9;
                 }
@@ -7562,7 +7558,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             int alt46=2;
             int LA46_0 = input.LA(1);
 
-            if ( (LA46_0==35) ) {
+            if ( (LA46_0==34) ) {
                 alt46=1;
             }
             switch (alt46) {
@@ -7600,7 +7596,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleecloutput_decl6823); 
+            otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleecloutput_decl6823); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getEcloutput_declAccess().getSemicolonKeyword_2());
                 
@@ -7689,21 +7685,21 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2966:1: ( ( ( (lv_name_0_0= 'SIDE' ) ) | ( (lv_name_1_0= 'LARGE' ) ) | ( (lv_name_2_0= 'SMALL' ) ) | ( (lv_name_3_0= 'FEW' ) ) | ( (lv_name_4_0= 'WUID' ) ) ) | ( ( (lv_name_5_0= 'FROM' ) ) otherlv_6= '(' ( (otherlv_7= RULE_ID ) ) otherlv_8= ')' ) | ( ( (lv_name_9_0= 'DESCRIPTION' ) ) otherlv_10= '(' ( (lv_vals_11_0= rulevalue ) ) otherlv_12= ')' ) )
             int alt48=3;
             switch ( input.LA(1) ) {
+            case 82:
             case 83:
             case 84:
             case 85:
             case 86:
-            case 87:
                 {
                 alt48=1;
                 }
                 break;
-            case 88:
+            case 87:
                 {
                 alt48=2;
                 }
                 break;
-            case 13:
+            case 12:
                 {
                 alt48=3;
                 }
@@ -7722,27 +7718,27 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2966:2: ( ( (lv_name_0_0= 'SIDE' ) ) | ( (lv_name_1_0= 'LARGE' ) ) | ( (lv_name_2_0= 'SMALL' ) ) | ( (lv_name_3_0= 'FEW' ) ) | ( (lv_name_4_0= 'WUID' ) ) )
                     int alt47=5;
                     switch ( input.LA(1) ) {
-                    case 83:
+                    case 82:
                         {
                         alt47=1;
                         }
                         break;
-                    case 84:
+                    case 83:
                         {
                         alt47=2;
                         }
                         break;
-                    case 85:
+                    case 84:
                         {
                         alt47=3;
                         }
                         break;
-                    case 86:
+                    case 85:
                         {
                         alt47=4;
                         }
                         break;
-                    case 87:
+                    case 86:
                         {
                         alt47=5;
                         }
@@ -7764,7 +7760,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2967:1: (lv_name_0_0= 'SIDE' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2968:3: lv_name_0_0= 'SIDE'
                             {
-                            lv_name_0_0=(Token)match(input,83,FOLLOW_83_in_ruleoutput_option6913); 
+                            lv_name_0_0=(Token)match(input,82,FOLLOW_82_in_ruleoutput_option6913); 
 
                                     newLeafNode(lv_name_0_0, grammarAccess.getOutput_optionAccess().getNameSIDEKeyword_0_0_0());
                                 
@@ -7792,7 +7788,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2983:1: (lv_name_1_0= 'LARGE' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2984:3: lv_name_1_0= 'LARGE'
                             {
-                            lv_name_1_0=(Token)match(input,84,FOLLOW_84_in_ruleoutput_option6950); 
+                            lv_name_1_0=(Token)match(input,83,FOLLOW_83_in_ruleoutput_option6950); 
 
                                     newLeafNode(lv_name_1_0, grammarAccess.getOutput_optionAccess().getNameLARGEKeyword_0_1_0());
                                 
@@ -7820,7 +7816,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:2999:1: (lv_name_2_0= 'SMALL' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3000:3: lv_name_2_0= 'SMALL'
                             {
-                            lv_name_2_0=(Token)match(input,85,FOLLOW_85_in_ruleoutput_option6987); 
+                            lv_name_2_0=(Token)match(input,84,FOLLOW_84_in_ruleoutput_option6987); 
 
                                     newLeafNode(lv_name_2_0, grammarAccess.getOutput_optionAccess().getNameSMALLKeyword_0_2_0());
                                 
@@ -7848,7 +7844,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3015:1: (lv_name_3_0= 'FEW' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3016:3: lv_name_3_0= 'FEW'
                             {
-                            lv_name_3_0=(Token)match(input,86,FOLLOW_86_in_ruleoutput_option7024); 
+                            lv_name_3_0=(Token)match(input,85,FOLLOW_85_in_ruleoutput_option7024); 
 
                                     newLeafNode(lv_name_3_0, grammarAccess.getOutput_optionAccess().getNameFEWKeyword_0_3_0());
                                 
@@ -7876,7 +7872,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3031:1: (lv_name_4_0= 'WUID' )
                             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3032:3: lv_name_4_0= 'WUID'
                             {
-                            lv_name_4_0=(Token)match(input,87,FOLLOW_87_in_ruleoutput_option7061); 
+                            lv_name_4_0=(Token)match(input,86,FOLLOW_86_in_ruleoutput_option7061); 
 
                                     newLeafNode(lv_name_4_0, grammarAccess.getOutput_optionAccess().getNameWUIDKeyword_0_4_0());
                                 
@@ -7913,7 +7909,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3047:1: (lv_name_5_0= 'FROM' )
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3048:3: lv_name_5_0= 'FROM'
                     {
-                    lv_name_5_0=(Token)match(input,88,FOLLOW_88_in_ruleoutput_option7100); 
+                    lv_name_5_0=(Token)match(input,87,FOLLOW_87_in_ruleoutput_option7100); 
 
                             newLeafNode(lv_name_5_0, grammarAccess.getOutput_optionAccess().getNameFROMKeyword_1_0_0());
                         
@@ -7929,7 +7925,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_6=(Token)match(input,36,FOLLOW_36_in_ruleoutput_option7125); 
+                    otherlv_6=(Token)match(input,35,FOLLOW_35_in_ruleoutput_option7125); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getOutput_optionAccess().getLeftParenthesisKeyword_1_1());
                         
@@ -7954,7 +7950,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,37,FOLLOW_37_in_ruleoutput_option7157); 
+                    otherlv_8=(Token)match(input,36,FOLLOW_36_in_ruleoutput_option7157); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getOutput_optionAccess().getRightParenthesisKeyword_1_3());
                         
@@ -7976,7 +7972,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3084:1: (lv_name_9_0= 'DESCRIPTION' )
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3085:3: lv_name_9_0= 'DESCRIPTION'
                     {
-                    lv_name_9_0=(Token)match(input,13,FOLLOW_13_in_ruleoutput_option7183); 
+                    lv_name_9_0=(Token)match(input,12,FOLLOW_12_in_ruleoutput_option7183); 
 
                             newLeafNode(lv_name_9_0, grammarAccess.getOutput_optionAccess().getNameDESCRIPTIONKeyword_2_0_0());
                         
@@ -7992,7 +7988,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,36,FOLLOW_36_in_ruleoutput_option7208); 
+                    otherlv_10=(Token)match(input,35,FOLLOW_35_in_ruleoutput_option7208); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getOutput_optionAccess().getLeftParenthesisKeyword_2_1());
                         
@@ -8027,7 +8023,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_12=(Token)match(input,37,FOLLOW_37_in_ruleoutput_option7241); 
+                    otherlv_12=(Token)match(input,36,FOLLOW_36_in_ruleoutput_option7241); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getOutput_optionAccess().getRightParenthesisKeyword_2_3());
                         
@@ -8114,7 +8110,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3145:1: (otherlv_0= ':' this_output_option_1= ruleoutput_option (otherlv_2= ',' ( (lv_output_internal_3_0= ruleoutput_option ) ) )* )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3145:3: otherlv_0= ':' this_output_option_1= ruleoutput_option (otherlv_2= ',' ( (lv_output_internal_3_0= ruleoutput_option ) ) )*
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleoutput_options7325); 
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_ruleoutput_options7325); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOutput_optionsAccess().getColonKeyword_0());
                 
@@ -8136,7 +8132,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 int alt49=2;
                 int LA49_0 = input.LA(1);
 
-                if ( (LA49_0==30) ) {
+                if ( (LA49_0==29) ) {
                     alt49=1;
                 }
 
@@ -8145,7 +8141,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	case 1 :
             	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3158:3: otherlv_2= ',' ( (lv_output_internal_3_0= ruleoutput_option ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_ruleoutput_options7359); 
+            	    otherlv_2=(Token)match(input,29,FOLLOW_29_in_ruleoutput_options7359); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getOutput_optionsAccess().getCommaKeyword_2_0());
             	        
@@ -8269,22 +8265,22 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3201:2: (otherlv_0= 'BOOL' | otherlv_1= 'INT' | otherlv_2= 'STRING' | otherlv_3= 'ACTION' )?
             int alt50=5;
             switch ( input.LA(1) ) {
-                case 41:
+                case 40:
                     {
                     alt50=1;
                     }
                     break;
-                case 42:
+                case 41:
                     {
                     alt50=2;
                     }
                     break;
-                case 43:
+                case 42:
                     {
                     alt50=3;
                     }
                     break;
-                case 89:
+                case 88:
                     {
                     alt50=4;
                     }
@@ -8295,7 +8291,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 1 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3201:4: otherlv_0= 'BOOL'
                     {
-                    otherlv_0=(Token)match(input,41,FOLLOW_41_in_ruleout_type7466); 
+                    otherlv_0=(Token)match(input,40,FOLLOW_40_in_ruleout_type7466); 
 
                         	newLeafNode(otherlv_0, grammarAccess.getOut_typeAccess().getBOOLKeyword_0_0());
                         
@@ -8305,7 +8301,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 2 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3206:7: otherlv_1= 'INT'
                     {
-                    otherlv_1=(Token)match(input,42,FOLLOW_42_in_ruleout_type7484); 
+                    otherlv_1=(Token)match(input,41,FOLLOW_41_in_ruleout_type7484); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getOut_typeAccess().getINTKeyword_0_1());
                         
@@ -8315,7 +8311,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 3 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3211:7: otherlv_2= 'STRING'
                     {
-                    otherlv_2=(Token)match(input,43,FOLLOW_43_in_ruleout_type7502); 
+                    otherlv_2=(Token)match(input,42,FOLLOW_42_in_ruleout_type7502); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getOut_typeAccess().getSTRINGKeyword_0_2());
                         
@@ -8325,7 +8321,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                 case 4 :
                     // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3216:7: otherlv_3= 'ACTION'
                     {
-                    otherlv_3=(Token)match(input,89,FOLLOW_89_in_ruleout_type7520); 
+                    otherlv_3=(Token)match(input,88,FOLLOW_88_in_ruleout_type7520); 
 
                         	newLeafNode(otherlv_3, grammarAccess.getOut_typeAccess().getACTIONKeyword_0_3());
                         
@@ -8462,7 +8458,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt51=2;
                     int LA51_0 = input.LA(1);
 
-                    if ( (LA51_0==35) ) {
+                    if ( (LA51_0==34) ) {
                         alt51=1;
                     }
                     switch (alt51) {
@@ -8500,7 +8496,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_2=(Token)match(input,20,FOLLOW_20_in_ruleoutput_value7670); 
+                    otherlv_2=(Token)match(input,19,FOLLOW_19_in_ruleoutput_value7670); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getOutput_valueAccess().getSemicolonKeyword_0_2());
                         
@@ -8532,7 +8528,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt52=2;
                     int LA52_0 = input.LA(1);
 
-                    if ( (LA52_0==36) ) {
+                    if ( (LA52_0==35) ) {
                         alt52=1;
                     }
                     switch (alt52) {
@@ -8574,7 +8570,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt53=2;
                     int LA53_0 = input.LA(1);
 
-                    if ( (LA53_0==35) ) {
+                    if ( (LA53_0==34) ) {
                         alt53=1;
                     }
                     switch (alt53) {
@@ -8618,7 +8614,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         int alt54=2;
                         int LA54_0 = input.LA(1);
 
-                        if ( (LA54_0==43||LA54_0==71||LA54_0==73||LA54_0==76||(LA54_0>=78 && LA54_0<=82)) ) {
+                        if ( (LA54_0==42||LA54_0==70||LA54_0==72||LA54_0==75||(LA54_0>=77 && LA54_0<=81)) ) {
                             alt54=1;
                         }
 
@@ -8661,7 +8657,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                         }
                     } while (true);
 
-                    otherlv_7=(Token)match(input,33,FOLLOW_33_in_ruleoutput_value7777); 
+                    otherlv_7=(Token)match(input,32,FOLLOW_32_in_ruleoutput_value7777); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getOutput_valueAccess().getENDKeyword_1_4());
                         
@@ -8693,7 +8689,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt55=2;
                     int LA55_0 = input.LA(1);
 
-                    if ( (LA55_0==36) ) {
+                    if ( (LA55_0==35) ) {
                         alt55=1;
                     }
                     switch (alt55) {
@@ -8735,7 +8731,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     int alt56=2;
                     int LA56_0 = input.LA(1);
 
-                    if ( (LA56_0==35) ) {
+                    if ( (LA56_0==34) ) {
                         alt56=1;
                     }
                     switch (alt56) {
@@ -8773,7 +8769,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,20,FOLLOW_20_in_ruleoutput_value7862); 
+                    otherlv_11=(Token)match(input,19,FOLLOW_19_in_ruleoutput_value7862); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getOutput_valueAccess().getSemicolonKeyword_2_3());
                         
@@ -8857,7 +8853,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3420:1: (otherlv_0= '(' ( (otherlv_1= RULE_ID ) ) otherlv_2= ')' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3420:3: otherlv_0= '(' ( (otherlv_1= RULE_ID ) ) otherlv_2= ')'
             {
-            otherlv_0=(Token)match(input,36,FOLLOW_36_in_ruleoutputbase7946); 
+            otherlv_0=(Token)match(input,35,FOLLOW_35_in_ruleoutputbase7946); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getOutputbaseAccess().getLeftParenthesisKeyword_0());
                 
@@ -8874,7 +8870,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     
             otherlv_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleoutputbase7966); 
 
-            		newLeafNode(otherlv_1, grammarAccess.getOutputbaseAccess().getActionsDatasetCrossReference_1_0()); 
+            		newLeafNode(otherlv_1, grammarAccess.getOutputbaseAccess().getActionsDatatypeCrossReference_1_0()); 
             	
 
             }
@@ -8882,7 +8878,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,37,FOLLOW_37_in_ruleoutputbase7978); 
+            otherlv_2=(Token)match(input,36,FOLLOW_36_in_ruleoutputbase7978); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getOutputbaseAccess().getRightParenthesisKeyword_2());
                 
@@ -8943,23 +8939,22 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulegenerate_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3458:1: rulegenerate_section returns [EObject current=null] : ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) otherlv_2= 'ENDGENERATES' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3458:1: rulegenerate_section returns [EObject current=null] : ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) ) ;
     public final EObject rulegenerate_section() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
-        Token otherlv_2=null;
         EObject lv_body_1_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3461:28: ( ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) otherlv_2= 'ENDGENERATES' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:1: ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) otherlv_2= 'ENDGENERATES' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3461:28: ( ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:1: ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:1: ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) otherlv_2= 'ENDGENERATES' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:2: ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) otherlv_2= 'ENDGENERATES'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:1: ( ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:2: ( (lv_name_0_0= 'GENERATES' ) ) ( (lv_body_1_0= rulegenerate_body ) )
             {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3462:2: ( (lv_name_0_0= 'GENERATES' ) )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3463:1: (lv_name_0_0= 'GENERATES' )
@@ -8967,7 +8962,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3463:1: (lv_name_0_0= 'GENERATES' )
             // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3464:3: lv_name_0_0= 'GENERATES'
             {
-            lv_name_0_0=(Token)match(input,90,FOLLOW_90_in_rulegenerate_section8067); 
+            lv_name_0_0=(Token)match(input,89,FOLLOW_89_in_rulegenerate_section8067); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getGenerate_sectionAccess().getNameGENERATESKeyword_0_0());
                 
@@ -9014,10 +9009,6 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_2=(Token)match(input,91,FOLLOW_91_in_rulegenerate_section8113); 
-
-                	newLeafNode(otherlv_2, grammarAccess.getGenerate_sectionAccess().getENDGENERATESKeyword_2());
-                
 
             }
 
@@ -9039,7 +9030,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulegenerate_body"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3507:1: entryRulegenerate_body returns [EObject current=null] : iv_rulegenerate_body= rulegenerate_body EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3503:1: entryRulegenerate_body returns [EObject current=null] : iv_rulegenerate_body= rulegenerate_body EOF ;
     public final EObject entryRulegenerate_body() throws RecognitionException {
         EObject current = null;
 
@@ -9047,17 +9038,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3508:2: (iv_rulegenerate_body= rulegenerate_body EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3509:2: iv_rulegenerate_body= rulegenerate_body EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3504:2: (iv_rulegenerate_body= rulegenerate_body EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3505:2: iv_rulegenerate_body= rulegenerate_body EOF
             {
              newCompositeNode(grammarAccess.getGenerate_bodyRule()); 
-            pushFollow(FOLLOW_rulegenerate_body_in_entryRulegenerate_body8149);
+            pushFollow(FOLLOW_rulegenerate_body_in_entryRulegenerate_body8137);
             iv_rulegenerate_body=rulegenerate_body();
 
             state._fsp--;
 
              current =iv_rulegenerate_body; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulegenerate_body8159); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulegenerate_body8147); 
 
             }
 
@@ -9075,324 +9066,68 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulegenerate_body"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3516:1: rulegenerate_body returns [EObject current=null] : ( ( ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )* ) | ( ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' ) ) ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3512:1: rulegenerate_body returns [EObject current=null] : ( ( (lv_name_0_0= RULE_STRING ) ) | ( ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES' ) ) ;
     public final EObject rulegenerate_body() throws RecognitionException {
         EObject current = null;
 
         Token lv_name_0_0=null;
-        Token this_ID_1=null;
-        Token this_INT_2=null;
-        Token this_WS_3=null;
-        Token this_STRING_4=null;
-        Token this_ECL_CODE_5=null;
+        Token lv_name_1_0=null;
+        Token otherlv_2=null;
+        Token this_ID_3=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
         Token otherlv_8=null;
-        Token otherlv_9=null;
-        Token otherlv_10=null;
-        Token otherlv_11=null;
-        Token otherlv_12=null;
-        Token otherlv_13=null;
-        Token otherlv_14=null;
-        Token otherlv_15=null;
-        Token lv_name_16_0=null;
-        Token otherlv_17=null;
-        Token this_ID_18=null;
-        Token otherlv_19=null;
-        Token otherlv_20=null;
-        Token otherlv_21=null;
-        Token otherlv_22=null;
 
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3519:28: ( ( ( ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )* ) | ( ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' ) ) ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3520:1: ( ( ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )* ) | ( ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3515:28: ( ( ( (lv_name_0_0= RULE_STRING ) ) | ( ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES' ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3516:1: ( ( (lv_name_0_0= RULE_STRING ) ) | ( ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES' ) )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3520:1: ( ( ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )* ) | ( ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' ) ) )
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3516:1: ( ( (lv_name_0_0= RULE_STRING ) ) | ( ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES' ) )
+            int alt59=2;
+            int LA59_0 = input.LA(1);
 
-            if ( (LA60_0==92) ) {
-                alt60=1;
+            if ( (LA59_0==RULE_STRING) ) {
+                alt59=1;
             }
-            else if ( (LA60_0==97) ) {
-                alt60=2;
+            else if ( (LA59_0==90) ) {
+                alt59=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 60, 0, input);
+                    new NoViableAltException("", 59, 0, input);
 
                 throw nvae;
             }
-            switch (alt60) {
+            switch (alt59) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3520:2: ( ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )* )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3516:2: ( (lv_name_0_0= RULE_STRING ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3520:2: ( ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )* )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3520:3: ( (lv_name_0_0= 'INLINE' ) ) (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )*
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3516:2: ( (lv_name_0_0= RULE_STRING ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3517:1: (lv_name_0_0= RULE_STRING )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3520:3: ( (lv_name_0_0= 'INLINE' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3521:1: (lv_name_0_0= 'INLINE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3517:1: (lv_name_0_0= RULE_STRING )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3518:3: lv_name_0_0= RULE_STRING
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3521:1: (lv_name_0_0= 'INLINE' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3522:3: lv_name_0_0= 'INLINE'
-                    {
-                    lv_name_0_0=(Token)match(input,92,FOLLOW_92_in_rulegenerate_body8203); 
+                    lv_name_0_0=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulegenerate_body8189); 
 
-                            newLeafNode(lv_name_0_0, grammarAccess.getGenerate_bodyAccess().getNameINLINEKeyword_0_0_0());
-                        
+                    			newLeafNode(lv_name_0_0, grammarAccess.getGenerate_bodyAccess().getNameSTRINGTerminalRuleCall_0_0()); 
+                    		
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getGenerate_bodyRule());
                     	        }
-                           		setWithLastConsumed(current, "name", lv_name_0_0, "INLINE");
+                           		setWithLastConsumed(
+                           			current, 
+                           			"name",
+                            		lv_name_0_0, 
+                            		"STRING");
                     	    
 
                     }
-
-
-                    }
-
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3535:2: (this_ID_1= RULE_ID | this_INT_2= RULE_INT | this_WS_3= RULE_WS | this_STRING_4= RULE_STRING | this_ECL_CODE_5= RULE_ECL_CODE | otherlv_6= ';' | otherlv_7= '.' | otherlv_8= '(' | otherlv_9= ')' | otherlv_10= ',' | otherlv_11= ':' | otherlv_12= '=' | otherlv_13= '{' | otherlv_14= '}' | otherlv_15= '-' )*
-                    loop58:
-                    do {
-                        int alt58=16;
-                        switch ( input.LA(1) ) {
-                        case RULE_ID:
-                            {
-                            alt58=1;
-                            }
-                            break;
-                        case RULE_INT:
-                            {
-                            alt58=2;
-                            }
-                            break;
-                        case RULE_WS:
-                            {
-                            alt58=3;
-                            }
-                            break;
-                        case RULE_STRING:
-                            {
-                            alt58=4;
-                            }
-                            break;
-                        case RULE_ECL_CODE:
-                            {
-                            alt58=5;
-                            }
-                            break;
-                        case 20:
-                            {
-                            alt58=6;
-                            }
-                            break;
-                        case 93:
-                            {
-                            alt58=7;
-                            }
-                            break;
-                        case 36:
-                            {
-                            alt58=8;
-                            }
-                            break;
-                        case 37:
-                            {
-                            alt58=9;
-                            }
-                            break;
-                        case 30:
-                            {
-                            alt58=10;
-                            }
-                            break;
-                        case 35:
-                            {
-                            alt58=11;
-                            }
-                            break;
-                        case 31:
-                            {
-                            alt58=12;
-                            }
-                            break;
-                        case 94:
-                            {
-                            alt58=13;
-                            }
-                            break;
-                        case 95:
-                            {
-                            alt58=14;
-                            }
-                            break;
-                        case 96:
-                            {
-                            alt58=15;
-                            }
-                            break;
-
-                        }
-
-                        switch (alt58) {
-                    	case 1 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3535:3: this_ID_1= RULE_ID
-                    	    {
-                    	    this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulegenerate_body8228); 
-                    	     
-                    	        newLeafNode(this_ID_1, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_0_1_0()); 
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 2 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3540:6: this_INT_2= RULE_INT
-                    	    {
-                    	    this_INT_2=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulegenerate_body8244); 
-                    	     
-                    	        newLeafNode(this_INT_2, grammarAccess.getGenerate_bodyAccess().getINTTerminalRuleCall_0_1_1()); 
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 3 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3545:6: this_WS_3= RULE_WS
-                    	    {
-                    	    this_WS_3=(Token)match(input,RULE_WS,FOLLOW_RULE_WS_in_rulegenerate_body8260); 
-                    	     
-                    	        newLeafNode(this_WS_3, grammarAccess.getGenerate_bodyAccess().getWSTerminalRuleCall_0_1_2()); 
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 4 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3550:6: this_STRING_4= RULE_STRING
-                    	    {
-                    	    this_STRING_4=(Token)match(input,RULE_STRING,FOLLOW_RULE_STRING_in_rulegenerate_body8276); 
-                    	     
-                    	        newLeafNode(this_STRING_4, grammarAccess.getGenerate_bodyAccess().getSTRINGTerminalRuleCall_0_1_3()); 
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 5 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3555:6: this_ECL_CODE_5= RULE_ECL_CODE
-                    	    {
-                    	    this_ECL_CODE_5=(Token)match(input,RULE_ECL_CODE,FOLLOW_RULE_ECL_CODE_in_rulegenerate_body8292); 
-                    	     
-                    	        newLeafNode(this_ECL_CODE_5, grammarAccess.getGenerate_bodyAccess().getECL_CODETerminalRuleCall_0_1_4()); 
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 6 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3560:7: otherlv_6= ';'
-                    	    {
-                    	    otherlv_6=(Token)match(input,20,FOLLOW_20_in_rulegenerate_body8309); 
-
-                    	        	newLeafNode(otherlv_6, grammarAccess.getGenerate_bodyAccess().getSemicolonKeyword_0_1_5());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 7 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3565:7: otherlv_7= '.'
-                    	    {
-                    	    otherlv_7=(Token)match(input,93,FOLLOW_93_in_rulegenerate_body8327); 
-
-                    	        	newLeafNode(otherlv_7, grammarAccess.getGenerate_bodyAccess().getFullStopKeyword_0_1_6());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 8 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3570:7: otherlv_8= '('
-                    	    {
-                    	    otherlv_8=(Token)match(input,36,FOLLOW_36_in_rulegenerate_body8345); 
-
-                    	        	newLeafNode(otherlv_8, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_0_1_7());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 9 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3575:7: otherlv_9= ')'
-                    	    {
-                    	    otherlv_9=(Token)match(input,37,FOLLOW_37_in_rulegenerate_body8363); 
-
-                    	        	newLeafNode(otherlv_9, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_0_1_8());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 10 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3580:7: otherlv_10= ','
-                    	    {
-                    	    otherlv_10=(Token)match(input,30,FOLLOW_30_in_rulegenerate_body8381); 
-
-                    	        	newLeafNode(otherlv_10, grammarAccess.getGenerate_bodyAccess().getCommaKeyword_0_1_9());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 11 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3585:7: otherlv_11= ':'
-                    	    {
-                    	    otherlv_11=(Token)match(input,35,FOLLOW_35_in_rulegenerate_body8399); 
-
-                    	        	newLeafNode(otherlv_11, grammarAccess.getGenerate_bodyAccess().getColonKeyword_0_1_10());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 12 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3590:7: otherlv_12= '='
-                    	    {
-                    	    otherlv_12=(Token)match(input,31,FOLLOW_31_in_rulegenerate_body8417); 
-
-                    	        	newLeafNode(otherlv_12, grammarAccess.getGenerate_bodyAccess().getEqualsSignKeyword_0_1_11());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 13 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3595:7: otherlv_13= '{'
-                    	    {
-                    	    otherlv_13=(Token)match(input,94,FOLLOW_94_in_rulegenerate_body8435); 
-
-                    	        	newLeafNode(otherlv_13, grammarAccess.getGenerate_bodyAccess().getLeftCurlyBracketKeyword_0_1_12());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 14 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3600:7: otherlv_14= '}'
-                    	    {
-                    	    otherlv_14=(Token)match(input,95,FOLLOW_95_in_rulegenerate_body8453); 
-
-                    	        	newLeafNode(otherlv_14, grammarAccess.getGenerate_bodyAccess().getRightCurlyBracketKeyword_0_1_13());
-                    	        
-
-                    	    }
-                    	    break;
-                    	case 15 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3605:7: otherlv_15= '-'
-                    	    {
-                    	    otherlv_15=(Token)match(input,96,FOLLOW_96_in_rulegenerate_body8471); 
-
-                    	        	newLeafNode(otherlv_15, grammarAccess.getGenerate_bodyAccess().getHyphenMinusKeyword_0_1_14());
-                    	        
-
-                    	    }
-                    	    break;
-
-                    	default :
-                    	    break loop58;
-                        }
-                    } while (true);
 
 
                     }
@@ -9401,26 +9136,26 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3610:6: ( ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3535:6: ( ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3610:6: ( ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3610:7: ( (lv_name_16_0= 'SALT' ) ) otherlv_17= '(' this_ID_18= RULE_ID otherlv_19= ')' otherlv_20= ':' (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3535:6: ( ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3535:7: ( (lv_name_1_0= 'SALT' ) ) otherlv_2= '(' this_ID_3= RULE_ID otherlv_4= ')' otherlv_5= ':' (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' ) otherlv_8= 'ENDGENERATES'
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3610:7: ( (lv_name_16_0= 'SALT' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3611:1: (lv_name_16_0= 'SALT' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3535:7: ( (lv_name_1_0= 'SALT' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3536:1: (lv_name_1_0= 'SALT' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3611:1: (lv_name_16_0= 'SALT' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3612:3: lv_name_16_0= 'SALT'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3536:1: (lv_name_1_0= 'SALT' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3537:3: lv_name_1_0= 'SALT'
                     {
-                    lv_name_16_0=(Token)match(input,97,FOLLOW_97_in_rulegenerate_body8499); 
+                    lv_name_1_0=(Token)match(input,90,FOLLOW_90_in_rulegenerate_body8219); 
 
-                            newLeafNode(lv_name_16_0, grammarAccess.getGenerate_bodyAccess().getNameSALTKeyword_1_0_0());
+                            newLeafNode(lv_name_1_0, grammarAccess.getGenerate_bodyAccess().getNameSALTKeyword_1_0_0());
                         
 
                     	        if (current==null) {
                     	            current = createModelElement(grammarAccess.getGenerate_bodyRule());
                     	        }
-                           		setWithLastConsumed(current, "name", lv_name_16_0, "SALT");
+                           		setWithLastConsumed(current, "name", lv_name_1_0, "SALT");
                     	    
 
                     }
@@ -9428,55 +9163,55 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_17=(Token)match(input,36,FOLLOW_36_in_rulegenerate_body8524); 
+                    otherlv_2=(Token)match(input,35,FOLLOW_35_in_rulegenerate_body8244); 
 
-                        	newLeafNode(otherlv_17, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_1_1());
+                        	newLeafNode(otherlv_2, grammarAccess.getGenerate_bodyAccess().getLeftParenthesisKeyword_1_1());
                         
-                    this_ID_18=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulegenerate_body8535); 
+                    this_ID_3=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulegenerate_body8255); 
                      
-                        newLeafNode(this_ID_18, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_1_2()); 
+                        newLeafNode(this_ID_3, grammarAccess.getGenerate_bodyAccess().getIDTerminalRuleCall_1_2()); 
                         
-                    otherlv_19=(Token)match(input,37,FOLLOW_37_in_rulegenerate_body8546); 
+                    otherlv_4=(Token)match(input,36,FOLLOW_36_in_rulegenerate_body8266); 
 
-                        	newLeafNode(otherlv_19, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_1_3());
+                        	newLeafNode(otherlv_4, grammarAccess.getGenerate_bodyAccess().getRightParenthesisKeyword_1_3());
                         
-                    otherlv_20=(Token)match(input,35,FOLLOW_35_in_rulegenerate_body8558); 
+                    otherlv_5=(Token)match(input,34,FOLLOW_34_in_rulegenerate_body8278); 
 
-                        	newLeafNode(otherlv_20, grammarAccess.getGenerate_bodyAccess().getColonKeyword_1_4());
+                        	newLeafNode(otherlv_5, grammarAccess.getGenerate_bodyAccess().getColonKeyword_1_4());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3641:1: (otherlv_21= 'SCOREDSEARCH' | otherlv_22= 'PROFILE' )
-                    int alt59=2;
-                    int LA59_0 = input.LA(1);
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3566:1: (otherlv_6= 'SCOREDSEARCH' | otherlv_7= 'PROFILE' )
+                    int alt58=2;
+                    int LA58_0 = input.LA(1);
 
-                    if ( (LA59_0==98) ) {
-                        alt59=1;
+                    if ( (LA58_0==91) ) {
+                        alt58=1;
                     }
-                    else if ( (LA59_0==99) ) {
-                        alt59=2;
+                    else if ( (LA58_0==92) ) {
+                        alt58=2;
                     }
                     else {
                         NoViableAltException nvae =
-                            new NoViableAltException("", 59, 0, input);
+                            new NoViableAltException("", 58, 0, input);
 
                         throw nvae;
                     }
-                    switch (alt59) {
+                    switch (alt58) {
                         case 1 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3641:3: otherlv_21= 'SCOREDSEARCH'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3566:3: otherlv_6= 'SCOREDSEARCH'
                             {
-                            otherlv_21=(Token)match(input,98,FOLLOW_98_in_rulegenerate_body8571); 
+                            otherlv_6=(Token)match(input,91,FOLLOW_91_in_rulegenerate_body8291); 
 
-                                	newLeafNode(otherlv_21, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0());
+                                	newLeafNode(otherlv_6, grammarAccess.getGenerate_bodyAccess().getSCOREDSEARCHKeyword_1_5_0());
                                 
 
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3646:7: otherlv_22= 'PROFILE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3571:7: otherlv_7= 'PROFILE'
                             {
-                            otherlv_22=(Token)match(input,99,FOLLOW_99_in_rulegenerate_body8589); 
+                            otherlv_7=(Token)match(input,92,FOLLOW_92_in_rulegenerate_body8309); 
 
-                                	newLeafNode(otherlv_22, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1());
+                                	newLeafNode(otherlv_7, grammarAccess.getGenerate_bodyAccess().getPROFILEKeyword_1_5_1());
                                 
 
                             }
@@ -9484,6 +9219,10 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
+                    otherlv_8=(Token)match(input,93,FOLLOW_93_in_rulegenerate_body8322); 
+
+                        	newLeafNode(otherlv_8, grammarAccess.getGenerate_bodyAccess().getENDGENERATESKeyword_1_6());
+                        
 
                     }
 
@@ -9511,7 +9250,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevisual_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3658:1: entryRulevisual_section returns [EObject current=null] : iv_rulevisual_section= rulevisual_section EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3587:1: entryRulevisual_section returns [EObject current=null] : iv_rulevisual_section= rulevisual_section EOF ;
     public final EObject entryRulevisual_section() throws RecognitionException {
         EObject current = null;
 
@@ -9519,17 +9258,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3659:2: (iv_rulevisual_section= rulevisual_section EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3660:2: iv_rulevisual_section= rulevisual_section EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3588:2: (iv_rulevisual_section= rulevisual_section EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3589:2: iv_rulevisual_section= rulevisual_section EOF
             {
              newCompositeNode(grammarAccess.getVisual_sectionRule()); 
-            pushFollow(FOLLOW_rulevisual_section_in_entryRulevisual_section8627);
+            pushFollow(FOLLOW_rulevisual_section_in_entryRulevisual_section8359);
             iv_rulevisual_section=rulevisual_section();
 
             state._fsp--;
 
              current =iv_rulevisual_section; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_section8637); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_section8369); 
 
             }
 
@@ -9547,7 +9286,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevisual_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3667:1: rulevisual_section returns [EObject current=null] : ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3596:1: rulevisual_section returns [EObject current=null] : ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' ) ;
     public final EObject rulevisual_section() throws RecognitionException {
         EObject current = null;
 
@@ -9562,19 +9301,19 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3670:28: ( ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3671:1: ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3599:28: ( ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3600:1: ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3671:1: ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3671:2: ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3600:1: ( ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3600:2: ( (lv_name_0_0= 'VISUALIZE' ) ) this_ID_1= RULE_ID ( (lv_vis_ops_2_0= rulevisual_section_options ) )? ( (lv_vis_elements_3_0= rulevisualization ) )+ otherlv_4= 'END'
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3671:2: ( (lv_name_0_0= 'VISUALIZE' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3672:1: (lv_name_0_0= 'VISUALIZE' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3600:2: ( (lv_name_0_0= 'VISUALIZE' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3601:1: (lv_name_0_0= 'VISUALIZE' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3672:1: (lv_name_0_0= 'VISUALIZE' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3673:3: lv_name_0_0= 'VISUALIZE'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3601:1: (lv_name_0_0= 'VISUALIZE' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3602:3: lv_name_0_0= 'VISUALIZE'
             {
-            lv_name_0_0=(Token)match(input,28,FOLLOW_28_in_rulevisual_section8680); 
+            lv_name_0_0=(Token)match(input,27,FOLLOW_27_in_rulevisual_section8412); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getVisual_sectionAccess().getNameVISUALIZEKeyword_0_0());
                 
@@ -9590,28 +9329,28 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisual_section8704); 
+            this_ID_1=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisual_section8436); 
              
                 newLeafNode(this_ID_1, grammarAccess.getVisual_sectionAccess().getIDTerminalRuleCall_1()); 
                 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3690:1: ( (lv_vis_ops_2_0= rulevisual_section_options ) )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3619:1: ( (lv_vis_ops_2_0= rulevisual_section_options ) )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA61_0==35) ) {
-                alt61=1;
+            if ( (LA60_0==34) ) {
+                alt60=1;
             }
-            switch (alt61) {
+            switch (alt60) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3691:1: (lv_vis_ops_2_0= rulevisual_section_options )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3620:1: (lv_vis_ops_2_0= rulevisual_section_options )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3691:1: (lv_vis_ops_2_0= rulevisual_section_options )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3692:3: lv_vis_ops_2_0= rulevisual_section_options
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3620:1: (lv_vis_ops_2_0= rulevisual_section_options )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3621:3: lv_vis_ops_2_0= rulevisual_section_options
                     {
                      
                     	        newCompositeNode(grammarAccess.getVisual_sectionAccess().getVis_opsVisual_section_optionsParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_rulevisual_section_options_in_rulevisual_section8724);
+                    pushFollow(FOLLOW_rulevisual_section_options_in_rulevisual_section8456);
                     lv_vis_ops_2_0=rulevisual_section_options();
 
                     state._fsp--;
@@ -9636,29 +9375,29 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3708:3: ( (lv_vis_elements_3_0= rulevisualization ) )+
-            int cnt62=0;
-            loop62:
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3637:3: ( (lv_vis_elements_3_0= rulevisualization ) )+
+            int cnt61=0;
+            loop61:
             do {
-                int alt62=2;
-                int LA62_0 = input.LA(1);
+                int alt61=2;
+                int LA61_0 = input.LA(1);
 
-                if ( ((LA62_0>=100 && LA62_0<=106)) ) {
-                    alt62=1;
+                if ( ((LA61_0>=94 && LA61_0<=100)) ) {
+                    alt61=1;
                 }
 
 
-                switch (alt62) {
+                switch (alt61) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3709:1: (lv_vis_elements_3_0= rulevisualization )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3638:1: (lv_vis_elements_3_0= rulevisualization )
             	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3709:1: (lv_vis_elements_3_0= rulevisualization )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3710:3: lv_vis_elements_3_0= rulevisualization
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3638:1: (lv_vis_elements_3_0= rulevisualization )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3639:3: lv_vis_elements_3_0= rulevisualization
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getVisual_sectionAccess().getVis_elementsVisualizationParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulevisualization_in_rulevisual_section8746);
+            	    pushFollow(FOLLOW_rulevisualization_in_rulevisual_section8478);
             	    lv_vis_elements_3_0=rulevisualization();
 
             	    state._fsp--;
@@ -9682,15 +9421,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt62 >= 1 ) break loop62;
+            	    if ( cnt61 >= 1 ) break loop61;
                         EarlyExitException eee =
-                            new EarlyExitException(62, input);
+                            new EarlyExitException(61, input);
                         throw eee;
                 }
-                cnt62++;
+                cnt61++;
             } while (true);
 
-            otherlv_4=(Token)match(input,33,FOLLOW_33_in_rulevisual_section8759); 
+            otherlv_4=(Token)match(input,32,FOLLOW_32_in_rulevisual_section8491); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getVisual_sectionAccess().getENDKeyword_4());
                 
@@ -9715,7 +9454,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevisualization"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3738:1: entryRulevisualization returns [EObject current=null] : iv_rulevisualization= rulevisualization EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3667:1: entryRulevisualization returns [EObject current=null] : iv_rulevisualization= rulevisualization EOF ;
     public final EObject entryRulevisualization() throws RecognitionException {
         EObject current = null;
 
@@ -9723,17 +9462,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3739:2: (iv_rulevisualization= rulevisualization EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3740:2: iv_rulevisualization= rulevisualization EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3668:2: (iv_rulevisualization= rulevisualization EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3669:2: iv_rulevisualization= rulevisualization EOF
             {
              newCompositeNode(grammarAccess.getVisualizationRule()); 
-            pushFollow(FOLLOW_rulevisualization_in_entryRulevisualization8795);
+            pushFollow(FOLLOW_rulevisualization_in_entryRulevisualization8527);
             iv_rulevisualization=rulevisualization();
 
             state._fsp--;
 
              current =iv_rulevisualization; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisualization8805); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisualization8537); 
 
             }
 
@@ -9751,7 +9490,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevisualization"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3747:1: rulevisualization returns [EObject current=null] : ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3676:1: rulevisualization returns [EObject current=null] : ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) ) ;
     public final EObject rulevisualization() throws RecognitionException {
         EObject current = null;
 
@@ -9778,77 +9517,77 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3750:28: ( ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:1: ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3679:28: ( ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:1: ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:1: ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) )
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:1: ( ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' ) | (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' ) )
+            int alt65=2;
+            int LA65_0 = input.LA(1);
 
-            if ( ((LA66_0>=100 && LA66_0<=105)) ) {
-                alt66=1;
+            if ( ((LA65_0>=94 && LA65_0<=99)) ) {
+                alt65=1;
             }
-            else if ( (LA66_0==106) ) {
-                alt66=2;
+            else if ( (LA65_0==100) ) {
+                alt65=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 66, 0, input);
+                    new NoViableAltException("", 65, 0, input);
 
                 throw nvae;
             }
-            switch (alt66) {
+            switch (alt65) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:2: ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:2: ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:2: ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:3: (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:2: ( (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:3: (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' ) ( (lv_name_6_0= RULE_ID ) ) otherlv_7= '(' ( (lv_inputs_8_0= rulevis_basis ) ) otherlv_9= ')' ( (lv_vis_ops_10_0= rulevisual_options ) )? otherlv_11= ';'
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:3: (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' )
-                    int alt63=6;
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:3: (otherlv_0= 'CHORO' | otherlv_1= 'LINE' | otherlv_2= 'TIMELINE' | otherlv_3= 'PIE' | otherlv_4= 'BAR' | otherlv_5= 'TABLE' )
+                    int alt62=6;
                     switch ( input.LA(1) ) {
-                    case 100:
+                    case 94:
                         {
-                        alt63=1;
+                        alt62=1;
                         }
                         break;
-                    case 101:
+                    case 95:
                         {
-                        alt63=2;
+                        alt62=2;
                         }
                         break;
-                    case 102:
+                    case 96:
                         {
-                        alt63=3;
+                        alt62=3;
                         }
                         break;
-                    case 103:
+                    case 97:
                         {
-                        alt63=4;
+                        alt62=4;
                         }
                         break;
-                    case 104:
+                    case 98:
                         {
-                        alt63=5;
+                        alt62=5;
                         }
                         break;
-                    case 105:
+                    case 99:
                         {
-                        alt63=6;
+                        alt62=6;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 63, 0, input);
+                            new NoViableAltException("", 62, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt63) {
+                    switch (alt62) {
                         case 1 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3751:5: otherlv_0= 'CHORO'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3680:5: otherlv_0= 'CHORO'
                             {
-                            otherlv_0=(Token)match(input,100,FOLLOW_100_in_rulevisualization8844); 
+                            otherlv_0=(Token)match(input,94,FOLLOW_94_in_rulevisualization8576); 
 
                                 	newLeafNode(otherlv_0, grammarAccess.getVisualizationAccess().getCHOROKeyword_0_0_0());
                                 
@@ -9856,9 +9595,9 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3756:7: otherlv_1= 'LINE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3685:7: otherlv_1= 'LINE'
                             {
-                            otherlv_1=(Token)match(input,101,FOLLOW_101_in_rulevisualization8862); 
+                            otherlv_1=(Token)match(input,95,FOLLOW_95_in_rulevisualization8594); 
 
                                 	newLeafNode(otherlv_1, grammarAccess.getVisualizationAccess().getLINEKeyword_0_0_1());
                                 
@@ -9866,9 +9605,9 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3761:7: otherlv_2= 'TIMELINE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3690:7: otherlv_2= 'TIMELINE'
                             {
-                            otherlv_2=(Token)match(input,102,FOLLOW_102_in_rulevisualization8880); 
+                            otherlv_2=(Token)match(input,96,FOLLOW_96_in_rulevisualization8612); 
 
                                 	newLeafNode(otherlv_2, grammarAccess.getVisualizationAccess().getTIMELINEKeyword_0_0_2());
                                 
@@ -9876,9 +9615,9 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3766:7: otherlv_3= 'PIE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3695:7: otherlv_3= 'PIE'
                             {
-                            otherlv_3=(Token)match(input,103,FOLLOW_103_in_rulevisualization8898); 
+                            otherlv_3=(Token)match(input,97,FOLLOW_97_in_rulevisualization8630); 
 
                                 	newLeafNode(otherlv_3, grammarAccess.getVisualizationAccess().getPIEKeyword_0_0_3());
                                 
@@ -9886,9 +9625,9 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 5 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3771:7: otherlv_4= 'BAR'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3700:7: otherlv_4= 'BAR'
                             {
-                            otherlv_4=(Token)match(input,104,FOLLOW_104_in_rulevisualization8916); 
+                            otherlv_4=(Token)match(input,98,FOLLOW_98_in_rulevisualization8648); 
 
                                 	newLeafNode(otherlv_4, grammarAccess.getVisualizationAccess().getBARKeyword_0_0_4());
                                 
@@ -9896,9 +9635,9 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 6 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3776:7: otherlv_5= 'TABLE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3705:7: otherlv_5= 'TABLE'
                             {
-                            otherlv_5=(Token)match(input,105,FOLLOW_105_in_rulevisualization8934); 
+                            otherlv_5=(Token)match(input,99,FOLLOW_99_in_rulevisualization8666); 
 
                                 	newLeafNode(otherlv_5, grammarAccess.getVisualizationAccess().getTABLEKeyword_0_0_5());
                                 
@@ -9908,13 +9647,13 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3780:2: ( (lv_name_6_0= RULE_ID ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3781:1: (lv_name_6_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3709:2: ( (lv_name_6_0= RULE_ID ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3710:1: (lv_name_6_0= RULE_ID )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3781:1: (lv_name_6_0= RULE_ID )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3782:3: lv_name_6_0= RULE_ID
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3710:1: (lv_name_6_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3711:3: lv_name_6_0= RULE_ID
                     {
-                    lv_name_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisualization8952); 
+                    lv_name_6_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisualization8684); 
 
                     			newLeafNode(lv_name_6_0, grammarAccess.getVisualizationAccess().getNameIDTerminalRuleCall_0_1_0()); 
                     		
@@ -9934,20 +9673,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_7=(Token)match(input,36,FOLLOW_36_in_rulevisualization8969); 
+                    otherlv_7=(Token)match(input,35,FOLLOW_35_in_rulevisualization8701); 
 
                         	newLeafNode(otherlv_7, grammarAccess.getVisualizationAccess().getLeftParenthesisKeyword_0_2());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3802:1: ( (lv_inputs_8_0= rulevis_basis ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3803:1: (lv_inputs_8_0= rulevis_basis )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3731:1: ( (lv_inputs_8_0= rulevis_basis ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3732:1: (lv_inputs_8_0= rulevis_basis )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3803:1: (lv_inputs_8_0= rulevis_basis )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3804:3: lv_inputs_8_0= rulevis_basis
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3732:1: (lv_inputs_8_0= rulevis_basis )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3733:3: lv_inputs_8_0= rulevis_basis
                     {
                      
                     	        newCompositeNode(grammarAccess.getVisualizationAccess().getInputsVis_basisParserRuleCall_0_3_0()); 
                     	    
-                    pushFollow(FOLLOW_rulevis_basis_in_rulevisualization8990);
+                    pushFollow(FOLLOW_rulevis_basis_in_rulevisualization8722);
                     lv_inputs_8_0=rulevis_basis();
 
                     state._fsp--;
@@ -9969,28 +9708,28 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_9=(Token)match(input,37,FOLLOW_37_in_rulevisualization9002); 
+                    otherlv_9=(Token)match(input,36,FOLLOW_36_in_rulevisualization8734); 
 
                         	newLeafNode(otherlv_9, grammarAccess.getVisualizationAccess().getRightParenthesisKeyword_0_4());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3824:1: ( (lv_vis_ops_10_0= rulevisual_options ) )?
-                    int alt64=2;
-                    int LA64_0 = input.LA(1);
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3753:1: ( (lv_vis_ops_10_0= rulevisual_options ) )?
+                    int alt63=2;
+                    int LA63_0 = input.LA(1);
 
-                    if ( (LA64_0==35) ) {
-                        alt64=1;
+                    if ( (LA63_0==34) ) {
+                        alt63=1;
                     }
-                    switch (alt64) {
+                    switch (alt63) {
                         case 1 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3825:1: (lv_vis_ops_10_0= rulevisual_options )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3754:1: (lv_vis_ops_10_0= rulevisual_options )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3825:1: (lv_vis_ops_10_0= rulevisual_options )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3826:3: lv_vis_ops_10_0= rulevisual_options
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3754:1: (lv_vis_ops_10_0= rulevisual_options )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3755:3: lv_vis_ops_10_0= rulevisual_options
                             {
                              
                             	        newCompositeNode(grammarAccess.getVisualizationAccess().getVis_opsVisual_optionsParserRuleCall_0_5_0()); 
                             	    
-                            pushFollow(FOLLOW_rulevisual_options_in_rulevisualization9023);
+                            pushFollow(FOLLOW_rulevisual_options_in_rulevisualization8755);
                             lv_vis_ops_10_0=rulevisual_options();
 
                             state._fsp--;
@@ -10015,7 +9754,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_11=(Token)match(input,20,FOLLOW_20_in_rulevisualization9036); 
+                    otherlv_11=(Token)match(input,19,FOLLOW_19_in_rulevisualization8768); 
 
                         	newLeafNode(otherlv_11, grammarAccess.getVisualizationAccess().getSemicolonKeyword_0_6());
                         
@@ -10026,22 +9765,22 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3847:6: (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3776:6: (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3847:6: (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3847:8: otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3776:6: (otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3776:8: otherlv_12= 'SLIDER' ( (lv_name_13_0= RULE_ID ) ) ( (lv_vis_ops_14_0= rulevisual_options ) )? otherlv_15= ';'
                     {
-                    otherlv_12=(Token)match(input,106,FOLLOW_106_in_rulevisualization9056); 
+                    otherlv_12=(Token)match(input,100,FOLLOW_100_in_rulevisualization8788); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getVisualizationAccess().getSLIDERKeyword_1_0());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3851:1: ( (lv_name_13_0= RULE_ID ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3852:1: (lv_name_13_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3780:1: ( (lv_name_13_0= RULE_ID ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3781:1: (lv_name_13_0= RULE_ID )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3852:1: (lv_name_13_0= RULE_ID )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3853:3: lv_name_13_0= RULE_ID
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3781:1: (lv_name_13_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3782:3: lv_name_13_0= RULE_ID
                     {
-                    lv_name_13_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisualization9073); 
+                    lv_name_13_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisualization8805); 
 
                     			newLeafNode(lv_name_13_0, grammarAccess.getVisualizationAccess().getNameIDTerminalRuleCall_1_1_0()); 
                     		
@@ -10061,24 +9800,24 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3869:2: ( (lv_vis_ops_14_0= rulevisual_options ) )?
-                    int alt65=2;
-                    int LA65_0 = input.LA(1);
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3798:2: ( (lv_vis_ops_14_0= rulevisual_options ) )?
+                    int alt64=2;
+                    int LA64_0 = input.LA(1);
 
-                    if ( (LA65_0==35) ) {
-                        alt65=1;
+                    if ( (LA64_0==34) ) {
+                        alt64=1;
                     }
-                    switch (alt65) {
+                    switch (alt64) {
                         case 1 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3870:1: (lv_vis_ops_14_0= rulevisual_options )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3799:1: (lv_vis_ops_14_0= rulevisual_options )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3870:1: (lv_vis_ops_14_0= rulevisual_options )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3871:3: lv_vis_ops_14_0= rulevisual_options
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3799:1: (lv_vis_ops_14_0= rulevisual_options )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3800:3: lv_vis_ops_14_0= rulevisual_options
                             {
                              
                             	        newCompositeNode(grammarAccess.getVisualizationAccess().getVis_opsVisual_optionsParserRuleCall_1_2_0()); 
                             	    
-                            pushFollow(FOLLOW_rulevisual_options_in_rulevisualization9099);
+                            pushFollow(FOLLOW_rulevisual_options_in_rulevisualization8831);
                             lv_vis_ops_14_0=rulevisual_options();
 
                             state._fsp--;
@@ -10103,7 +9842,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_15=(Token)match(input,20,FOLLOW_20_in_rulevisualization9112); 
+                    otherlv_15=(Token)match(input,19,FOLLOW_19_in_rulevisualization8844); 
 
                         	newLeafNode(otherlv_15, grammarAccess.getVisualizationAccess().getSemicolonKeyword_1_3());
                         
@@ -10134,7 +9873,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevis_basis"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3899:1: entryRulevis_basis returns [EObject current=null] : iv_rulevis_basis= rulevis_basis EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3828:1: entryRulevis_basis returns [EObject current=null] : iv_rulevis_basis= rulevis_basis EOF ;
     public final EObject entryRulevis_basis() throws RecognitionException {
         EObject current = null;
 
@@ -10142,17 +9881,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3900:2: (iv_rulevis_basis= rulevis_basis EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3901:2: iv_rulevis_basis= rulevis_basis EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3829:2: (iv_rulevis_basis= rulevis_basis EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3830:2: iv_rulevis_basis= rulevis_basis EOF
             {
              newCompositeNode(grammarAccess.getVis_basisRule()); 
-            pushFollow(FOLLOW_rulevis_basis_in_entryRulevis_basis9149);
+            pushFollow(FOLLOW_rulevis_basis_in_entryRulevis_basis8881);
             iv_rulevis_basis=rulevis_basis();
 
             state._fsp--;
 
              current =iv_rulevis_basis; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevis_basis9159); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevis_basis8891); 
 
             }
 
@@ -10170,7 +9909,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevis_basis"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3908:1: rulevis_basis returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3837:1: rulevis_basis returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? ) ;
     public final EObject rulevis_basis() throws RecognitionException {
         EObject current = null;
 
@@ -10181,26 +9920,26 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3911:28: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3912:1: ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3840:28: ( ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3841:1: ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3912:1: ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3912:2: ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )?
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3841:1: ( ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )? )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3841:2: ( (otherlv_0= RULE_ID ) ) ( (lv_quals_1_0= rulevis_basis_qualifiers ) )?
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3912:2: ( (otherlv_0= RULE_ID ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3913:1: (otherlv_0= RULE_ID )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3841:2: ( (otherlv_0= RULE_ID ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3842:1: (otherlv_0= RULE_ID )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3913:1: (otherlv_0= RULE_ID )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3914:3: otherlv_0= RULE_ID
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3842:1: (otherlv_0= RULE_ID )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3843:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getVis_basisRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevis_basis9204); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevis_basis8936); 
 
-            		newLeafNode(otherlv_0, grammarAccess.getVis_basisAccess().getVarsDatasetCrossReference_0_0()); 
+            		newLeafNode(otherlv_0, grammarAccess.getVis_basisAccess().getVarsDatatypeCrossReference_0_0()); 
             	
 
             }
@@ -10208,24 +9947,24 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3925:2: ( (lv_quals_1_0= rulevis_basis_qualifiers ) )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3854:2: ( (lv_quals_1_0= rulevis_basis_qualifiers ) )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA67_0==94) ) {
-                alt67=1;
+            if ( (LA66_0==101) ) {
+                alt66=1;
             }
-            switch (alt67) {
+            switch (alt66) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3926:1: (lv_quals_1_0= rulevis_basis_qualifiers )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3855:1: (lv_quals_1_0= rulevis_basis_qualifiers )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3926:1: (lv_quals_1_0= rulevis_basis_qualifiers )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3927:3: lv_quals_1_0= rulevis_basis_qualifiers
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3855:1: (lv_quals_1_0= rulevis_basis_qualifiers )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3856:3: lv_quals_1_0= rulevis_basis_qualifiers
                     {
                      
                     	        newCompositeNode(grammarAccess.getVis_basisAccess().getQualsVis_basis_qualifiersParserRuleCall_1_0()); 
                     	    
-                    pushFollow(FOLLOW_rulevis_basis_qualifiers_in_rulevis_basis9225);
+                    pushFollow(FOLLOW_rulevis_basis_qualifiers_in_rulevis_basis8957);
                     lv_quals_1_0=rulevis_basis_qualifiers();
 
                     state._fsp--;
@@ -10271,7 +10010,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevis_basis_qualifiers"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3951:1: entryRulevis_basis_qualifiers returns [EObject current=null] : iv_rulevis_basis_qualifiers= rulevis_basis_qualifiers EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3880:1: entryRulevis_basis_qualifiers returns [EObject current=null] : iv_rulevis_basis_qualifiers= rulevis_basis_qualifiers EOF ;
     public final EObject entryRulevis_basis_qualifiers() throws RecognitionException {
         EObject current = null;
 
@@ -10279,17 +10018,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3952:2: (iv_rulevis_basis_qualifiers= rulevis_basis_qualifiers EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3953:2: iv_rulevis_basis_qualifiers= rulevis_basis_qualifiers EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3881:2: (iv_rulevis_basis_qualifiers= rulevis_basis_qualifiers EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3882:2: iv_rulevis_basis_qualifiers= rulevis_basis_qualifiers EOF
             {
              newCompositeNode(grammarAccess.getVis_basis_qualifiersRule()); 
-            pushFollow(FOLLOW_rulevis_basis_qualifiers_in_entryRulevis_basis_qualifiers9262);
+            pushFollow(FOLLOW_rulevis_basis_qualifiers_in_entryRulevis_basis_qualifiers8994);
             iv_rulevis_basis_qualifiers=rulevis_basis_qualifiers();
 
             state._fsp--;
 
              current =iv_rulevis_basis_qualifiers; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevis_basis_qualifiers9272); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevis_basis_qualifiers9004); 
 
             }
 
@@ -10307,7 +10046,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevis_basis_qualifiers"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3960:1: rulevis_basis_qualifiers returns [EObject current=null] : (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3889:1: rulevis_basis_qualifiers returns [EObject current=null] : (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' ) ;
     public final EObject rulevis_basis_qualifiers() throws RecognitionException {
         EObject current = null;
 
@@ -10322,20 +10061,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3963:28: ( (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3964:1: (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3892:28: ( (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3893:1: (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3964:1: (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3964:3: otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3893:1: (otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3893:3: otherlv_0= '{' this_function_1= rulefunction (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )* otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,94,FOLLOW_94_in_rulevis_basis_qualifiers9309); 
+            otherlv_0=(Token)match(input,101,FOLLOW_101_in_rulevis_basis_qualifiers9041); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getVis_basis_qualifiersAccess().getLeftCurlyBracketKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getVis_basis_qualifiersAccess().getFunctionParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulefunction_in_rulevis_basis_qualifiers9331);
+            pushFollow(FOLLOW_rulefunction_in_rulevis_basis_qualifiers9063);
             this_function_1=rulefunction();
 
             state._fsp--;
@@ -10344,35 +10083,35 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     current = this_function_1; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3977:1: (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )*
-            loop68:
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3906:1: (otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) ) )*
+            loop67:
             do {
-                int alt68=2;
-                int LA68_0 = input.LA(1);
+                int alt67=2;
+                int LA67_0 = input.LA(1);
 
-                if ( (LA68_0==30) ) {
-                    alt68=1;
+                if ( (LA67_0==29) ) {
+                    alt67=1;
                 }
 
 
-                switch (alt68) {
+                switch (alt67) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3977:3: otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3906:3: otherlv_2= ',' ( (lv_funcs_3_0= rulefunction ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_rulevis_basis_qualifiers9343); 
+            	    otherlv_2=(Token)match(input,29,FOLLOW_29_in_rulevis_basis_qualifiers9075); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getVis_basis_qualifiersAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3981:1: ( (lv_funcs_3_0= rulefunction ) )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3982:1: (lv_funcs_3_0= rulefunction )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3910:1: ( (lv_funcs_3_0= rulefunction ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3911:1: (lv_funcs_3_0= rulefunction )
             	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3982:1: (lv_funcs_3_0= rulefunction )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3983:3: lv_funcs_3_0= rulefunction
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3911:1: (lv_funcs_3_0= rulefunction )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3912:3: lv_funcs_3_0= rulefunction
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getVis_basis_qualifiersAccess().getFuncsFunctionParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulefunction_in_rulevis_basis_qualifiers9364);
+            	    pushFollow(FOLLOW_rulefunction_in_rulevis_basis_qualifiers9096);
             	    lv_funcs_3_0=rulefunction();
 
             	    state._fsp--;
@@ -10399,11 +10138,11 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop68;
+            	    break loop67;
                 }
             } while (true);
 
-            otherlv_4=(Token)match(input,95,FOLLOW_95_in_rulevis_basis_qualifiers9378); 
+            otherlv_4=(Token)match(input,102,FOLLOW_102_in_rulevis_basis_qualifiers9110); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getVis_basis_qualifiersAccess().getRightCurlyBracketKeyword_3());
                 
@@ -10428,7 +10167,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulefunction"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4011:1: entryRulefunction returns [EObject current=null] : iv_rulefunction= rulefunction EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3940:1: entryRulefunction returns [EObject current=null] : iv_rulefunction= rulefunction EOF ;
     public final EObject entryRulefunction() throws RecognitionException {
         EObject current = null;
 
@@ -10436,17 +10175,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4012:2: (iv_rulefunction= rulefunction EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4013:2: iv_rulefunction= rulefunction EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3941:2: (iv_rulefunction= rulefunction EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3942:2: iv_rulefunction= rulefunction EOF
             {
              newCompositeNode(grammarAccess.getFunctionRule()); 
-            pushFollow(FOLLOW_rulefunction_in_entryRulefunction9414);
+            pushFollow(FOLLOW_rulefunction_in_entryRulefunction9146);
             iv_rulefunction=rulefunction();
 
             state._fsp--;
 
              current =iv_rulefunction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulefunction9424); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulefunction9156); 
 
             }
 
@@ -10464,7 +10203,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulefunction"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4020:1: rulefunction returns [EObject current=null] : (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3949:1: rulefunction returns [EObject current=null] : (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) ) ;
     public final EObject rulefunction() throws RecognitionException {
         EObject current = null;
 
@@ -10484,44 +10223,44 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4023:28: ( (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4024:1: (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3952:28: ( (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3953:1: (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4024:1: (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) )
-            int alt69=3;
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3953:1: (this_value_0= rulevalue | (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' ) | (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' ) )
+            int alt68=3;
             switch ( input.LA(1) ) {
             case RULE_ID:
             case RULE_INT:
             case RULE_STRING:
                 {
-                alt69=1;
+                alt68=1;
                 }
                 break;
-            case 107:
+            case 103:
                 {
-                alt69=2;
+                alt68=2;
                 }
                 break;
-            case 108:
+            case 104:
                 {
-                alt69=3;
+                alt68=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 69, 0, input);
+                    new NoViableAltException("", 68, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt69) {
+            switch (alt68) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4025:5: this_value_0= rulevalue
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3954:5: this_value_0= rulevalue
                     {
                      
                             newCompositeNode(grammarAccess.getFunctionAccess().getValueParserRuleCall_0()); 
                         
-                    pushFollow(FOLLOW_rulevalue_in_rulefunction9471);
+                    pushFollow(FOLLOW_rulevalue_in_rulefunction9203);
                     this_value_0=rulevalue();
 
                     state._fsp--;
@@ -10534,26 +10273,26 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4034:6: (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3963:6: (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4034:6: (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4034:8: otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3963:6: (otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3963:8: otherlv_1= 'SUM' otherlv_2= '(' ( (lv_name_3_0= RULE_ID ) ) otherlv_4= ')'
                     {
-                    otherlv_1=(Token)match(input,107,FOLLOW_107_in_rulefunction9489); 
+                    otherlv_1=(Token)match(input,103,FOLLOW_103_in_rulefunction9221); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getFunctionAccess().getSUMKeyword_1_0());
                         
-                    otherlv_2=(Token)match(input,36,FOLLOW_36_in_rulefunction9501); 
+                    otherlv_2=(Token)match(input,35,FOLLOW_35_in_rulefunction9233); 
 
                         	newLeafNode(otherlv_2, grammarAccess.getFunctionAccess().getLeftParenthesisKeyword_1_1());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4042:1: ( (lv_name_3_0= RULE_ID ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4043:1: (lv_name_3_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3971:1: ( (lv_name_3_0= RULE_ID ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3972:1: (lv_name_3_0= RULE_ID )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4043:1: (lv_name_3_0= RULE_ID )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4044:3: lv_name_3_0= RULE_ID
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3972:1: (lv_name_3_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3973:3: lv_name_3_0= RULE_ID
                     {
-                    lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulefunction9518); 
+                    lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulefunction9250); 
 
                     			newLeafNode(lv_name_3_0, grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_1_2_0()); 
                     		
@@ -10573,7 +10312,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_4=(Token)match(input,37,FOLLOW_37_in_rulefunction9535); 
+                    otherlv_4=(Token)match(input,36,FOLLOW_36_in_rulefunction9267); 
 
                         	newLeafNode(otherlv_4, grammarAccess.getFunctionAccess().getRightParenthesisKeyword_1_3());
                         
@@ -10584,26 +10323,26 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4065:6: (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3994:6: (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4065:6: (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4065:8: otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3994:6: (otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:3994:8: otherlv_5= 'SCALE' otherlv_6= '(' ( (lv_name_7_0= RULE_ID ) ) otherlv_8= ',' this_INT_9= RULE_INT otherlv_10= ')'
                     {
-                    otherlv_5=(Token)match(input,108,FOLLOW_108_in_rulefunction9555); 
+                    otherlv_5=(Token)match(input,104,FOLLOW_104_in_rulefunction9287); 
 
                         	newLeafNode(otherlv_5, grammarAccess.getFunctionAccess().getSCALEKeyword_2_0());
                         
-                    otherlv_6=(Token)match(input,36,FOLLOW_36_in_rulefunction9567); 
+                    otherlv_6=(Token)match(input,35,FOLLOW_35_in_rulefunction9299); 
 
                         	newLeafNode(otherlv_6, grammarAccess.getFunctionAccess().getLeftParenthesisKeyword_2_1());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4073:1: ( (lv_name_7_0= RULE_ID ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4074:1: (lv_name_7_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4002:1: ( (lv_name_7_0= RULE_ID ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4003:1: (lv_name_7_0= RULE_ID )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4074:1: (lv_name_7_0= RULE_ID )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4075:3: lv_name_7_0= RULE_ID
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4003:1: (lv_name_7_0= RULE_ID )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4004:3: lv_name_7_0= RULE_ID
                     {
-                    lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulefunction9584); 
+                    lv_name_7_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulefunction9316); 
 
                     			newLeafNode(lv_name_7_0, grammarAccess.getFunctionAccess().getNameIDTerminalRuleCall_2_2_0()); 
                     		
@@ -10623,15 +10362,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,30,FOLLOW_30_in_rulefunction9601); 
+                    otherlv_8=(Token)match(input,29,FOLLOW_29_in_rulefunction9333); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getFunctionAccess().getCommaKeyword_2_3());
                         
-                    this_INT_9=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulefunction9612); 
+                    this_INT_9=(Token)match(input,RULE_INT,FOLLOW_RULE_INT_in_rulefunction9344); 
                      
                         newLeafNode(this_INT_9, grammarAccess.getFunctionAccess().getINTTerminalRuleCall_2_4()); 
                         
-                    otherlv_10=(Token)match(input,37,FOLLOW_37_in_rulefunction9623); 
+                    otherlv_10=(Token)match(input,36,FOLLOW_36_in_rulefunction9355); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getFunctionAccess().getRightParenthesisKeyword_2_5());
                         
@@ -10662,7 +10401,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevisual_section_options"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4111:1: entryRulevisual_section_options returns [EObject current=null] : iv_rulevisual_section_options= rulevisual_section_options EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4040:1: entryRulevisual_section_options returns [EObject current=null] : iv_rulevisual_section_options= rulevisual_section_options EOF ;
     public final EObject entryRulevisual_section_options() throws RecognitionException {
         EObject current = null;
 
@@ -10670,17 +10409,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4112:2: (iv_rulevisual_section_options= rulevisual_section_options EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4113:2: iv_rulevisual_section_options= rulevisual_section_options EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4041:2: (iv_rulevisual_section_options= rulevisual_section_options EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4042:2: iv_rulevisual_section_options= rulevisual_section_options EOF
             {
              newCompositeNode(grammarAccess.getVisual_section_optionsRule()); 
-            pushFollow(FOLLOW_rulevisual_section_options_in_entryRulevisual_section_options9660);
+            pushFollow(FOLLOW_rulevisual_section_options_in_entryRulevisual_section_options9392);
             iv_rulevisual_section_options=rulevisual_section_options();
 
             state._fsp--;
 
              current =iv_rulevisual_section_options; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_section_options9670); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_section_options9402); 
 
             }
 
@@ -10698,7 +10437,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevisual_section_options"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4120:1: rulevisual_section_options returns [EObject current=null] : (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4049:1: rulevisual_section_options returns [EObject current=null] : (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* ) ;
     public final EObject rulevisual_section_options() throws RecognitionException {
         EObject current = null;
 
@@ -10712,20 +10451,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4123:28: ( (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4124:1: (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4052:28: ( (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4053:1: (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4124:1: (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4124:3: otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4053:1: (otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4053:3: otherlv_0= ':' this_visual_section_option_1= rulevisual_section_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )*
             {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_rulevisual_section_options9707); 
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_rulevisual_section_options9439); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getVisual_section_optionsAccess().getColonKeyword_0());
                 
              
                     newCompositeNode(grammarAccess.getVisual_section_optionsAccess().getVisual_section_optionParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulevisual_section_option_in_rulevisual_section_options9729);
+            pushFollow(FOLLOW_rulevisual_section_option_in_rulevisual_section_options9461);
             this_visual_section_option_1=rulevisual_section_option();
 
             state._fsp--;
@@ -10734,35 +10473,35 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     current = this_visual_section_option_1; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4137:1: (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )*
-            loop70:
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4066:1: (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) ) )*
+            loop69:
             do {
-                int alt70=2;
-                int LA70_0 = input.LA(1);
+                int alt69=2;
+                int LA69_0 = input.LA(1);
 
-                if ( (LA70_0==30) ) {
-                    alt70=1;
+                if ( (LA69_0==29) ) {
+                    alt69=1;
                 }
 
 
-                switch (alt70) {
+                switch (alt69) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4137:3: otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4066:3: otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_section_option ) )
             	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_rulevisual_section_options9741); 
+            	    otherlv_2=(Token)match(input,29,FOLLOW_29_in_rulevisual_section_options9473); 
 
             	        	newLeafNode(otherlv_2, grammarAccess.getVisual_section_optionsAccess().getCommaKeyword_2_0());
             	        
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4141:1: ( (lv_vis_ops_3_0= rulevisual_section_option ) )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4142:1: (lv_vis_ops_3_0= rulevisual_section_option )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4070:1: ( (lv_vis_ops_3_0= rulevisual_section_option ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4071:1: (lv_vis_ops_3_0= rulevisual_section_option )
             	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4142:1: (lv_vis_ops_3_0= rulevisual_section_option )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4143:3: lv_vis_ops_3_0= rulevisual_section_option
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4071:1: (lv_vis_ops_3_0= rulevisual_section_option )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4072:3: lv_vis_ops_3_0= rulevisual_section_option
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getVisual_section_optionsAccess().getVis_opsVisual_section_optionParserRuleCall_2_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulevisual_section_option_in_rulevisual_section_options9762);
+            	    pushFollow(FOLLOW_rulevisual_section_option_in_rulevisual_section_options9494);
             	    lv_vis_ops_3_0=rulevisual_section_option();
 
             	    state._fsp--;
@@ -10776,6 +10515,295 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	           			"vis_ops",
             	            		lv_vis_ops_3_0, 
             	            		"visual_section_option");
+            	    	        afterParserOrEnumRuleCall();
+            	    	    
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop69;
+                }
+            } while (true);
+
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulevisual_section_options"
+
+
+    // $ANTLR start "entryRulevisual_section_option"
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4096:1: entryRulevisual_section_option returns [EObject current=null] : iv_rulevisual_section_option= rulevisual_section_option EOF ;
+    public final EObject entryRulevisual_section_option() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulevisual_section_option = null;
+
+
+        try {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4097:2: (iv_rulevisual_section_option= rulevisual_section_option EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4098:2: iv_rulevisual_section_option= rulevisual_section_option EOF
+            {
+             newCompositeNode(grammarAccess.getVisual_section_optionRule()); 
+            pushFollow(FOLLOW_rulevisual_section_option_in_entryRulevisual_section_option9532);
+            iv_rulevisual_section_option=rulevisual_section_option();
+
+            state._fsp--;
+
+             current =iv_rulevisual_section_option; 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_section_option9542); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulevisual_section_option"
+
+
+    // $ANTLR start "rulevisual_section_option"
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4105:1: rulevisual_section_option returns [EObject current=null] : ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' ) ;
+    public final EObject rulevisual_section_option() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_name_0_0=null;
+        Token otherlv_1=null;
+        Token otherlv_3=null;
+        EObject lv_vals_2_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4108:28: ( ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4109:1: ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' )
+            {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4109:1: ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4109:2: ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')'
+            {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4109:2: ( (lv_name_0_0= 'LABEL' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4110:1: (lv_name_0_0= 'LABEL' )
+            {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4110:1: (lv_name_0_0= 'LABEL' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4111:3: lv_name_0_0= 'LABEL'
+            {
+            lv_name_0_0=(Token)match(input,17,FOLLOW_17_in_rulevisual_section_option9585); 
+
+                    newLeafNode(lv_name_0_0, grammarAccess.getVisual_section_optionAccess().getNameLABELKeyword_0_0());
+                
+
+            	        if (current==null) {
+            	            current = createModelElement(grammarAccess.getVisual_section_optionRule());
+            	        }
+                   		setWithLastConsumed(current, "name", lv_name_0_0, "LABEL");
+            	    
+
+            }
+
+
+            }
+
+            otherlv_1=(Token)match(input,35,FOLLOW_35_in_rulevisual_section_option9610); 
+
+                	newLeafNode(otherlv_1, grammarAccess.getVisual_section_optionAccess().getLeftParenthesisKeyword_1());
+                
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4128:1: ( (lv_vals_2_0= rulevalue ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4129:1: (lv_vals_2_0= rulevalue )
+            {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4129:1: (lv_vals_2_0= rulevalue )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4130:3: lv_vals_2_0= rulevalue
+            {
+             
+            	        newCompositeNode(grammarAccess.getVisual_section_optionAccess().getValsValueParserRuleCall_2_0()); 
+            	    
+            pushFollow(FOLLOW_rulevalue_in_rulevisual_section_option9631);
+            lv_vals_2_0=rulevalue();
+
+            state._fsp--;
+
+
+            	        if (current==null) {
+            	            current = createModelElementForParent(grammarAccess.getVisual_section_optionRule());
+            	        }
+                   		add(
+                   			current, 
+                   			"vals",
+                    		lv_vals_2_0, 
+                    		"value");
+            	        afterParserOrEnumRuleCall();
+            	    
+
+            }
+
+
+            }
+
+            otherlv_3=(Token)match(input,36,FOLLOW_36_in_rulevisual_section_option9643); 
+
+                	newLeafNode(otherlv_3, grammarAccess.getVisual_section_optionAccess().getRightParenthesisKeyword_3());
+                
+
+            }
+
+
+            }
+
+             leaveRule(); 
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "rulevisual_section_option"
+
+
+    // $ANTLR start "entryRulevisual_options"
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4158:1: entryRulevisual_options returns [EObject current=null] : iv_rulevisual_options= rulevisual_options EOF ;
+    public final EObject entryRulevisual_options() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_rulevisual_options = null;
+
+
+        try {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4159:2: (iv_rulevisual_options= rulevisual_options EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4160:2: iv_rulevisual_options= rulevisual_options EOF
+            {
+             newCompositeNode(grammarAccess.getVisual_optionsRule()); 
+            pushFollow(FOLLOW_rulevisual_options_in_entryRulevisual_options9679);
+            iv_rulevisual_options=rulevisual_options();
+
+            state._fsp--;
+
+             current =iv_rulevisual_options; 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_options9689); 
+
+            }
+
+        }
+         
+            catch (RecognitionException re) { 
+                recover(input,re); 
+                appendSkippedTokens();
+            } 
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRulevisual_options"
+
+
+    // $ANTLR start "rulevisual_options"
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4167:1: rulevisual_options returns [EObject current=null] : (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* ) ;
+    public final EObject rulevisual_options() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        EObject this_visual_option_1 = null;
+
+        EObject lv_vis_ops_3_0 = null;
+
+
+         enterRule(); 
+            
+        try {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4170:28: ( (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4171:1: (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* )
+            {
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4171:1: (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4171:3: otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )*
+            {
+            otherlv_0=(Token)match(input,34,FOLLOW_34_in_rulevisual_options9726); 
+
+                	newLeafNode(otherlv_0, grammarAccess.getVisual_optionsAccess().getColonKeyword_0());
+                
+             
+                    newCompositeNode(grammarAccess.getVisual_optionsAccess().getVisual_optionParserRuleCall_1()); 
+                
+            pushFollow(FOLLOW_rulevisual_option_in_rulevisual_options9748);
+            this_visual_option_1=rulevisual_option();
+
+            state._fsp--;
+
+             
+                    current = this_visual_option_1; 
+                    afterParserOrEnumRuleCall();
+                
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4184:1: (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )*
+            loop70:
+            do {
+                int alt70=2;
+                int LA70_0 = input.LA(1);
+
+                if ( (LA70_0==29) ) {
+                    alt70=1;
+                }
+
+
+                switch (alt70) {
+            	case 1 :
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4184:3: otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) )
+            	    {
+            	    otherlv_2=(Token)match(input,29,FOLLOW_29_in_rulevisual_options9760); 
+
+            	        	newLeafNode(otherlv_2, grammarAccess.getVisual_optionsAccess().getCommaKeyword_2_0());
+            	        
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4188:1: ( (lv_vis_ops_3_0= rulevisual_option ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4189:1: (lv_vis_ops_3_0= rulevisual_option )
+            	    {
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4189:1: (lv_vis_ops_3_0= rulevisual_option )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4190:3: lv_vis_ops_3_0= rulevisual_option
+            	    {
+            	     
+            	    	        newCompositeNode(grammarAccess.getVisual_optionsAccess().getVis_opsVisual_optionParserRuleCall_2_1_0()); 
+            	    	    
+            	    pushFollow(FOLLOW_rulevisual_option_in_rulevisual_options9781);
+            	    lv_vis_ops_3_0=rulevisual_option();
+
+            	    state._fsp--;
+
+
+            	    	        if (current==null) {
+            	    	            current = createModelElementForParent(grammarAccess.getVisual_optionsRule());
+            	    	        }
+            	           		add(
+            	           			current, 
+            	           			"vis_ops",
+            	            		lv_vis_ops_3_0, 
+            	            		"visual_option");
             	    	        afterParserOrEnumRuleCall();
             	    	    
 
@@ -10810,300 +10838,11 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
         }
         return current;
     }
-    // $ANTLR end "rulevisual_section_options"
-
-
-    // $ANTLR start "entryRulevisual_section_option"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4167:1: entryRulevisual_section_option returns [EObject current=null] : iv_rulevisual_section_option= rulevisual_section_option EOF ;
-    public final EObject entryRulevisual_section_option() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulevisual_section_option = null;
-
-
-        try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4168:2: (iv_rulevisual_section_option= rulevisual_section_option EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4169:2: iv_rulevisual_section_option= rulevisual_section_option EOF
-            {
-             newCompositeNode(grammarAccess.getVisual_section_optionRule()); 
-            pushFollow(FOLLOW_rulevisual_section_option_in_entryRulevisual_section_option9800);
-            iv_rulevisual_section_option=rulevisual_section_option();
-
-            state._fsp--;
-
-             current =iv_rulevisual_section_option; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_section_option9810); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRulevisual_section_option"
-
-
-    // $ANTLR start "rulevisual_section_option"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4176:1: rulevisual_section_option returns [EObject current=null] : ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' ) ;
-    public final EObject rulevisual_section_option() throws RecognitionException {
-        EObject current = null;
-
-        Token lv_name_0_0=null;
-        Token otherlv_1=null;
-        Token otherlv_3=null;
-        EObject lv_vals_2_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4179:28: ( ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4180:1: ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' )
-            {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4180:1: ( ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4180:2: ( (lv_name_0_0= 'LABEL' ) ) otherlv_1= '(' ( (lv_vals_2_0= rulevalue ) ) otherlv_3= ')'
-            {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4180:2: ( (lv_name_0_0= 'LABEL' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4181:1: (lv_name_0_0= 'LABEL' )
-            {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4181:1: (lv_name_0_0= 'LABEL' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4182:3: lv_name_0_0= 'LABEL'
-            {
-            lv_name_0_0=(Token)match(input,18,FOLLOW_18_in_rulevisual_section_option9853); 
-
-                    newLeafNode(lv_name_0_0, grammarAccess.getVisual_section_optionAccess().getNameLABELKeyword_0_0());
-                
-
-            	        if (current==null) {
-            	            current = createModelElement(grammarAccess.getVisual_section_optionRule());
-            	        }
-                   		setWithLastConsumed(current, "name", lv_name_0_0, "LABEL");
-            	    
-
-            }
-
-
-            }
-
-            otherlv_1=(Token)match(input,36,FOLLOW_36_in_rulevisual_section_option9878); 
-
-                	newLeafNode(otherlv_1, grammarAccess.getVisual_section_optionAccess().getLeftParenthesisKeyword_1());
-                
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4199:1: ( (lv_vals_2_0= rulevalue ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4200:1: (lv_vals_2_0= rulevalue )
-            {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4200:1: (lv_vals_2_0= rulevalue )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4201:3: lv_vals_2_0= rulevalue
-            {
-             
-            	        newCompositeNode(grammarAccess.getVisual_section_optionAccess().getValsValueParserRuleCall_2_0()); 
-            	    
-            pushFollow(FOLLOW_rulevalue_in_rulevisual_section_option9899);
-            lv_vals_2_0=rulevalue();
-
-            state._fsp--;
-
-
-            	        if (current==null) {
-            	            current = createModelElementForParent(grammarAccess.getVisual_section_optionRule());
-            	        }
-                   		add(
-                   			current, 
-                   			"vals",
-                    		lv_vals_2_0, 
-                    		"value");
-            	        afterParserOrEnumRuleCall();
-            	    
-
-            }
-
-
-            }
-
-            otherlv_3=(Token)match(input,37,FOLLOW_37_in_rulevisual_section_option9911); 
-
-                	newLeafNode(otherlv_3, grammarAccess.getVisual_section_optionAccess().getRightParenthesisKeyword_3());
-                
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "rulevisual_section_option"
-
-
-    // $ANTLR start "entryRulevisual_options"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4229:1: entryRulevisual_options returns [EObject current=null] : iv_rulevisual_options= rulevisual_options EOF ;
-    public final EObject entryRulevisual_options() throws RecognitionException {
-        EObject current = null;
-
-        EObject iv_rulevisual_options = null;
-
-
-        try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4230:2: (iv_rulevisual_options= rulevisual_options EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4231:2: iv_rulevisual_options= rulevisual_options EOF
-            {
-             newCompositeNode(grammarAccess.getVisual_optionsRule()); 
-            pushFollow(FOLLOW_rulevisual_options_in_entryRulevisual_options9947);
-            iv_rulevisual_options=rulevisual_options();
-
-            state._fsp--;
-
-             current =iv_rulevisual_options; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_options9957); 
-
-            }
-
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
-    // $ANTLR end "entryRulevisual_options"
-
-
-    // $ANTLR start "rulevisual_options"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4238:1: rulevisual_options returns [EObject current=null] : (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* ) ;
-    public final EObject rulevisual_options() throws RecognitionException {
-        EObject current = null;
-
-        Token otherlv_0=null;
-        Token otherlv_2=null;
-        EObject this_visual_option_1 = null;
-
-        EObject lv_vis_ops_3_0 = null;
-
-
-         enterRule(); 
-            
-        try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4241:28: ( (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4242:1: (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* )
-            {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4242:1: (otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )* )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4242:3: otherlv_0= ':' this_visual_option_1= rulevisual_option (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )*
-            {
-            otherlv_0=(Token)match(input,35,FOLLOW_35_in_rulevisual_options9994); 
-
-                	newLeafNode(otherlv_0, grammarAccess.getVisual_optionsAccess().getColonKeyword_0());
-                
-             
-                    newCompositeNode(grammarAccess.getVisual_optionsAccess().getVisual_optionParserRuleCall_1()); 
-                
-            pushFollow(FOLLOW_rulevisual_option_in_rulevisual_options10016);
-            this_visual_option_1=rulevisual_option();
-
-            state._fsp--;
-
-             
-                    current = this_visual_option_1; 
-                    afterParserOrEnumRuleCall();
-                
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4255:1: (otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) ) )*
-            loop71:
-            do {
-                int alt71=2;
-                int LA71_0 = input.LA(1);
-
-                if ( (LA71_0==30) ) {
-                    alt71=1;
-                }
-
-
-                switch (alt71) {
-            	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4255:3: otherlv_2= ',' ( (lv_vis_ops_3_0= rulevisual_option ) )
-            	    {
-            	    otherlv_2=(Token)match(input,30,FOLLOW_30_in_rulevisual_options10028); 
-
-            	        	newLeafNode(otherlv_2, grammarAccess.getVisual_optionsAccess().getCommaKeyword_2_0());
-            	        
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4259:1: ( (lv_vis_ops_3_0= rulevisual_option ) )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4260:1: (lv_vis_ops_3_0= rulevisual_option )
-            	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4260:1: (lv_vis_ops_3_0= rulevisual_option )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4261:3: lv_vis_ops_3_0= rulevisual_option
-            	    {
-            	     
-            	    	        newCompositeNode(grammarAccess.getVisual_optionsAccess().getVis_opsVisual_optionParserRuleCall_2_1_0()); 
-            	    	    
-            	    pushFollow(FOLLOW_rulevisual_option_in_rulevisual_options10049);
-            	    lv_vis_ops_3_0=rulevisual_option();
-
-            	    state._fsp--;
-
-
-            	    	        if (current==null) {
-            	    	            current = createModelElementForParent(grammarAccess.getVisual_optionsRule());
-            	    	        }
-            	           		add(
-            	           			current, 
-            	           			"vis_ops",
-            	            		lv_vis_ops_3_0, 
-            	            		"visual_option");
-            	    	        afterParserOrEnumRuleCall();
-            	    	    
-
-            	    }
-
-
-            	    }
-
-
-            	    }
-            	    break;
-
-            	default :
-            	    break loop71;
-                }
-            } while (true);
-
-
-            }
-
-
-            }
-
-             leaveRule(); 
-        }
-         
-            catch (RecognitionException re) { 
-                recover(input,re); 
-                appendSkippedTokens();
-            } 
-        finally {
-        }
-        return current;
-    }
     // $ANTLR end "rulevisual_options"
 
 
     // $ANTLR start "entryRulevisual_option"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4285:1: entryRulevisual_option returns [EObject current=null] : iv_rulevisual_option= rulevisual_option EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4214:1: entryRulevisual_option returns [EObject current=null] : iv_rulevisual_option= rulevisual_option EOF ;
     public final EObject entryRulevisual_option() throws RecognitionException {
         EObject current = null;
 
@@ -11111,17 +10850,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4286:2: (iv_rulevisual_option= rulevisual_option EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4287:2: iv_rulevisual_option= rulevisual_option EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4215:2: (iv_rulevisual_option= rulevisual_option EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4216:2: iv_rulevisual_option= rulevisual_option EOF
             {
              newCompositeNode(grammarAccess.getVisual_optionRule()); 
-            pushFollow(FOLLOW_rulevisual_option_in_entryRulevisual_option10087);
+            pushFollow(FOLLOW_rulevisual_option_in_entryRulevisual_option9819);
             iv_rulevisual_option=rulevisual_option();
 
             state._fsp--;
 
              current =iv_rulevisual_option; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_option10097); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_option9829); 
 
             }
 
@@ -11139,7 +10878,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevisual_option"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4294:1: rulevisual_option returns [EObject current=null] : ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4223:1: rulevisual_option returns [EObject current=null] : ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) ) ;
     public final EObject rulevisual_option() throws RecognitionException {
         EObject current = null;
 
@@ -11174,115 +10913,115 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4297:28: ( ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:1: ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4226:28: ( ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:1: ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:1: ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) )
-            int alt74=3;
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:1: ( ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' ) | (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' ) | ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' ) )
+            int alt73=3;
             switch ( input.LA(1) ) {
-            case 13:
+            case 12:
+            case 105:
+            case 106:
+            case 107:
+            case 108:
             case 109:
             case 110:
             case 111:
-            case 112:
-            case 113:
+                {
+                alt73=1;
+                }
+                break;
+            case 17:
+            case 55:
             case 114:
             case 115:
-                {
-                alt74=1;
-                }
-                break;
-            case 18:
-            case 56:
-            case 118:
-            case 119:
-            case 120:
-            case 121:
-            case 122:
-                {
-                alt74=2;
-                }
-                break;
             case 116:
+            case 117:
+            case 118:
                 {
-                alt74=3;
+                alt73=2;
+                }
+                break;
+            case 112:
+                {
+                alt73=3;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 74, 0, input);
+                    new NoViableAltException("", 73, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt74) {
+            switch (alt73) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:2: ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:2: ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:2: ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:3: ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:2: ( ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:3: ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) ) otherlv_8= '(' ( (lv_funcs_9_0= rulefunction ) ) otherlv_10= ')'
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:3: ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) )
-                    int alt72=8;
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:3: ( ( (lv_name_0_0= 'TITLE' ) ) | ( (lv_name_1_0= 'DATE' ) ) | ( (lv_name_2_0= 'DESCRIPTION' ) ) | ( (lv_name_3_0= 'PICTURE' ) ) | ( (lv_name_4_0= 'STATE' ) ) | ( (lv_name_5_0= 'COUNTY' ) ) | ( (lv_name_6_0= 'WEIGHT' ) ) | ( (lv_name_7_0= 'SIZE' ) ) )
+                    int alt71=8;
                     switch ( input.LA(1) ) {
+                    case 105:
+                        {
+                        alt71=1;
+                        }
+                        break;
+                    case 106:
+                        {
+                        alt71=2;
+                        }
+                        break;
+                    case 12:
+                        {
+                        alt71=3;
+                        }
+                        break;
+                    case 107:
+                        {
+                        alt71=4;
+                        }
+                        break;
+                    case 108:
+                        {
+                        alt71=5;
+                        }
+                        break;
                     case 109:
                         {
-                        alt72=1;
+                        alt71=6;
                         }
                         break;
                     case 110:
                         {
-                        alt72=2;
-                        }
-                        break;
-                    case 13:
-                        {
-                        alt72=3;
+                        alt71=7;
                         }
                         break;
                     case 111:
                         {
-                        alt72=4;
-                        }
-                        break;
-                    case 112:
-                        {
-                        alt72=5;
-                        }
-                        break;
-                    case 113:
-                        {
-                        alt72=6;
-                        }
-                        break;
-                    case 114:
-                        {
-                        alt72=7;
-                        }
-                        break;
-                    case 115:
-                        {
-                        alt72=8;
+                        alt71=8;
                         }
                         break;
                     default:
                         NoViableAltException nvae =
-                            new NoViableAltException("", 72, 0, input);
+                            new NoViableAltException("", 71, 0, input);
 
                         throw nvae;
                     }
 
-                    switch (alt72) {
+                    switch (alt71) {
                         case 1 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:4: ( (lv_name_0_0= 'TITLE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:4: ( (lv_name_0_0= 'TITLE' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4298:4: ( (lv_name_0_0= 'TITLE' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4299:1: (lv_name_0_0= 'TITLE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4227:4: ( (lv_name_0_0= 'TITLE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4228:1: (lv_name_0_0= 'TITLE' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4299:1: (lv_name_0_0= 'TITLE' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4300:3: lv_name_0_0= 'TITLE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4228:1: (lv_name_0_0= 'TITLE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4229:3: lv_name_0_0= 'TITLE'
                             {
-                            lv_name_0_0=(Token)match(input,109,FOLLOW_109_in_rulevisual_option10142); 
+                            lv_name_0_0=(Token)match(input,105,FOLLOW_105_in_rulevisual_option9874); 
 
                                     newLeafNode(lv_name_0_0, grammarAccess.getVisual_optionAccess().getNameTITLEKeyword_0_0_0_0());
                                 
@@ -11302,15 +11041,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 2 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4314:6: ( (lv_name_1_0= 'DATE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4243:6: ( (lv_name_1_0= 'DATE' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4314:6: ( (lv_name_1_0= 'DATE' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4315:1: (lv_name_1_0= 'DATE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4243:6: ( (lv_name_1_0= 'DATE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4244:1: (lv_name_1_0= 'DATE' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4315:1: (lv_name_1_0= 'DATE' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4316:3: lv_name_1_0= 'DATE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4244:1: (lv_name_1_0= 'DATE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4245:3: lv_name_1_0= 'DATE'
                             {
-                            lv_name_1_0=(Token)match(input,110,FOLLOW_110_in_rulevisual_option10179); 
+                            lv_name_1_0=(Token)match(input,106,FOLLOW_106_in_rulevisual_option9911); 
 
                                     newLeafNode(lv_name_1_0, grammarAccess.getVisual_optionAccess().getNameDATEKeyword_0_0_1_0());
                                 
@@ -11330,15 +11069,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 3 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4330:6: ( (lv_name_2_0= 'DESCRIPTION' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4259:6: ( (lv_name_2_0= 'DESCRIPTION' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4330:6: ( (lv_name_2_0= 'DESCRIPTION' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4331:1: (lv_name_2_0= 'DESCRIPTION' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4259:6: ( (lv_name_2_0= 'DESCRIPTION' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4260:1: (lv_name_2_0= 'DESCRIPTION' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4331:1: (lv_name_2_0= 'DESCRIPTION' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4332:3: lv_name_2_0= 'DESCRIPTION'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4260:1: (lv_name_2_0= 'DESCRIPTION' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4261:3: lv_name_2_0= 'DESCRIPTION'
                             {
-                            lv_name_2_0=(Token)match(input,13,FOLLOW_13_in_rulevisual_option10216); 
+                            lv_name_2_0=(Token)match(input,12,FOLLOW_12_in_rulevisual_option9948); 
 
                                     newLeafNode(lv_name_2_0, grammarAccess.getVisual_optionAccess().getNameDESCRIPTIONKeyword_0_0_2_0());
                                 
@@ -11358,15 +11097,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 4 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4346:6: ( (lv_name_3_0= 'PICTURE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4275:6: ( (lv_name_3_0= 'PICTURE' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4346:6: ( (lv_name_3_0= 'PICTURE' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4347:1: (lv_name_3_0= 'PICTURE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4275:6: ( (lv_name_3_0= 'PICTURE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4276:1: (lv_name_3_0= 'PICTURE' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4347:1: (lv_name_3_0= 'PICTURE' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4348:3: lv_name_3_0= 'PICTURE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4276:1: (lv_name_3_0= 'PICTURE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4277:3: lv_name_3_0= 'PICTURE'
                             {
-                            lv_name_3_0=(Token)match(input,111,FOLLOW_111_in_rulevisual_option10253); 
+                            lv_name_3_0=(Token)match(input,107,FOLLOW_107_in_rulevisual_option9985); 
 
                                     newLeafNode(lv_name_3_0, grammarAccess.getVisual_optionAccess().getNamePICTUREKeyword_0_0_3_0());
                                 
@@ -11386,15 +11125,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 5 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4362:6: ( (lv_name_4_0= 'STATE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4291:6: ( (lv_name_4_0= 'STATE' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4362:6: ( (lv_name_4_0= 'STATE' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4363:1: (lv_name_4_0= 'STATE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4291:6: ( (lv_name_4_0= 'STATE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4292:1: (lv_name_4_0= 'STATE' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4363:1: (lv_name_4_0= 'STATE' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4364:3: lv_name_4_0= 'STATE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4292:1: (lv_name_4_0= 'STATE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4293:3: lv_name_4_0= 'STATE'
                             {
-                            lv_name_4_0=(Token)match(input,112,FOLLOW_112_in_rulevisual_option10290); 
+                            lv_name_4_0=(Token)match(input,108,FOLLOW_108_in_rulevisual_option10022); 
 
                                     newLeafNode(lv_name_4_0, grammarAccess.getVisual_optionAccess().getNameSTATEKeyword_0_0_4_0());
                                 
@@ -11414,15 +11153,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 6 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4378:6: ( (lv_name_5_0= 'COUNTY' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4307:6: ( (lv_name_5_0= 'COUNTY' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4378:6: ( (lv_name_5_0= 'COUNTY' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4379:1: (lv_name_5_0= 'COUNTY' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4307:6: ( (lv_name_5_0= 'COUNTY' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4308:1: (lv_name_5_0= 'COUNTY' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4379:1: (lv_name_5_0= 'COUNTY' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4380:3: lv_name_5_0= 'COUNTY'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4308:1: (lv_name_5_0= 'COUNTY' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4309:3: lv_name_5_0= 'COUNTY'
                             {
-                            lv_name_5_0=(Token)match(input,113,FOLLOW_113_in_rulevisual_option10327); 
+                            lv_name_5_0=(Token)match(input,109,FOLLOW_109_in_rulevisual_option10059); 
 
                                     newLeafNode(lv_name_5_0, grammarAccess.getVisual_optionAccess().getNameCOUNTYKeyword_0_0_5_0());
                                 
@@ -11442,15 +11181,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 7 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4394:6: ( (lv_name_6_0= 'WEIGHT' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4323:6: ( (lv_name_6_0= 'WEIGHT' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4394:6: ( (lv_name_6_0= 'WEIGHT' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4395:1: (lv_name_6_0= 'WEIGHT' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4323:6: ( (lv_name_6_0= 'WEIGHT' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4324:1: (lv_name_6_0= 'WEIGHT' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4395:1: (lv_name_6_0= 'WEIGHT' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4396:3: lv_name_6_0= 'WEIGHT'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4324:1: (lv_name_6_0= 'WEIGHT' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4325:3: lv_name_6_0= 'WEIGHT'
                             {
-                            lv_name_6_0=(Token)match(input,114,FOLLOW_114_in_rulevisual_option10364); 
+                            lv_name_6_0=(Token)match(input,110,FOLLOW_110_in_rulevisual_option10096); 
 
                                     newLeafNode(lv_name_6_0, grammarAccess.getVisual_optionAccess().getNameWEIGHTKeyword_0_0_6_0());
                                 
@@ -11470,15 +11209,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             }
                             break;
                         case 8 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4410:6: ( (lv_name_7_0= 'SIZE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4339:6: ( (lv_name_7_0= 'SIZE' ) )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4410:6: ( (lv_name_7_0= 'SIZE' ) )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4411:1: (lv_name_7_0= 'SIZE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4339:6: ( (lv_name_7_0= 'SIZE' ) )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4340:1: (lv_name_7_0= 'SIZE' )
                             {
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4411:1: (lv_name_7_0= 'SIZE' )
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4412:3: lv_name_7_0= 'SIZE'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4340:1: (lv_name_7_0= 'SIZE' )
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4341:3: lv_name_7_0= 'SIZE'
                             {
-                            lv_name_7_0=(Token)match(input,115,FOLLOW_115_in_rulevisual_option10401); 
+                            lv_name_7_0=(Token)match(input,111,FOLLOW_111_in_rulevisual_option10133); 
 
                                     newLeafNode(lv_name_7_0, grammarAccess.getVisual_optionAccess().getNameSIZEKeyword_0_0_7_0());
                                 
@@ -11500,20 +11239,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_8=(Token)match(input,36,FOLLOW_36_in_rulevisual_option10427); 
+                    otherlv_8=(Token)match(input,35,FOLLOW_35_in_rulevisual_option10159); 
 
                         	newLeafNode(otherlv_8, grammarAccess.getVisual_optionAccess().getLeftParenthesisKeyword_0_1());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4429:1: ( (lv_funcs_9_0= rulefunction ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4430:1: (lv_funcs_9_0= rulefunction )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4358:1: ( (lv_funcs_9_0= rulefunction ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4359:1: (lv_funcs_9_0= rulefunction )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4430:1: (lv_funcs_9_0= rulefunction )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4431:3: lv_funcs_9_0= rulefunction
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4359:1: (lv_funcs_9_0= rulefunction )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4360:3: lv_funcs_9_0= rulefunction
                     {
                      
                     	        newCompositeNode(grammarAccess.getVisual_optionAccess().getFuncsFunctionParserRuleCall_0_2_0()); 
                     	    
-                    pushFollow(FOLLOW_rulefunction_in_rulevisual_option10448);
+                    pushFollow(FOLLOW_rulefunction_in_rulevisual_option10180);
                     lv_funcs_9_0=rulefunction();
 
                     state._fsp--;
@@ -11535,7 +11274,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_10=(Token)match(input,37,FOLLOW_37_in_rulevisual_option10460); 
+                    otherlv_10=(Token)match(input,36,FOLLOW_36_in_rulevisual_option10192); 
 
                         	newLeafNode(otherlv_10, grammarAccess.getVisual_optionAccess().getRightParenthesisKeyword_0_3());
                         
@@ -11546,15 +11285,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4452:6: (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4381:6: (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4452:6: (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4453:5: this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4381:6: (this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4382:5: this_visual_multival_11= rulevisual_multival otherlv_12= '(' ( (lv_funcs_13_0= rulefunction ) ) (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )* otherlv_16= ')'
                     {
                      
                             newCompositeNode(grammarAccess.getVisual_optionAccess().getVisual_multivalParserRuleCall_1_0()); 
                         
-                    pushFollow(FOLLOW_rulevisual_multival_in_rulevisual_option10490);
+                    pushFollow(FOLLOW_rulevisual_multival_in_rulevisual_option10222);
                     this_visual_multival_11=rulevisual_multival();
 
                     state._fsp--;
@@ -11563,20 +11302,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                             current = this_visual_multival_11; 
                             afterParserOrEnumRuleCall();
                         
-                    otherlv_12=(Token)match(input,36,FOLLOW_36_in_rulevisual_option10501); 
+                    otherlv_12=(Token)match(input,35,FOLLOW_35_in_rulevisual_option10233); 
 
                         	newLeafNode(otherlv_12, grammarAccess.getVisual_optionAccess().getLeftParenthesisKeyword_1_1());
                         
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4465:1: ( (lv_funcs_13_0= rulefunction ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4466:1: (lv_funcs_13_0= rulefunction )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4394:1: ( (lv_funcs_13_0= rulefunction ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4395:1: (lv_funcs_13_0= rulefunction )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4466:1: (lv_funcs_13_0= rulefunction )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4467:3: lv_funcs_13_0= rulefunction
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4395:1: (lv_funcs_13_0= rulefunction )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4396:3: lv_funcs_13_0= rulefunction
                     {
                      
                     	        newCompositeNode(grammarAccess.getVisual_optionAccess().getFuncsFunctionParserRuleCall_1_2_0()); 
                     	    
-                    pushFollow(FOLLOW_rulefunction_in_rulevisual_option10522);
+                    pushFollow(FOLLOW_rulefunction_in_rulevisual_option10254);
                     lv_funcs_13_0=rulefunction();
 
                     state._fsp--;
@@ -11598,35 +11337,35 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4483:2: (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )*
-                    loop73:
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4412:2: (otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) ) )*
+                    loop72:
                     do {
-                        int alt73=2;
-                        int LA73_0 = input.LA(1);
+                        int alt72=2;
+                        int LA72_0 = input.LA(1);
 
-                        if ( (LA73_0==30) ) {
-                            alt73=1;
+                        if ( (LA72_0==29) ) {
+                            alt72=1;
                         }
 
 
-                        switch (alt73) {
+                        switch (alt72) {
                     	case 1 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4483:4: otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4412:4: otherlv_14= ',' ( (lv_funcs_15_0= rulefunction ) )
                     	    {
-                    	    otherlv_14=(Token)match(input,30,FOLLOW_30_in_rulevisual_option10535); 
+                    	    otherlv_14=(Token)match(input,29,FOLLOW_29_in_rulevisual_option10267); 
 
                     	        	newLeafNode(otherlv_14, grammarAccess.getVisual_optionAccess().getCommaKeyword_1_3_0());
                     	        
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4487:1: ( (lv_funcs_15_0= rulefunction ) )
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4488:1: (lv_funcs_15_0= rulefunction )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4416:1: ( (lv_funcs_15_0= rulefunction ) )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4417:1: (lv_funcs_15_0= rulefunction )
                     	    {
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4488:1: (lv_funcs_15_0= rulefunction )
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4489:3: lv_funcs_15_0= rulefunction
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4417:1: (lv_funcs_15_0= rulefunction )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4418:3: lv_funcs_15_0= rulefunction
                     	    {
                     	     
                     	    	        newCompositeNode(grammarAccess.getVisual_optionAccess().getFuncsFunctionParserRuleCall_1_3_1_0()); 
                     	    	    
-                    	    pushFollow(FOLLOW_rulefunction_in_rulevisual_option10556);
+                    	    pushFollow(FOLLOW_rulefunction_in_rulevisual_option10288);
                     	    lv_funcs_15_0=rulefunction();
 
                     	    state._fsp--;
@@ -11653,11 +11392,11 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     	    break;
 
                     	default :
-                    	    break loop73;
+                    	    break loop72;
                         }
                     } while (true);
 
-                    otherlv_16=(Token)match(input,37,FOLLOW_37_in_rulevisual_option10570); 
+                    otherlv_16=(Token)match(input,36,FOLLOW_36_in_rulevisual_option10302); 
 
                         	newLeafNode(otherlv_16, grammarAccess.getVisual_optionAccess().getRightParenthesisKeyword_1_4());
                         
@@ -11668,18 +11407,18 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4510:6: ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4439:6: ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4510:6: ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4510:7: ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4439:6: ( ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4439:7: ( (lv_name_17_0= 'SELECTS' ) ) otherlv_18= '(' this_ID_19= RULE_ID otherlv_20= '->' this_ID_21= RULE_ID otherlv_22= ')'
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4510:7: ( (lv_name_17_0= 'SELECTS' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4511:1: (lv_name_17_0= 'SELECTS' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4439:7: ( (lv_name_17_0= 'SELECTS' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4440:1: (lv_name_17_0= 'SELECTS' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4511:1: (lv_name_17_0= 'SELECTS' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4512:3: lv_name_17_0= 'SELECTS'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4440:1: (lv_name_17_0= 'SELECTS' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4441:3: lv_name_17_0= 'SELECTS'
                     {
-                    lv_name_17_0=(Token)match(input,116,FOLLOW_116_in_rulevisual_option10596); 
+                    lv_name_17_0=(Token)match(input,112,FOLLOW_112_in_rulevisual_option10328); 
 
                             newLeafNode(lv_name_17_0, grammarAccess.getVisual_optionAccess().getNameSELECTSKeyword_2_0_0());
                         
@@ -11695,23 +11434,23 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
                     }
 
-                    otherlv_18=(Token)match(input,36,FOLLOW_36_in_rulevisual_option10621); 
+                    otherlv_18=(Token)match(input,35,FOLLOW_35_in_rulevisual_option10353); 
 
                         	newLeafNode(otherlv_18, grammarAccess.getVisual_optionAccess().getLeftParenthesisKeyword_2_1());
                         
-                    this_ID_19=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisual_option10632); 
+                    this_ID_19=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisual_option10364); 
                      
                         newLeafNode(this_ID_19, grammarAccess.getVisual_optionAccess().getIDTerminalRuleCall_2_2()); 
                         
-                    otherlv_20=(Token)match(input,117,FOLLOW_117_in_rulevisual_option10643); 
+                    otherlv_20=(Token)match(input,113,FOLLOW_113_in_rulevisual_option10375); 
 
                         	newLeafNode(otherlv_20, grammarAccess.getVisual_optionAccess().getHyphenMinusGreaterThanSignKeyword_2_3());
                         
-                    this_ID_21=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisual_option10654); 
+                    this_ID_21=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulevisual_option10386); 
                      
                         newLeafNode(this_ID_21, grammarAccess.getVisual_optionAccess().getIDTerminalRuleCall_2_4()); 
                         
-                    otherlv_22=(Token)match(input,37,FOLLOW_37_in_rulevisual_option10665); 
+                    otherlv_22=(Token)match(input,36,FOLLOW_36_in_rulevisual_option10397); 
 
                         	newLeafNode(otherlv_22, grammarAccess.getVisual_optionAccess().getRightParenthesisKeyword_2_5());
                         
@@ -11742,7 +11481,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulevisual_multival"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4553:1: entryRulevisual_multival returns [EObject current=null] : iv_rulevisual_multival= rulevisual_multival EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4482:1: entryRulevisual_multival returns [EObject current=null] : iv_rulevisual_multival= rulevisual_multival EOF ;
     public final EObject entryRulevisual_multival() throws RecognitionException {
         EObject current = null;
 
@@ -11750,17 +11489,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4554:2: (iv_rulevisual_multival= rulevisual_multival EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4555:2: iv_rulevisual_multival= rulevisual_multival EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4483:2: (iv_rulevisual_multival= rulevisual_multival EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4484:2: iv_rulevisual_multival= rulevisual_multival EOF
             {
              newCompositeNode(grammarAccess.getVisual_multivalRule()); 
-            pushFollow(FOLLOW_rulevisual_multival_in_entryRulevisual_multival10702);
+            pushFollow(FOLLOW_rulevisual_multival_in_entryRulevisual_multival10434);
             iv_rulevisual_multival=rulevisual_multival();
 
             state._fsp--;
 
              current =iv_rulevisual_multival; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_multival10712); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulevisual_multival10444); 
 
             }
 
@@ -11778,7 +11517,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulevisual_multival"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4562:1: rulevisual_multival returns [EObject current=null] : ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4491:1: rulevisual_multival returns [EObject current=null] : ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) ) ;
     public final EObject rulevisual_multival() throws RecognitionException {
         EObject current = null;
 
@@ -11793,65 +11532,65 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4565:28: ( ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4566:1: ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4494:28: ( ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4495:1: ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4566:1: ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) )
-            int alt75=7;
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4495:1: ( ( (lv_name_0_0= 'X' ) ) | ( (lv_name_1_0= 'Y' ) ) | ( (lv_name_2_0= 'COLOR' ) ) | ( (lv_name_3_0= 'RANGE' ) ) | ( (lv_name_4_0= 'FILTER' ) ) | ( (lv_name_5_0= 'LABEL' ) ) | ( (lv_name_6_0= 'VALUE' ) ) )
+            int alt74=7;
             switch ( input.LA(1) ) {
+            case 114:
+                {
+                alt74=1;
+                }
+                break;
+            case 115:
+                {
+                alt74=2;
+                }
+                break;
+            case 116:
+                {
+                alt74=3;
+                }
+                break;
+            case 55:
+                {
+                alt74=4;
+                }
+                break;
+            case 117:
+                {
+                alt74=5;
+                }
+                break;
+            case 17:
+                {
+                alt74=6;
+                }
+                break;
             case 118:
                 {
-                alt75=1;
-                }
-                break;
-            case 119:
-                {
-                alt75=2;
-                }
-                break;
-            case 120:
-                {
-                alt75=3;
-                }
-                break;
-            case 56:
-                {
-                alt75=4;
-                }
-                break;
-            case 121:
-                {
-                alt75=5;
-                }
-                break;
-            case 18:
-                {
-                alt75=6;
-                }
-                break;
-            case 122:
-                {
-                alt75=7;
+                alt74=7;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 75, 0, input);
+                    new NoViableAltException("", 74, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt75) {
+            switch (alt74) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4566:2: ( (lv_name_0_0= 'X' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4495:2: ( (lv_name_0_0= 'X' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4566:2: ( (lv_name_0_0= 'X' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4567:1: (lv_name_0_0= 'X' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4495:2: ( (lv_name_0_0= 'X' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4496:1: (lv_name_0_0= 'X' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4567:1: (lv_name_0_0= 'X' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4568:3: lv_name_0_0= 'X'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4496:1: (lv_name_0_0= 'X' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4497:3: lv_name_0_0= 'X'
                     {
-                    lv_name_0_0=(Token)match(input,118,FOLLOW_118_in_rulevisual_multival10755); 
+                    lv_name_0_0=(Token)match(input,114,FOLLOW_114_in_rulevisual_multival10487); 
 
                             newLeafNode(lv_name_0_0, grammarAccess.getVisual_multivalAccess().getNameXKeyword_0_0());
                         
@@ -11871,15 +11610,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4582:6: ( (lv_name_1_0= 'Y' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4511:6: ( (lv_name_1_0= 'Y' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4582:6: ( (lv_name_1_0= 'Y' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4583:1: (lv_name_1_0= 'Y' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4511:6: ( (lv_name_1_0= 'Y' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4512:1: (lv_name_1_0= 'Y' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4583:1: (lv_name_1_0= 'Y' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4584:3: lv_name_1_0= 'Y'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4512:1: (lv_name_1_0= 'Y' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4513:3: lv_name_1_0= 'Y'
                     {
-                    lv_name_1_0=(Token)match(input,119,FOLLOW_119_in_rulevisual_multival10792); 
+                    lv_name_1_0=(Token)match(input,115,FOLLOW_115_in_rulevisual_multival10524); 
 
                             newLeafNode(lv_name_1_0, grammarAccess.getVisual_multivalAccess().getNameYKeyword_1_0());
                         
@@ -11899,15 +11638,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4598:6: ( (lv_name_2_0= 'COLOR' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4527:6: ( (lv_name_2_0= 'COLOR' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4598:6: ( (lv_name_2_0= 'COLOR' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4599:1: (lv_name_2_0= 'COLOR' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4527:6: ( (lv_name_2_0= 'COLOR' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4528:1: (lv_name_2_0= 'COLOR' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4599:1: (lv_name_2_0= 'COLOR' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4600:3: lv_name_2_0= 'COLOR'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4528:1: (lv_name_2_0= 'COLOR' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4529:3: lv_name_2_0= 'COLOR'
                     {
-                    lv_name_2_0=(Token)match(input,120,FOLLOW_120_in_rulevisual_multival10829); 
+                    lv_name_2_0=(Token)match(input,116,FOLLOW_116_in_rulevisual_multival10561); 
 
                             newLeafNode(lv_name_2_0, grammarAccess.getVisual_multivalAccess().getNameCOLORKeyword_2_0());
                         
@@ -11927,15 +11666,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4614:6: ( (lv_name_3_0= 'RANGE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4543:6: ( (lv_name_3_0= 'RANGE' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4614:6: ( (lv_name_3_0= 'RANGE' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4615:1: (lv_name_3_0= 'RANGE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4543:6: ( (lv_name_3_0= 'RANGE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4544:1: (lv_name_3_0= 'RANGE' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4615:1: (lv_name_3_0= 'RANGE' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4616:3: lv_name_3_0= 'RANGE'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4544:1: (lv_name_3_0= 'RANGE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4545:3: lv_name_3_0= 'RANGE'
                     {
-                    lv_name_3_0=(Token)match(input,56,FOLLOW_56_in_rulevisual_multival10866); 
+                    lv_name_3_0=(Token)match(input,55,FOLLOW_55_in_rulevisual_multival10598); 
 
                             newLeafNode(lv_name_3_0, grammarAccess.getVisual_multivalAccess().getNameRANGEKeyword_3_0());
                         
@@ -11955,15 +11694,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4630:6: ( (lv_name_4_0= 'FILTER' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4559:6: ( (lv_name_4_0= 'FILTER' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4630:6: ( (lv_name_4_0= 'FILTER' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4631:1: (lv_name_4_0= 'FILTER' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4559:6: ( (lv_name_4_0= 'FILTER' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4560:1: (lv_name_4_0= 'FILTER' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4631:1: (lv_name_4_0= 'FILTER' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4632:3: lv_name_4_0= 'FILTER'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4560:1: (lv_name_4_0= 'FILTER' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4561:3: lv_name_4_0= 'FILTER'
                     {
-                    lv_name_4_0=(Token)match(input,121,FOLLOW_121_in_rulevisual_multival10903); 
+                    lv_name_4_0=(Token)match(input,117,FOLLOW_117_in_rulevisual_multival10635); 
 
                             newLeafNode(lv_name_4_0, grammarAccess.getVisual_multivalAccess().getNameFILTERKeyword_4_0());
                         
@@ -11983,15 +11722,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4646:6: ( (lv_name_5_0= 'LABEL' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4575:6: ( (lv_name_5_0= 'LABEL' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4646:6: ( (lv_name_5_0= 'LABEL' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4647:1: (lv_name_5_0= 'LABEL' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4575:6: ( (lv_name_5_0= 'LABEL' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4576:1: (lv_name_5_0= 'LABEL' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4647:1: (lv_name_5_0= 'LABEL' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4648:3: lv_name_5_0= 'LABEL'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4576:1: (lv_name_5_0= 'LABEL' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4577:3: lv_name_5_0= 'LABEL'
                     {
-                    lv_name_5_0=(Token)match(input,18,FOLLOW_18_in_rulevisual_multival10940); 
+                    lv_name_5_0=(Token)match(input,17,FOLLOW_17_in_rulevisual_multival10672); 
 
                             newLeafNode(lv_name_5_0, grammarAccess.getVisual_multivalAccess().getNameLABELKeyword_5_0());
                         
@@ -12011,15 +11750,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4662:6: ( (lv_name_6_0= 'VALUE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4591:6: ( (lv_name_6_0= 'VALUE' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4662:6: ( (lv_name_6_0= 'VALUE' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4663:1: (lv_name_6_0= 'VALUE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4591:6: ( (lv_name_6_0= 'VALUE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4592:1: (lv_name_6_0= 'VALUE' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4663:1: (lv_name_6_0= 'VALUE' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4664:3: lv_name_6_0= 'VALUE'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4592:1: (lv_name_6_0= 'VALUE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4593:3: lv_name_6_0= 'VALUE'
                     {
-                    lv_name_6_0=(Token)match(input,122,FOLLOW_122_in_rulevisual_multival10977); 
+                    lv_name_6_0=(Token)match(input,118,FOLLOW_118_in_rulevisual_multival10709); 
 
                             newLeafNode(lv_name_6_0, grammarAccess.getVisual_multivalAccess().getNameVALUEKeyword_6_0());
                         
@@ -12059,7 +11798,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulecustom_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4685:1: entryRulecustom_section returns [EObject current=null] : iv_rulecustom_section= rulecustom_section EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4614:1: entryRulecustom_section returns [EObject current=null] : iv_rulecustom_section= rulecustom_section EOF ;
     public final EObject entryRulecustom_section() throws RecognitionException {
         EObject current = null;
 
@@ -12067,17 +11806,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4686:2: (iv_rulecustom_section= rulecustom_section EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4687:2: iv_rulecustom_section= rulecustom_section EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4615:2: (iv_rulecustom_section= rulecustom_section EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4616:2: iv_rulecustom_section= rulecustom_section EOF
             {
              newCompositeNode(grammarAccess.getCustom_sectionRule()); 
-            pushFollow(FOLLOW_rulecustom_section_in_entryRulecustom_section11026);
+            pushFollow(FOLLOW_rulecustom_section_in_entryRulecustom_section10758);
             iv_rulecustom_section=rulecustom_section();
 
             state._fsp--;
 
              current =iv_rulecustom_section; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulecustom_section11036); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulecustom_section10768); 
 
             }
 
@@ -12095,7 +11834,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecustom_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4694:1: rulecustom_section returns [EObject current=null] : ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4623:1: rulecustom_section returns [EObject current=null] : ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' ) ;
     public final EObject rulecustom_section() throws RecognitionException {
         EObject current = null;
 
@@ -12107,19 +11846,19 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4697:28: ( ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4698:1: ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4626:28: ( ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4627:1: ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4698:1: ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4698:2: ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4627:1: ( ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4627:2: ( (lv_name_0_0= 'CUSTOM' ) ) ( (lv_cust_vals_1_0= rulecustom_value ) )* otherlv_2= 'END'
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4698:2: ( (lv_name_0_0= 'CUSTOM' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4699:1: (lv_name_0_0= 'CUSTOM' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4627:2: ( (lv_name_0_0= 'CUSTOM' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4628:1: (lv_name_0_0= 'CUSTOM' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4699:1: (lv_name_0_0= 'CUSTOM' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4700:3: lv_name_0_0= 'CUSTOM'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4628:1: (lv_name_0_0= 'CUSTOM' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4629:3: lv_name_0_0= 'CUSTOM'
             {
-            lv_name_0_0=(Token)match(input,27,FOLLOW_27_in_rulecustom_section11079); 
+            lv_name_0_0=(Token)match(input,26,FOLLOW_26_in_rulecustom_section10811); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getCustom_sectionAccess().getNameCUSTOMKeyword_0_0());
                 
@@ -12135,28 +11874,28 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4713:2: ( (lv_cust_vals_1_0= rulecustom_value ) )*
-            loop76:
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4642:2: ( (lv_cust_vals_1_0= rulecustom_value ) )*
+            loop75:
             do {
-                int alt76=2;
-                int LA76_0 = input.LA(1);
+                int alt75=2;
+                int LA75_0 = input.LA(1);
 
-                if ( (LA76_0==RULE_ID) ) {
-                    alt76=1;
+                if ( (LA75_0==RULE_ID) ) {
+                    alt75=1;
                 }
 
 
-                switch (alt76) {
+                switch (alt75) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4714:1: (lv_cust_vals_1_0= rulecustom_value )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4643:1: (lv_cust_vals_1_0= rulecustom_value )
             	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4714:1: (lv_cust_vals_1_0= rulecustom_value )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4715:3: lv_cust_vals_1_0= rulecustom_value
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4643:1: (lv_cust_vals_1_0= rulecustom_value )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4644:3: lv_cust_vals_1_0= rulecustom_value
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getCustom_sectionAccess().getCust_valsCustom_valueParserRuleCall_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulecustom_value_in_rulecustom_section11113);
+            	    pushFollow(FOLLOW_rulecustom_value_in_rulecustom_section10845);
             	    lv_cust_vals_1_0=rulecustom_value();
 
             	    state._fsp--;
@@ -12180,11 +11919,11 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop76;
+            	    break loop75;
                 }
             } while (true);
 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_rulecustom_section11126); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_rulecustom_section10858); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCustom_sectionAccess().getENDKeyword_2());
                 
@@ -12209,7 +11948,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRulecustom_value"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4743:1: entryRulecustom_value returns [EObject current=null] : iv_rulecustom_value= rulecustom_value EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4672:1: entryRulecustom_value returns [EObject current=null] : iv_rulecustom_value= rulecustom_value EOF ;
     public final EObject entryRulecustom_value() throws RecognitionException {
         EObject current = null;
 
@@ -12217,17 +11956,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4744:2: (iv_rulecustom_value= rulecustom_value EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4745:2: iv_rulecustom_value= rulecustom_value EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4673:2: (iv_rulecustom_value= rulecustom_value EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4674:2: iv_rulecustom_value= rulecustom_value EOF
             {
              newCompositeNode(grammarAccess.getCustom_valueRule()); 
-            pushFollow(FOLLOW_rulecustom_value_in_entryRulecustom_value11162);
+            pushFollow(FOLLOW_rulecustom_value_in_entryRulecustom_value10894);
             iv_rulecustom_value=rulecustom_value();
 
             state._fsp--;
 
              current =iv_rulecustom_value; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulecustom_value11172); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulecustom_value10904); 
 
             }
 
@@ -12245,7 +11984,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "rulecustom_value"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4752:1: rulecustom_value returns [EObject current=null] : (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4681:1: rulecustom_value returns [EObject current=null] : (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' ) ;
     public final EObject rulecustom_value() throws RecognitionException {
         EObject current = null;
 
@@ -12257,20 +11996,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4755:28: ( (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4756:1: (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4684:28: ( (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4685:1: (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4756:1: (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4756:2: this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4685:1: (this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4685:2: this_ID_0= RULE_ID this_value_1= rulevalue otherlv_2= ';'
             {
-            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulecustom_value11208); 
+            this_ID_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulecustom_value10940); 
              
                 newLeafNode(this_ID_0, grammarAccess.getCustom_valueAccess().getIDTerminalRuleCall_0()); 
                 
              
                     newCompositeNode(grammarAccess.getCustom_valueAccess().getValueParserRuleCall_1()); 
                 
-            pushFollow(FOLLOW_rulevalue_in_rulecustom_value11229);
+            pushFollow(FOLLOW_rulevalue_in_rulecustom_value10961);
             this_value_1=rulevalue();
 
             state._fsp--;
@@ -12279,7 +12018,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     current = this_value_1; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_2=(Token)match(input,20,FOLLOW_20_in_rulecustom_value11240); 
+            otherlv_2=(Token)match(input,19,FOLLOW_19_in_rulecustom_value10972); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getCustom_valueAccess().getSemicolonKeyword_2());
                 
@@ -12304,7 +12043,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleresource_option"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4781:1: entryRuleresource_option returns [EObject current=null] : iv_ruleresource_option= ruleresource_option EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4710:1: entryRuleresource_option returns [EObject current=null] : iv_ruleresource_option= ruleresource_option EOF ;
     public final EObject entryRuleresource_option() throws RecognitionException {
         EObject current = null;
 
@@ -12312,17 +12051,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4782:2: (iv_ruleresource_option= ruleresource_option EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4783:2: iv_ruleresource_option= ruleresource_option EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4711:2: (iv_ruleresource_option= ruleresource_option EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4712:2: iv_ruleresource_option= ruleresource_option EOF
             {
              newCompositeNode(grammarAccess.getResource_optionRule()); 
-            pushFollow(FOLLOW_ruleresource_option_in_entryRuleresource_option11276);
+            pushFollow(FOLLOW_ruleresource_option_in_entryRuleresource_option11008);
             iv_ruleresource_option=ruleresource_option();
 
             state._fsp--;
 
              current =iv_ruleresource_option; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_option11286); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_option11018); 
 
             }
 
@@ -12340,7 +12079,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleresource_option"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4790:1: ruleresource_option returns [EObject current=null] : ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4719:1: ruleresource_option returns [EObject current=null] : ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' ) ;
     public final EObject ruleresource_option() throws RecognitionException {
         EObject current = null;
 
@@ -12356,53 +12095,53 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4793:28: ( ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4794:1: ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4722:28: ( ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4723:1: ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4794:1: ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4794:2: ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4723:1: ( ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4723:2: ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) ) otherlv_4= '(' ( (lv_vals_5_0= rulevalue ) ) otherlv_6= ')'
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4794:2: ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) )
-            int alt77=4;
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4723:2: ( ( (lv_name_0_0= 'DESCRIPTION' ) ) | ( (lv_name_1_0= 'FILE' ) ) | ( (lv_name_2_0= 'LABEL' ) ) | ( (lv_name_3_0= '_HTML_STYLECLASS' ) ) )
+            int alt76=4;
             switch ( input.LA(1) ) {
-            case 13:
+            case 12:
                 {
-                alt77=1;
+                alt76=1;
                 }
                 break;
-            case 123:
+            case 119:
                 {
-                alt77=2;
+                alt76=2;
                 }
                 break;
-            case 18:
+            case 17:
                 {
-                alt77=3;
+                alt76=3;
                 }
                 break;
-            case 63:
+            case 62:
                 {
-                alt77=4;
+                alt76=4;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 77, 0, input);
+                    new NoViableAltException("", 76, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt77) {
+            switch (alt76) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4794:3: ( (lv_name_0_0= 'DESCRIPTION' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4723:3: ( (lv_name_0_0= 'DESCRIPTION' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4794:3: ( (lv_name_0_0= 'DESCRIPTION' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4795:1: (lv_name_0_0= 'DESCRIPTION' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4723:3: ( (lv_name_0_0= 'DESCRIPTION' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4724:1: (lv_name_0_0= 'DESCRIPTION' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4795:1: (lv_name_0_0= 'DESCRIPTION' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4796:3: lv_name_0_0= 'DESCRIPTION'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4724:1: (lv_name_0_0= 'DESCRIPTION' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4725:3: lv_name_0_0= 'DESCRIPTION'
                     {
-                    lv_name_0_0=(Token)match(input,13,FOLLOW_13_in_ruleresource_option11330); 
+                    lv_name_0_0=(Token)match(input,12,FOLLOW_12_in_ruleresource_option11062); 
 
                             newLeafNode(lv_name_0_0, grammarAccess.getResource_optionAccess().getNameDESCRIPTIONKeyword_0_0_0());
                         
@@ -12422,15 +12161,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4810:6: ( (lv_name_1_0= 'FILE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4739:6: ( (lv_name_1_0= 'FILE' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4810:6: ( (lv_name_1_0= 'FILE' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4811:1: (lv_name_1_0= 'FILE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4739:6: ( (lv_name_1_0= 'FILE' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4740:1: (lv_name_1_0= 'FILE' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4811:1: (lv_name_1_0= 'FILE' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4812:3: lv_name_1_0= 'FILE'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4740:1: (lv_name_1_0= 'FILE' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4741:3: lv_name_1_0= 'FILE'
                     {
-                    lv_name_1_0=(Token)match(input,123,FOLLOW_123_in_ruleresource_option11367); 
+                    lv_name_1_0=(Token)match(input,119,FOLLOW_119_in_ruleresource_option11099); 
 
                             newLeafNode(lv_name_1_0, grammarAccess.getResource_optionAccess().getNameFILEKeyword_0_1_0());
                         
@@ -12450,15 +12189,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4826:6: ( (lv_name_2_0= 'LABEL' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4755:6: ( (lv_name_2_0= 'LABEL' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4826:6: ( (lv_name_2_0= 'LABEL' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4827:1: (lv_name_2_0= 'LABEL' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4755:6: ( (lv_name_2_0= 'LABEL' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4756:1: (lv_name_2_0= 'LABEL' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4827:1: (lv_name_2_0= 'LABEL' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4828:3: lv_name_2_0= 'LABEL'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4756:1: (lv_name_2_0= 'LABEL' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4757:3: lv_name_2_0= 'LABEL'
                     {
-                    lv_name_2_0=(Token)match(input,18,FOLLOW_18_in_ruleresource_option11404); 
+                    lv_name_2_0=(Token)match(input,17,FOLLOW_17_in_ruleresource_option11136); 
 
                             newLeafNode(lv_name_2_0, grammarAccess.getResource_optionAccess().getNameLABELKeyword_0_2_0());
                         
@@ -12478,15 +12217,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4842:6: ( (lv_name_3_0= '_HTML_STYLECLASS' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4771:6: ( (lv_name_3_0= '_HTML_STYLECLASS' ) )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4842:6: ( (lv_name_3_0= '_HTML_STYLECLASS' ) )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4843:1: (lv_name_3_0= '_HTML_STYLECLASS' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4771:6: ( (lv_name_3_0= '_HTML_STYLECLASS' ) )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4772:1: (lv_name_3_0= '_HTML_STYLECLASS' )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4843:1: (lv_name_3_0= '_HTML_STYLECLASS' )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4844:3: lv_name_3_0= '_HTML_STYLECLASS'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4772:1: (lv_name_3_0= '_HTML_STYLECLASS' )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4773:3: lv_name_3_0= '_HTML_STYLECLASS'
                     {
-                    lv_name_3_0=(Token)match(input,63,FOLLOW_63_in_ruleresource_option11441); 
+                    lv_name_3_0=(Token)match(input,62,FOLLOW_62_in_ruleresource_option11173); 
 
                             newLeafNode(lv_name_3_0, grammarAccess.getResource_optionAccess().getName_HTML_STYLECLASSKeyword_0_3_0());
                         
@@ -12508,20 +12247,20 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_4=(Token)match(input,36,FOLLOW_36_in_ruleresource_option11467); 
+            otherlv_4=(Token)match(input,35,FOLLOW_35_in_ruleresource_option11199); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getResource_optionAccess().getLeftParenthesisKeyword_1());
                 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4861:1: ( (lv_vals_5_0= rulevalue ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4862:1: (lv_vals_5_0= rulevalue )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4790:1: ( (lv_vals_5_0= rulevalue ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4791:1: (lv_vals_5_0= rulevalue )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4862:1: (lv_vals_5_0= rulevalue )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4863:3: lv_vals_5_0= rulevalue
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4791:1: (lv_vals_5_0= rulevalue )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4792:3: lv_vals_5_0= rulevalue
             {
              
             	        newCompositeNode(grammarAccess.getResource_optionAccess().getValsValueParserRuleCall_2_0()); 
             	    
-            pushFollow(FOLLOW_rulevalue_in_ruleresource_option11488);
+            pushFollow(FOLLOW_rulevalue_in_ruleresource_option11220);
             lv_vals_5_0=rulevalue();
 
             state._fsp--;
@@ -12543,7 +12282,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_6=(Token)match(input,37,FOLLOW_37_in_ruleresource_option11500); 
+            otherlv_6=(Token)match(input,36,FOLLOW_36_in_ruleresource_option11232); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getResource_optionAccess().getRightParenthesisKeyword_3());
                 
@@ -12568,7 +12307,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleresource_options"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4891:1: entryRuleresource_options returns [EObject current=null] : iv_ruleresource_options= ruleresource_options EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4820:1: entryRuleresource_options returns [EObject current=null] : iv_ruleresource_options= ruleresource_options EOF ;
     public final EObject entryRuleresource_options() throws RecognitionException {
         EObject current = null;
 
@@ -12576,17 +12315,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4892:2: (iv_ruleresource_options= ruleresource_options EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4893:2: iv_ruleresource_options= ruleresource_options EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4821:2: (iv_ruleresource_options= ruleresource_options EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4822:2: iv_ruleresource_options= ruleresource_options EOF
             {
              newCompositeNode(grammarAccess.getResource_optionsRule()); 
-            pushFollow(FOLLOW_ruleresource_options_in_entryRuleresource_options11536);
+            pushFollow(FOLLOW_ruleresource_options_in_entryRuleresource_options11268);
             iv_ruleresource_options=ruleresource_options();
 
             state._fsp--;
 
              current =iv_ruleresource_options; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_options11546); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_options11278); 
 
             }
 
@@ -12604,7 +12343,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleresource_options"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4900:1: ruleresource_options returns [EObject current=null] : (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4829:1: ruleresource_options returns [EObject current=null] : (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* ) ;
     public final EObject ruleresource_options() throws RecognitionException {
         EObject current = null;
 
@@ -12617,16 +12356,16 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4903:28: ( (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4904:1: (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4832:28: ( (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4833:1: (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4904:1: (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4905:5: this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4833:1: (this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4834:5: this_resource_option_0= ruleresource_option (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )*
             {
              
                     newCompositeNode(grammarAccess.getResource_optionsAccess().getResource_optionParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_ruleresource_option_in_ruleresource_options11593);
+            pushFollow(FOLLOW_ruleresource_option_in_ruleresource_options11325);
             this_resource_option_0=ruleresource_option();
 
             state._fsp--;
@@ -12635,35 +12374,35 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     current = this_resource_option_0; 
                     afterParserOrEnumRuleCall();
                 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4913:1: (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )*
-            loop78:
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4842:1: (otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) ) )*
+            loop77:
             do {
-                int alt78=2;
-                int LA78_0 = input.LA(1);
+                int alt77=2;
+                int LA77_0 = input.LA(1);
 
-                if ( (LA78_0==30) ) {
-                    alt78=1;
+                if ( (LA77_0==29) ) {
+                    alt77=1;
                 }
 
 
-                switch (alt78) {
+                switch (alt77) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4913:3: otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4842:3: otherlv_1= ',' ( (lv_res_ops_2_0= ruleresource_option ) )
             	    {
-            	    otherlv_1=(Token)match(input,30,FOLLOW_30_in_ruleresource_options11605); 
+            	    otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleresource_options11337); 
 
             	        	newLeafNode(otherlv_1, grammarAccess.getResource_optionsAccess().getCommaKeyword_1_0());
             	        
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4917:1: ( (lv_res_ops_2_0= ruleresource_option ) )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4918:1: (lv_res_ops_2_0= ruleresource_option )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4846:1: ( (lv_res_ops_2_0= ruleresource_option ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4847:1: (lv_res_ops_2_0= ruleresource_option )
             	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4918:1: (lv_res_ops_2_0= ruleresource_option )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4919:3: lv_res_ops_2_0= ruleresource_option
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4847:1: (lv_res_ops_2_0= ruleresource_option )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4848:3: lv_res_ops_2_0= ruleresource_option
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getResource_optionsAccess().getRes_opsResource_optionParserRuleCall_1_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleresource_option_in_ruleresource_options11626);
+            	    pushFollow(FOLLOW_ruleresource_option_in_ruleresource_options11358);
             	    lv_res_ops_2_0=ruleresource_option();
 
             	    state._fsp--;
@@ -12690,7 +12429,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop78;
+            	    break loop77;
                 }
             } while (true);
 
@@ -12715,7 +12454,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleresource_value"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4943:1: entryRuleresource_value returns [EObject current=null] : iv_ruleresource_value= ruleresource_value EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4872:1: entryRuleresource_value returns [EObject current=null] : iv_ruleresource_value= ruleresource_value EOF ;
     public final EObject entryRuleresource_value() throws RecognitionException {
         EObject current = null;
 
@@ -12723,17 +12462,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4944:2: (iv_ruleresource_value= ruleresource_value EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4945:2: iv_ruleresource_value= ruleresource_value EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4873:2: (iv_ruleresource_value= ruleresource_value EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4874:2: iv_ruleresource_value= ruleresource_value EOF
             {
              newCompositeNode(grammarAccess.getResource_valueRule()); 
-            pushFollow(FOLLOW_ruleresource_value_in_entryRuleresource_value11664);
+            pushFollow(FOLLOW_ruleresource_value_in_entryRuleresource_value11396);
             iv_ruleresource_value=ruleresource_value();
 
             state._fsp--;
 
              current =iv_ruleresource_value; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_value11674); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_value11406); 
 
             }
 
@@ -12751,7 +12490,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleresource_value"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4952:1: ruleresource_value returns [EObject current=null] : (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4881:1: ruleresource_value returns [EObject current=null] : (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' ) ;
     public final EObject ruleresource_value() throws RecognitionException {
         EObject current = null;
 
@@ -12765,16 +12504,16 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4955:28: ( (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4956:1: (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4884:28: ( (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4885:1: (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4956:1: (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4957:5: this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4885:1: (this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4886:5: this_value_0= rulevalue otherlv_1= ':' ( (lv_res_ops_2_0= ruleresource_options ) )? otherlv_3= ';'
             {
              
                     newCompositeNode(grammarAccess.getResource_valueAccess().getValueParserRuleCall_0()); 
                 
-            pushFollow(FOLLOW_rulevalue_in_ruleresource_value11721);
+            pushFollow(FOLLOW_rulevalue_in_ruleresource_value11453);
             this_value_0=rulevalue();
 
             state._fsp--;
@@ -12783,28 +12522,28 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
                     current = this_value_0; 
                     afterParserOrEnumRuleCall();
                 
-            otherlv_1=(Token)match(input,35,FOLLOW_35_in_ruleresource_value11732); 
+            otherlv_1=(Token)match(input,34,FOLLOW_34_in_ruleresource_value11464); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getResource_valueAccess().getColonKeyword_1());
                 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4969:1: ( (lv_res_ops_2_0= ruleresource_options ) )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4898:1: ( (lv_res_ops_2_0= ruleresource_options ) )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA79_0==13||LA79_0==18||LA79_0==63||LA79_0==123) ) {
-                alt79=1;
+            if ( (LA78_0==12||LA78_0==17||LA78_0==62||LA78_0==119) ) {
+                alt78=1;
             }
-            switch (alt79) {
+            switch (alt78) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4970:1: (lv_res_ops_2_0= ruleresource_options )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4899:1: (lv_res_ops_2_0= ruleresource_options )
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4970:1: (lv_res_ops_2_0= ruleresource_options )
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4971:3: lv_res_ops_2_0= ruleresource_options
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4899:1: (lv_res_ops_2_0= ruleresource_options )
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4900:3: lv_res_ops_2_0= ruleresource_options
                     {
                      
                     	        newCompositeNode(grammarAccess.getResource_valueAccess().getRes_opsResource_optionsParserRuleCall_2_0()); 
                     	    
-                    pushFollow(FOLLOW_ruleresource_options_in_ruleresource_value11753);
+                    pushFollow(FOLLOW_ruleresource_options_in_ruleresource_value11485);
                     lv_res_ops_2_0=ruleresource_options();
 
                     state._fsp--;
@@ -12829,7 +12568,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_3=(Token)match(input,20,FOLLOW_20_in_ruleresource_value11766); 
+            otherlv_3=(Token)match(input,19,FOLLOW_19_in_ruleresource_value11498); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getResource_valueAccess().getSemicolonKeyword_3());
                 
@@ -12854,7 +12593,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleresource_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4999:1: entryRuleresource_section returns [EObject current=null] : iv_ruleresource_section= ruleresource_section EOF ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4928:1: entryRuleresource_section returns [EObject current=null] : iv_ruleresource_section= ruleresource_section EOF ;
     public final EObject entryRuleresource_section() throws RecognitionException {
         EObject current = null;
 
@@ -12862,17 +12601,17 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5000:2: (iv_ruleresource_section= ruleresource_section EOF )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5001:2: iv_ruleresource_section= ruleresource_section EOF
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4929:2: (iv_ruleresource_section= ruleresource_section EOF )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4930:2: iv_ruleresource_section= ruleresource_section EOF
             {
              newCompositeNode(grammarAccess.getResource_sectionRule()); 
-            pushFollow(FOLLOW_ruleresource_section_in_entryRuleresource_section11802);
+            pushFollow(FOLLOW_ruleresource_section_in_entryRuleresource_section11534);
             iv_ruleresource_section=ruleresource_section();
 
             state._fsp--;
 
              current =iv_ruleresource_section; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_section11812); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleresource_section11544); 
 
             }
 
@@ -12890,7 +12629,7 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleresource_section"
-    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5008:1: ruleresource_section returns [EObject current=null] : ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' ) ;
+    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4937:1: ruleresource_section returns [EObject current=null] : ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' ) ;
     public final EObject ruleresource_section() throws RecognitionException {
         EObject current = null;
 
@@ -12902,19 +12641,19 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
          enterRule(); 
             
         try {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5011:28: ( ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5012:1: ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4940:28: ( ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4941:1: ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5012:1: ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5012:2: ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4941:1: ( ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4941:2: ( (lv_name_0_0= 'RESOURCES' ) ) ( (lv_res_vals_1_0= ruleresource_value ) )+ otherlv_2= 'END'
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5012:2: ( (lv_name_0_0= 'RESOURCES' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5013:1: (lv_name_0_0= 'RESOURCES' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4941:2: ( (lv_name_0_0= 'RESOURCES' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4942:1: (lv_name_0_0= 'RESOURCES' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5013:1: (lv_name_0_0= 'RESOURCES' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5014:3: lv_name_0_0= 'RESOURCES'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4942:1: (lv_name_0_0= 'RESOURCES' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4943:3: lv_name_0_0= 'RESOURCES'
             {
-            lv_name_0_0=(Token)match(input,124,FOLLOW_124_in_ruleresource_section11855); 
+            lv_name_0_0=(Token)match(input,120,FOLLOW_120_in_ruleresource_section11587); 
 
                     newLeafNode(lv_name_0_0, grammarAccess.getResource_sectionAccess().getNameRESOURCESKeyword_0_0());
                 
@@ -12930,29 +12669,29 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
             }
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5027:2: ( (lv_res_vals_1_0= ruleresource_value ) )+
-            int cnt80=0;
-            loop80:
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4956:2: ( (lv_res_vals_1_0= ruleresource_value ) )+
+            int cnt79=0;
+            loop79:
             do {
-                int alt80=2;
-                int LA80_0 = input.LA(1);
+                int alt79=2;
+                int LA79_0 = input.LA(1);
 
-                if ( ((LA80_0>=RULE_ID && LA80_0<=RULE_STRING)) ) {
-                    alt80=1;
+                if ( ((LA79_0>=RULE_ID && LA79_0<=RULE_STRING)) ) {
+                    alt79=1;
                 }
 
 
-                switch (alt80) {
+                switch (alt79) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5028:1: (lv_res_vals_1_0= ruleresource_value )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4957:1: (lv_res_vals_1_0= ruleresource_value )
             	    {
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5028:1: (lv_res_vals_1_0= ruleresource_value )
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:5029:3: lv_res_vals_1_0= ruleresource_value
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4957:1: (lv_res_vals_1_0= ruleresource_value )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:4958:3: lv_res_vals_1_0= ruleresource_value
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getResource_sectionAccess().getRes_valsResource_valueParserRuleCall_1_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleresource_value_in_ruleresource_section11889);
+            	    pushFollow(FOLLOW_ruleresource_value_in_ruleresource_section11621);
             	    lv_res_vals_1_0=ruleresource_value();
 
             	    state._fsp--;
@@ -12976,15 +12715,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt80 >= 1 ) break loop80;
+            	    if ( cnt79 >= 1 ) break loop79;
                         EarlyExitException eee =
-                            new EarlyExitException(80, input);
+                            new EarlyExitException(79, input);
                         throw eee;
                 }
-                cnt80++;
+                cnt79++;
             } while (true);
 
-            otherlv_2=(Token)match(input,33,FOLLOW_33_in_ruleresource_section11902); 
+            otherlv_2=(Token)match(input,32,FOLLOW_32_in_ruleresource_section11634); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getResource_sectionAccess().getENDKeyword_2());
                 
@@ -13017,9 +12756,9 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     static final String DFA29_eofS =
         "\u009e\uffff";
     static final String DFA29_minS =
-        "\1\47\1\uffff\1\4\1\uffff\1\24\1\15\1\uffff\6\24\15\44\1\15\1\4\1\100\1\4\1\53\6\24\15\44\3\36\7\45\3\37\7\36\1\4\1\100\1\4\1\53\1\4\2\24\1\4\1\53\1\24\3\36\7\45\3\37\24\36\1\4\2\24\1\4\1\53\1\24\1\4\1\24\20\36\1\4\1\24\1\4\6\36\2\4\6\36\1\4\3\36";
+        "\1\46\1\uffff\1\4\1\uffff\1\23\1\14\1\uffff\6\23\15\43\1\14\1\4\1\77\1\4\1\52\6\23\15\43\3\35\7\44\3\36\7\35\1\4\1\77\1\4\1\52\1\4\2\23\1\4\1\52\1\23\3\35\7\44\3\36\24\35\1\4\2\23\1\4\1\52\1\23\1\4\1\23\20\35\1\4\1\23\1\4\6\35\2\4\6\35\1\4\3\35";
     static final String DFA29_maxS =
-        "\1\56\1\uffff\1\4\1\uffff\1\46\1\77\1\uffff\6\46\15\44\1\77\1\6\1\106\1\6\1\114\6\46\15\44\12\45\3\37\7\45\1\6\1\106\1\6\1\114\1\6\2\46\1\6\1\114\1\46\12\45\3\37\24\45\1\6\2\46\1\6\1\114\1\46\1\6\1\46\20\45\1\6\1\46\1\6\6\45\2\6\6\45\1\6\3\45";
+        "\1\55\1\uffff\1\4\1\uffff\1\45\1\76\1\uffff\6\45\15\43\1\76\1\6\1\105\1\6\1\113\6\45\15\43\12\44\3\36\7\44\1\6\1\105\1\6\1\113\1\6\2\45\1\6\1\113\1\45\12\44\3\36\24\44\1\6\2\45\1\6\1\113\1\45\1\6\1\45\20\44\1\6\1\45\1\6\6\44\2\6\6\44\1\6\3\44";
     static final String DFA29_acceptS =
         "\1\uffff\1\1\1\uffff\1\3\2\uffff\1\2\u0097\uffff";
     static final String DFA29_specialS =
@@ -13223,15 +12962,15 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     static final String DFA57_eofS =
         "\51\uffff";
     static final String DFA57_minS =
-        "\1\4\1\uffff\1\4\1\24\1\4\1\15\2\uffff\1\45\5\24\2\44\1\24\1\15\2\4\5\24\2\44\4\45\2\4\2\24\4\45\2\24";
+        "\1\4\1\uffff\1\4\1\23\1\4\1\14\2\uffff\1\44\5\23\2\43\1\23\1\14\2\4\5\23\2\43\4\44\2\4\2\23\4\44\2\23";
     static final String DFA57_maxS =
-        "\1\131\1\uffff\1\4\1\122\1\4\1\130\2\uffff\1\45\5\122\2\44\1\122\1\130\1\4\1\6\5\122\2\44\4\45\1\4\1\6\2\122\4\45\2\122";
+        "\1\130\1\uffff\1\4\1\121\1\4\1\127\2\uffff\1\44\5\121\2\43\1\121\1\127\1\4\1\6\5\121\2\43\4\44\1\4\1\6\2\121\4\44\2\121";
     static final String DFA57_acceptS =
         "\1\uffff\1\1\4\uffff\1\3\1\2\41\uffff";
     static final String DFA57_specialS =
         "\51\uffff}>";
     static final String[] DFA57_transitionS = {
-            "\3\1\42\uffff\3\1\1\uffff\1\2\53\uffff\1\1",
+            "\3\1\41\uffff\3\1\1\uffff\1\2\53\uffff\1\1",
             "",
             "\1\3",
             "\1\6\14\uffff\1\7\1\uffff\1\5\1\4\6\uffff\1\7\33\uffff\1\7\1\uffff\1\7\2\uffff\1\7\1\uffff\5\7",
@@ -13311,45 +13050,45 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
 
     public static final BitSet FOLLOW_ruleprogram_in_entryRuleprogram75 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleprogram85 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecomposition_header_in_ruleprogram131 = new BitSet(new long[]{0x00000000002FF000L});
-    public static final BitSet FOLLOW_rulebase_prop_in_ruleprogram153 = new BitSet(new long[]{0x00000104182FF002L,0x1000000004002000L});
-    public static final BitSet FOLLOW_rulecontract_instance_in_ruleprogram175 = new BitSet(new long[]{0x0000010418000002L,0x1000000004002000L});
-    public static final BitSet FOLLOW_ruleinput_section_in_ruleprogram197 = new BitSet(new long[]{0x0000000018000002L,0x1000000004002000L});
-    public static final BitSet FOLLOW_ruleoutput_section_in_ruleprogram219 = new BitSet(new long[]{0x0000000018000002L,0x1000000004000000L});
-    public static final BitSet FOLLOW_rulevisual_section_in_ruleprogram241 = new BitSet(new long[]{0x0000000018000002L,0x1000000004000000L});
-    public static final BitSet FOLLOW_rulegenerate_section_in_ruleprogram263 = new BitSet(new long[]{0x0000000008000002L,0x1000000000000000L});
-    public static final BitSet FOLLOW_rulecustom_section_in_ruleprogram285 = new BitSet(new long[]{0x0000000000000002L,0x1000000000000000L});
+    public static final BitSet FOLLOW_rulecomposition_header_in_ruleprogram131 = new BitSet(new long[]{0x000000000017F800L});
+    public static final BitSet FOLLOW_rulebase_prop_in_ruleprogram153 = new BitSet(new long[]{0x000000820C17F802L,0x0100000002001000L});
+    public static final BitSet FOLLOW_rulecontract_instance_in_ruleprogram175 = new BitSet(new long[]{0x000000820C000002L,0x0100000002001000L});
+    public static final BitSet FOLLOW_ruleinput_section_in_ruleprogram197 = new BitSet(new long[]{0x000000000C000002L,0x0100000002001000L});
+    public static final BitSet FOLLOW_ruleoutput_section_in_ruleprogram219 = new BitSet(new long[]{0x000000000C000002L,0x0100000002000000L});
+    public static final BitSet FOLLOW_rulevisual_section_in_ruleprogram241 = new BitSet(new long[]{0x000000000C000002L,0x0100000002000000L});
+    public static final BitSet FOLLOW_rulegenerate_section_in_ruleprogram263 = new BitSet(new long[]{0x0000000004000002L,0x0100000000000000L});
+    public static final BitSet FOLLOW_rulecustom_section_in_ruleprogram285 = new BitSet(new long[]{0x0000000000000002L,0x0100000000000000L});
     public static final BitSet FOLLOW_ruleresource_section_in_ruleprogram307 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulebase_prop_in_entryRulebase_prop344 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulebase_prop354 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_12_in_rulebase_prop399 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_13_in_rulebase_prop436 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_14_in_rulebase_prop473 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_15_in_rulebase_prop510 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_16_in_rulebase_prop547 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_17_in_rulebase_prop584 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_18_in_rulebase_prop621 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_19_in_rulebase_prop658 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_list_in_rulebase_prop693 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_rulebase_prop705 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_21_in_rulebase_prop731 = new BitSet(new long[]{0x000000003FC00000L});
-    public static final BitSet FOLLOW_rulecategory_type_list_in_rulebase_prop765 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_rulebase_prop777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_11_in_rulebase_prop399 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_12_in_rulebase_prop436 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_13_in_rulebase_prop473 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_14_in_rulebase_prop510 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_15_in_rulebase_prop547 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_16_in_rulebase_prop584 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_17_in_rulebase_prop621 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_18_in_rulebase_prop658 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_list_in_rulebase_prop693 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulebase_prop705 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_20_in_rulebase_prop731 = new BitSet(new long[]{0x000000001FE00000L});
+    public static final BitSet FOLLOW_rulecategory_type_list_in_rulebase_prop765 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulebase_prop777 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulecategory_type_in_entryRulecategory_type815 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulecategory_type826 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_22_in_rulecategory_type864 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_23_in_rulecategory_type883 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_24_in_rulecategory_type902 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_rulecategory_type921 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_rulecategory_type940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rulecategory_type959 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rulecategory_type978 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_29_in_rulecategory_type997 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_21_in_rulecategory_type864 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_22_in_rulecategory_type883 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_23_in_rulecategory_type902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_24_in_rulecategory_type921 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_rulecategory_type940 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rulecategory_type959 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rulecategory_type978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rulecategory_type997 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulecategory_type_list_in_entryRulecategory_type_list1037 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulecategory_type_list1047 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecategory_type_in_rulecategory_type_list1093 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_rulecategory_type_list1106 = new BitSet(new long[]{0x000000003FC00000L});
-    public static final BitSet FOLLOW_rulecategory_type_in_rulecategory_type_list1122 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rulecategory_type_in_rulecategory_type_list1093 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_rulecategory_type_list1106 = new BitSet(new long[]{0x000000001FE00000L});
+    public static final BitSet FOLLOW_rulecategory_type_in_rulecategory_type_list1122 = new BitSet(new long[]{0x0000000020000002L});
     public static final BitSet FOLLOW_rulevalue_in_entryRulevalue1159 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulevalue1169 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rulevalue1211 = new BitSet(new long[]{0x0000000000000002L});
@@ -13357,205 +13096,205 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_RULE_STRING_in_rulevalue1267 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulevalue_list_in_entryRulevalue_list1308 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulevalue_list1318 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevalue_in_rulevalue_list1365 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_rulevalue_list1377 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_in_rulevalue_list1398 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_rulevalue_in_rulevalue_list1365 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_rulevalue_list1377 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_rulevalue_list1398 = new BitSet(new long[]{0x0000000020000002L});
     public static final BitSet FOLLOW_ruleassign_in_entryRuleassign1438 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleassign1448 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevalue_in_ruleassign1495 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_31_in_ruleassign1506 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_ruleassign1495 = new BitSet(new long[]{0x0000000040000000L});
+    public static final BitSet FOLLOW_30_in_ruleassign1506 = new BitSet(new long[]{0x0000000000000070L});
     public static final BitSet FOLLOW_rulevalue_list_in_ruleassign1527 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleassign_list_in_entryRuleassign_list1563 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleassign_list1573 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleassign_in_ruleassign_list1620 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_ruleassign_list1632 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleassign_in_ruleassign_list1653 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_ruleassign_in_ruleassign_list1620 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleassign_list1632 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleassign_in_ruleassign_list1653 = new BitSet(new long[]{0x0000000020000002L});
     public static final BitSet FOLLOW_rulecomposition_header_in_entryRulecomposition_header1691 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulecomposition_header1701 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_32_in_rulecomposition_header1744 = new BitSet(new long[]{0x0000000200000070L});
-    public static final BitSet FOLLOW_ruleassign_in_rulecomposition_header1778 = new BitSet(new long[]{0x0000000200000070L});
-    public static final BitSet FOLLOW_33_in_rulecomposition_header1791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_31_in_rulecomposition_header1744 = new BitSet(new long[]{0x0000000100000070L});
+    public static final BitSet FOLLOW_ruleassign_in_rulecomposition_header1778 = new BitSet(new long[]{0x0000000100000070L});
+    public static final BitSet FOLLOW_32_in_rulecomposition_header1791 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulecontract_instance_in_entryRulecontract_instance1827 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulecontract_instance1837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_34_in_rulecontract_instance1880 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulecontract_instance1905 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_rulecontract_instance1916 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_in_rulecontract_instance1939 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulecontract_instance1951 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulecontract_instance1971 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulecontract_instance1983 = new BitSet(new long[]{0x0000000200000070L});
-    public static final BitSet FOLLOW_ruleassign_in_rulecontract_instance2004 = new BitSet(new long[]{0x0000000200000070L});
-    public static final BitSet FOLLOW_33_in_rulecontract_instance2017 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_33_in_rulecontract_instance1880 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulecontract_instance1905 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_rulecontract_instance1916 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_rulecontract_instance1939 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulecontract_instance1951 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulecontract_instance1971 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulecontract_instance1983 = new BitSet(new long[]{0x0000000100000070L});
+    public static final BitSet FOLLOW_ruleassign_in_rulecontract_instance2004 = new BitSet(new long[]{0x0000000100000070L});
+    public static final BitSet FOLLOW_32_in_rulecontract_instance2017 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulefield_decl_in_entryRulefield_decl2053 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulefield_decl2063 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_38_in_rulefield_decl2100 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulefield_decl2117 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleinput_options_in_rulefield_decl2143 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_rulefield_decl2156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_37_in_rulefield_decl2100 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulefield_decl2117 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleinput_options_in_rulefield_decl2143 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulefield_decl2156 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleenum_decl_in_entryRuleenum_decl2192 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleenum_decl2202 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_39_in_ruleenum_decl2245 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleenum_decl2270 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_list_in_ruleenum_decl2292 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_ruleassign_list_in_ruleenum_decl2319 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleenum_decl2332 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_38_in_ruleenum_decl2245 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleenum_decl2270 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_list_in_ruleenum_decl2292 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_ruleassign_list_in_ruleenum_decl2319 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleenum_decl2332 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleinput_section_in_entryRuleinput_section2368 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleinput_section2378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_40_in_ruleinput_section2421 = new BitSet(new long[]{0x00007E8000000000L});
-    public static final BitSet FOLLOW_ruleinput_value_in_ruleinput_section2455 = new BitSet(new long[]{0x00007E8200000000L});
-    public static final BitSet FOLLOW_33_in_ruleinput_section2468 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_39_in_ruleinput_section2421 = new BitSet(new long[]{0x00003F4000000000L});
+    public static final BitSet FOLLOW_ruleinput_value_in_ruleinput_section2455 = new BitSet(new long[]{0x00003F4100000000L});
+    public static final BitSet FOLLOW_32_in_ruleinput_section2468 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulebool_in_entryRulebool2504 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulebool2514 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_rulebool2551 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_40_in_rulebool2551 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_rulebool2568 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleint_var_in_entryRuleint_var2609 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleint_var2619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_42_in_ruleint_var2656 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_41_in_ruleint_var2656 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleint_var2673 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulestring_var_in_entryRulestring_var2714 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulestring_var2724 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_rulestring_var2761 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_42_in_rulestring_var2761 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_rulestring_var2778 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulerecord_in_entryRulerecord2819 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulerecord2829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_44_in_rulerecord2866 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_43_in_rulerecord2866 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_rulerecord2883 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruledataset_in_entryRuledataset2924 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuledataset2934 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_45_in_ruledataset2971 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_44_in_ruledataset2971 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruledataset2988 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulegroup_in_entryRulegroup3029 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulegroup3039 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_46_in_rulegroup3076 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_45_in_rulegroup3076 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_rulegroup3093 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleinput_value_in_entryRuleinput_value3136 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleinput_value3146 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulebool_in_ruleinput_value3195 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleint_var_in_ruleinput_value3222 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleenum_decl_in_ruleinput_value3249 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_rulestring_var_in_ruleinput_value3276 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_rulerecord_in_ruleinput_value3303 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruledataset_in_ruleinput_value3330 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleinput_options_in_ruleinput_value3351 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleinput_value3364 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruledataset_in_ruleinput_value3394 = new BitSet(new long[]{0x0000004A00000000L});
-    public static final BitSet FOLLOW_ruleinput_options_in_ruleinput_value3414 = new BitSet(new long[]{0x0000004200000000L});
-    public static final BitSet FOLLOW_rulefield_decl_in_ruleinput_value3436 = new BitSet(new long[]{0x0000004200000000L});
-    public static final BitSet FOLLOW_33_in_ruleinput_value3449 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegroup_in_ruleinput_value3479 = new BitSet(new long[]{0x00007E8A00000000L});
-    public static final BitSet FOLLOW_ruleinput_options_in_ruleinput_value3499 = new BitSet(new long[]{0x00007E8200000000L});
-    public static final BitSet FOLLOW_ruleinput_value_in_ruleinput_value3521 = new BitSet(new long[]{0x00007E8200000000L});
-    public static final BitSet FOLLOW_33_in_ruleinput_value3534 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulebool_in_ruleinput_value3195 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleint_var_in_ruleinput_value3222 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleenum_decl_in_ruleinput_value3249 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_rulestring_var_in_ruleinput_value3276 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_rulerecord_in_ruleinput_value3303 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruledataset_in_ruleinput_value3330 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleinput_options_in_ruleinput_value3351 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleinput_value3364 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruledataset_in_ruleinput_value3394 = new BitSet(new long[]{0x0000002500000000L});
+    public static final BitSet FOLLOW_ruleinput_options_in_ruleinput_value3414 = new BitSet(new long[]{0x0000002100000000L});
+    public static final BitSet FOLLOW_rulefield_decl_in_ruleinput_value3436 = new BitSet(new long[]{0x0000002100000000L});
+    public static final BitSet FOLLOW_32_in_ruleinput_value3449 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegroup_in_ruleinput_value3479 = new BitSet(new long[]{0x00003F4500000000L});
+    public static final BitSet FOLLOW_ruleinput_options_in_ruleinput_value3499 = new BitSet(new long[]{0x00003F4100000000L});
+    public static final BitSet FOLLOW_ruleinput_value_in_ruleinput_value3521 = new BitSet(new long[]{0x00003F4100000000L});
+    public static final BitSet FOLLOW_32_in_ruleinput_value3534 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleinput_options_in_entryRuleinput_options3571 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleinput_options3581 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleinput_options3618 = new BitSet(new long[]{0xFFFF800000042000L});
-    public static final BitSet FOLLOW_ruleinput_option_in_ruleinput_options3640 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_ruleinput_options3652 = new BitSet(new long[]{0xFFFF800000042000L});
-    public static final BitSet FOLLOW_ruleinput_option_in_ruleinput_options3673 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_34_in_ruleinput_options3618 = new BitSet(new long[]{0x7FFFC00000021000L});
+    public static final BitSet FOLLOW_ruleinput_option_in_ruleinput_options3640 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleinput_options3652 = new BitSet(new long[]{0x7FFFC00000021000L});
+    public static final BitSet FOLLOW_ruleinput_option_in_ruleinput_options3673 = new BitSet(new long[]{0x0000000020000002L});
     public static final BitSet FOLLOW_ruleinput_option_in_entryRuleinput_option3711 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleinput_option3721 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_47_in_ruleinput_option3765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_48_in_ruleinput_option3802 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_49_in_ruleinput_option3839 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_50_in_ruleinput_option3876 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_51_in_ruleinput_option3913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_52_in_ruleinput_option3950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_53_in_ruleinput_option3989 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleinput_option4014 = new BitSet(new long[]{0x0000000000000000L,0x000000000000007FL});
-    public static final BitSet FOLLOW_ruleformfield_option_in_ruleinput_option4030 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleinput_option4041 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_54_in_ruleinput_option4067 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleinput_option4092 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleassign_list_in_ruleinput_option4113 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleinput_option4125 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_55_in_ruleinput_option4151 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleinput_option4176 = new BitSet(new long[]{0x0000080000000000L,0x0000000000001F80L});
-    public static final BitSet FOLLOW_ruleinputtype_options_in_ruleinput_option4192 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleinput_option4203 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_ruleinput_option4230 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_57_in_ruleinput_option4267 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_58_in_ruleinput_option4304 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_49_in_ruleinput_option4341 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_13_in_ruleinput_option4378 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_59_in_ruleinput_option4415 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_60_in_ruleinput_option4452 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_61_in_ruleinput_option4489 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_62_in_ruleinput_option4526 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_63_in_ruleinput_option4563 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_18_in_ruleinput_option4600 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleinput_option4626 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_list_in_ruleinput_option4647 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleinput_option4659 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_46_in_ruleinput_option3765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_47_in_ruleinput_option3802 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_48_in_ruleinput_option3839 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_49_in_ruleinput_option3876 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_50_in_ruleinput_option3913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_51_in_ruleinput_option3950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_52_in_ruleinput_option3989 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleinput_option4014 = new BitSet(new long[]{0x8000000000000000L,0x000000000000003FL});
+    public static final BitSet FOLLOW_ruleformfield_option_in_ruleinput_option4030 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleinput_option4041 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_53_in_ruleinput_option4067 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleinput_option4092 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleassign_list_in_ruleinput_option4113 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleinput_option4125 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_54_in_ruleinput_option4151 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleinput_option4176 = new BitSet(new long[]{0x0000040000000000L,0x0000000000000FC0L});
+    public static final BitSet FOLLOW_ruleinputtype_options_in_ruleinput_option4192 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleinput_option4203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_ruleinput_option4230 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_56_in_ruleinput_option4267 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_57_in_ruleinput_option4304 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_48_in_ruleinput_option4341 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_12_in_ruleinput_option4378 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_58_in_ruleinput_option4415 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_59_in_ruleinput_option4452 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_60_in_ruleinput_option4489 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_61_in_ruleinput_option4526 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_62_in_ruleinput_option4563 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_17_in_ruleinput_option4600 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleinput_option4626 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_list_in_ruleinput_option4647 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleinput_option4659 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleformfield_option_in_entryRuleformfield_option4697 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleformfield_option4708 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_64_in_ruleformfield_option4746 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_65_in_ruleformfield_option4765 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_66_in_ruleformfield_option4784 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_67_in_ruleformfield_option4803 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_68_in_ruleformfield_option4822 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_69_in_ruleformfield_option4841 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_70_in_ruleformfield_option4860 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_63_in_ruleformfield_option4746 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_64_in_ruleformfield_option4765 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_65_in_ruleformfield_option4784 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_66_in_ruleformfield_option4803 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_67_in_ruleformfield_option4822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_68_in_ruleformfield_option4841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_69_in_ruleformfield_option4860 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleinputtype_option_in_entryRuleinputtype_option4901 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleinputtype_option4912 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleinputtype_option4950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleinputtype_option4969 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_72_in_ruleinputtype_option4988 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleinputtype_option5007 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_74_in_ruleinputtype_option5026 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_75_in_ruleinputtype_option5045 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleinputtype_option5064 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_42_in_ruleinputtype_option4950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_70_in_ruleinputtype_option4969 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_71_in_ruleinputtype_option4988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_72_in_ruleinputtype_option5007 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_73_in_ruleinputtype_option5026 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_74_in_ruleinputtype_option5045 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_75_in_ruleinputtype_option5064 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleinputtype_options_in_entryRuleinputtype_options5105 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleinputtype_options5116 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleinputtype_option_in_ruleinputtype_options5163 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_ruleinputtype_options5182 = new BitSet(new long[]{0x0000080000000000L,0x0000000000001F80L});
-    public static final BitSet FOLLOW_ruleinputtype_option_in_ruleinputtype_options5204 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_ruleinputtype_option_in_ruleinputtype_options5163 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleinputtype_options5182 = new BitSet(new long[]{0x0000040000000000L,0x0000000000000FC0L});
+    public static final BitSet FOLLOW_ruleinputtype_option_in_ruleinputtype_options5204 = new BitSet(new long[]{0x0000000020000002L});
     public static final BitSet FOLLOW_ruleoutput_section_in_entryRuleoutput_section5251 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleoutput_section5261 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_77_in_ruleoutput_section5304 = new BitSet(new long[]{0x00003E8000000070L,0x0000000002000000L});
-    public static final BitSet FOLLOW_ruleoutput_value_in_ruleoutput_section5338 = new BitSet(new long[]{0x00003E8200000070L,0x0000000002000000L});
-    public static final BitSet FOLLOW_33_in_ruleoutput_section5351 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_76_in_ruleoutput_section5304 = new BitSet(new long[]{0x00001F4000000070L,0x0000000001000000L});
+    public static final BitSet FOLLOW_ruleoutput_value_in_ruleoutput_section5338 = new BitSet(new long[]{0x00001F4100000070L,0x0000000001000000L});
+    public static final BitSet FOLLOW_32_in_ruleoutput_section5351 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_integer_in_entryRuleecl_integer5389 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_integer5399 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_73_in_ruleecl_integer5436 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_72_in_ruleecl_integer5436 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_integer5448 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_integer5466 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_unsigned_in_entryRuleecl_unsigned5507 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_unsigned5517 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_78_in_ruleecl_unsigned5554 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_77_in_ruleecl_unsigned5554 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_unsigned5566 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_unsigned5584 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_string_in_entryRuleecl_string5625 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_string5635 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_43_in_ruleecl_string5672 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_42_in_ruleecl_string5672 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_string5684 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_string5702 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_qstring_in_entryRuleecl_qstring5743 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_qstring5753 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_79_in_ruleecl_qstring5790 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_78_in_ruleecl_qstring5790 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_qstring5802 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_qstring5820 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_varstring_in_entryRuleecl_varstring5861 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_varstring5871 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_80_in_ruleecl_varstring5908 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_79_in_ruleecl_varstring5908 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_varstring5920 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_varstring5938 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_unicode_in_entryRuleecl_unicode5979 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_unicode5989 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_71_in_ruleecl_unicode6026 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_70_in_ruleecl_unicode6026 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_unicode6038 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_unicode6056 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_varunicode_in_entryRuleecl_varunicode6097 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_varunicode6107 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_81_in_ruleecl_varunicode6144 = new BitSet(new long[]{0x0000000000000030L});
+    public static final BitSet FOLLOW_80_in_ruleecl_varunicode6144 = new BitSet(new long[]{0x0000000000000030L});
     public static final BitSet FOLLOW_RULE_INT_in_ruleecl_varunicode6156 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_varunicode6174 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_data_in_entryRuleecl_data6215 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_data6225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_82_in_ruleecl_data6262 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_81_in_ruleecl_data6262 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_data6279 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecl_real_in_entryRuleecl_real6320 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecl_real6330 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_76_in_ruleecl_real6367 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_75_in_ruleecl_real6367 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_RULE_ID_in_ruleecl_real6384 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleeclfield_type_in_entryRuleeclfield_type6425 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleeclfield_type6435 = new BitSet(new long[]{0x0000000000000002L});
@@ -13570,221 +13309,206 @@ public class InternalHIPIEParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_ruleecl_unsigned_in_ruleeclfield_type6698 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleecloutput_decl_in_entryRuleecloutput_decl6733 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleecloutput_decl6743 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleeclfield_type_in_ruleecloutput_decl6790 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleoutput_options_in_ruleecloutput_decl6810 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleecloutput_decl6823 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleeclfield_type_in_ruleecloutput_decl6790 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleoutput_options_in_ruleecloutput_decl6810 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleecloutput_decl6823 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleoutput_option_in_entryRuleoutput_option6859 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleoutput_option6869 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_83_in_ruleoutput_option6913 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_84_in_ruleoutput_option6950 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_85_in_ruleoutput_option6987 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_86_in_ruleoutput_option7024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_87_in_ruleoutput_option7061 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_88_in_ruleoutput_option7100 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleoutput_option7125 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleoutput_option7145 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleoutput_option7157 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleoutput_option7183 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleoutput_option7208 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_in_ruleoutput_option7229 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleoutput_option7241 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_82_in_ruleoutput_option6913 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_83_in_ruleoutput_option6950 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_84_in_ruleoutput_option6987 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_85_in_ruleoutput_option7024 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_86_in_ruleoutput_option7061 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_87_in_ruleoutput_option7100 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleoutput_option7125 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleoutput_option7145 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleoutput_option7157 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_ruleoutput_option7183 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleoutput_option7208 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_ruleoutput_option7229 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleoutput_option7241 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleoutput_options_in_entryRuleoutput_options7278 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleoutput_options7288 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_ruleoutput_options7325 = new BitSet(new long[]{0x0000000000002000L,0x0000000001F80000L});
-    public static final BitSet FOLLOW_ruleoutput_option_in_ruleoutput_options7347 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_ruleoutput_options7359 = new BitSet(new long[]{0x0000000000002000L,0x0000000001F80000L});
-    public static final BitSet FOLLOW_ruleoutput_option_in_ruleoutput_options7380 = new BitSet(new long[]{0x0000000040000002L});
+    public static final BitSet FOLLOW_34_in_ruleoutput_options7325 = new BitSet(new long[]{0x0000000000001000L,0x0000000000FC0000L});
+    public static final BitSet FOLLOW_ruleoutput_option_in_ruleoutput_options7347 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleoutput_options7359 = new BitSet(new long[]{0x0000000000001000L,0x0000000000FC0000L});
+    public static final BitSet FOLLOW_ruleoutput_option_in_ruleoutput_options7380 = new BitSet(new long[]{0x0000000020000002L});
     public static final BitSet FOLLOW_ruleout_type_in_entryRuleout_type7418 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleout_type7428 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_41_in_ruleout_type7466 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_42_in_ruleout_type7484 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_43_in_ruleout_type7502 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_89_in_ruleout_type7520 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_40_in_ruleout_type7466 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_41_in_ruleout_type7484 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_42_in_ruleout_type7502 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_88_in_ruleout_type7520 = new BitSet(new long[]{0x0000000000000070L});
     public static final BitSet FOLLOW_rulevalue_in_ruleout_type7544 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleoutput_value_in_entryRuleoutput_value7579 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleoutput_value7589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleout_type_in_ruleoutput_value7637 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleoutput_options_in_ruleoutput_value7657 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleoutput_value7670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruledataset_in_ruleoutput_value7700 = new BitSet(new long[]{0x0000081A00000000L,0x000000000007D280L});
-    public static final BitSet FOLLOW_ruleoutputbase_in_ruleoutput_value7720 = new BitSet(new long[]{0x0000080A00000000L,0x000000000007D280L});
-    public static final BitSet FOLLOW_ruleoutput_options_in_ruleoutput_value7742 = new BitSet(new long[]{0x0000080200000000L,0x000000000007D280L});
-    public static final BitSet FOLLOW_ruleecloutput_decl_in_ruleoutput_value7764 = new BitSet(new long[]{0x0000080200000000L,0x000000000007D280L});
-    public static final BitSet FOLLOW_33_in_ruleoutput_value7777 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruledataset_in_ruleoutput_value7807 = new BitSet(new long[]{0x0000001800100000L});
-    public static final BitSet FOLLOW_ruleoutputbase_in_ruleoutput_value7827 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_ruleoutput_options_in_ruleoutput_value7849 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleoutput_value7862 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleout_type_in_ruleoutput_value7637 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleoutput_options_in_ruleoutput_value7657 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleoutput_value7670 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruledataset_in_ruleoutput_value7700 = new BitSet(new long[]{0x0000040D00000000L,0x000000000003E940L});
+    public static final BitSet FOLLOW_ruleoutputbase_in_ruleoutput_value7720 = new BitSet(new long[]{0x0000040500000000L,0x000000000003E940L});
+    public static final BitSet FOLLOW_ruleoutput_options_in_ruleoutput_value7742 = new BitSet(new long[]{0x0000040100000000L,0x000000000003E940L});
+    public static final BitSet FOLLOW_ruleecloutput_decl_in_ruleoutput_value7764 = new BitSet(new long[]{0x0000040100000000L,0x000000000003E940L});
+    public static final BitSet FOLLOW_32_in_ruleoutput_value7777 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruledataset_in_ruleoutput_value7807 = new BitSet(new long[]{0x0000000C00080000L});
+    public static final BitSet FOLLOW_ruleoutputbase_in_ruleoutput_value7827 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_ruleoutput_options_in_ruleoutput_value7849 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleoutput_value7862 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleoutputbase_in_entryRuleoutputbase7899 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleoutputbase7909 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_36_in_ruleoutputbase7946 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleoutputbase7966 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleoutputbase7978 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_35_in_ruleoutputbase7946 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleoutputbase7966 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleoutputbase7978 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulegenerate_section_in_entryRulegenerate_section8014 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulegenerate_section8024 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_90_in_rulegenerate_section8067 = new BitSet(new long[]{0x0000000000000000L,0x0000000210000000L});
-    public static final BitSet FOLLOW_rulegenerate_body_in_rulegenerate_section8101 = new BitSet(new long[]{0x0000000000000000L,0x0000000008000000L});
-    public static final BitSet FOLLOW_91_in_rulegenerate_section8113 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulegenerate_body_in_entryRulegenerate_body8149 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulegenerate_body8159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_92_in_rulegenerate_body8203 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulegenerate_body8228 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulegenerate_body8244 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_RULE_WS_in_rulegenerate_body8260 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_RULE_STRING_in_rulegenerate_body8276 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_RULE_ECL_CODE_in_rulegenerate_body8292 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_20_in_rulegenerate_body8309 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_93_in_rulegenerate_body8327 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_36_in_rulegenerate_body8345 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_37_in_rulegenerate_body8363 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_30_in_rulegenerate_body8381 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_35_in_rulegenerate_body8399 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_31_in_rulegenerate_body8417 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_94_in_rulegenerate_body8435 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_95_in_rulegenerate_body8453 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_96_in_rulegenerate_body8471 = new BitSet(new long[]{0x00000038C01001F2L,0x00000001E0000000L});
-    public static final BitSet FOLLOW_97_in_rulegenerate_body8499 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulegenerate_body8524 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulegenerate_body8535 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulegenerate_body8546 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_rulegenerate_body8558 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
-    public static final BitSet FOLLOW_98_in_rulegenerate_body8571 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_99_in_rulegenerate_body8589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevisual_section_in_entryRulevisual_section8627 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisual_section8637 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rulevisual_section8680 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulevisual_section8704 = new BitSet(new long[]{0x0000000800000000L,0x000007F000000000L});
-    public static final BitSet FOLLOW_rulevisual_section_options_in_rulevisual_section8724 = new BitSet(new long[]{0x0000000800000000L,0x000007F000000000L});
-    public static final BitSet FOLLOW_rulevisualization_in_rulevisual_section8746 = new BitSet(new long[]{0x0000000A00000000L,0x000007F000000000L});
-    public static final BitSet FOLLOW_33_in_rulevisual_section8759 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevisualization_in_entryRulevisualization8795 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisualization8805 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_100_in_rulevisualization8844 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_101_in_rulevisualization8862 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_102_in_rulevisualization8880 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_103_in_rulevisualization8898 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_104_in_rulevisualization8916 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_105_in_rulevisualization8934 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulevisualization8952 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulevisualization8969 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulevis_basis_in_rulevisualization8990 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulevisualization9002 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_rulevisual_options_in_rulevisualization9023 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_rulevisualization9036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_106_in_rulevisualization9056 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulevisualization9073 = new BitSet(new long[]{0x0000000800100000L});
-    public static final BitSet FOLLOW_rulevisual_options_in_rulevisualization9099 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_rulevisualization9112 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevis_basis_in_entryRulevis_basis9149 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevis_basis9159 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulevis_basis9204 = new BitSet(new long[]{0x0000000000000002L,0x0000000040000000L});
-    public static final BitSet FOLLOW_rulevis_basis_qualifiers_in_rulevis_basis9225 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevis_basis_qualifiers_in_entryRulevis_basis_qualifiers9262 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevis_basis_qualifiers9272 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_94_in_rulevis_basis_qualifiers9309 = new BitSet(new long[]{0x0000000000000070L,0x0000180000000000L});
-    public static final BitSet FOLLOW_rulefunction_in_rulevis_basis_qualifiers9331 = new BitSet(new long[]{0x0000000040000000L,0x0000000080000000L});
-    public static final BitSet FOLLOW_30_in_rulevis_basis_qualifiers9343 = new BitSet(new long[]{0x0000000000000070L,0x0000180000000000L});
-    public static final BitSet FOLLOW_rulefunction_in_rulevis_basis_qualifiers9364 = new BitSet(new long[]{0x0000000040000000L,0x0000000080000000L});
-    public static final BitSet FOLLOW_95_in_rulevis_basis_qualifiers9378 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulefunction_in_entryRulefunction9414 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulefunction9424 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevalue_in_rulefunction9471 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_107_in_rulefunction9489 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulefunction9501 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulefunction9518 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulefunction9535 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_108_in_rulefunction9555 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulefunction9567 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulefunction9584 = new BitSet(new long[]{0x0000000040000000L});
-    public static final BitSet FOLLOW_30_in_rulefunction9601 = new BitSet(new long[]{0x0000000000000020L});
-    public static final BitSet FOLLOW_RULE_INT_in_rulefunction9612 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulefunction9623 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevisual_section_options_in_entryRulevisual_section_options9660 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisual_section_options9670 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rulevisual_section_options9707 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rulevisual_section_option_in_rulevisual_section_options9729 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_rulevisual_section_options9741 = new BitSet(new long[]{0x0000000000040000L});
-    public static final BitSet FOLLOW_rulevisual_section_option_in_rulevisual_section_options9762 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rulevisual_section_option_in_entryRulevisual_section_option9800 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisual_section_option9810 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rulevisual_section_option9853 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulevisual_section_option9878 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_in_rulevisual_section_option9899 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulevisual_section_option9911 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevisual_options_in_entryRulevisual_options9947 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisual_options9957 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_35_in_rulevisual_options9994 = new BitSet(new long[]{0x0100000000042000L,0x07DFE00000000000L});
-    public static final BitSet FOLLOW_rulevisual_option_in_rulevisual_options10016 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_rulevisual_options10028 = new BitSet(new long[]{0x0100000000042000L,0x07DFE00000000000L});
-    public static final BitSet FOLLOW_rulevisual_option_in_rulevisual_options10049 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_rulevisual_option_in_entryRulevisual_option10087 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisual_option10097 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_109_in_rulevisual_option10142 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_110_in_rulevisual_option10179 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_13_in_rulevisual_option10216 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_111_in_rulevisual_option10253 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_112_in_rulevisual_option10290 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_113_in_rulevisual_option10327 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_114_in_rulevisual_option10364 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_115_in_rulevisual_option10401 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulevisual_option10427 = new BitSet(new long[]{0x0000000000000070L,0x0000180000000000L});
-    public static final BitSet FOLLOW_rulefunction_in_rulevisual_option10448 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulevisual_option10460 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevisual_multival_in_rulevisual_option10490 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulevisual_option10501 = new BitSet(new long[]{0x0000000000000070L,0x0000180000000000L});
-    public static final BitSet FOLLOW_rulefunction_in_rulevisual_option10522 = new BitSet(new long[]{0x0000002040000000L});
-    public static final BitSet FOLLOW_30_in_rulevisual_option10535 = new BitSet(new long[]{0x0000000000000070L,0x0000180000000000L});
-    public static final BitSet FOLLOW_rulefunction_in_rulevisual_option10556 = new BitSet(new long[]{0x0000002040000000L});
-    public static final BitSet FOLLOW_37_in_rulevisual_option10570 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_116_in_rulevisual_option10596 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_rulevisual_option10621 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulevisual_option10632 = new BitSet(new long[]{0x0000000000000000L,0x0020000000000000L});
-    public static final BitSet FOLLOW_117_in_rulevisual_option10643 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulevisual_option10654 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_rulevisual_option10665 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevisual_multival_in_entryRulevisual_multival10702 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulevisual_multival10712 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_118_in_rulevisual_multival10755 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_119_in_rulevisual_multival10792 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_120_in_rulevisual_multival10829 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_56_in_rulevisual_multival10866 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_121_in_rulevisual_multival10903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_18_in_rulevisual_multival10940 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_122_in_rulevisual_multival10977 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecustom_section_in_entryRulecustom_section11026 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulecustom_section11036 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_27_in_rulecustom_section11079 = new BitSet(new long[]{0x0000000200000010L});
-    public static final BitSet FOLLOW_rulecustom_value_in_rulecustom_section11113 = new BitSet(new long[]{0x0000000200000010L});
-    public static final BitSet FOLLOW_33_in_rulecustom_section11126 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulecustom_value_in_entryRulecustom_value11162 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulecustom_value11172 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulecustom_value11208 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_in_rulecustom_value11229 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_rulecustom_value11240 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleresource_option_in_entryRuleresource_option11276 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleresource_option11286 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_13_in_ruleresource_option11330 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_123_in_ruleresource_option11367 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_18_in_ruleresource_option11404 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_63_in_ruleresource_option11441 = new BitSet(new long[]{0x0000001000000000L});
-    public static final BitSet FOLLOW_36_in_ruleresource_option11467 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_rulevalue_in_ruleresource_option11488 = new BitSet(new long[]{0x0000002000000000L});
-    public static final BitSet FOLLOW_37_in_ruleresource_option11500 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleresource_options_in_entryRuleresource_options11536 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleresource_options11546 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleresource_option_in_ruleresource_options11593 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_30_in_ruleresource_options11605 = new BitSet(new long[]{0x8000000000042000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_ruleresource_option_in_ruleresource_options11626 = new BitSet(new long[]{0x0000000040000002L});
-    public static final BitSet FOLLOW_ruleresource_value_in_entryRuleresource_value11664 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleresource_value11674 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulevalue_in_ruleresource_value11721 = new BitSet(new long[]{0x0000000800000000L});
-    public static final BitSet FOLLOW_35_in_ruleresource_value11732 = new BitSet(new long[]{0x8000000000142000L,0x0800000000000000L});
-    public static final BitSet FOLLOW_ruleresource_options_in_ruleresource_value11753 = new BitSet(new long[]{0x0000000000100000L});
-    public static final BitSet FOLLOW_20_in_ruleresource_value11766 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleresource_section_in_entryRuleresource_section11802 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleresource_section11812 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_124_in_ruleresource_section11855 = new BitSet(new long[]{0x0000000000000070L});
-    public static final BitSet FOLLOW_ruleresource_value_in_ruleresource_section11889 = new BitSet(new long[]{0x0000000200000070L});
-    public static final BitSet FOLLOW_33_in_ruleresource_section11902 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_89_in_rulegenerate_section8067 = new BitSet(new long[]{0x0000000000000040L,0x0000000004000000L});
+    public static final BitSet FOLLOW_rulegenerate_body_in_rulegenerate_section8101 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulegenerate_body_in_entryRulegenerate_body8137 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulegenerate_body8147 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_STRING_in_rulegenerate_body8189 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_90_in_rulegenerate_body8219 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulegenerate_body8244 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulegenerate_body8255 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulegenerate_body8266 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_rulegenerate_body8278 = new BitSet(new long[]{0x0000000000000000L,0x0000000018000000L});
+    public static final BitSet FOLLOW_91_in_rulegenerate_body8291 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000000L});
+    public static final BitSet FOLLOW_92_in_rulegenerate_body8309 = new BitSet(new long[]{0x0000000000000000L,0x0000000020000000L});
+    public static final BitSet FOLLOW_93_in_rulegenerate_body8322 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevisual_section_in_entryRulevisual_section8359 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisual_section8369 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_27_in_rulevisual_section8412 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulevisual_section8436 = new BitSet(new long[]{0x0000000400000000L,0x0000001FC0000000L});
+    public static final BitSet FOLLOW_rulevisual_section_options_in_rulevisual_section8456 = new BitSet(new long[]{0x0000000400000000L,0x0000001FC0000000L});
+    public static final BitSet FOLLOW_rulevisualization_in_rulevisual_section8478 = new BitSet(new long[]{0x0000000500000000L,0x0000001FC0000000L});
+    public static final BitSet FOLLOW_32_in_rulevisual_section8491 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevisualization_in_entryRulevisualization8527 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisualization8537 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_94_in_rulevisualization8576 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_95_in_rulevisualization8594 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_96_in_rulevisualization8612 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_97_in_rulevisualization8630 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_98_in_rulevisualization8648 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_99_in_rulevisualization8666 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulevisualization8684 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulevisualization8701 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulevis_basis_in_rulevisualization8722 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulevisualization8734 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_rulevisual_options_in_rulevisualization8755 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulevisualization8768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_100_in_rulevisualization8788 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulevisualization8805 = new BitSet(new long[]{0x0000000400080000L});
+    public static final BitSet FOLLOW_rulevisual_options_in_rulevisualization8831 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulevisualization8844 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevis_basis_in_entryRulevis_basis8881 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevis_basis8891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulevis_basis8936 = new BitSet(new long[]{0x0000000000000002L,0x0000002000000000L});
+    public static final BitSet FOLLOW_rulevis_basis_qualifiers_in_rulevis_basis8957 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevis_basis_qualifiers_in_entryRulevis_basis_qualifiers8994 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevis_basis_qualifiers9004 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_101_in_rulevis_basis_qualifiers9041 = new BitSet(new long[]{0x0000000000000070L,0x0000018000000000L});
+    public static final BitSet FOLLOW_rulefunction_in_rulevis_basis_qualifiers9063 = new BitSet(new long[]{0x0000000020000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_29_in_rulevis_basis_qualifiers9075 = new BitSet(new long[]{0x0000000000000070L,0x0000018000000000L});
+    public static final BitSet FOLLOW_rulefunction_in_rulevis_basis_qualifiers9096 = new BitSet(new long[]{0x0000000020000000L,0x0000004000000000L});
+    public static final BitSet FOLLOW_102_in_rulevis_basis_qualifiers9110 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulefunction_in_entryRulefunction9146 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulefunction9156 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevalue_in_rulefunction9203 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_103_in_rulefunction9221 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulefunction9233 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulefunction9250 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulefunction9267 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_104_in_rulefunction9287 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulefunction9299 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulefunction9316 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_rulefunction9333 = new BitSet(new long[]{0x0000000000000020L});
+    public static final BitSet FOLLOW_RULE_INT_in_rulefunction9344 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulefunction9355 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevisual_section_options_in_entryRulevisual_section_options9392 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisual_section_options9402 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rulevisual_section_options9439 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rulevisual_section_option_in_rulevisual_section_options9461 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_rulevisual_section_options9473 = new BitSet(new long[]{0x0000000000020000L});
+    public static final BitSet FOLLOW_rulevisual_section_option_in_rulevisual_section_options9494 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_rulevisual_section_option_in_entryRulevisual_section_option9532 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisual_section_option9542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rulevisual_section_option9585 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulevisual_section_option9610 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_rulevisual_section_option9631 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulevisual_section_option9643 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevisual_options_in_entryRulevisual_options9679 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisual_options9689 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_34_in_rulevisual_options9726 = new BitSet(new long[]{0x0080000000021000L,0x007DFE0000000000L});
+    public static final BitSet FOLLOW_rulevisual_option_in_rulevisual_options9748 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_rulevisual_options9760 = new BitSet(new long[]{0x0080000000021000L,0x007DFE0000000000L});
+    public static final BitSet FOLLOW_rulevisual_option_in_rulevisual_options9781 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_rulevisual_option_in_entryRulevisual_option9819 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisual_option9829 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_105_in_rulevisual_option9874 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_106_in_rulevisual_option9911 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_12_in_rulevisual_option9948 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_107_in_rulevisual_option9985 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_108_in_rulevisual_option10022 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_109_in_rulevisual_option10059 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_110_in_rulevisual_option10096 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_111_in_rulevisual_option10133 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulevisual_option10159 = new BitSet(new long[]{0x0000000000000070L,0x0000018000000000L});
+    public static final BitSet FOLLOW_rulefunction_in_rulevisual_option10180 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulevisual_option10192 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevisual_multival_in_rulevisual_option10222 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulevisual_option10233 = new BitSet(new long[]{0x0000000000000070L,0x0000018000000000L});
+    public static final BitSet FOLLOW_rulefunction_in_rulevisual_option10254 = new BitSet(new long[]{0x0000001020000000L});
+    public static final BitSet FOLLOW_29_in_rulevisual_option10267 = new BitSet(new long[]{0x0000000000000070L,0x0000018000000000L});
+    public static final BitSet FOLLOW_rulefunction_in_rulevisual_option10288 = new BitSet(new long[]{0x0000001020000000L});
+    public static final BitSet FOLLOW_36_in_rulevisual_option10302 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_112_in_rulevisual_option10328 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_rulevisual_option10353 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulevisual_option10364 = new BitSet(new long[]{0x0000000000000000L,0x0002000000000000L});
+    public static final BitSet FOLLOW_113_in_rulevisual_option10375 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulevisual_option10386 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_rulevisual_option10397 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevisual_multival_in_entryRulevisual_multival10434 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulevisual_multival10444 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_114_in_rulevisual_multival10487 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_115_in_rulevisual_multival10524 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_116_in_rulevisual_multival10561 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_55_in_rulevisual_multival10598 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_117_in_rulevisual_multival10635 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_17_in_rulevisual_multival10672 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_118_in_rulevisual_multival10709 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecustom_section_in_entryRulecustom_section10758 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulecustom_section10768 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_rulecustom_section10811 = new BitSet(new long[]{0x0000000100000010L});
+    public static final BitSet FOLLOW_rulecustom_value_in_rulecustom_section10845 = new BitSet(new long[]{0x0000000100000010L});
+    public static final BitSet FOLLOW_32_in_rulecustom_section10858 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulecustom_value_in_entryRulecustom_value10894 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulecustom_value10904 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulecustom_value10940 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_rulecustom_value10961 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_rulecustom_value10972 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleresource_option_in_entryRuleresource_option11008 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleresource_option11018 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_12_in_ruleresource_option11062 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_119_in_ruleresource_option11099 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_17_in_ruleresource_option11136 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_62_in_ruleresource_option11173 = new BitSet(new long[]{0x0000000800000000L});
+    public static final BitSet FOLLOW_35_in_ruleresource_option11199 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_rulevalue_in_ruleresource_option11220 = new BitSet(new long[]{0x0000001000000000L});
+    public static final BitSet FOLLOW_36_in_ruleresource_option11232 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleresource_options_in_entryRuleresource_options11268 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleresource_options11278 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleresource_option_in_ruleresource_options11325 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_29_in_ruleresource_options11337 = new BitSet(new long[]{0x4000000000021000L,0x0080000000000000L});
+    public static final BitSet FOLLOW_ruleresource_option_in_ruleresource_options11358 = new BitSet(new long[]{0x0000000020000002L});
+    public static final BitSet FOLLOW_ruleresource_value_in_entryRuleresource_value11396 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleresource_value11406 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulevalue_in_ruleresource_value11453 = new BitSet(new long[]{0x0000000400000000L});
+    public static final BitSet FOLLOW_34_in_ruleresource_value11464 = new BitSet(new long[]{0x40000000000A1000L,0x0080000000000000L});
+    public static final BitSet FOLLOW_ruleresource_options_in_ruleresource_value11485 = new BitSet(new long[]{0x0000000000080000L});
+    public static final BitSet FOLLOW_19_in_ruleresource_value11498 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleresource_section_in_entryRuleresource_section11534 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleresource_section11544 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_120_in_ruleresource_section11587 = new BitSet(new long[]{0x0000000000000070L});
+    public static final BitSet FOLLOW_ruleresource_value_in_ruleresource_section11621 = new BitSet(new long[]{0x0000000100000070L});
+    public static final BitSet FOLLOW_32_in_ruleresource_section11634 = new BitSet(new long[]{0x0000000000000002L});
 
 }

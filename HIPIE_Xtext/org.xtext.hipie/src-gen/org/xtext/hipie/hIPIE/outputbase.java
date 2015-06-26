@@ -31,12 +31,12 @@ public interface outputbase extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Actions</em>' reference.
-   * @see #setActions(dataset)
+   * @see #setActions(datatype)
    * @see org.xtext.hipie.hIPIE.HIPIEPackage#getoutputbase_Actions()
    * @model
    * @generated
    */
-  dataset getActions();
+  datatype getActions();
 
   /**
    * Sets the value of the '{@link org.xtext.hipie.hIPIE.outputbase#getActions <em>Actions</em>}' reference.
@@ -46,6 +46,6 @@ public interface outputbase extends EObject
    * @see #getActions()
    * @generated
    */
-  void setActions(dataset value);
+  void setActions(datatype value);
 
 } // outputbase

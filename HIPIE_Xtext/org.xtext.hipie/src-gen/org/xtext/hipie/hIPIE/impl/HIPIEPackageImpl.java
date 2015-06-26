@@ -2394,7 +2394,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
     initEReference(getoutput_value_Ops(), this.getoutput_options(), null, "ops", null, 0, -1, output_value.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(outputbaseEClass, outputbase.class, "outputbase", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getoutputbase_Actions(), this.getdataset(), null, "actions", null, 0, 1, outputbase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getoutputbase_Actions(), this.getdatatype(), null, "actions", null, 0, 1, outputbase.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(generate_sectionEClass, generate_section.class, "generate_section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getgenerate_section_Name(), ecorePackage.getEString(), "name", null, 0, 1, generate_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -2414,7 +2414,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
     initEReference(getvisualization_Vis_ops(), this.getvisual_options(), null, "vis_ops", null, 0, -1, visualization.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(vis_basisEClass, vis_basis.class, "vis_basis", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getvis_basis_Vars(), this.getdataset(), null, "vars", null, 0, -1, vis_basis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getvis_basis_Vars(), this.getdatatype(), null, "vars", null, 0, -1, vis_basis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getvis_basis_Quals(), this.getvis_basis_qualifiers(), null, "quals", null, 0, -1, vis_basis.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(vis_basis_qualifiersEClass, vis_basis_qualifiers.class, "vis_basis_qualifiers", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

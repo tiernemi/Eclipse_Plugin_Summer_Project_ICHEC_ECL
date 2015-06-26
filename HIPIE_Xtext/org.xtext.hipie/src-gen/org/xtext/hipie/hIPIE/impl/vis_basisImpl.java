@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.hipie.hIPIE.HIPIEPackage;
-import org.xtext.hipie.hIPIE.dataset;
+import org.xtext.hipie.hIPIE.datatype;
 import org.xtext.hipie.hIPIE.vis_basis;
 import org.xtext.hipie.hIPIE.vis_basis_qualifiers;
 
@@ -46,7 +46,7 @@ public class vis_basisImpl extends MinimalEObjectImpl.Container implements vis_b
    * @generated
    * @ordered
    */
-  protected EList<dataset> vars;
+  protected EList<datatype> vars;
 
   /**
    * The cached value of the '{@link #getQuals() <em>Quals</em>}' containment reference list.
@@ -84,11 +84,11 @@ public class vis_basisImpl extends MinimalEObjectImpl.Container implements vis_b
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<dataset> getVars()
+  public EList<datatype> getVars()
   {
     if (vars == null)
     {
-      vars = new EObjectResolvingEList<dataset>(dataset.class, this, HIPIEPackage.VIS_BASIS__VARS);
+      vars = new EObjectResolvingEList<datatype>(datatype.class, this, HIPIEPackage.VIS_BASIS__VARS);
     }
     return vars;
   }
@@ -154,7 +154,7 @@ public class vis_basisImpl extends MinimalEObjectImpl.Container implements vis_b
     {
       case HIPIEPackage.VIS_BASIS__VARS:
         getVars().clear();
-        getVars().addAll((Collection<? extends dataset>)newValue);
+        getVars().addAll((Collection<? extends datatype>)newValue);
         return;
       case HIPIEPackage.VIS_BASIS__QUALS:
         getQuals().clear();

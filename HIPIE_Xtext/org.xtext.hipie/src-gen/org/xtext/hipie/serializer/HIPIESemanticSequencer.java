@@ -751,7 +751,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name='INLINE' | name='SALT')
+	 *     (name=STRING | name='SALT')
 	 */
 	protected void sequence_generate_body(EObject context, generate_body semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -969,7 +969,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     actions=[dataset|ID]
+	 *     actions=[datatype|ID]
 	 */
 	protected void sequence_outputbase(EObject context, outputbase semanticObject) {
 		if(errorAcceptor != null) {
@@ -978,7 +978,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getOutputbaseAccess().getActionsDatasetIDTerminalRuleCall_1_0_1(), semanticObject.getActions());
+		feeder.accept(grammarAccess.getOutputbaseAccess().getActionsDatatypeIDTerminalRuleCall_1_0_1(), semanticObject.getActions());
 		feeder.finish();
 	}
 	
@@ -1085,7 +1085,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (vars+=[dataset|ID] quals+=vis_basis_qualifiers?)
+	 *     (vars+=[datatype|ID] quals+=vis_basis_qualifiers?)
 	 */
 	protected void sequence_vis_basis(EObject context, vis_basis semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

@@ -57,7 +57,6 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOut_typeAccess().getAlternatives_0(), "rule__Out_type__Alternatives_0");
 					put(grammarAccess.getOutput_valueAccess().getAlternatives(), "rule__Output_value__Alternatives");
 					put(grammarAccess.getGenerate_bodyAccess().getAlternatives(), "rule__Generate_body__Alternatives");
-					put(grammarAccess.getGenerate_bodyAccess().getAlternatives_0_1(), "rule__Generate_body__Alternatives_0_1");
 					put(grammarAccess.getGenerate_bodyAccess().getAlternatives_1_5(), "rule__Generate_body__Alternatives_1_5");
 					put(grammarAccess.getVisualizationAccess().getAlternatives(), "rule__Visualization__Alternatives");
 					put(grammarAccess.getVisualizationAccess().getAlternatives_0_0(), "rule__Visualization__Alternatives_0_0");
@@ -122,7 +121,6 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOutput_valueAccess().getGroup_2(), "rule__Output_value__Group_2__0");
 					put(grammarAccess.getOutputbaseAccess().getGroup(), "rule__Outputbase__Group__0");
 					put(grammarAccess.getGenerate_sectionAccess().getGroup(), "rule__Generate_section__Group__0");
-					put(grammarAccess.getGenerate_bodyAccess().getGroup_0(), "rule__Generate_body__Group_0__0");
 					put(grammarAccess.getGenerate_bodyAccess().getGroup_1(), "rule__Generate_body__Group_1__0");
 					put(grammarAccess.getVisual_sectionAccess().getGroup(), "rule__Visual_section__Group__0");
 					put(grammarAccess.getVisualizationAccess().getGroup_0(), "rule__Visualization__Group_0__0");
@@ -254,7 +252,7 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOutputbaseAccess().getActionsAssignment_1(), "rule__Outputbase__ActionsAssignment_1");
 					put(grammarAccess.getGenerate_sectionAccess().getNameAssignment_0(), "rule__Generate_section__NameAssignment_0");
 					put(grammarAccess.getGenerate_sectionAccess().getBodyAssignment_1(), "rule__Generate_section__BodyAssignment_1");
-					put(grammarAccess.getGenerate_bodyAccess().getNameAssignment_0_0(), "rule__Generate_body__NameAssignment_0_0");
+					put(grammarAccess.getGenerate_bodyAccess().getNameAssignment_0(), "rule__Generate_body__NameAssignment_0");
 					put(grammarAccess.getGenerate_bodyAccess().getNameAssignment_1_0(), "rule__Generate_body__NameAssignment_1_0");
 					put(grammarAccess.getVisual_sectionAccess().getNameAssignment_0(), "rule__Visual_section__NameAssignment_0");
 					put(grammarAccess.getVisual_sectionAccess().getVis_opsAssignment_2(), "rule__Visual_section__Vis_opsAssignment_2");

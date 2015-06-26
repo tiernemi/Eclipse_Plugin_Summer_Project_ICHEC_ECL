@@ -11,7 +11,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.hipie.hIPIE.HIPIEPackage;
-import org.xtext.hipie.hIPIE.dataset;
+import org.xtext.hipie.hIPIE.datatype;
 import org.xtext.hipie.hIPIE.outputbase;
 
 /**
@@ -37,7 +37,7 @@ public class outputbaseImpl extends MinimalEObjectImpl.Container implements outp
    * @generated
    * @ordered
    */
-  protected dataset actions;
+  protected datatype actions;
 
   /**
    * <!-- begin-user-doc -->
@@ -65,12 +65,12 @@ public class outputbaseImpl extends MinimalEObjectImpl.Container implements outp
    * <!-- end-user-doc -->
    * @generated
    */
-  public dataset getActions()
+  public datatype getActions()
   {
     if (actions != null && actions.eIsProxy())
     {
       InternalEObject oldActions = (InternalEObject)actions;
-      actions = (dataset)eResolveProxy(oldActions);
+      actions = (datatype)eResolveProxy(oldActions);
       if (actions != oldActions)
       {
         if (eNotificationRequired())
@@ -85,7 +85,7 @@ public class outputbaseImpl extends MinimalEObjectImpl.Container implements outp
    * <!-- end-user-doc -->
    * @generated
    */
-  public dataset basicGetActions()
+  public datatype basicGetActions()
   {
     return actions;
   }
@@ -95,9 +95,9 @@ public class outputbaseImpl extends MinimalEObjectImpl.Container implements outp
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setActions(dataset newActions)
+  public void setActions(datatype newActions)
   {
-    dataset oldActions = actions;
+    datatype oldActions = actions;
     actions = newActions;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUTPUTBASE__ACTIONS, oldActions, actions));
@@ -131,7 +131,7 @@ public class outputbaseImpl extends MinimalEObjectImpl.Container implements outp
     switch (featureID)
     {
       case HIPIEPackage.OUTPUTBASE__ACTIONS:
-        setActions((dataset)newValue);
+        setActions((datatype)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -148,7 +148,7 @@ public class outputbaseImpl extends MinimalEObjectImpl.Container implements outp
     switch (featureID)
     {
       case HIPIEPackage.OUTPUTBASE__ACTIONS:
-        setActions((dataset)null);
+        setActions((datatype)null);
         return;
     }
     super.eUnset(featureID);
