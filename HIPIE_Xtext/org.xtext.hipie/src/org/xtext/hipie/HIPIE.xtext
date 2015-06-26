@@ -162,10 +162,10 @@ outputbase:  '(' actions=[datatype] ')';
  
 
                
-generate_section: name='GENERATES' body+=generate_body ;
+generate_section: name='GENERATES' body=generate_body ;
 
-generate_body: name=STRING  |
-               name='SALT' '(' ID ')' ':' ('SCOREDSEARCH'|'PROFILE') 'ENDGENERATES';
+generate_body: GEN_BLOCK |
+               name='SALT' '(' ID ')' ':' ('SCOREDSEARCH'|'PROFILE') 'ENDGENERATES' ;
 
 
 visual_section: name='VISUALIZE' ID (vis_ops+=visual_section_options)? (vis_elements+=visualization)+ 'END';
@@ -197,8 +197,6 @@ resource_options:  resource_option ( ',' res_ops+=resource_option )*;
 resource_value: value ':' (res_ops+=resource_options)? ';' ;
 resource_section: name='RESOURCES' (res_vals+=resource_value)+ 'END';
  
-
-
 terminal WS :  (' '|'\t'|'\r'|'\n')+ ;
 
 terminal INT returns ecore::EInt:
@@ -206,6 +204,11 @@ terminal INT returns ecore::EInt:
 
 terminal STRING :
 '"' ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|'"') )* '"' |
-"'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'" |
-'INLINE' -> 'ENDGENERATES' ;
+"'" ( '\\'('b'|'t'|'n'|'f'|'r'|'u'|'"'|"'"|'\\') | !('\\'|"'") )* "'" 
+;
+
+terminal GEN_BLOCK :
+	'INLINE' -> 'ENDGENERATES'
+;
+
 

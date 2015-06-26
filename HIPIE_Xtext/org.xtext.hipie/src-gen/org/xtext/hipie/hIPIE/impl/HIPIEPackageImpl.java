@@ -2398,7 +2398,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
 
     initEClass(generate_sectionEClass, generate_section.class, "generate_section", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getgenerate_section_Name(), ecorePackage.getEString(), "name", null, 0, 1, generate_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getgenerate_section_Body(), this.getgenerate_body(), null, "body", null, 0, -1, generate_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgenerate_section_Body(), this.getgenerate_body(), null, "body", null, 0, 1, generate_section.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(generate_bodyEClass, generate_body.class, "generate_body", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getgenerate_body_Name(), ecorePackage.getEString(), "name", null, 0, 1, generate_body.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

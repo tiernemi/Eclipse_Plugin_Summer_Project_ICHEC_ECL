@@ -54,7 +54,9 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if(ruleCall.getRule() == grammarAccess.getIDRule())
+		if(ruleCall.getRule() == grammarAccess.getGEN_BLOCKRule())
+			return getGEN_BLOCKToken(semanticObject, ruleCall, node);
+		else if(ruleCall.getRule() == grammarAccess.getIDRule())
 			return getIDToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getINTRule())
 			return getINTToken(semanticObject, ruleCall, node);
@@ -65,6 +67,17 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 		else if(ruleCall.getRule() == grammarAccess.getInputtype_optionsRule())
 			return getinputtype_optionsToken(semanticObject, ruleCall, node);
 		return "";
+	}
+	
+	/**
+	 * terminal GEN_BLOCK :
+	 * 	'INLINE' -> 'ENDGENERATES'
+	 * ;
+	 */
+	protected String getGEN_BLOCKToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "INLINE";
 	}
 	
 	/**

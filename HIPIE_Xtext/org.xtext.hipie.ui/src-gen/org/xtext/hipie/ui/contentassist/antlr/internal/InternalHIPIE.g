@@ -2525,9 +2525,9 @@ rule__Generate_body__Alternatives
     }
 :
 (
-{ before(grammarAccess.getGenerate_bodyAccess().getNameAssignment_0()); }
-(rule__Generate_body__NameAssignment_0)
-{ after(grammarAccess.getGenerate_bodyAccess().getNameAssignment_0()); }
+{ before(grammarAccess.getGenerate_bodyAccess().getGEN_BLOCKTerminalRuleCall_0()); }
+	RULE_GEN_BLOCK
+{ after(grammarAccess.getGenerate_bodyAccess().getGEN_BLOCKTerminalRuleCall_0()); }
 )
 
     |(
@@ -12930,21 +12930,6 @@ finally {
 	restoreStackSize(stackSize);
 }
 
-rule__Generate_body__NameAssignment_0
-    @init {
-		int stackSize = keepStackSize();
-    }
-:
-(
-{ before(grammarAccess.getGenerate_bodyAccess().getNameSTRINGTerminalRuleCall_0_0()); }
-	RULE_STRING{ after(grammarAccess.getGenerate_bodyAccess().getNameSTRINGTerminalRuleCall_0_0()); }
-)
-
-;
-finally {
-	restoreStackSize(stackSize);
-}
-
 rule__Generate_body__NameAssignment_1_0
     @init {
 		int stackSize = keepStackSize();
@@ -13874,7 +13859,9 @@ RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
 RULE_INT : ('0'..'9')+;
 
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\''|'INLINE' ( options {greedy=false;} : . )*'ENDGENERATES');
+RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
+
+RULE_GEN_BLOCK : 'INLINE' ( options {greedy=false;} : . )*'ENDGENERATES';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

@@ -2,8 +2,6 @@
  */
 package org.xtext.hipie.hIPIE;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -52,19 +50,29 @@ public interface generate_section extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Body</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.generate_body}.
+   * Returns the value of the '<em><b>Body</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Body</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Body</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Body</em>' containment reference list.
+   * @return the value of the '<em>Body</em>' containment reference.
+   * @see #setBody(generate_body)
    * @see org.xtext.hipie.hIPIE.HIPIEPackage#getgenerate_section_Body()
    * @model containment="true"
    * @generated
    */
-  EList<generate_body> getBody();
+  generate_body getBody();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.generate_section#getBody <em>Body</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Body</em>' containment reference.
+   * @see #getBody()
+   * @generated
+   */
+  void setBody(generate_body value);
 
 } // generate_section

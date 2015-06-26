@@ -252,7 +252,6 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOutputbaseAccess().getActionsAssignment_1(), "rule__Outputbase__ActionsAssignment_1");
 					put(grammarAccess.getGenerate_sectionAccess().getNameAssignment_0(), "rule__Generate_section__NameAssignment_0");
 					put(grammarAccess.getGenerate_sectionAccess().getBodyAssignment_1(), "rule__Generate_section__BodyAssignment_1");
-					put(grammarAccess.getGenerate_bodyAccess().getNameAssignment_0(), "rule__Generate_body__NameAssignment_0");
 					put(grammarAccess.getGenerate_bodyAccess().getNameAssignment_1_0(), "rule__Generate_body__NameAssignment_1_0");
 					put(grammarAccess.getVisual_sectionAccess().getNameAssignment_0(), "rule__Visual_section__NameAssignment_0");
 					put(grammarAccess.getVisual_sectionAccess().getVis_opsAssignment_2(), "rule__Visual_section__Vis_opsAssignment_2");

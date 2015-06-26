@@ -3483,7 +3483,7 @@ rulegenerate_section returns [EObject current=null]
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGenerate_sectionRule());
 	        }
-       		add(
+       		set(
        			$current, 
        			"body",
         		lv_body_1_0, 
@@ -3513,25 +3513,11 @@ rulegenerate_body returns [EObject current=null]
     @init { enterRule(); 
     }
     @after { leaveRule(); }:
-((
-(
-		lv_name_0_0=RULE_STRING
-		{
-			newLeafNode(lv_name_0_0, grammarAccess.getGenerate_bodyAccess().getNameSTRINGTerminalRuleCall_0_0()); 
-		}
-		{
-	        if ($current==null) {
-	            $current = createModelElement(grammarAccess.getGenerate_bodyRule());
-	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"STRING");
-	    }
+(this_GEN_BLOCK_0=RULE_GEN_BLOCK
+    { 
+    newLeafNode(this_GEN_BLOCK_0, grammarAccess.getGenerate_bodyAccess().getGEN_BLOCKTerminalRuleCall_0()); 
+    }
 
-)
-)
     |((
 (
 		lv_name_1_0=	'SALT' 
@@ -4986,7 +4972,9 @@ RULE_WS : (' '|'\t'|'\r'|'\n')+;
 
 RULE_INT : ('0'..'9')+;
 
-RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\''|'INLINE' ( options {greedy=false;} : . )*'ENDGENERATES');
+RULE_STRING : ('"' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'"')))* '"'|'\'' ('\\' ('b'|'t'|'n'|'f'|'r'|'u'|'"'|'\''|'\\')|~(('\\'|'\'')))* '\'');
+
+RULE_GEN_BLOCK : 'INLINE' ( options {greedy=false;} : . )*'ENDGENERATES';
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

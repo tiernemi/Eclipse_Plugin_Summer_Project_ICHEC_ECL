@@ -2093,10 +2093,10 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cBodyGenerate_bodyParserRuleCall_1_0 = (RuleCall)cBodyAssignment_1.eContents().get(0);
 		
 		//generate_section:
-		//	name="GENERATES" body+=generate_body;
+		//	name="GENERATES" body=generate_body;
 		@Override public ParserRule getRule() { return rule; }
 
-		//name="GENERATES" body+=generate_body
+		//name="GENERATES" body=generate_body
 		public Group getGroup() { return cGroup; }
 
 		//name="GENERATES"
@@ -2105,7 +2105,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		//"GENERATES"
 		public Keyword getNameGENERATESKeyword_0_0() { return cNameGENERATESKeyword_0_0; }
 
-		//body+=generate_body
+		//body=generate_body
 		public Assignment getBodyAssignment_1() { return cBodyAssignment_1; }
 
 		//generate_body
@@ -2115,8 +2115,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	public class Generate_bodyElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "generate_body");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Assignment cNameAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
-		private final RuleCall cNameSTRINGTerminalRuleCall_0_0 = (RuleCall)cNameAssignment_0.eContents().get(0);
+		private final RuleCall cGEN_BLOCKTerminalRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cNameAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final Keyword cNameSALTKeyword_1_0_0 = (Keyword)cNameAssignment_1_0.eContents().get(0);
@@ -2130,17 +2129,14 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cENDGENERATESKeyword_1_6 = (Keyword)cGroup_1.eContents().get(6);
 		
 		//generate_body:
-		//	name=STRING | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
+		//	GEN_BLOCK | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
 		@Override public ParserRule getRule() { return rule; }
 
-		//name=STRING | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
+		//GEN_BLOCK | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//name=STRING
-		public Assignment getNameAssignment_0() { return cNameAssignment_0; }
-
-		//STRING
-		public RuleCall getNameSTRINGTerminalRuleCall_0_0() { return cNameSTRINGTerminalRuleCall_0_0; }
+		//GEN_BLOCK
+		public RuleCall getGEN_BLOCKTerminalRuleCall_0() { return cGEN_BLOCKTerminalRuleCall_0; }
 
 		//name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES"
 		public Group getGroup_1() { return cGroup_1; }
@@ -3111,6 +3107,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	private final TerminalRule tWS;
 	private final TerminalRule tINT;
 	private final TerminalRule tSTRING;
+	private final TerminalRule tGEN_BLOCK;
 	
 	private final Grammar grammar;
 
@@ -3187,6 +3184,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		this.tWS = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "WS");
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "STRING");
+		this.tGEN_BLOCK = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "GEN_BLOCK");
 	}
 	
 	protected Grammar internalFindGrammar(GrammarProvider grammarProvider) {
@@ -3678,7 +3676,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//generate_section:
-	//	name="GENERATES" body+=generate_body;
+	//	name="GENERATES" body=generate_body;
 	public Generate_sectionElements getGenerate_sectionAccess() {
 		return pGenerate_section;
 	}
@@ -3688,7 +3686,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//generate_body:
-	//	name=STRING | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
+	//	GEN_BLOCK | name="SALT" "(" ID ")" ":" ("SCOREDSEARCH" | "PROFILE") "ENDGENERATES";
 	public Generate_bodyElements getGenerate_bodyAccess() {
 		return pGenerate_body;
 	}
@@ -3874,9 +3872,15 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 
 	//terminal STRING:
 	//	"\"" ("\\" ("b" | "t" | "n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\""))* "\"" | "\'" ("\\" ("b" | "t" |
-	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'" | "INLINE"->"ENDGENERATES";
+	//	"n" | "f" | "r" | "u" | "\"" | "\'" | "\\") | !("\\" | "\'"))* "\'";
 	public TerminalRule getSTRINGRule() {
 		return tSTRING;
+	} 
+
+	//terminal GEN_BLOCK:
+	//	"INLINE"->"ENDGENERATES";
+	public TerminalRule getGEN_BLOCKRule() {
+		return tGEN_BLOCK;
 	} 
 
 	//terminal ID:
