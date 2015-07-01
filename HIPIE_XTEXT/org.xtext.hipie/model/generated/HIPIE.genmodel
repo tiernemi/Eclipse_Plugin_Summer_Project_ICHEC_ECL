@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.xtext.hipie/src-gen" editDirectory="/org.xtext.hipie.edit/src"
+    editorDirectory="/org.xtext.hipie.editor/src" modelPluginID="org.xtext.hipie"
+    forceOverwrite="true" modelName="HIPIE" updateClasspath="false" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    complianceLevel="6.0" copyrightFields="false" editPluginID="org.xtext.hipie.edit"
+    editorPluginID="org.xtext.hipie.editor" runtimeVersion="2.10">
+  <genPackages prefix="HIPIE" basePackage="org.xtext.hipie" disposableProviderFactory="true"
+      fileExtensions="dud" ecorePackage="HIPIE.ecore#/">
+    <genClasses ecoreClass="HIPIE.ecore#//Program">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/composition_header"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/base_props"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/contract_instances"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/input_section"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/output_section"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/visual_section"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/generate_section"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/custom_section"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Program/sesource_section"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//BaseProp">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//BaseProp/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//BaseProp/val_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//BaseProp/cat_list"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//CategoryTypeList">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//CategoryTypeList/cats"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Value">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Value/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Value/int_val"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Value/str_val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Value/res_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//ValueList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ValueList/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Assign">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Assign/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Assign/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//AssignList">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//AssignList/assigns"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//CompositionHeader">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//CompositionHeader/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//CompositionHeader/assigns"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//ContractInstance">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//ContractInstance/sec_name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ContractInstance/vals"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ContractInstance/vars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ContractInstance/assigns"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//FieldDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//FieldDecl/input_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//EnumDecl">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//EnumDecl/enum_dec"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//EnumDecl/vals"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//EnumDecl/assigns"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//InputSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputSection/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputSection/inputs"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Bool">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Bool/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//IntVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//IntVar/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//StringVar">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//StringVar/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Record">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Record/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Dataset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Dataset/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Dataset/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Group">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Group/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Group/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Datatype"/>
+    <genClasses ecoreClass="HIPIE.ecore#//InputValue">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputValue/input_op_list"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//InputOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOptions/input_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//InputOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOption/assigns_list"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOption/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutputSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputSection/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputSection/outputs"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutfieldDecl">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutfieldDecl/fields"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLInteger"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLUnsigned"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLString"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLQstring"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLVarstring"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLUnicode"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLVarunicode"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLData"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLReal"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLfieldType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ECLfieldType/options"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//PosVizData">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//PosVizData/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//ECLOutputDecl"/>
+    <genClasses ecoreClass="HIPIE.ecore#//OutputOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputOption/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOption/vars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOption/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutputOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOptions/output_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutType">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutType/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutType/ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutDataset">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutDataset/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/out_base"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/ops"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/ecl_vars"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutputValue"/>
+    <genClasses ecoreClass="HIPIE.ecore#//OutputBase">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputBase/base"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//GenerateSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//GenerateSection/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//GenerateBodyInline"/>
+    <genClasses ecoreClass="HIPIE.ecore#//GenerateBodySalt"/>
+    <genClasses ecoreClass="HIPIE.ecore#//VisualSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualSection/sec_name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualSection/vis_ops"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualSection/vis_elements"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Visualization">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Visualization/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Visualization/input"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Visualization/vis_op"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisBasis">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisBasis/basis"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisBasis/quals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisBasisQualifiers">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisBasisQualifiers/funcs"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//Function">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Function/vars"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Function/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisualSectionOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualSectionOptions/vis_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisualSectionOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualSectionOption/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualSectionOption/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisualOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualOptions/vis_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisualOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualOption/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualOption/funcs"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualOption/vis_mult"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisualMultival">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualMultival/name"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//CustomSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//CustomSection/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//CustomSection/cust_vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//CustomValue"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ResourceOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//ResourceOption/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ResourceOption/vals"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//ResourceOptions">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ResourceOptions/res_ops"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//ResourceValue"/>
+    <genClasses ecoreClass="HIPIE.ecore#//ResourceSection">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//ResourceSection/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//ResourceSection/res_vals"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
