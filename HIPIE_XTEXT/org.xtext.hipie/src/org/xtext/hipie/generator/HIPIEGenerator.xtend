@@ -50,6 +50,8 @@ class HIPIEGenerator implements IGenerator {
 		if (sc_in.hasNext())
 			streamString_in = sc_in.useDelimiter("\\Z").next() ;
 		
+		in.close()
+		er.close()
 		in_stream.close() 
 		sc_in.close()
 		sc_verbose.close()

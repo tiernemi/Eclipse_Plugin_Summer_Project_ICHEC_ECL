@@ -82,6 +82,8 @@ public class HIPIEGenerator implements IGenerator {
         String _next_2 = _useDelimiter_2.next();
         streamString_in = _next_2;
       }
+      in.close();
+      er.close();
       in_stream.close();
       sc_in.close();
       sc_verbose.close();
