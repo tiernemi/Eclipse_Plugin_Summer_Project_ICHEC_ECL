@@ -6,17 +6,14 @@ package org.xtext.hipie.generator
 import org.eclipse.emf.ecore.resource.Resource
 import java.lang.Process
 import java.util.Scanner
-import java.net.URI 
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
-import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl
-import org.eclipse.core.runtime.FileLocator
 import org.eclipse.emf.common.CommonPlugin
 import org.eclipse.core.runtime.Path
 import org.eclipse.core.resources.ResourcesPlugin
-import org.eclipse.core.resources.IResource
-import org.eclipse.core.resources.IFolder
 import java.io.FileInputStream
+import java.nio.file.Files
+import java.nio.file.FileSystems
 
 /**
  * Generates code from your model files on save.
@@ -58,7 +55,7 @@ class HIPIEGenerator implements IGenerator {
 		sc_verbose.close()
 		sc_er.close()
 		
-		Runtime.getRuntime().exec('rm ' + filepath_output)
+		Files.delete(FileSystems.getDefault().getPath(filepath_output))
 		fsa.generateFile(filename + 'out' , streamString_in)
 		
 	}

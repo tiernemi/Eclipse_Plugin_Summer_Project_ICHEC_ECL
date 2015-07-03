@@ -5,6 +5,9 @@ package org.xtext.hipie.generator;
 
 import java.io.FileInputStream;
 import java.io.InputStream;
+import java.nio.file.FileSystem;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
 import java.util.Scanner;
 import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IWorkspace;
@@ -83,8 +86,9 @@ public class HIPIEGenerator implements IGenerator {
       sc_in.close();
       sc_verbose.close();
       sc_er.close();
-      Runtime _runtime_1 = Runtime.getRuntime();
-      _runtime_1.exec(("rm " + filepath_output));
+      FileSystem _default = FileSystems.getDefault();
+      java.nio.file.Path _path_1 = _default.getPath(filepath_output);
+      Files.delete(_path_1);
       fsa.generateFile((filename + "out"), streamString_in);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
