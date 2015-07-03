@@ -1,0 +1,12 @@
+//Import:hipie_mood.GLOBAL_DSINPUT
+// Modified on 03 Jul 2015 10:06:35 GMT by HIPIE on machine michael-RV410-RV510-S3510-E3510
+  EXPORT DATASET GLOBAL_DSINPUT := '' : STORED('GLOBAL_DSINPUT');
+
+//Import:hipie_mood.ID
+// Modified on 03 Jul 2015 10:06:35 GMT by HIPIE on machine michael-RV410-RV510-S3510-E3510
+  EXPORT STRING ID := '197D49F9-BC98-434B-9EAA-6C997FFCFE1B' : STORED('ID');
+
+
+//Import:hipie_mood.BWR_hipie_mood
+// Modified on 03 Jul 2015 10:06:35 GMT by HIPIE on machine michael-RV410-RV510-S3510-E3510
+IMPORT hipie_mood as HIPIE;

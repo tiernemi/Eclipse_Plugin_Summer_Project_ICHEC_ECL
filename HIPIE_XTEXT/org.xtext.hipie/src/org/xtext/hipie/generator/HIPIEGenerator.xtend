@@ -4,8 +4,19 @@
 package org.xtext.hipie.generator
 
 import org.eclipse.emf.ecore.resource.Resource
+import java.lang.Process
+import java.util.Scanner
+import java.net.URI 
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import org.eclipse.emf.ecore.resource.impl.ExtensibleURIConverterImpl
+import org.eclipse.core.runtime.FileLocator
+import org.eclipse.emf.common.CommonPlugin
+import org.eclipse.core.runtime.Path
+import org.eclipse.core.resources.ResourcesPlugin
+import org.eclipse.core.resources.IResource
+import org.eclipse.core.resources.IFolder
+import java.io.FileInputStream
 
 /**
  * Generates code from your model files on save.
@@ -14,11 +25,41 @@ import org.eclipse.xtext.generator.IFileSystemAccess
  */
 class HIPIEGenerator implements IGenerator {
 	
-	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+	override void doGenerate(Resource resource, IFileSystemAccess fsa) 
+	{
+		var resolvedFile = CommonPlugin.resolve(resource.URI);
+		val filepath = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(resolvedFile.toFileString())).fullPath.toString
+		val filename = resolvedFile.lastSegment.substring(0, resolvedFile.lastSegment.length-3)		
+		val filepath_output = filepath.substring(0 , filepath.length-3) + "out" 
+								
+		val proc = Runtime.getRuntime().exec("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -c " + filepath + " -o " + filepath_output + " -verbose") as Process ;
+		val in = proc.inputStream
+		val er = proc.errorStream
+		val sc_verbose = new Scanner(in)
+		val sc_er = new Scanner(er)
+		var streamString = new String
+		var streamString_er = new String
+		if (sc_verbose.hasNext())
+			streamString = sc_verbose.useDelimiter("\\Z").next() ;
+		if (sc_er.hasNext())
+				streamString_er = sc_er.useDelimiter("\\Z").next() ;
+		System.out.println(streamString)
+		System.out.println(streamString_er)	
+		
+		
+		val in_stream = new FileInputStream(filepath_output);
+		var streamString_in = new String
+		val sc_in = new Scanner(in_stream)
+		if (sc_in.hasNext())
+			streamString_in = sc_in.useDelimiter("\\Z").next() ;
+		
+		in_stream.close() 
+		sc_in.close()
+		sc_verbose.close()
+		sc_er.close()
+		
+		Runtime.getRuntime().exec('rm ' + filepath_output)
+		fsa.generateFile(filename + 'out' , streamString_in)
+		
 	}
 }
