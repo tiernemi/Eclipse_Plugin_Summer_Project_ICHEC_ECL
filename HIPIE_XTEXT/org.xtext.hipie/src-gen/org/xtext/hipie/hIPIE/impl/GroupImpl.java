@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.hipie.hIPIE.Group;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
+import org.xtext.hipie.hIPIE.InputOptions;
 import org.xtext.hipie.hIPIE.InputValue;
 
 /**
@@ -29,13 +30,14 @@ import org.xtext.hipie.hIPIE.InputValue;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.GroupImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.GroupImpl#getInput_op_list <em>Input op list</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.GroupImpl#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class GroupImpl extends InputValueImpl implements Group
+public class GroupImpl extends DatatypeImpl implements Group
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -56,6 +58,16 @@ public class GroupImpl extends InputValueImpl implements Group
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getInput_op_list() <em>Input op list</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInput_op_list()
+   * @generated
+   * @ordered
+   */
+  protected InputOptions input_op_list;
 
   /**
    * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference list.
@@ -116,6 +128,54 @@ public class GroupImpl extends InputValueImpl implements Group
    * <!-- end-user-doc -->
    * @generated
    */
+  public InputOptions getInput_op_list()
+  {
+    return input_op_list;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetInput_op_list(InputOptions newInput_op_list, NotificationChain msgs)
+  {
+    InputOptions oldInput_op_list = input_op_list;
+    input_op_list = newInput_op_list;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.GROUP__INPUT_OP_LIST, oldInput_op_list, newInput_op_list);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setInput_op_list(InputOptions newInput_op_list)
+  {
+    if (newInput_op_list != input_op_list)
+    {
+      NotificationChain msgs = null;
+      if (input_op_list != null)
+        msgs = ((InternalEObject)input_op_list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.GROUP__INPUT_OP_LIST, null, msgs);
+      if (newInput_op_list != null)
+        msgs = ((InternalEObject)newInput_op_list).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.GROUP__INPUT_OP_LIST, null, msgs);
+      msgs = basicSetInput_op_list(newInput_op_list, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.GROUP__INPUT_OP_LIST, newInput_op_list, newInput_op_list));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<InputValue> getVals()
   {
     if (vals == null)
@@ -135,6 +195,8 @@ public class GroupImpl extends InputValueImpl implements Group
   {
     switch (featureID)
     {
+      case HIPIEPackage.GROUP__INPUT_OP_LIST:
+        return basicSetInput_op_list(null, msgs);
       case HIPIEPackage.GROUP__VALS:
         return ((InternalEList<?>)getVals()).basicRemove(otherEnd, msgs);
     }
@@ -153,6 +215,8 @@ public class GroupImpl extends InputValueImpl implements Group
     {
       case HIPIEPackage.GROUP__NAME:
         return getName();
+      case HIPIEPackage.GROUP__INPUT_OP_LIST:
+        return getInput_op_list();
       case HIPIEPackage.GROUP__VALS:
         return getVals();
     }
@@ -172,6 +236,9 @@ public class GroupImpl extends InputValueImpl implements Group
     {
       case HIPIEPackage.GROUP__NAME:
         setName((String)newValue);
+        return;
+      case HIPIEPackage.GROUP__INPUT_OP_LIST:
+        setInput_op_list((InputOptions)newValue);
         return;
       case HIPIEPackage.GROUP__VALS:
         getVals().clear();
@@ -194,6 +261,9 @@ public class GroupImpl extends InputValueImpl implements Group
       case HIPIEPackage.GROUP__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case HIPIEPackage.GROUP__INPUT_OP_LIST:
+        setInput_op_list((InputOptions)null);
+        return;
       case HIPIEPackage.GROUP__VALS:
         getVals().clear();
         return;
@@ -213,6 +283,8 @@ public class GroupImpl extends InputValueImpl implements Group
     {
       case HIPIEPackage.GROUP__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case HIPIEPackage.GROUP__INPUT_OP_LIST:
+        return input_op_list != null;
       case HIPIEPackage.GROUP__VALS:
         return vals != null && !vals.isEmpty();
     }

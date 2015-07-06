@@ -12,6 +12,7 @@ package org.xtext.hipie.hIPIE;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.ECLfieldType#getOptions <em>Options</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.ECLfieldType#getIn_ops <em>In ops</em>}</li>
  * </ul>
  * </p>
  *
@@ -19,7 +20,7 @@ package org.xtext.hipie.hIPIE;
  * @model
  * @generated
  */
-public interface ECLfieldType extends PosVizData, ECLOutputDecl
+public interface ECLfieldType extends ECLOutputDecl, ServiceInputValue, PosVizData
 {
   /**
    * Returns the value of the '<em><b>Options</b></em>' containment reference.
@@ -46,5 +47,31 @@ public interface ECLfieldType extends PosVizData, ECLOutputDecl
    * @generated
    */
   void setOptions(OutputOptions value);
+
+  /**
+   * Returns the value of the '<em><b>In ops</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>In ops</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>In ops</em>' containment reference.
+   * @see #setIn_ops(InputOptions)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getECLfieldType_In_ops()
+   * @model containment="true"
+   * @generated
+   */
+  InputOptions getIn_ops();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.ECLfieldType#getIn_ops <em>In ops</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>In ops</em>' containment reference.
+   * @see #getIn_ops()
+   * @generated
+   */
+  void setIn_ops(InputOptions value);
 
 } // ECLfieldType

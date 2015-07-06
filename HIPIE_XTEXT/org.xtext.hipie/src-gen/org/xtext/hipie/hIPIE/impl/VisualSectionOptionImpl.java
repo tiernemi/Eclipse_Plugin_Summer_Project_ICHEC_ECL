@@ -11,6 +11,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.xtext.hipie.hIPIE.AssignList;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.Value;
 import org.xtext.hipie.hIPIE.VisualSectionOption;
@@ -24,6 +25,7 @@ import org.xtext.hipie.hIPIE.VisualSectionOption;
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionOptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionOptionImpl#getVals <em>Vals</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionOptionImpl#getAssigns <em>Assigns</em>}</li>
  * </ul>
  * </p>
  *
@@ -60,6 +62,16 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
    * @ordered
    */
   protected Value vals;
+
+  /**
+   * The cached value of the '{@link #getAssigns() <em>Assigns</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAssigns()
+   * @generated
+   * @ordered
+   */
+  protected AssignList assigns;
 
   /**
    * <!-- begin-user-doc -->
@@ -158,6 +170,54 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
+  public AssignList getAssigns()
+  {
+    return assigns;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetAssigns(AssignList newAssigns, NotificationChain msgs)
+  {
+    AssignList oldAssigns = assigns;
+    assigns = newAssigns;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS, oldAssigns, newAssigns);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAssigns(AssignList newAssigns)
+  {
+    if (newAssigns != assigns)
+    {
+      NotificationChain msgs = null;
+      if (assigns != null)
+        msgs = ((InternalEObject)assigns).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS, null, msgs);
+      if (newAssigns != null)
+        msgs = ((InternalEObject)newAssigns).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS, null, msgs);
+      msgs = basicSetAssigns(newAssigns, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS, newAssigns, newAssigns));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -165,6 +225,8 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
     {
       case HIPIEPackage.VISUAL_SECTION_OPTION__VALS:
         return basicSetVals(null, msgs);
+      case HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS:
+        return basicSetAssigns(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -183,6 +245,8 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
         return getName();
       case HIPIEPackage.VISUAL_SECTION_OPTION__VALS:
         return getVals();
+      case HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS:
+        return getAssigns();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -202,6 +266,9 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
         return;
       case HIPIEPackage.VISUAL_SECTION_OPTION__VALS:
         setVals((Value)newValue);
+        return;
+      case HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS:
+        setAssigns((AssignList)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -223,6 +290,9 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
       case HIPIEPackage.VISUAL_SECTION_OPTION__VALS:
         setVals((Value)null);
         return;
+      case HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS:
+        setAssigns((AssignList)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -241,6 +311,8 @@ public class VisualSectionOptionImpl extends MinimalEObjectImpl.Container implem
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.VISUAL_SECTION_OPTION__VALS:
         return vals != null;
+      case HIPIEPackage.VISUAL_SECTION_OPTION__ASSIGNS:
+        return assigns != null;
     }
     return super.eIsSet(featureID);
   }

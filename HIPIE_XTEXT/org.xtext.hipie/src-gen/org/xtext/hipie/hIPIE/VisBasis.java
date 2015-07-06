@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.VisBasis#getBasis <em>Basis</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.VisBasis#getFilter <em>Filter</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.VisBasis#getQuals <em>Quals</em>}</li>
  * </ul>
  * </p>
@@ -48,6 +49,32 @@ public interface VisBasis extends EObject
    * @generated
    */
   void setBasis(OutDataset value);
+
+  /**
+   * Returns the value of the '<em><b>Filter</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Filter</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Filter</em>' containment reference.
+   * @see #setFilter(VisFilter)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisBasis_Filter()
+   * @model containment="true"
+   * @generated
+   */
+  VisFilter getFilter();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.VisBasis#getFilter <em>Filter</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Filter</em>' containment reference.
+   * @see #getFilter()
+   * @generated
+   */
+  void setFilter(VisFilter value);
 
   /**
    * Returns the value of the '<em><b>Quals</b></em>' containment reference.

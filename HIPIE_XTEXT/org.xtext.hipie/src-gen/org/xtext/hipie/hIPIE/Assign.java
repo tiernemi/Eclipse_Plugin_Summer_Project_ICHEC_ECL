@@ -12,8 +12,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.Assign#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.Assign#getVals <em>Vals</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Assign#getVals_l <em>Vals l</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Assign#getVals_r <em>Vals r</em>}</li>
  * </ul>
  * </p>
  *
@@ -24,55 +24,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface Assign extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Vals l</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Vals l</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getAssign_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Assign#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
-  /**
-   * Returns the value of the '<em><b>Vals</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Vals</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Vals</em>' containment reference.
-   * @see #setVals(ValueList)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getAssign_Vals()
+   * @return the value of the '<em>Vals l</em>' containment reference.
+   * @see #setVals_l(Value)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getAssign_Vals_l()
    * @model containment="true"
    * @generated
    */
-  ValueList getVals();
+  Value getVals_l();
 
   /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Assign#getVals <em>Vals</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Assign#getVals_l <em>Vals l</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vals</em>' containment reference.
-   * @see #getVals()
+   * @param value the new value of the '<em>Vals l</em>' containment reference.
+   * @see #getVals_l()
    * @generated
    */
-  void setVals(ValueList value);
+  void setVals_l(Value value);
+
+  /**
+   * Returns the value of the '<em><b>Vals r</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Vals r</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Vals r</em>' containment reference.
+   * @see #setVals_r(ValueList)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getAssign_Vals_r()
+   * @model containment="true"
+   * @generated
+   */
+  ValueList getVals_r();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Assign#getVals_r <em>Vals r</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Vals r</em>' containment reference.
+   * @see #getVals_r()
+   * @generated
+   */
+  void setVals_r(ValueList value);
 
 } // Assign

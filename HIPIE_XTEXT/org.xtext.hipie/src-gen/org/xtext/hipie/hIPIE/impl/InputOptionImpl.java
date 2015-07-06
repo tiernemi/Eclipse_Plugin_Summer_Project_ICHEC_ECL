@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.hipie.hIPIE.AssignList;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.InputOption;
+import org.xtext.hipie.hIPIE.InputtypeOptions;
 import org.xtext.hipie.hIPIE.ValueList;
 
 /**
@@ -31,7 +32,9 @@ import org.xtext.hipie.hIPIE.ValueList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.InputOptionImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.InputOptionImpl#getForm_op <em>Form op</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.InputOptionImpl#getAssigns_list <em>Assigns list</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.InputOptionImpl#getType_op <em>Type op</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.InputOptionImpl#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
@@ -61,6 +64,26 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getForm_op() <em>Form op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getForm_op()
+   * @generated
+   * @ordered
+   */
+  protected static final String FORM_OP_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getForm_op() <em>Form op</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getForm_op()
+   * @generated
+   * @ordered
+   */
+  protected String form_op = FORM_OP_EDEFAULT;
+
+  /**
    * The cached value of the '{@link #getAssigns_list() <em>Assigns list</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -69,6 +92,16 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
    * @ordered
    */
   protected AssignList assigns_list;
+
+  /**
+   * The cached value of the '{@link #getType_op() <em>Type op</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType_op()
+   * @generated
+   * @ordered
+   */
+  protected InputtypeOptions type_op;
 
   /**
    * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference list.
@@ -129,6 +162,29 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getForm_op()
+  {
+    return form_op;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setForm_op(String newForm_op)
+  {
+    String oldForm_op = form_op;
+    form_op = newForm_op;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.INPUT_OPTION__FORM_OP, oldForm_op, form_op));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public AssignList getAssigns_list()
   {
     return assigns_list;
@@ -177,6 +233,54 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
    * <!-- end-user-doc -->
    * @generated
    */
+  public InputtypeOptions getType_op()
+  {
+    return type_op;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetType_op(InputtypeOptions newType_op, NotificationChain msgs)
+  {
+    InputtypeOptions oldType_op = type_op;
+    type_op = newType_op;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.INPUT_OPTION__TYPE_OP, oldType_op, newType_op);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType_op(InputtypeOptions newType_op)
+  {
+    if (newType_op != type_op)
+    {
+      NotificationChain msgs = null;
+      if (type_op != null)
+        msgs = ((InternalEObject)type_op).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.INPUT_OPTION__TYPE_OP, null, msgs);
+      if (newType_op != null)
+        msgs = ((InternalEObject)newType_op).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.INPUT_OPTION__TYPE_OP, null, msgs);
+      msgs = basicSetType_op(newType_op, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.INPUT_OPTION__TYPE_OP, newType_op, newType_op));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<ValueList> getVals()
   {
     if (vals == null)
@@ -198,6 +302,8 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
     {
       case HIPIEPackage.INPUT_OPTION__ASSIGNS_LIST:
         return basicSetAssigns_list(null, msgs);
+      case HIPIEPackage.INPUT_OPTION__TYPE_OP:
+        return basicSetType_op(null, msgs);
       case HIPIEPackage.INPUT_OPTION__VALS:
         return ((InternalEList<?>)getVals()).basicRemove(otherEnd, msgs);
     }
@@ -216,8 +322,12 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
     {
       case HIPIEPackage.INPUT_OPTION__NAME:
         return getName();
+      case HIPIEPackage.INPUT_OPTION__FORM_OP:
+        return getForm_op();
       case HIPIEPackage.INPUT_OPTION__ASSIGNS_LIST:
         return getAssigns_list();
+      case HIPIEPackage.INPUT_OPTION__TYPE_OP:
+        return getType_op();
       case HIPIEPackage.INPUT_OPTION__VALS:
         return getVals();
     }
@@ -238,8 +348,14 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
       case HIPIEPackage.INPUT_OPTION__NAME:
         setName((String)newValue);
         return;
+      case HIPIEPackage.INPUT_OPTION__FORM_OP:
+        setForm_op((String)newValue);
+        return;
       case HIPIEPackage.INPUT_OPTION__ASSIGNS_LIST:
         setAssigns_list((AssignList)newValue);
+        return;
+      case HIPIEPackage.INPUT_OPTION__TYPE_OP:
+        setType_op((InputtypeOptions)newValue);
         return;
       case HIPIEPackage.INPUT_OPTION__VALS:
         getVals().clear();
@@ -262,8 +378,14 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
       case HIPIEPackage.INPUT_OPTION__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case HIPIEPackage.INPUT_OPTION__FORM_OP:
+        setForm_op(FORM_OP_EDEFAULT);
+        return;
       case HIPIEPackage.INPUT_OPTION__ASSIGNS_LIST:
         setAssigns_list((AssignList)null);
+        return;
+      case HIPIEPackage.INPUT_OPTION__TYPE_OP:
+        setType_op((InputtypeOptions)null);
         return;
       case HIPIEPackage.INPUT_OPTION__VALS:
         getVals().clear();
@@ -284,8 +406,12 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
     {
       case HIPIEPackage.INPUT_OPTION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case HIPIEPackage.INPUT_OPTION__FORM_OP:
+        return FORM_OP_EDEFAULT == null ? form_op != null : !FORM_OP_EDEFAULT.equals(form_op);
       case HIPIEPackage.INPUT_OPTION__ASSIGNS_LIST:
         return assigns_list != null;
+      case HIPIEPackage.INPUT_OPTION__TYPE_OP:
+        return type_op != null;
       case HIPIEPackage.INPUT_OPTION__VALS:
         return vals != null && !vals.isEmpty();
     }
@@ -305,6 +431,8 @@ public class InputOptionImpl extends MinimalEObjectImpl.Container implements Inp
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
+    result.append(", form_op: ");
+    result.append(form_op);
     result.append(')');
     return result.toString();
   }

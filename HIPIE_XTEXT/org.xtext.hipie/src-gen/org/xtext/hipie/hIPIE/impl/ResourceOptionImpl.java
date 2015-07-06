@@ -22,7 +22,6 @@ import org.xtext.hipie.hIPIE.Value;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.ResourceOptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ResourceOptionImpl#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
@@ -31,26 +30,6 @@ import org.xtext.hipie.hIPIE.Value;
  */
 public class ResourceOptionImpl extends MinimalEObjectImpl.Container implements ResourceOption
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -80,29 +59,6 @@ public class ResourceOptionImpl extends MinimalEObjectImpl.Container implements 
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.RESOURCE_OPTION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.RESOURCE_OPTION__NAME, oldName, name));
   }
 
   /**
@@ -179,8 +135,6 @@ public class ResourceOptionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case HIPIEPackage.RESOURCE_OPTION__NAME:
-        return getName();
       case HIPIEPackage.RESOURCE_OPTION__VALS:
         return getVals();
     }
@@ -197,9 +151,6 @@ public class ResourceOptionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case HIPIEPackage.RESOURCE_OPTION__NAME:
-        setName((String)newValue);
-        return;
       case HIPIEPackage.RESOURCE_OPTION__VALS:
         setVals((Value)newValue);
         return;
@@ -217,9 +168,6 @@ public class ResourceOptionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case HIPIEPackage.RESOURCE_OPTION__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case HIPIEPackage.RESOURCE_OPTION__VALS:
         setVals((Value)null);
         return;
@@ -237,29 +185,10 @@ public class ResourceOptionImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case HIPIEPackage.RESOURCE_OPTION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.RESOURCE_OPTION__VALS:
         return vals != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //ResourceOptionImpl

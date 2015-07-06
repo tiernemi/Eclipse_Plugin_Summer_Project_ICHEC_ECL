@@ -19,7 +19,7 @@ package org.xtext.hipie.hIPIE;
  * @model
  * @generated
  */
-public interface IntVar extends Datatype, InputValue, OutfieldDecl
+public interface IntVar extends InputSimpleTypes, OutfieldDecl
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

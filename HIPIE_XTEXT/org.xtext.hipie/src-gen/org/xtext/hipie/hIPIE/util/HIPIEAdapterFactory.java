@@ -115,6 +115,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createCompositionHeaderAdapter();
       }
       @Override
+      public Adapter caseInstanceID(InstanceID object)
+      {
+        return createInstanceIDAdapter();
+      }
+      @Override
+      public Adapter caseInstanceOptions(InstanceOptions object)
+      {
+        return createInstanceOptionsAdapter();
+      }
+      @Override
+      public Adapter caseInstanceOption(InstanceOption object)
+      {
+        return createInstanceOptionAdapter();
+      }
+      @Override
       public Adapter caseContractInstance(ContractInstance object)
       {
         return createContractInstanceAdapter();
@@ -123,6 +138,31 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFieldDecl(FieldDecl object)
       {
         return createFieldDeclAdapter();
+      }
+      @Override
+      public Adapter caseKelAttrDecl(KelAttrDecl object)
+      {
+        return createKelAttrDeclAdapter();
+      }
+      @Override
+      public Adapter caseKelEntityDeclSimple(KelEntityDeclSimple object)
+      {
+        return createKelEntityDeclSimpleAdapter();
+      }
+      @Override
+      public Adapter caseKelEntityDecl(KelEntityDecl object)
+      {
+        return createKelEntityDeclAdapter();
+      }
+      @Override
+      public Adapter caseEnumEntry(EnumEntry object)
+      {
+        return createEnumEntryAdapter();
+      }
+      @Override
+      public Adapter caseEnumList(EnumList object)
+      {
+        return createEnumListAdapter();
       }
       @Override
       public Adapter caseEnumDecl(EnumDecl object)
@@ -150,11 +190,6 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createStringVarAdapter();
       }
       @Override
-      public Adapter caseRecord(Record object)
-      {
-        return createRecordAdapter();
-      }
-      @Override
       public Adapter caseDataset(Dataset object)
       {
         return createDatasetAdapter();
@@ -163,6 +198,26 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
       public Adapter caseGroup(Group object)
       {
         return createGroupAdapter();
+      }
+      @Override
+      public Adapter caseReal(Real object)
+      {
+        return createRealAdapter();
+      }
+      @Override
+      public Adapter caseInputSimpleTypes(InputSimpleTypes object)
+      {
+        return createInputSimpleTypesAdapter();
+      }
+      @Override
+      public Adapter caseRecord(Record object)
+      {
+        return createRecordAdapter();
+      }
+      @Override
+      public Adapter caseKelBase(KelBase object)
+      {
+        return createKelBaseAdapter();
       }
       @Override
       public Adapter caseDatatype(Datatype object)
@@ -183,6 +238,16 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
       public Adapter caseInputOption(InputOption object)
       {
         return createInputOptionAdapter();
+      }
+      @Override
+      public Adapter caseInputtypeOptions(InputtypeOptions object)
+      {
+        return createInputtypeOptionsAdapter();
+      }
+      @Override
+      public Adapter caseIntegrateSection(IntegrateSection object)
+      {
+        return createIntegrateSectionAdapter();
       }
       @Override
       public Adapter caseOutputSection(OutputSection object)
@@ -240,19 +305,44 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createECLRealAdapter();
       }
       @Override
+      public Adapter caseECLBoolean(ECLBoolean object)
+      {
+        return createECLBooleanAdapter();
+      }
+      @Override
+      public Adapter caseECLNumType(ECLNumType object)
+      {
+        return createECLNumTypeAdapter();
+      }
+      @Override
+      public Adapter caseECLDecType(ECLDecType object)
+      {
+        return createECLDecTypeAdapter();
+      }
+      @Override
       public Adapter caseECLfieldType(ECLfieldType object)
       {
         return createECLfieldTypeAdapter();
       }
       @Override
-      public Adapter casePosVizData(PosVizData object)
-      {
-        return createPosVizDataAdapter();
-      }
-      @Override
       public Adapter caseECLOutputDecl(ECLOutputDecl object)
       {
         return createECLOutputDeclAdapter();
+      }
+      @Override
+      public Adapter caseServiceInputValue(ServiceInputValue object)
+      {
+        return createServiceInputValueAdapter();
+      }
+      @Override
+      public Adapter caseServiceInputSection(ServiceInputSection object)
+      {
+        return createServiceInputSectionAdapter();
+      }
+      @Override
+      public Adapter caseNestedDatasetDecl(NestedDatasetDecl object)
+      {
+        return createNestedDatasetDeclAdapter();
       }
       @Override
       public Adapter caseOutputOption(OutputOption object)
@@ -265,14 +355,19 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createOutputOptionsAdapter();
       }
       @Override
-      public Adapter caseOutType(OutType object)
+      public Adapter caseOutTypeSimple(OutTypeSimple object)
       {
-        return createOutTypeAdapter();
+        return createOutTypeSimpleAdapter();
       }
       @Override
       public Adapter caseOutDataset(OutDataset object)
       {
         return createOutDatasetAdapter();
+      }
+      @Override
+      public Adapter caseService(Service object)
+      {
+        return createServiceAdapter();
       }
       @Override
       public Adapter caseOutputValue(OutputValue object)
@@ -283,6 +378,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
       public Adapter caseOutputBase(OutputBase object)
       {
         return createOutputBaseAdapter();
+      }
+      @Override
+      public Adapter casePermissions(Permissions object)
+      {
+        return createPermissionsAdapter();
+      }
+      @Override
+      public Adapter casePermission(Permission object)
+      {
+        return createPermissionAdapter();
+      }
+      @Override
+      public Adapter caseCustomPermissionLevel(CustomPermissionLevel object)
+      {
+        return createCustomPermissionLevelAdapter();
       }
       @Override
       public Adapter caseGenerateSection(GenerateSection object)
@@ -300,9 +410,24 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createGenerateBodySaltAdapter();
       }
       @Override
+      public Adapter caseGenerateBodyKel(GenerateBodyKel object)
+      {
+        return createGenerateBodyKelAdapter();
+      }
+      @Override
       public Adapter caseVisualSection(VisualSection object)
       {
         return createVisualSectionAdapter();
+      }
+      @Override
+      public Adapter caseVisInputValue(VisInputValue object)
+      {
+        return createVisInputValueAdapter();
+      }
+      @Override
+      public Adapter caseVisBasisParens(VisBasisParens object)
+      {
+        return createVisBasisParensAdapter();
       }
       @Override
       public Adapter caseVisualization(Visualization object)
@@ -315,14 +440,34 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createVisBasisAdapter();
       }
       @Override
+      public Adapter caseVisFilter(VisFilter object)
+      {
+        return createVisFilterAdapter();
+      }
+      @Override
       public Adapter caseVisBasisQualifiers(VisBasisQualifiers object)
       {
         return createVisBasisQualifiersAdapter();
       }
       @Override
+      public Adapter casePosVizData(PosVizData object)
+      {
+        return createPosVizDataAdapter();
+      }
+      @Override
       public Adapter caseFunction(Function object)
       {
         return createFunctionAdapter();
+      }
+      @Override
+      public Adapter caseQFunction(QFunction object)
+      {
+        return createQFunctionAdapter();
+      }
+      @Override
+      public Adapter caseNestBasisQualifier(NestBasisQualifier object)
+      {
+        return createNestBasisQualifierAdapter();
       }
       @Override
       public Adapter caseVisualSectionOptions(VisualSectionOptions object)
@@ -335,6 +480,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createVisualSectionOptionAdapter();
       }
       @Override
+      public Adapter caseVizAssign(VizAssign object)
+      {
+        return createVizAssignAdapter();
+      }
+      @Override
+      public Adapter caseVizAssignList(VizAssignList object)
+      {
+        return createVizAssignListAdapter();
+      }
+      @Override
+      public Adapter caseVizEnumDecl(VizEnumDecl object)
+      {
+        return createVizEnumDeclAdapter();
+      }
+      @Override
       public Adapter caseVisualOptions(VisualOptions object)
       {
         return createVisualOptionsAdapter();
@@ -345,9 +505,34 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createVisualOptionAdapter();
       }
       @Override
+      public Adapter caseSelectEvent(SelectEvent object)
+      {
+        return createSelectEventAdapter();
+      }
+      @Override
+      public Adapter caseSelectOption(SelectOption object)
+      {
+        return createSelectOptionAdapter();
+      }
+      @Override
+      public Adapter caseLinkOption(LinkOption object)
+      {
+        return createLinkOptionAdapter();
+      }
+      @Override
       public Adapter caseVisualMultival(VisualMultival object)
       {
         return createVisualMultivalAdapter();
+      }
+      @Override
+      public Adapter caseVisibilityOption(VisibilityOption object)
+      {
+        return createVisibilityOptionAdapter();
+      }
+      @Override
+      public Adapter caseVisualCustomOption(VisualCustomOption object)
+      {
+        return createVisualCustomOptionAdapter();
       }
       @Override
       public Adapter caseCustomSection(CustomSection object)
@@ -358,6 +543,11 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
       public Adapter caseCustomValue(CustomValue object)
       {
         return createCustomValueAdapter();
+      }
+      @Override
+      public Adapter caseResourceType(ResourceType object)
+      {
+        return createResourceTypeAdapter();
       }
       @Override
       public Adapter caseResourceOption(ResourceOption object)
@@ -522,6 +712,51 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.InstanceID <em>Instance ID</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.InstanceID
+   * @generated
+   */
+  public Adapter createInstanceIDAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.InstanceOptions <em>Instance Options</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.InstanceOptions
+   * @generated
+   */
+  public Adapter createInstanceOptionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.InstanceOption <em>Instance Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.InstanceOption
+   * @generated
+   */
+  public Adapter createInstanceOptionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ContractInstance <em>Contract Instance</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -547,6 +782,81 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFieldDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.KelAttrDecl <em>Kel Attr Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.KelAttrDecl
+   * @generated
+   */
+  public Adapter createKelAttrDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.KelEntityDeclSimple <em>Kel Entity Decl Simple</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.KelEntityDeclSimple
+   * @generated
+   */
+  public Adapter createKelEntityDeclSimpleAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.KelEntityDecl <em>Kel Entity Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.KelEntityDecl
+   * @generated
+   */
+  public Adapter createKelEntityDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.EnumEntry <em>Enum Entry</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.EnumEntry
+   * @generated
+   */
+  public Adapter createEnumEntryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.EnumList <em>Enum List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.EnumList
+   * @generated
+   */
+  public Adapter createEnumListAdapter()
   {
     return null;
   }
@@ -627,21 +937,6 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Record <em>Record</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.hipie.hIPIE.Record
-   * @generated
-   */
-  public Adapter createRecordAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Dataset <em>Dataset</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -667,6 +962,66 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createGroupAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Real <em>Real</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.Real
+   * @generated
+   */
+  public Adapter createRealAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.InputSimpleTypes <em>Input Simple Types</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.InputSimpleTypes
+   * @generated
+   */
+  public Adapter createInputSimpleTypesAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Record <em>Record</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.Record
+   * @generated
+   */
+  public Adapter createRecordAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.KelBase <em>Kel Base</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.KelBase
+   * @generated
+   */
+  public Adapter createKelBaseAdapter()
   {
     return null;
   }
@@ -727,6 +1082,36 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createInputOptionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.InputtypeOptions <em>Inputtype Options</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.InputtypeOptions
+   * @generated
+   */
+  public Adapter createInputtypeOptionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.IntegrateSection <em>Integrate Section</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.IntegrateSection
+   * @generated
+   */
+  public Adapter createIntegrateSectionAdapter()
   {
     return null;
   }
@@ -897,6 +1282,51 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ECLBoolean <em>ECL Boolean</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.ECLBoolean
+   * @generated
+   */
+  public Adapter createECLBooleanAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ECLNumType <em>ECL Num Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.ECLNumType
+   * @generated
+   */
+  public Adapter createECLNumTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ECLDecType <em>ECL Dec Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.ECLDecType
+   * @generated
+   */
+  public Adapter createECLDecTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ECLfieldType <em>EC Lfield Type</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -912,21 +1342,6 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.PosVizData <em>Pos Viz Data</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see org.xtext.hipie.hIPIE.PosVizData
-   * @generated
-   */
-  public Adapter createPosVizDataAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ECLOutputDecl <em>ECL Output Decl</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -937,6 +1352,51 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createECLOutputDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ServiceInputValue <em>Service Input Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.ServiceInputValue
+   * @generated
+   */
+  public Adapter createServiceInputValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ServiceInputSection <em>Service Input Section</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.ServiceInputSection
+   * @generated
+   */
+  public Adapter createServiceInputSectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.NestedDatasetDecl <em>Nested Dataset Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.NestedDatasetDecl
+   * @generated
+   */
+  public Adapter createNestedDatasetDeclAdapter()
   {
     return null;
   }
@@ -972,16 +1432,16 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.OutType <em>Out Type</em>}'.
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.OutTypeSimple <em>Out Type Simple</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see org.xtext.hipie.hIPIE.OutType
+   * @see org.xtext.hipie.hIPIE.OutTypeSimple
    * @generated
    */
-  public Adapter createOutTypeAdapter()
+  public Adapter createOutTypeSimpleAdapter()
   {
     return null;
   }
@@ -997,6 +1457,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOutDatasetAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Service <em>Service</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.Service
+   * @generated
+   */
+  public Adapter createServiceAdapter()
   {
     return null;
   }
@@ -1027,6 +1502,51 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createOutputBaseAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Permissions <em>Permissions</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.Permissions
+   * @generated
+   */
+  public Adapter createPermissionsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Permission <em>Permission</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.Permission
+   * @generated
+   */
+  public Adapter createPermissionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.CustomPermissionLevel <em>Custom Permission Level</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.CustomPermissionLevel
+   * @generated
+   */
+  public Adapter createCustomPermissionLevelAdapter()
   {
     return null;
   }
@@ -1077,6 +1597,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.GenerateBodyKel <em>Generate Body Kel</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.GenerateBodyKel
+   * @generated
+   */
+  public Adapter createGenerateBodyKelAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisualSection <em>Visual Section</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1087,6 +1622,36 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVisualSectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisInputValue <em>Vis Input Value</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VisInputValue
+   * @generated
+   */
+  public Adapter createVisInputValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisBasisParens <em>Vis Basis Parens</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VisBasisParens
+   * @generated
+   */
+  public Adapter createVisBasisParensAdapter()
   {
     return null;
   }
@@ -1122,6 +1687,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisFilter <em>Vis Filter</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VisFilter
+   * @generated
+   */
+  public Adapter createVisFilterAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisBasisQualifiers <em>Vis Basis Qualifiers</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1137,6 +1717,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.PosVizData <em>Pos Viz Data</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.PosVizData
+   * @generated
+   */
+  public Adapter createPosVizDataAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.Function <em>Function</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1147,6 +1742,36 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.QFunction <em>QFunction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.QFunction
+   * @generated
+   */
+  public Adapter createQFunctionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.NestBasisQualifier <em>Nest Basis Qualifier</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.NestBasisQualifier
+   * @generated
+   */
+  public Adapter createNestBasisQualifierAdapter()
   {
     return null;
   }
@@ -1182,6 +1807,51 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VizAssign <em>Viz Assign</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VizAssign
+   * @generated
+   */
+  public Adapter createVizAssignAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VizAssignList <em>Viz Assign List</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VizAssignList
+   * @generated
+   */
+  public Adapter createVizAssignListAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VizEnumDecl <em>Viz Enum Decl</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VizEnumDecl
+   * @generated
+   */
+  public Adapter createVizEnumDeclAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisualOptions <em>Visual Options</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1212,6 +1882,51 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.SelectEvent <em>Select Event</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.SelectEvent
+   * @generated
+   */
+  public Adapter createSelectEventAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.SelectOption <em>Select Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.SelectOption
+   * @generated
+   */
+  public Adapter createSelectOptionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.LinkOption <em>Link Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.LinkOption
+   * @generated
+   */
+  public Adapter createLinkOptionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisualMultival <em>Visual Multival</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -1222,6 +1937,36 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVisualMultivalAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisibilityOption <em>Visibility Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VisibilityOption
+   * @generated
+   */
+  public Adapter createVisibilityOptionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisualCustomOption <em>Visual Custom Option</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VisualCustomOption
+   * @generated
+   */
+  public Adapter createVisualCustomOptionAdapter()
   {
     return null;
   }
@@ -1252,6 +1997,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createCustomValueAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.ResourceType <em>Resource Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.ResourceType
+   * @generated
+   */
+  public Adapter createResourceTypeAdapter()
   {
     return null;
   }

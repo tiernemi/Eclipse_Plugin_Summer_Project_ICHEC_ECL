@@ -95,6 +95,33 @@ public interface HIPIEFactory extends EFactory
   CompositionHeader createCompositionHeader();
 
   /**
+   * Returns a new object of class '<em>Instance ID</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Instance ID</em>'.
+   * @generated
+   */
+  InstanceID createInstanceID();
+
+  /**
+   * Returns a new object of class '<em>Instance Options</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Instance Options</em>'.
+   * @generated
+   */
+  InstanceOptions createInstanceOptions();
+
+  /**
+   * Returns a new object of class '<em>Instance Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Instance Option</em>'.
+   * @generated
+   */
+  InstanceOption createInstanceOption();
+
+  /**
    * Returns a new object of class '<em>Contract Instance</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -111,6 +138,51 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   FieldDecl createFieldDecl();
+
+  /**
+   * Returns a new object of class '<em>Kel Attr Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Kel Attr Decl</em>'.
+   * @generated
+   */
+  KelAttrDecl createKelAttrDecl();
+
+  /**
+   * Returns a new object of class '<em>Kel Entity Decl Simple</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Kel Entity Decl Simple</em>'.
+   * @generated
+   */
+  KelEntityDeclSimple createKelEntityDeclSimple();
+
+  /**
+   * Returns a new object of class '<em>Kel Entity Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Kel Entity Decl</em>'.
+   * @generated
+   */
+  KelEntityDecl createKelEntityDecl();
+
+  /**
+   * Returns a new object of class '<em>Enum Entry</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum Entry</em>'.
+   * @generated
+   */
+  EnumEntry createEnumEntry();
+
+  /**
+   * Returns a new object of class '<em>Enum List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Enum List</em>'.
+   * @generated
+   */
+  EnumList createEnumList();
 
   /**
    * Returns a new object of class '<em>Enum Decl</em>'.
@@ -158,15 +230,6 @@ public interface HIPIEFactory extends EFactory
   StringVar createStringVar();
 
   /**
-   * Returns a new object of class '<em>Record</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Record</em>'.
-   * @generated
-   */
-  Record createRecord();
-
-  /**
    * Returns a new object of class '<em>Dataset</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -183,6 +246,42 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   Group createGroup();
+
+  /**
+   * Returns a new object of class '<em>Real</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Real</em>'.
+   * @generated
+   */
+  Real createReal();
+
+  /**
+   * Returns a new object of class '<em>Input Simple Types</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Input Simple Types</em>'.
+   * @generated
+   */
+  InputSimpleTypes createInputSimpleTypes();
+
+  /**
+   * Returns a new object of class '<em>Record</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Record</em>'.
+   * @generated
+   */
+  Record createRecord();
+
+  /**
+   * Returns a new object of class '<em>Kel Base</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Kel Base</em>'.
+   * @generated
+   */
+  KelBase createKelBase();
 
   /**
    * Returns a new object of class '<em>Datatype</em>'.
@@ -219,6 +318,24 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   InputOption createInputOption();
+
+  /**
+   * Returns a new object of class '<em>Inputtype Options</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Inputtype Options</em>'.
+   * @generated
+   */
+  InputtypeOptions createInputtypeOptions();
+
+  /**
+   * Returns a new object of class '<em>Integrate Section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Integrate Section</em>'.
+   * @generated
+   */
+  IntegrateSection createIntegrateSection();
 
   /**
    * Returns a new object of class '<em>Output Section</em>'.
@@ -320,6 +437,33 @@ public interface HIPIEFactory extends EFactory
   ECLReal createECLReal();
 
   /**
+   * Returns a new object of class '<em>ECL Boolean</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ECL Boolean</em>'.
+   * @generated
+   */
+  ECLBoolean createECLBoolean();
+
+  /**
+   * Returns a new object of class '<em>ECL Num Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ECL Num Type</em>'.
+   * @generated
+   */
+  ECLNumType createECLNumType();
+
+  /**
+   * Returns a new object of class '<em>ECL Dec Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>ECL Dec Type</em>'.
+   * @generated
+   */
+  ECLDecType createECLDecType();
+
+  /**
    * Returns a new object of class '<em>EC Lfield Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -329,15 +473,6 @@ public interface HIPIEFactory extends EFactory
   ECLfieldType createECLfieldType();
 
   /**
-   * Returns a new object of class '<em>Pos Viz Data</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Pos Viz Data</em>'.
-   * @generated
-   */
-  PosVizData createPosVizData();
-
-  /**
    * Returns a new object of class '<em>ECL Output Decl</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -345,6 +480,33 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   ECLOutputDecl createECLOutputDecl();
+
+  /**
+   * Returns a new object of class '<em>Service Input Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Service Input Value</em>'.
+   * @generated
+   */
+  ServiceInputValue createServiceInputValue();
+
+  /**
+   * Returns a new object of class '<em>Service Input Section</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Service Input Section</em>'.
+   * @generated
+   */
+  ServiceInputSection createServiceInputSection();
+
+  /**
+   * Returns a new object of class '<em>Nested Dataset Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Nested Dataset Decl</em>'.
+   * @generated
+   */
+  NestedDatasetDecl createNestedDatasetDecl();
 
   /**
    * Returns a new object of class '<em>Output Option</em>'.
@@ -365,13 +527,13 @@ public interface HIPIEFactory extends EFactory
   OutputOptions createOutputOptions();
 
   /**
-   * Returns a new object of class '<em>Out Type</em>'.
+   * Returns a new object of class '<em>Out Type Simple</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Out Type</em>'.
+   * @return a new object of class '<em>Out Type Simple</em>'.
    * @generated
    */
-  OutType createOutType();
+  OutTypeSimple createOutTypeSimple();
 
   /**
    * Returns a new object of class '<em>Out Dataset</em>'.
@@ -381,6 +543,15 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   OutDataset createOutDataset();
+
+  /**
+   * Returns a new object of class '<em>Service</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Service</em>'.
+   * @generated
+   */
+  Service createService();
 
   /**
    * Returns a new object of class '<em>Output Value</em>'.
@@ -399,6 +570,33 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   OutputBase createOutputBase();
+
+  /**
+   * Returns a new object of class '<em>Permissions</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Permissions</em>'.
+   * @generated
+   */
+  Permissions createPermissions();
+
+  /**
+   * Returns a new object of class '<em>Permission</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Permission</em>'.
+   * @generated
+   */
+  Permission createPermission();
+
+  /**
+   * Returns a new object of class '<em>Custom Permission Level</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Custom Permission Level</em>'.
+   * @generated
+   */
+  CustomPermissionLevel createCustomPermissionLevel();
 
   /**
    * Returns a new object of class '<em>Generate Section</em>'.
@@ -428,6 +626,15 @@ public interface HIPIEFactory extends EFactory
   GenerateBodySalt createGenerateBodySalt();
 
   /**
+   * Returns a new object of class '<em>Generate Body Kel</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Generate Body Kel</em>'.
+   * @generated
+   */
+  GenerateBodyKel createGenerateBodyKel();
+
+  /**
    * Returns a new object of class '<em>Visual Section</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -435,6 +642,24 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   VisualSection createVisualSection();
+
+  /**
+   * Returns a new object of class '<em>Vis Input Value</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vis Input Value</em>'.
+   * @generated
+   */
+  VisInputValue createVisInputValue();
+
+  /**
+   * Returns a new object of class '<em>Vis Basis Parens</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vis Basis Parens</em>'.
+   * @generated
+   */
+  VisBasisParens createVisBasisParens();
 
   /**
    * Returns a new object of class '<em>Visualization</em>'.
@@ -455,6 +680,15 @@ public interface HIPIEFactory extends EFactory
   VisBasis createVisBasis();
 
   /**
+   * Returns a new object of class '<em>Vis Filter</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vis Filter</em>'.
+   * @generated
+   */
+  VisFilter createVisFilter();
+
+  /**
    * Returns a new object of class '<em>Vis Basis Qualifiers</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -464,6 +698,15 @@ public interface HIPIEFactory extends EFactory
   VisBasisQualifiers createVisBasisQualifiers();
 
   /**
+   * Returns a new object of class '<em>Pos Viz Data</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Pos Viz Data</em>'.
+   * @generated
+   */
+  PosVizData createPosVizData();
+
+  /**
    * Returns a new object of class '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -471,6 +714,24 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   Function createFunction();
+
+  /**
+   * Returns a new object of class '<em>QFunction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>QFunction</em>'.
+   * @generated
+   */
+  QFunction createQFunction();
+
+  /**
+   * Returns a new object of class '<em>Nest Basis Qualifier</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Nest Basis Qualifier</em>'.
+   * @generated
+   */
+  NestBasisQualifier createNestBasisQualifier();
 
   /**
    * Returns a new object of class '<em>Visual Section Options</em>'.
@@ -491,6 +752,33 @@ public interface HIPIEFactory extends EFactory
   VisualSectionOption createVisualSectionOption();
 
   /**
+   * Returns a new object of class '<em>Viz Assign</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Viz Assign</em>'.
+   * @generated
+   */
+  VizAssign createVizAssign();
+
+  /**
+   * Returns a new object of class '<em>Viz Assign List</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Viz Assign List</em>'.
+   * @generated
+   */
+  VizAssignList createVizAssignList();
+
+  /**
+   * Returns a new object of class '<em>Viz Enum Decl</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Viz Enum Decl</em>'.
+   * @generated
+   */
+  VizEnumDecl createVizEnumDecl();
+
+  /**
    * Returns a new object of class '<em>Visual Options</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -509,6 +797,33 @@ public interface HIPIEFactory extends EFactory
   VisualOption createVisualOption();
 
   /**
+   * Returns a new object of class '<em>Select Event</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Select Event</em>'.
+   * @generated
+   */
+  SelectEvent createSelectEvent();
+
+  /**
+   * Returns a new object of class '<em>Select Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Select Option</em>'.
+   * @generated
+   */
+  SelectOption createSelectOption();
+
+  /**
+   * Returns a new object of class '<em>Link Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Link Option</em>'.
+   * @generated
+   */
+  LinkOption createLinkOption();
+
+  /**
    * Returns a new object of class '<em>Visual Multival</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -516,6 +831,24 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   VisualMultival createVisualMultival();
+
+  /**
+   * Returns a new object of class '<em>Visibility Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Visibility Option</em>'.
+   * @generated
+   */
+  VisibilityOption createVisibilityOption();
+
+  /**
+   * Returns a new object of class '<em>Visual Custom Option</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Visual Custom Option</em>'.
+   * @generated
+   */
+  VisualCustomOption createVisualCustomOption();
 
   /**
    * Returns a new object of class '<em>Custom Section</em>'.
@@ -534,6 +867,15 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   CustomValue createCustomValue();
+
+  /**
+   * Returns a new object of class '<em>Resource Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Resource Type</em>'.
+   * @generated
+   */
+  ResourceType createResourceType();
 
   /**
    * Returns a new object of class '<em>Resource Option</em>'.

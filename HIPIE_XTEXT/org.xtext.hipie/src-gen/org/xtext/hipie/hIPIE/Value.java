@@ -11,7 +11,6 @@ package org.xtext.hipie.hIPIE;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.Value#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Value#getInt_val <em>Int val</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Value#getStr_val <em>Str val</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Value#getRes_ops <em>Res ops</em>}</li>
@@ -22,34 +21,8 @@ package org.xtext.hipie.hIPIE;
  * @model
  * @generated
  */
-public interface Value extends CustomValue, ResourceValue
+public interface Value extends SelectEvent, CustomValue, ResourceValue
 {
-  /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getValue_Name()
-   * @model
-   * @generated
-   */
-  String getName();
-
-  /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Value#getName <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
-   * @generated
-   */
-  void setName(String value);
-
   /**
    * Returns the value of the '<em><b>Int val</b></em>' attribute.
    * <!-- begin-user-doc -->

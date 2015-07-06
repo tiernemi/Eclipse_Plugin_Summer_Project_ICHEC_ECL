@@ -97,8 +97,11 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         Value value = (Value)theEObject;
         T result = caseValue(value);
+        if (result == null) result = caseSelectEvent(value);
         if (result == null) result = caseCustomValue(value);
         if (result == null) result = caseResourceValue(value);
+        if (result == null) result = caseSelectOption(value);
+        if (result == null) result = caseVisualOption(value);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -106,6 +109,7 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         ValueList valueList = (ValueList)theEObject;
         T result = caseValueList(valueList);
+        if (result == null) result = caseInstanceOption(valueList);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -130,6 +134,27 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.INSTANCE_ID:
+      {
+        InstanceID instanceID = (InstanceID)theEObject;
+        T result = caseInstanceID(instanceID);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.INSTANCE_OPTIONS:
+      {
+        InstanceOptions instanceOptions = (InstanceOptions)theEObject;
+        T result = caseInstanceOptions(instanceOptions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.INSTANCE_OPTION:
+      {
+        InstanceOption instanceOption = (InstanceOption)theEObject;
+        T result = caseInstanceOption(instanceOption);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.CONTRACT_INSTANCE:
       {
         ContractInstance contractInstance = (ContractInstance)theEObject;
@@ -145,11 +170,49 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.KEL_ATTR_DECL:
+      {
+        KelAttrDecl kelAttrDecl = (KelAttrDecl)theEObject;
+        T result = caseKelAttrDecl(kelAttrDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.KEL_ENTITY_DECL_SIMPLE:
+      {
+        KelEntityDeclSimple kelEntityDeclSimple = (KelEntityDeclSimple)theEObject;
+        T result = caseKelEntityDeclSimple(kelEntityDeclSimple);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.KEL_ENTITY_DECL:
+      {
+        KelEntityDecl kelEntityDecl = (KelEntityDecl)theEObject;
+        T result = caseKelEntityDecl(kelEntityDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.ENUM_ENTRY:
+      {
+        EnumEntry enumEntry = (EnumEntry)theEObject;
+        T result = caseEnumEntry(enumEntry);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.ENUM_LIST:
+      {
+        EnumList enumList = (EnumList)theEObject;
+        T result = caseEnumList(enumList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.ENUM_DECL:
       {
         EnumDecl enumDecl = (EnumDecl)theEObject;
         T result = caseEnumDecl(enumDecl);
+        if (result == null) result = caseInputSimpleTypes(enumDecl);
+        if (result == null) result = caseDatatype(enumDecl);
         if (result == null) result = caseInputValue(enumDecl);
+        if (result == null) result = caseVisInputValue(enumDecl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -164,9 +227,11 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         Bool bool = (Bool)theEObject;
         T result = caseBool(bool);
+        if (result == null) result = caseInputSimpleTypes(bool);
+        if (result == null) result = caseOutfieldDecl(bool);
         if (result == null) result = caseDatatype(bool);
         if (result == null) result = caseInputValue(bool);
-        if (result == null) result = caseOutfieldDecl(bool);
+        if (result == null) result = caseVisInputValue(bool);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -174,9 +239,11 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         IntVar intVar = (IntVar)theEObject;
         T result = caseIntVar(intVar);
+        if (result == null) result = caseInputSimpleTypes(intVar);
+        if (result == null) result = caseOutfieldDecl(intVar);
         if (result == null) result = caseDatatype(intVar);
         if (result == null) result = caseInputValue(intVar);
-        if (result == null) result = caseOutfieldDecl(intVar);
+        if (result == null) result = caseVisInputValue(intVar);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -184,18 +251,11 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         StringVar stringVar = (StringVar)theEObject;
         T result = caseStringVar(stringVar);
+        if (result == null) result = caseInputSimpleTypes(stringVar);
+        if (result == null) result = caseOutfieldDecl(stringVar);
         if (result == null) result = caseDatatype(stringVar);
         if (result == null) result = caseInputValue(stringVar);
-        if (result == null) result = caseOutfieldDecl(stringVar);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case HIPIEPackage.RECORD:
-      {
-        Record record = (Record)theEObject;
-        T result = caseRecord(record);
-        if (result == null) result = caseDatatype(record);
-        if (result == null) result = caseInputValue(record);
+        if (result == null) result = caseVisInputValue(stringVar);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -212,7 +272,47 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         Group group = (Group)theEObject;
         T result = caseGroup(group);
+        if (result == null) result = caseDatatype(group);
         if (result == null) result = caseInputValue(group);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.REAL:
+      {
+        Real real = (Real)theEObject;
+        T result = caseReal(real);
+        if (result == null) result = caseInputSimpleTypes(real);
+        if (result == null) result = caseDatatype(real);
+        if (result == null) result = caseInputValue(real);
+        if (result == null) result = caseVisInputValue(real);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.INPUT_SIMPLE_TYPES:
+      {
+        InputSimpleTypes inputSimpleTypes = (InputSimpleTypes)theEObject;
+        T result = caseInputSimpleTypes(inputSimpleTypes);
+        if (result == null) result = caseDatatype(inputSimpleTypes);
+        if (result == null) result = caseInputValue(inputSimpleTypes);
+        if (result == null) result = caseVisInputValue(inputSimpleTypes);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.RECORD:
+      {
+        Record record = (Record)theEObject;
+        T result = caseRecord(record);
+        if (result == null) result = caseDatatype(record);
+        if (result == null) result = caseInputValue(record);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.KEL_BASE:
+      {
+        KelBase kelBase = (KelBase)theEObject;
+        T result = caseKelBase(kelBase);
+        if (result == null) result = caseDatatype(kelBase);
+        if (result == null) result = caseInputValue(kelBase);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -244,6 +344,20 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.INPUTTYPE_OPTIONS:
+      {
+        InputtypeOptions inputtypeOptions = (InputtypeOptions)theEObject;
+        T result = caseInputtypeOptions(inputtypeOptions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.INTEGRATE_SECTION:
+      {
+        IntegrateSection integrateSection = (IntegrateSection)theEObject;
+        T result = caseIntegrateSection(integrateSection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.OUTPUT_SECTION:
       {
         OutputSection outputSection = (OutputSection)theEObject;
@@ -263,8 +377,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLInteger eclInteger = (ECLInteger)theEObject;
         T result = caseECLInteger(eclInteger);
         if (result == null) result = caseECLfieldType(eclInteger);
-        if (result == null) result = casePosVizData(eclInteger);
         if (result == null) result = caseECLOutputDecl(eclInteger);
+        if (result == null) result = caseServiceInputValue(eclInteger);
+        if (result == null) result = casePosVizData(eclInteger);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -273,8 +388,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLUnsigned eclUnsigned = (ECLUnsigned)theEObject;
         T result = caseECLUnsigned(eclUnsigned);
         if (result == null) result = caseECLfieldType(eclUnsigned);
-        if (result == null) result = casePosVizData(eclUnsigned);
         if (result == null) result = caseECLOutputDecl(eclUnsigned);
+        if (result == null) result = caseServiceInputValue(eclUnsigned);
+        if (result == null) result = casePosVizData(eclUnsigned);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -283,8 +399,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLString eclString = (ECLString)theEObject;
         T result = caseECLString(eclString);
         if (result == null) result = caseECLfieldType(eclString);
-        if (result == null) result = casePosVizData(eclString);
         if (result == null) result = caseECLOutputDecl(eclString);
+        if (result == null) result = caseServiceInputValue(eclString);
+        if (result == null) result = casePosVizData(eclString);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -293,8 +410,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLQstring eclQstring = (ECLQstring)theEObject;
         T result = caseECLQstring(eclQstring);
         if (result == null) result = caseECLfieldType(eclQstring);
-        if (result == null) result = casePosVizData(eclQstring);
         if (result == null) result = caseECLOutputDecl(eclQstring);
+        if (result == null) result = caseServiceInputValue(eclQstring);
+        if (result == null) result = casePosVizData(eclQstring);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -303,8 +421,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLVarstring eclVarstring = (ECLVarstring)theEObject;
         T result = caseECLVarstring(eclVarstring);
         if (result == null) result = caseECLfieldType(eclVarstring);
-        if (result == null) result = casePosVizData(eclVarstring);
         if (result == null) result = caseECLOutputDecl(eclVarstring);
+        if (result == null) result = caseServiceInputValue(eclVarstring);
+        if (result == null) result = casePosVizData(eclVarstring);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -313,8 +432,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLUnicode eclUnicode = (ECLUnicode)theEObject;
         T result = caseECLUnicode(eclUnicode);
         if (result == null) result = caseECLfieldType(eclUnicode);
-        if (result == null) result = casePosVizData(eclUnicode);
         if (result == null) result = caseECLOutputDecl(eclUnicode);
+        if (result == null) result = caseServiceInputValue(eclUnicode);
+        if (result == null) result = casePosVizData(eclUnicode);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -323,8 +443,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLVarunicode eclVarunicode = (ECLVarunicode)theEObject;
         T result = caseECLVarunicode(eclVarunicode);
         if (result == null) result = caseECLfieldType(eclVarunicode);
-        if (result == null) result = casePosVizData(eclVarunicode);
         if (result == null) result = caseECLOutputDecl(eclVarunicode);
+        if (result == null) result = caseServiceInputValue(eclVarunicode);
+        if (result == null) result = casePosVizData(eclVarunicode);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -333,8 +454,9 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLData eclData = (ECLData)theEObject;
         T result = caseECLData(eclData);
         if (result == null) result = caseECLfieldType(eclData);
-        if (result == null) result = casePosVizData(eclData);
         if (result == null) result = caseECLOutputDecl(eclData);
+        if (result == null) result = caseServiceInputValue(eclData);
+        if (result == null) result = casePosVizData(eclData);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -343,8 +465,42 @@ public class HIPIESwitch<T> extends Switch<T>
         ECLReal eclReal = (ECLReal)theEObject;
         T result = caseECLReal(eclReal);
         if (result == null) result = caseECLfieldType(eclReal);
-        if (result == null) result = casePosVizData(eclReal);
         if (result == null) result = caseECLOutputDecl(eclReal);
+        if (result == null) result = caseServiceInputValue(eclReal);
+        if (result == null) result = casePosVizData(eclReal);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.ECL_BOOLEAN:
+      {
+        ECLBoolean eclBoolean = (ECLBoolean)theEObject;
+        T result = caseECLBoolean(eclBoolean);
+        if (result == null) result = caseECLfieldType(eclBoolean);
+        if (result == null) result = caseECLOutputDecl(eclBoolean);
+        if (result == null) result = caseServiceInputValue(eclBoolean);
+        if (result == null) result = casePosVizData(eclBoolean);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.ECL_NUM_TYPE:
+      {
+        ECLNumType eclNumType = (ECLNumType)theEObject;
+        T result = caseECLNumType(eclNumType);
+        if (result == null) result = caseECLfieldType(eclNumType);
+        if (result == null) result = caseECLOutputDecl(eclNumType);
+        if (result == null) result = caseServiceInputValue(eclNumType);
+        if (result == null) result = casePosVizData(eclNumType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.ECL_DEC_TYPE:
+      {
+        ECLDecType eclDecType = (ECLDecType)theEObject;
+        T result = caseECLDecType(eclDecType);
+        if (result == null) result = caseECLfieldType(eclDecType);
+        if (result == null) result = caseECLOutputDecl(eclDecType);
+        if (result == null) result = caseServiceInputValue(eclDecType);
+        if (result == null) result = casePosVizData(eclDecType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -352,15 +508,9 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         ECLfieldType ecLfieldType = (ECLfieldType)theEObject;
         T result = caseECLfieldType(ecLfieldType);
-        if (result == null) result = casePosVizData(ecLfieldType);
         if (result == null) result = caseECLOutputDecl(ecLfieldType);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case HIPIEPackage.POS_VIZ_DATA:
-      {
-        PosVizData posVizData = (PosVizData)theEObject;
-        T result = casePosVizData(posVizData);
+        if (result == null) result = caseServiceInputValue(ecLfieldType);
+        if (result == null) result = casePosVizData(ecLfieldType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -368,6 +518,29 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         ECLOutputDecl eclOutputDecl = (ECLOutputDecl)theEObject;
         T result = caseECLOutputDecl(eclOutputDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.SERVICE_INPUT_VALUE:
+      {
+        ServiceInputValue serviceInputValue = (ServiceInputValue)theEObject;
+        T result = caseServiceInputValue(serviceInputValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.SERVICE_INPUT_SECTION:
+      {
+        ServiceInputSection serviceInputSection = (ServiceInputSection)theEObject;
+        T result = caseServiceInputSection(serviceInputSection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.NESTED_DATASET_DECL:
+      {
+        NestedDatasetDecl nestedDatasetDecl = (NestedDatasetDecl)theEObject;
+        T result = caseNestedDatasetDecl(nestedDatasetDecl);
+        if (result == null) result = caseECLOutputDecl(nestedDatasetDecl);
+        if (result == null) result = caseServiceInputValue(nestedDatasetDecl);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -385,11 +558,11 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case HIPIEPackage.OUT_TYPE:
+      case HIPIEPackage.OUT_TYPE_SIMPLE:
       {
-        OutType outType = (OutType)theEObject;
-        T result = caseOutType(outType);
-        if (result == null) result = caseOutputValue(outType);
+        OutTypeSimple outTypeSimple = (OutTypeSimple)theEObject;
+        T result = caseOutTypeSimple(outTypeSimple);
+        if (result == null) result = caseOutputValue(outTypeSimple);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -397,7 +570,18 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         OutDataset outDataset = (OutDataset)theEObject;
         T result = caseOutDataset(outDataset);
+        if (result == null) result = caseNestedDatasetDecl(outDataset);
         if (result == null) result = caseOutputValue(outDataset);
+        if (result == null) result = caseECLOutputDecl(outDataset);
+        if (result == null) result = caseServiceInputValue(outDataset);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.SERVICE:
+      {
+        Service service = (Service)theEObject;
+        T result = caseService(service);
+        if (result == null) result = caseOutputValue(service);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -412,6 +596,27 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         OutputBase outputBase = (OutputBase)theEObject;
         T result = caseOutputBase(outputBase);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.PERMISSIONS:
+      {
+        Permissions permissions = (Permissions)theEObject;
+        T result = casePermissions(permissions);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.PERMISSION:
+      {
+        Permission permission = (Permission)theEObject;
+        T result = casePermission(permission);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.CUSTOM_PERMISSION_LEVEL:
+      {
+        CustomPermissionLevel customPermissionLevel = (CustomPermissionLevel)theEObject;
+        T result = caseCustomPermissionLevel(customPermissionLevel);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -438,10 +643,32 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.GENERATE_BODY_KEL:
+      {
+        GenerateBodyKel generateBodyKel = (GenerateBodyKel)theEObject;
+        T result = caseGenerateBodyKel(generateBodyKel);
+        if (result == null) result = caseGenerateSection(generateBodyKel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.VISUAL_SECTION:
       {
         VisualSection visualSection = (VisualSection)theEObject;
         T result = caseVisualSection(visualSection);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.VIS_INPUT_VALUE:
+      {
+        VisInputValue visInputValue = (VisInputValue)theEObject;
+        T result = caseVisInputValue(visInputValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.VIS_BASIS_PARENS:
+      {
+        VisBasisParens visBasisParens = (VisBasisParens)theEObject;
+        T result = caseVisBasisParens(visBasisParens);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -459,10 +686,26 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.VIS_FILTER:
+      {
+        VisFilter visFilter = (VisFilter)theEObject;
+        T result = caseVisFilter(visFilter);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.VIS_BASIS_QUALIFIERS:
       {
         VisBasisQualifiers visBasisQualifiers = (VisBasisQualifiers)theEObject;
         T result = caseVisBasisQualifiers(visBasisQualifiers);
+        if (result == null) result = caseNestBasisQualifier(visBasisQualifiers);
+        if (result == null) result = caseQFunction(visBasisQualifiers);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.POS_VIZ_DATA:
+      {
+        PosVizData posVizData = (PosVizData)theEObject;
+        T result = casePosVizData(posVizData);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -470,6 +713,22 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         Function function = (Function)theEObject;
         T result = caseFunction(function);
+        if (result == null) result = caseQFunction(function);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.QFUNCTION:
+      {
+        QFunction qFunction = (QFunction)theEObject;
+        T result = caseQFunction(qFunction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.NEST_BASIS_QUALIFIER:
+      {
+        NestBasisQualifier nestBasisQualifier = (NestBasisQualifier)theEObject;
+        T result = caseNestBasisQualifier(nestBasisQualifier);
+        if (result == null) result = caseQFunction(nestBasisQualifier);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -487,6 +746,27 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.VIZ_ASSIGN:
+      {
+        VizAssign vizAssign = (VizAssign)theEObject;
+        T result = caseVizAssign(vizAssign);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.VIZ_ASSIGN_LIST:
+      {
+        VizAssignList vizAssignList = (VizAssignList)theEObject;
+        T result = caseVizAssignList(vizAssignList);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.VIZ_ENUM_DECL:
+      {
+        VizEnumDecl vizEnumDecl = (VizEnumDecl)theEObject;
+        T result = caseVizEnumDecl(vizEnumDecl);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.VISUAL_OPTIONS:
       {
         VisualOptions visualOptions = (VisualOptions)theEObject;
@@ -501,10 +781,52 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.SELECT_EVENT:
+      {
+        SelectEvent selectEvent = (SelectEvent)theEObject;
+        T result = caseSelectEvent(selectEvent);
+        if (result == null) result = caseSelectOption(selectEvent);
+        if (result == null) result = caseVisualOption(selectEvent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.SELECT_OPTION:
+      {
+        SelectOption selectOption = (SelectOption)theEObject;
+        T result = caseSelectOption(selectOption);
+        if (result == null) result = caseVisualOption(selectOption);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.LINK_OPTION:
+      {
+        LinkOption linkOption = (LinkOption)theEObject;
+        T result = caseLinkOption(linkOption);
+        if (result == null) result = caseVisualOption(linkOption);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.VISUAL_MULTIVAL:
       {
         VisualMultival visualMultival = (VisualMultival)theEObject;
         T result = caseVisualMultival(visualMultival);
+        if (result == null) result = caseVisualOption(visualMultival);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.VISIBILITY_OPTION:
+      {
+        VisibilityOption visibilityOption = (VisibilityOption)theEObject;
+        T result = caseVisibilityOption(visibilityOption);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.VISUAL_CUSTOM_OPTION:
+      {
+        VisualCustomOption visualCustomOption = (VisualCustomOption)theEObject;
+        T result = caseVisualCustomOption(visualCustomOption);
+        if (result == null) result = caseVisualOption(visualCustomOption);
+        if (result == null) result = caseResourceOption(visualCustomOption);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -519,6 +841,13 @@ public class HIPIESwitch<T> extends Switch<T>
       {
         CustomValue customValue = (CustomValue)theEObject;
         T result = caseCustomValue(customValue);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case HIPIEPackage.RESOURCE_TYPE:
+      {
+        ResourceType resourceType = (ResourceType)theEObject;
+        T result = caseResourceType(resourceType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -683,6 +1012,54 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Instance ID</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Instance ID</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInstanceID(InstanceID object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Instance Options</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Instance Options</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInstanceOptions(InstanceOptions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Instance Option</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Instance Option</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInstanceOption(InstanceOption object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Contract Instance</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -710,6 +1087,86 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFieldDecl(FieldDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kel Attr Decl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kel Attr Decl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKelAttrDecl(KelAttrDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kel Entity Decl Simple</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kel Entity Decl Simple</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKelEntityDeclSimple(KelEntityDeclSimple object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kel Entity Decl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kel Entity Decl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKelEntityDecl(KelEntityDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enum Entry</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enum Entry</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumEntry(EnumEntry object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Enum List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Enum List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseEnumList(EnumList object)
   {
     return null;
   }
@@ -795,22 +1252,6 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Record</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Record</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseRecord(Record object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>Dataset</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -838,6 +1279,70 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseGroup(Group object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Real</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Real</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReal(Real object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Input Simple Types</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Input Simple Types</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInputSimpleTypes(InputSimpleTypes object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Record</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Record</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRecord(Record object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Kel Base</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Kel Base</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKelBase(KelBase object)
   {
     return null;
   }
@@ -902,6 +1407,38 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseInputOption(InputOption object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Inputtype Options</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Inputtype Options</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseInputtypeOptions(InputtypeOptions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Integrate Section</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Integrate Section</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntegrateSection(IntegrateSection object)
   {
     return null;
   }
@@ -1083,6 +1620,54 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>ECL Boolean</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ECL Boolean</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseECLBoolean(ECLBoolean object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ECL Num Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ECL Num Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseECLNumType(ECLNumType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>ECL Dec Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>ECL Dec Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseECLDecType(ECLDecType object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>EC Lfield Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1099,22 +1684,6 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Pos Viz Data</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Pos Viz Data</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casePosVizData(PosVizData object)
-  {
-    return null;
-  }
-
-  /**
    * Returns the result of interpreting the object as an instance of '<em>ECL Output Decl</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1126,6 +1695,54 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseECLOutputDecl(ECLOutputDecl object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Service Input Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Service Input Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseServiceInputValue(ServiceInputValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Service Input Section</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Service Input Section</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseServiceInputSection(ServiceInputSection object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Nested Dataset Decl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Nested Dataset Decl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNestedDatasetDecl(NestedDatasetDecl object)
   {
     return null;
   }
@@ -1163,17 +1780,17 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Out Type</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Out Type Simple</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Out Type</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Out Type Simple</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseOutType(OutType object)
+  public T caseOutTypeSimple(OutTypeSimple object)
   {
     return null;
   }
@@ -1190,6 +1807,22 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOutDataset(OutDataset object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Service</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Service</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseService(Service object)
   {
     return null;
   }
@@ -1222,6 +1855,54 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseOutputBase(OutputBase object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Permissions</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Permissions</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePermissions(Permissions object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Permission</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Permission</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePermission(Permission object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Custom Permission Level</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Custom Permission Level</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCustomPermissionLevel(CustomPermissionLevel object)
   {
     return null;
   }
@@ -1275,6 +1956,22 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Generate Body Kel</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Generate Body Kel</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseGenerateBodyKel(GenerateBodyKel object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Visual Section</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1286,6 +1983,38 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVisualSection(VisualSection object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Vis Input Value</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vis Input Value</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisInputValue(VisInputValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Vis Basis Parens</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vis Basis Parens</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisBasisParens(VisBasisParens object)
   {
     return null;
   }
@@ -1323,6 +2052,22 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Vis Filter</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vis Filter</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisFilter(VisFilter object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Vis Basis Qualifiers</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1339,6 +2084,22 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Pos Viz Data</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Pos Viz Data</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePosVizData(PosVizData object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Function</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1350,6 +2111,38 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFunction(Function object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>QFunction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>QFunction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseQFunction(QFunction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Nest Basis Qualifier</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Nest Basis Qualifier</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseNestBasisQualifier(NestBasisQualifier object)
   {
     return null;
   }
@@ -1387,6 +2180,54 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Viz Assign</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Viz Assign</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVizAssign(VizAssign object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Viz Assign List</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Viz Assign List</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVizAssignList(VizAssignList object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Viz Enum Decl</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Viz Enum Decl</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVizEnumDecl(VizEnumDecl object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Visual Options</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1419,6 +2260,54 @@ public class HIPIESwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Select Event</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Select Event</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSelectEvent(SelectEvent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Select Option</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Select Option</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSelectOption(SelectOption object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Link Option</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Link Option</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseLinkOption(LinkOption object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Visual Multival</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1430,6 +2319,38 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVisualMultival(VisualMultival object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Visibility Option</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Visibility Option</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisibilityOption(VisibilityOption object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Visual Custom Option</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Visual Custom Option</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisualCustomOption(VisualCustomOption object)
   {
     return null;
   }
@@ -1462,6 +2383,22 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseCustomValue(CustomValue object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Resource Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Resource Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseResourceType(ResourceType object)
   {
     return null;
   }

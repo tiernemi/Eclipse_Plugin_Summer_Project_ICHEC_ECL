@@ -15,6 +15,7 @@ import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.OutDataset;
 import org.xtext.hipie.hIPIE.VisBasis;
 import org.xtext.hipie.hIPIE.VisBasisQualifiers;
+import org.xtext.hipie.hIPIE.VisFilter;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,6 +25,7 @@ import org.xtext.hipie.hIPIE.VisBasisQualifiers;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisBasisImpl#getBasis <em>Basis</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisBasisImpl#getFilter <em>Filter</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisBasisImpl#getQuals <em>Quals</em>}</li>
  * </ul>
  * </p>
@@ -41,6 +43,16 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
    * @ordered
    */
   protected OutDataset basis;
+
+  /**
+   * The cached value of the '{@link #getFilter() <em>Filter</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFilter()
+   * @generated
+   * @ordered
+   */
+  protected VisFilter filter;
 
   /**
    * The cached value of the '{@link #getQuals() <em>Quals</em>}' containment reference.
@@ -121,6 +133,54 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
    * <!-- end-user-doc -->
    * @generated
    */
+  public VisFilter getFilter()
+  {
+    return filter;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFilter(VisFilter newFilter, NotificationChain msgs)
+  {
+    VisFilter oldFilter = filter;
+    filter = newFilter;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.VIS_BASIS__FILTER, oldFilter, newFilter);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setFilter(VisFilter newFilter)
+  {
+    if (newFilter != filter)
+    {
+      NotificationChain msgs = null;
+      if (filter != null)
+        msgs = ((InternalEObject)filter).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VIS_BASIS__FILTER, null, msgs);
+      if (newFilter != null)
+        msgs = ((InternalEObject)newFilter).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VIS_BASIS__FILTER, null, msgs);
+      msgs = basicSetFilter(newFilter, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VIS_BASIS__FILTER, newFilter, newFilter));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public VisBasisQualifiers getQuals()
   {
     return quals;
@@ -174,6 +234,8 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
   {
     switch (featureID)
     {
+      case HIPIEPackage.VIS_BASIS__FILTER:
+        return basicSetFilter(null, msgs);
       case HIPIEPackage.VIS_BASIS__QUALS:
         return basicSetQuals(null, msgs);
     }
@@ -193,6 +255,8 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
       case HIPIEPackage.VIS_BASIS__BASIS:
         if (resolve) return getBasis();
         return basicGetBasis();
+      case HIPIEPackage.VIS_BASIS__FILTER:
+        return getFilter();
       case HIPIEPackage.VIS_BASIS__QUALS:
         return getQuals();
     }
@@ -211,6 +275,9 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
     {
       case HIPIEPackage.VIS_BASIS__BASIS:
         setBasis((OutDataset)newValue);
+        return;
+      case HIPIEPackage.VIS_BASIS__FILTER:
+        setFilter((VisFilter)newValue);
         return;
       case HIPIEPackage.VIS_BASIS__QUALS:
         setQuals((VisBasisQualifiers)newValue);
@@ -232,6 +299,9 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
       case HIPIEPackage.VIS_BASIS__BASIS:
         setBasis((OutDataset)null);
         return;
+      case HIPIEPackage.VIS_BASIS__FILTER:
+        setFilter((VisFilter)null);
+        return;
       case HIPIEPackage.VIS_BASIS__QUALS:
         setQuals((VisBasisQualifiers)null);
         return;
@@ -251,6 +321,8 @@ public class VisBasisImpl extends MinimalEObjectImpl.Container implements VisBas
     {
       case HIPIEPackage.VIS_BASIS__BASIS:
         return basis != null;
+      case HIPIEPackage.VIS_BASIS__FILTER:
+        return filter != null;
       case HIPIEPackage.VIS_BASIS__QUALS:
         return quals != null;
     }

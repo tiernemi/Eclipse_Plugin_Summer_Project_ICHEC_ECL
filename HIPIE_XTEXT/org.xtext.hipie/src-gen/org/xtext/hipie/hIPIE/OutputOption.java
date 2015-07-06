@@ -13,7 +13,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.OutputOption#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.OutputOption#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.OutputOption#getAssigns <em>Assigns</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.OutputOption#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
@@ -51,30 +51,30 @@ public interface OutputOption extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Vars</b></em>' reference.
+   * Returns the value of the '<em><b>Assigns</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vars</em>' reference isn't clear,
+   * If the meaning of the '<em>Assigns</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vars</em>' reference.
-   * @see #setVars(Datatype)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutputOption_Vars()
-   * @model
+   * @return the value of the '<em>Assigns</em>' containment reference.
+   * @see #setAssigns(AssignList)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutputOption_Assigns()
+   * @model containment="true"
    * @generated
    */
-  Datatype getVars();
+  AssignList getAssigns();
 
   /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.OutputOption#getVars <em>Vars</em>}' reference.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.OutputOption#getAssigns <em>Assigns</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Vars</em>' reference.
-   * @see #getVars()
+   * @param value the new value of the '<em>Assigns</em>' containment reference.
+   * @see #getAssigns()
    * @generated
    */
-  void setVars(Datatype value);
+  void setAssigns(AssignList value);
 
   /**
    * Returns the value of the '<em><b>Vals</b></em>' containment reference.
@@ -85,12 +85,12 @@ public interface OutputOption extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Vals</em>' containment reference.
-   * @see #setVals(Value)
+   * @see #setVals(EObject)
    * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutputOption_Vals()
    * @model containment="true"
    * @generated
    */
-  Value getVals();
+  EObject getVals();
 
   /**
    * Sets the value of the '{@link org.xtext.hipie.hIPIE.OutputOption#getVals <em>Vals</em>}' containment reference.
@@ -100,6 +100,6 @@ public interface OutputOption extends EObject
    * @see #getVals()
    * @generated
    */
-  void setVals(Value value);
+  void setVals(EObject value);
 
 } // OutputOption

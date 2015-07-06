@@ -23,10 +23,14 @@ import org.xtext.hipie.hIPIE.Bool;
 import org.xtext.hipie.hIPIE.CategoryTypeList;
 import org.xtext.hipie.hIPIE.CompositionHeader;
 import org.xtext.hipie.hIPIE.ContractInstance;
+import org.xtext.hipie.hIPIE.CustomPermissionLevel;
 import org.xtext.hipie.hIPIE.CustomSection;
 import org.xtext.hipie.hIPIE.Dataset;
+import org.xtext.hipie.hIPIE.ECLBoolean;
 import org.xtext.hipie.hIPIE.ECLData;
+import org.xtext.hipie.hIPIE.ECLDecType;
 import org.xtext.hipie.hIPIE.ECLInteger;
+import org.xtext.hipie.hIPIE.ECLNumType;
 import org.xtext.hipie.hIPIE.ECLQstring;
 import org.xtext.hipie.hIPIE.ECLReal;
 import org.xtext.hipie.hIPIE.ECLString;
@@ -35,33 +39,56 @@ import org.xtext.hipie.hIPIE.ECLUnsigned;
 import org.xtext.hipie.hIPIE.ECLVarstring;
 import org.xtext.hipie.hIPIE.ECLVarunicode;
 import org.xtext.hipie.hIPIE.EnumDecl;
+import org.xtext.hipie.hIPIE.EnumEntry;
+import org.xtext.hipie.hIPIE.EnumList;
 import org.xtext.hipie.hIPIE.FieldDecl;
 import org.xtext.hipie.hIPIE.Function;
 import org.xtext.hipie.hIPIE.GenerateBodyInline;
+import org.xtext.hipie.hIPIE.GenerateBodyKel;
 import org.xtext.hipie.hIPIE.GenerateBodySalt;
 import org.xtext.hipie.hIPIE.Group;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.InputOption;
 import org.xtext.hipie.hIPIE.InputOptions;
 import org.xtext.hipie.hIPIE.InputSection;
+import org.xtext.hipie.hIPIE.InputtypeOptions;
+import org.xtext.hipie.hIPIE.InstanceID;
+import org.xtext.hipie.hIPIE.InstanceOptions;
 import org.xtext.hipie.hIPIE.IntVar;
+import org.xtext.hipie.hIPIE.IntegrateSection;
+import org.xtext.hipie.hIPIE.KelAttrDecl;
+import org.xtext.hipie.hIPIE.KelBase;
+import org.xtext.hipie.hIPIE.KelEntityDecl;
+import org.xtext.hipie.hIPIE.KelEntityDeclSimple;
+import org.xtext.hipie.hIPIE.LinkOption;
 import org.xtext.hipie.hIPIE.OutDataset;
-import org.xtext.hipie.hIPIE.OutType;
+import org.xtext.hipie.hIPIE.OutTypeSimple;
 import org.xtext.hipie.hIPIE.OutfieldDecl;
 import org.xtext.hipie.hIPIE.OutputBase;
 import org.xtext.hipie.hIPIE.OutputOption;
 import org.xtext.hipie.hIPIE.OutputOptions;
 import org.xtext.hipie.hIPIE.OutputSection;
+import org.xtext.hipie.hIPIE.Permission;
+import org.xtext.hipie.hIPIE.Permissions;
 import org.xtext.hipie.hIPIE.Program;
+import org.xtext.hipie.hIPIE.Real;
 import org.xtext.hipie.hIPIE.Record;
 import org.xtext.hipie.hIPIE.ResourceOption;
 import org.xtext.hipie.hIPIE.ResourceOptions;
 import org.xtext.hipie.hIPIE.ResourceSection;
+import org.xtext.hipie.hIPIE.ResourceType;
+import org.xtext.hipie.hIPIE.SelectOption;
+import org.xtext.hipie.hIPIE.Service;
+import org.xtext.hipie.hIPIE.ServiceInputSection;
 import org.xtext.hipie.hIPIE.StringVar;
 import org.xtext.hipie.hIPIE.Value;
 import org.xtext.hipie.hIPIE.ValueList;
 import org.xtext.hipie.hIPIE.VisBasis;
+import org.xtext.hipie.hIPIE.VisBasisParens;
 import org.xtext.hipie.hIPIE.VisBasisQualifiers;
+import org.xtext.hipie.hIPIE.VisFilter;
+import org.xtext.hipie.hIPIE.VisibilityOption;
+import org.xtext.hipie.hIPIE.VisualCustomOption;
 import org.xtext.hipie.hIPIE.VisualMultival;
 import org.xtext.hipie.hIPIE.VisualOption;
 import org.xtext.hipie.hIPIE.VisualOptions;
@@ -69,6 +96,9 @@ import org.xtext.hipie.hIPIE.VisualSection;
 import org.xtext.hipie.hIPIE.VisualSectionOption;
 import org.xtext.hipie.hIPIE.VisualSectionOptions;
 import org.xtext.hipie.hIPIE.Visualization;
+import org.xtext.hipie.hIPIE.VizAssign;
+import org.xtext.hipie.hIPIE.VizAssignList;
+import org.xtext.hipie.hIPIE.VizEnumDecl;
 import org.xtext.hipie.services.HIPIEGrammarAccess;
 
 @SuppressWarnings("all")
@@ -92,12 +122,17 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.BOOL:
 				if(context == grammarAccess.getBoolRule() ||
 				   context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getInputSimpleTypesRule() ||
 				   context == grammarAccess.getOutfieldDeclRule()) {
 					sequence_Bool(context, (Bool) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getInputValueRule()) {
 					sequence_Bool_InputValue(context, (Bool) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getVisInputValueRule()) {
+					sequence_Bool_VisInputValue(context, (Bool) semanticObject); 
 					return; 
 				}
 				else break;
@@ -109,6 +144,9 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case HIPIEPackage.CONTRACT_INSTANCE:
 				sequence_ContractInstance(context, (ContractInstance) semanticObject); 
+				return; 
+			case HIPIEPackage.CUSTOM_PERMISSION_LEVEL:
+				sequence_CustomPermissionLevel(context, (CustomPermissionLevel) semanticObject); 
 				return; 
 			case HIPIEPackage.CUSTOM_SECTION:
 				sequence_CustomSection(context, (CustomSection) semanticObject); 
@@ -124,6 +162,22 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case HIPIEPackage.ECL_BOOLEAN:
+				if(context == grammarAccess.getECLBooleanRule() ||
+				   context == grammarAccess.getECLfieldTypeRule() ||
+				   context == grammarAccess.getPosVizDataRule()) {
+					sequence_ECLBoolean(context, (ECLBoolean) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getECLOutputDeclRule()) {
+					sequence_ECLBoolean_ECLOutputDecl(context, (ECLBoolean) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLBoolean_ServiceInputValue(context, (ECLBoolean) semanticObject); 
+					return; 
+				}
+				else break;
 			case HIPIEPackage.ECL_DATA:
 				if(context == grammarAccess.getECLDataRule() ||
 				   context == grammarAccess.getECLfieldTypeRule() ||
@@ -133,6 +187,26 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				}
 				else if(context == grammarAccess.getECLOutputDeclRule()) {
 					sequence_ECLData_ECLOutputDecl(context, (ECLData) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLData_ServiceInputValue(context, (ECLData) semanticObject); 
+					return; 
+				}
+				else break;
+			case HIPIEPackage.ECL_DEC_TYPE:
+				if(context == grammarAccess.getECLDecTypeRule() ||
+				   context == grammarAccess.getECLfieldTypeRule() ||
+				   context == grammarAccess.getPosVizDataRule()) {
+					sequence_ECLDecType(context, (ECLDecType) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getECLOutputDeclRule()) {
+					sequence_ECLDecType_ECLOutputDecl(context, (ECLDecType) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLDecType_ServiceInputValue(context, (ECLDecType) semanticObject); 
 					return; 
 				}
 				else break;
@@ -147,6 +221,26 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_ECLInteger_ECLOutputDecl(context, (ECLInteger) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLInteger_ServiceInputValue(context, (ECLInteger) semanticObject); 
+					return; 
+				}
+				else break;
+			case HIPIEPackage.ECL_NUM_TYPE:
+				if(context == grammarAccess.getECLNumTypeRule() ||
+				   context == grammarAccess.getECLfieldTypeRule() ||
+				   context == grammarAccess.getPosVizDataRule()) {
+					sequence_ECLNumType(context, (ECLNumType) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getECLOutputDeclRule()) {
+					sequence_ECLNumType_ECLOutputDecl(context, (ECLNumType) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLNumType_ServiceInputValue(context, (ECLNumType) semanticObject); 
+					return; 
+				}
 				else break;
 			case HIPIEPackage.ECL_QSTRING:
 				if(context == grammarAccess.getECLOutputDeclRule()) {
@@ -157,6 +251,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getECLfieldTypeRule() ||
 				   context == grammarAccess.getPosVizDataRule()) {
 					sequence_ECLQstring(context, (ECLQstring) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLQstring_ServiceInputValue(context, (ECLQstring) semanticObject); 
 					return; 
 				}
 				else break;
@@ -171,6 +269,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_ECLReal(context, (ECLReal) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLReal_ServiceInputValue(context, (ECLReal) semanticObject); 
+					return; 
+				}
 				else break;
 			case HIPIEPackage.ECL_STRING:
 				if(context == grammarAccess.getECLOutputDeclRule()) {
@@ -181,6 +283,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getECLfieldTypeRule() ||
 				   context == grammarAccess.getPosVizDataRule()) {
 					sequence_ECLString(context, (ECLString) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLString_ServiceInputValue(context, (ECLString) semanticObject); 
 					return; 
 				}
 				else break;
@@ -195,6 +301,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_ECLUnicode(context, (ECLUnicode) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLUnicode_ServiceInputValue(context, (ECLUnicode) semanticObject); 
+					return; 
+				}
 				else break;
 			case HIPIEPackage.ECL_UNSIGNED:
 				if(context == grammarAccess.getECLOutputDeclRule()) {
@@ -205,6 +315,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				   context == grammarAccess.getECLfieldTypeRule() ||
 				   context == grammarAccess.getPosVizDataRule()) {
 					sequence_ECLUnsigned(context, (ECLUnsigned) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLUnsigned_ServiceInputValue(context, (ECLUnsigned) semanticObject); 
 					return; 
 				}
 				else break;
@@ -219,6 +333,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_ECLVarstring(context, (ECLVarstring) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLVarstring_ServiceInputValue(context, (ECLVarstring) semanticObject); 
+					return; 
+				}
 				else break;
 			case HIPIEPackage.ECL_VARUNICODE:
 				if(context == grammarAccess.getECLOutputDeclRule()) {
@@ -231,9 +349,15 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_ECLVarunicode(context, (ECLVarunicode) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getServiceInputValueRule()) {
+					sequence_ECLVarunicode_ServiceInputValue(context, (ECLVarunicode) semanticObject); 
+					return; 
+				}
 				else break;
 			case HIPIEPackage.ENUM_DECL:
-				if(context == grammarAccess.getEnumDeclRule()) {
+				if(context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getEnumDeclRule() ||
+				   context == grammarAccess.getInputSimpleTypesRule()) {
 					sequence_EnumDecl(context, (EnumDecl) semanticObject); 
 					return; 
 				}
@@ -241,7 +365,17 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_EnumDecl_InputValue(context, (EnumDecl) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getVisInputValueRule()) {
+					sequence_EnumDecl_VisInputValue(context, (EnumDecl) semanticObject); 
+					return; 
+				}
 				else break;
+			case HIPIEPackage.ENUM_ENTRY:
+				sequence_EnumEntry(context, (EnumEntry) semanticObject); 
+				return; 
+			case HIPIEPackage.ENUM_LIST:
+				sequence_EnumList(context, (EnumList) semanticObject); 
+				return; 
 			case HIPIEPackage.FIELD_DECL:
 				sequence_FieldDecl(context, (FieldDecl) semanticObject); 
 				return; 
@@ -251,11 +385,15 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.GENERATE_BODY_INLINE:
 				sequence_GenerateBodyInline(context, (GenerateBodyInline) semanticObject); 
 				return; 
+			case HIPIEPackage.GENERATE_BODY_KEL:
+				sequence_GenerateBodyKel(context, (GenerateBodyKel) semanticObject); 
+				return; 
 			case HIPIEPackage.GENERATE_BODY_SALT:
 				sequence_GenerateBodySalt(context, (GenerateBodySalt) semanticObject); 
 				return; 
 			case HIPIEPackage.GROUP:
-				if(context == grammarAccess.getGroupRule()) {
+				if(context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getGroupRule()) {
 					sequence_Group(context, (Group) semanticObject); 
 					return; 
 				}
@@ -273,20 +411,66 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.INPUT_SECTION:
 				sequence_InputSection(context, (InputSection) semanticObject); 
 				return; 
+			case HIPIEPackage.INPUTTYPE_OPTIONS:
+				sequence_InputtypeOptions(context, (InputtypeOptions) semanticObject); 
+				return; 
+			case HIPIEPackage.INSTANCE_ID:
+				sequence_InstanceID(context, (InstanceID) semanticObject); 
+				return; 
+			case HIPIEPackage.INSTANCE_OPTIONS:
+				sequence_InstanceOptions(context, (InstanceOptions) semanticObject); 
+				return; 
 			case HIPIEPackage.INT_VAR:
 				if(context == grammarAccess.getInputValueRule()) {
 					sequence_InputValue_IntVar(context, (IntVar) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getInputSimpleTypesRule() ||
 				   context == grammarAccess.getIntVarRule() ||
 				   context == grammarAccess.getOutfieldDeclRule()) {
 					sequence_IntVar(context, (IntVar) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getVisInputValueRule()) {
+					sequence_IntVar_VisInputValue(context, (IntVar) semanticObject); 
+					return; 
+				}
 				else break;
+			case HIPIEPackage.INTEGRATE_SECTION:
+				sequence_IntegrateSection(context, (IntegrateSection) semanticObject); 
+				return; 
+			case HIPIEPackage.KEL_ATTR_DECL:
+				sequence_KelAttrDecl(context, (KelAttrDecl) semanticObject); 
+				return; 
+			case HIPIEPackage.KEL_BASE:
+				if(context == grammarAccess.getInputValueRule()) {
+					sequence_InputValue_KelBase(context, (KelBase) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getKelBaseRule()) {
+					sequence_KelBase(context, (KelBase) semanticObject); 
+					return; 
+				}
+				else break;
+			case HIPIEPackage.KEL_ENTITY_DECL:
+				sequence_KelEntityDecl(context, (KelEntityDecl) semanticObject); 
+				return; 
+			case HIPIEPackage.KEL_ENTITY_DECL_SIMPLE:
+				sequence_KelEntityDeclSimple(context, (KelEntityDeclSimple) semanticObject); 
+				return; 
+			case HIPIEPackage.LINK_OPTION:
+				sequence_LinkOption(context, (LinkOption) semanticObject); 
+				return; 
 			case HIPIEPackage.OUT_DATASET:
-				if(context == grammarAccess.getOutDatasetRule()) {
+				if(context == grammarAccess.getECLOutputDeclRule() ||
+				   context == grammarAccess.getNestedDatasetDeclRule() ||
+				   context == grammarAccess.getServiceInputValueRule()) {
+					sequence_NestedDatasetDecl_OutDataset(context, (OutDataset) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getOutDatasetRule()) {
 					sequence_OutDataset(context, (OutDataset) semanticObject); 
 					return; 
 				}
@@ -295,13 +479,13 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
-			case HIPIEPackage.OUT_TYPE:
-				if(context == grammarAccess.getOutTypeRule()) {
-					sequence_OutType(context, (OutType) semanticObject); 
+			case HIPIEPackage.OUT_TYPE_SIMPLE:
+				if(context == grammarAccess.getOutTypeSimpleRule()) {
+					sequence_OutTypeSimple(context, (OutTypeSimple) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getOutputValueRule()) {
-					sequence_OutType_OutputValue(context, (OutType) semanticObject); 
+					sequence_OutTypeSimple_OutputValue(context, (OutTypeSimple) semanticObject); 
 					return; 
 				}
 				else break;
@@ -320,9 +504,31 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.OUTPUT_SECTION:
 				sequence_OutputSection(context, (OutputSection) semanticObject); 
 				return; 
+			case HIPIEPackage.PERMISSION:
+				sequence_Permission(context, (Permission) semanticObject); 
+				return; 
+			case HIPIEPackage.PERMISSIONS:
+				sequence_Permissions(context, (Permissions) semanticObject); 
+				return; 
 			case HIPIEPackage.PROGRAM:
 				sequence_Program(context, (Program) semanticObject); 
 				return; 
+			case HIPIEPackage.REAL:
+				if(context == grammarAccess.getInputValueRule()) {
+					sequence_InputValue_Real(context, (Real) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getInputSimpleTypesRule() ||
+				   context == grammarAccess.getRealRule()) {
+					sequence_Real(context, (Real) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getVisInputValueRule()) {
+					sequence_Real_VisInputValue(context, (Real) semanticObject); 
+					return; 
+				}
+				else break;
 			case HIPIEPackage.RECORD:
 				if(context == grammarAccess.getInputValueRule()) {
 					sequence_InputValue_Record(context, (Record) semanticObject); 
@@ -343,15 +549,39 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.RESOURCE_SECTION:
 				sequence_ResourceSection(context, (ResourceSection) semanticObject); 
 				return; 
+			case HIPIEPackage.RESOURCE_TYPE:
+				sequence_ResourceType(context, (ResourceType) semanticObject); 
+				return; 
+			case HIPIEPackage.SELECT_OPTION:
+				sequence_SelectOption(context, (SelectOption) semanticObject); 
+				return; 
+			case HIPIEPackage.SERVICE:
+				if(context == grammarAccess.getOutputValueRule()) {
+					sequence_OutputValue_Service(context, (Service) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getServiceRule()) {
+					sequence_Service(context, (Service) semanticObject); 
+					return; 
+				}
+				else break;
+			case HIPIEPackage.SERVICE_INPUT_SECTION:
+				sequence_ServiceInputSection(context, (ServiceInputSection) semanticObject); 
+				return; 
 			case HIPIEPackage.STRING_VAR:
 				if(context == grammarAccess.getInputValueRule()) {
 					sequence_InputValue_StringVar(context, (StringVar) semanticObject); 
 					return; 
 				}
 				else if(context == grammarAccess.getDatatypeRule() ||
+				   context == grammarAccess.getInputSimpleTypesRule() ||
 				   context == grammarAccess.getOutfieldDeclRule() ||
 				   context == grammarAccess.getStringVarRule()) {
 					sequence_StringVar(context, (StringVar) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getVisInputValueRule()) {
+					sequence_StringVar_VisInputValue(context, (StringVar) semanticObject); 
 					return; 
 				}
 				else break;
@@ -360,7 +590,13 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					sequence_ResourceValue_Value(context, (Value) semanticObject); 
 					return; 
 				}
+				else if(context == grammarAccess.getSelectOptionRule() ||
+				   context == grammarAccess.getVisualOptionRule()) {
+					sequence_SelectOption_Value(context, (Value) semanticObject); 
+					return; 
+				}
 				else if(context == grammarAccess.getCustomValueRule() ||
+				   context == grammarAccess.getSelectEventRule() ||
 				   context == grammarAccess.getValueRule()) {
 					sequence_Value(context, (Value) semanticObject); 
 					return; 
@@ -372,12 +608,42 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.VIS_BASIS:
 				sequence_VisBasis(context, (VisBasis) semanticObject); 
 				return; 
+			case HIPIEPackage.VIS_BASIS_PARENS:
+				sequence_VisBasisParens(context, (VisBasisParens) semanticObject); 
+				return; 
 			case HIPIEPackage.VIS_BASIS_QUALIFIERS:
 				sequence_VisBasisQualifiers(context, (VisBasisQualifiers) semanticObject); 
 				return; 
-			case HIPIEPackage.VISUAL_MULTIVAL:
-				sequence_VisualMultival(context, (VisualMultival) semanticObject); 
+			case HIPIEPackage.VIS_FILTER:
+				sequence_VisFilter(context, (VisFilter) semanticObject); 
 				return; 
+			case HIPIEPackage.VISIBILITY_OPTION:
+				sequence_VisibilityOption(context, (VisibilityOption) semanticObject); 
+				return; 
+			case HIPIEPackage.VISUAL_CUSTOM_OPTION:
+				if(context == grammarAccess.getResourceOptionRule()) {
+					sequence_ResourceOption_VisualCustomOption(context, (VisualCustomOption) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getVisualCustomOptionRule()) {
+					sequence_VisualCustomOption(context, (VisualCustomOption) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getVisualOptionRule()) {
+					sequence_VisualCustomOption_VisualOption(context, (VisualCustomOption) semanticObject); 
+					return; 
+				}
+				else break;
+			case HIPIEPackage.VISUAL_MULTIVAL:
+				if(context == grammarAccess.getVisualMultivalRule()) {
+					sequence_VisualMultival(context, (VisualMultival) semanticObject); 
+					return; 
+				}
+				else if(context == grammarAccess.getVisualOptionRule()) {
+					sequence_VisualMultival_VisualOption(context, (VisualMultival) semanticObject); 
+					return; 
+				}
+				else break;
 			case HIPIEPackage.VISUAL_OPTION:
 				sequence_VisualOption(context, (VisualOption) semanticObject); 
 				return; 
@@ -396,6 +662,15 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 			case HIPIEPackage.VISUALIZATION:
 				sequence_Visualization(context, (Visualization) semanticObject); 
 				return; 
+			case HIPIEPackage.VIZ_ASSIGN:
+				sequence_VizAssign(context, (VizAssign) semanticObject); 
+				return; 
+			case HIPIEPackage.VIZ_ASSIGN_LIST:
+				sequence_VizAssignList(context, (VizAssignList) semanticObject); 
+				return; 
+			case HIPIEPackage.VIZ_ENUM_DECL:
+				sequence_VizEnumDecl(context, (VizEnumDecl) semanticObject); 
+				return; 
 			}
 		if (errorAcceptor != null) errorAcceptor.accept(diagnosticProvider.createInvalidContextOrTypeDiagnostic(semanticObject, context));
 	}
@@ -411,19 +686,19 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID vals=ValueList)
+	 *     (vals_l=Value vals_r=ValueList)
 	 */
 	protected void sequence_Assign(EObject context, Assign semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.ASSIGN__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.ASSIGN__NAME));
-			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.ASSIGN__VALS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.ASSIGN__VALS));
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.ASSIGN__VALS_L) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.ASSIGN__VALS_L));
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.ASSIGN__VALS_R) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.ASSIGN__VALS_R));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAssignAccess().getNameIDTerminalRuleCall_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getAssignAccess().getValsValueListParserRuleCall_2_0(), semanticObject.getVals());
+		feeder.accept(grammarAccess.getAssignAccess().getVals_lValueParserRuleCall_0_0(), semanticObject.getVals_l());
+		feeder.accept(grammarAccess.getAssignAccess().getVals_rValueListParserRuleCall_2_0(), semanticObject.getVals_r());
 		feeder.finish();
 	}
 	
@@ -440,7 +715,8 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *                 name='COPYRIGHT' | 
 	 *                 name='VERSION' | 
 	 *                 name='LABEL' | 
-	 *                 name='ID'
+	 *                 name='ID' | 
+	 *                 name='TEMPLATE'
 	 *             ) 
 	 *             val_list=ValueList
 	 *         ) | 
@@ -454,7 +730,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=TOKEN
 	 */
 	protected void sequence_Bool(EObject context, Bool semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -463,9 +739,18 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_op_list=InputOptions?)
+	 *     (name=TOKEN input_op_list=InputOptions?)
 	 */
 	protected void sequence_Bool_InputValue(EObject context, Bool semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_Bool_VisInputValue(EObject context, Bool semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -490,9 +775,18 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (sec_name='INSTANCE' vals+=Value vars+=[Value|ID] assigns+=Assign*)
+	 *     (sec_name='INSTANCE' instId=InstanceID instance_ops=InstanceOptions? assigns+=Assign*)
 	 */
 	protected void sequence_ContractInstance(EObject context, ContractInstance semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (vals+=Value vals+=Value*)
+	 */
+	protected void sequence_CustomPermissionLevel(EObject context, CustomPermissionLevel semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -508,7 +802,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=TOKEN
 	 */
 	protected void sequence_Dataset(EObject context, Dataset semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -517,7 +811,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_op_list=InputOptions?)
+	 *     (name=TOKEN input_op_list=InputOptions?)
 	 */
 	protected void sequence_Dataset_InputValue(EObject context, Dataset semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -526,7 +820,34 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=TOKEN
+	 */
+	protected void sequence_ECLBoolean(EObject context, ECLBoolean semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN options=OutputOptions?)
+	 */
+	protected void sequence_ECLBoolean_ECLOutputDecl(EObject context, ECLBoolean semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLBoolean_ServiceInputValue(EObject context, ECLBoolean semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLData(EObject context, ECLData semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -535,7 +856,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLData_ECLOutputDecl(EObject context, ECLData semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -544,7 +865,43 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLData_ServiceInputValue(EObject context, ECLData semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
+	 */
+	protected void sequence_ECLDecType(EObject context, ECLDecType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN options=OutputOptions?)
+	 */
+	protected void sequence_ECLDecType_ECLOutputDecl(EObject context, ECLDecType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLDecType_ServiceInputValue(EObject context, ECLDecType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLInteger(EObject context, ECLInteger semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -553,7 +910,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLInteger_ECLOutputDecl(EObject context, ECLInteger semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -562,7 +919,43 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLInteger_ServiceInputValue(EObject context, ECLInteger semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
+	 */
+	protected void sequence_ECLNumType(EObject context, ECLNumType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN options=OutputOptions?)
+	 */
+	protected void sequence_ECLNumType_ECLOutputDecl(EObject context, ECLNumType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLNumType_ServiceInputValue(EObject context, ECLNumType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLQstring(EObject context, ECLQstring semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -571,7 +964,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLReal(EObject context, ECLReal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -580,7 +973,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLString(EObject context, ECLString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -589,7 +982,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLUnicode(EObject context, ECLUnicode semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -598,7 +991,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLUnsigned(EObject context, ECLUnsigned semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -607,7 +1000,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLVarstring(EObject context, ECLVarstring semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -616,7 +1009,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID options=OutputOptions?)
+	 *     (name=TOKEN options=OutputOptions?)
 	 */
 	protected void sequence_ECLOutputDecl_ECLVarunicode(EObject context, ECLVarunicode semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -625,7 +1018,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLQstring(EObject context, ECLQstring semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -634,7 +1027,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLQstring_ServiceInputValue(EObject context, ECLQstring semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLReal(EObject context, ECLReal semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -643,7 +1045,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLReal_ServiceInputValue(EObject context, ECLReal semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLString(EObject context, ECLString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -652,7 +1063,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLString_ServiceInputValue(EObject context, ECLString semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLUnicode(EObject context, ECLUnicode semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -661,7 +1081,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLUnicode_ServiceInputValue(EObject context, ECLUnicode semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLUnsigned(EObject context, ECLUnsigned semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -670,7 +1099,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLUnsigned_ServiceInputValue(EObject context, ECLUnsigned semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLVarstring(EObject context, ECLVarstring semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -679,7 +1117,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLVarstring_ServiceInputValue(EObject context, ECLVarstring semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_ECLVarunicode(EObject context, ECLVarunicode semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -688,7 +1135,16 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (enum_dec='ENUM' (vals+=ValueList | assigns+=AssignList))
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_ECLVarunicode_ServiceInputValue(EObject context, ECLVarunicode semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (enum_dec='ENUM' enum_list=EnumList)
 	 */
 	protected void sequence_EnumDecl(EObject context, EnumDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -697,7 +1153,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (enum_dec='ENUM' (vals+=ValueList | assigns+=AssignList) input_op_list=InputOptions?)
+	 *     (enum_dec='ENUM' enum_list=EnumList input_op_list=InputOptions?)
 	 */
 	protected void sequence_EnumDecl_InputValue(EObject context, EnumDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -706,7 +1162,34 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_ops=InputOptions?)
+	 *     (enum_dec='ENUM' enum_list=EnumList in_ops=InputOptions?)
+	 */
+	protected void sequence_EnumDecl_VisInputValue(EObject context, EnumDecl semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (val_l=Value val_r=Value?)
+	 */
+	protected void sequence_EnumEntry(EObject context, EnumEntry semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (en_ents+=EnumEntry en_ents+=EnumEntry*)
+	 */
+	protected void sequence_EnumList(EObject context, EnumList semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN input_ops=InputOptions?)
 	 */
 	protected void sequence_FieldDecl(EObject context, FieldDecl semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -715,14 +1198,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (
-	 *         vars=[PosVizData|ID] | 
-	 *         vals=Value | 
-	 *         vars=[PosVizData|ID] | 
-	 *         vals=Value | 
-	 *         vars=[PosVizData|ID] | 
-	 *         vals=Value
-	 *     )
+	 *     (vals=Value | vals=Value)?
 	 */
 	protected void sequence_Function(EObject context, Function semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -749,6 +1225,22 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     name='GENERATES'
 	 */
+	protected void sequence_GenerateBodyKel(EObject context, GenerateBodyKel semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getGenerateBodyKelAccess().getNameGENERATESKeyword_0_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name='GENERATES'
+	 */
 	protected void sequence_GenerateBodySalt(EObject context, GenerateBodySalt semanticObject) {
 		if(errorAcceptor != null) {
 			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.GENERATE_SECTION__NAME) == ValueTransient.YES)
@@ -763,7 +1255,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=TOKEN
 	 */
 	protected void sequence_Group(EObject context, Group semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -772,7 +1264,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_op_list=InputOptions? vals+=InputValue*)
+	 *     (name=TOKEN input_op_list=InputOptions? vals+=InputValue*)
 	 */
 	protected void sequence_Group_InputValue(EObject context, Group semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -788,9 +1280,9 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         name='MAPBYTYPE' | 
 	 *         name='MAPBYNAME' | 
 	 *         name='MANY' | 
-	 *         name='FORMFIELD' | 
+	 *         (name='FORMFIELD' form_op=FormfieldOption) | 
 	 *         (name='ENABLE' assigns_list=AssignList) | 
-	 *         name='TYPE' | 
+	 *         (name='TYPE' type_op=InputtypeOptions) | 
 	 *         (
 	 *             (
 	 *                 name='RANGE' | 
@@ -834,7 +1326,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_op_list=InputOptions?)
+	 *     (name=TOKEN input_op_list=InputOptions?)
 	 */
 	protected void sequence_InputValue_IntVar(EObject context, IntVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -843,7 +1335,25 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_op_list=InputOptions?)
+	 *     (name=TOKEN input_op_list=InputOptions? (kel_ops+=KelEntityDecl | kel_ops+=KelEntityDeclSimple | kel_ops+=KelAttrDecl)*)
+	 */
+	protected void sequence_InputValue_KelBase(EObject context, KelBase semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN input_op_list=InputOptions?)
+	 */
+	protected void sequence_InputValue_Real(EObject context, Real semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN input_op_list=InputOptions?)
 	 */
 	protected void sequence_InputValue_Record(EObject context, Record semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -852,7 +1362,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID input_op_list=InputOptions?)
+	 *     (name=TOKEN input_op_list=InputOptions?)
 	 */
 	protected void sequence_InputValue_StringVar(EObject context, StringVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -861,7 +1371,41 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (in_type_op+=InputtypeOption in_type_op+=InputtypeOption*)
+	 */
+	protected void sequence_InputtypeOptions(EObject context, InputtypeOptions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
+	 */
+	protected void sequence_InstanceID(EObject context, InstanceID semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.INSTANCE_ID__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.INSTANCE_ID__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getInstanceIDAccess().getNameTOKENParserRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (in_ops+=InstanceOption in_ops+=InstanceOption*)
+	 */
+	protected void sequence_InstanceOptions(EObject context, InstanceOptions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_IntVar(EObject context, IntVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -870,7 +1414,79 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID out_base=OutputBase? ops+=OutputOptions?)
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_IntVar_VisInputValue(EObject context, IntVar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='INTEGRATE' outputs+=OutputValue+)
+	 */
+	protected void sequence_IntegrateSection(EObject context, IntegrateSection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN input_ops=InputOptions?)
+	 */
+	protected void sequence_KelAttrDecl(EObject context, KelAttrDecl semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
+	 */
+	protected void sequence_KelBase(EObject context, KelBase semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN input_ops=InputOptions?)
+	 */
+	protected void sequence_KelEntityDeclSimple(EObject context, KelEntityDeclSimple semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN input_ops=InputOptions? attrdecl=KelAttrDecl?)
+	 */
+	protected void sequence_KelEntityDecl(EObject context, KelEntityDecl semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN ops+=VisualOption*)
+	 */
+	protected void sequence_LinkOption(EObject context, LinkOption semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN out_base=OutputBase? ops=OutputOptions? options=OutputOptions? decl+=ECLOutputDecl+)
+	 */
+	protected void sequence_NestedDatasetDecl_OutDataset(EObject context, OutDataset semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN out_base=OutputBase? ops=OutputOptions?)
 	 */
 	protected void sequence_OutDataset(EObject context, OutDataset semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -879,7 +1495,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID out_base=OutputBase? ops+=OutputOptions? ecl_vars+=ECLOutputDecl*)
+	 *     (name=TOKEN out_base=OutputBase? ops=OutputOptions? ecl_vars+=ECLOutputDecl*)
 	 */
 	protected void sequence_OutDataset_OutputValue(EObject context, OutDataset semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -890,7 +1506,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     val=Value
 	 */
-	protected void sequence_OutType(EObject context, OutType semanticObject) {
+	protected void sequence_OutTypeSimple(EObject context, OutTypeSimple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -899,7 +1515,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 * Constraint:
 	 *     (val=Value ops=OutputOptions?)
 	 */
-	protected void sequence_OutType_OutputValue(EObject context, OutType semanticObject) {
+	protected void sequence_OutTypeSimple_OutputValue(EObject context, OutTypeSimple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -915,7 +1531,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     base=[Datatype|ID]
+	 *     base=[Datatype|TOKEN]
 	 */
 	protected void sequence_OutputBase(EObject context, OutputBase semanticObject) {
 		if(errorAcceptor != null) {
@@ -924,7 +1540,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getOutputBaseAccess().getBaseDatatypeIDTerminalRuleCall_1_0_1(), semanticObject.getBase());
+		feeder.accept(grammarAccess.getOutputBaseAccess().getBaseDatatypeTOKENParserRuleCall_1_0_1(), semanticObject.getBase());
 		feeder.finish();
 	}
 	
@@ -937,8 +1553,15 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         name='SMALL' | 
 	 *         name='FEW' | 
 	 *         name='WUID' | 
-	 *         (name='FROM' vars=[Datatype|ID]) | 
-	 *         (name='DESCRIPTION' vals=Value)
+	 *         name='APPEND' | 
+	 *         name='SCOREDSEARCH' | 
+	 *         name='DATABOMB' | 
+	 *         name='OPTIONAL' | 
+	 *         name=TOKEN | 
+	 *         assigns=AssignList | 
+	 *         name=TOKEN | 
+	 *         vals=ValueList | 
+	 *         ((name='DESCRIPTION' | name='SOAP' | name='JSON' | name='ROXIE' | name='XPATH') vals=Value)
 	 *     )
 	 */
 	protected void sequence_OutputOption(EObject context, OutputOption semanticObject) {
@@ -966,16 +1589,45 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     (name=TOKEN ops=OutputOptions serv=ServiceInputSection? ecl_vars+=ECLOutputDecl*)
+	 */
+	protected void sequence_OutputValue_Service(EObject context, Service semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((name='VIEW' | name='EDIT' | name='RUN') (cust_levs+=CustomPermissionLevel cust_levs+=CustomPermissionLevel?)?)
+	 */
+	protected void sequence_Permission(EObject context, Permission semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='PERMISSIONS' perms+=Permission*)
+	 */
+	protected void sequence_Permissions(EObject context, Permissions semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (
 	 *         composition_header+=CompositionHeader? 
 	 *         base_props+=BaseProp+ 
-	 *         contract_instances+=ContractInstance* 
+	 *         permissions=Permissions? 
 	 *         input_section+=InputSection? 
+	 *         contract_instances+=ContractInstance* 
 	 *         output_section+=OutputSection? 
+	 *         integrate_section=IntegrateSection? 
 	 *         visual_section+=VisualSection* 
 	 *         generate_section+=GenerateSection? 
 	 *         custom_section+=CustomSection? 
-	 *         sesource_section+=ResourceSection?
+	 *         resource_section+=ResourceSection?
 	 *     )
 	 */
 	protected void sequence_Program(EObject context, Program semanticObject) {
@@ -985,7 +1637,25 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     name=TOKEN
+	 */
+	protected void sequence_Real(EObject context, Real semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_Real_VisInputValue(EObject context, Real semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_Record(EObject context, Record semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -994,9 +1664,25 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((name='DESCRIPTION' | name='FILE' | name='LABEL' | name='_HTML_STYLECLASS') vals=Value)
+	 *     vals=Value
 	 */
 	protected void sequence_ResourceOption(EObject context, ResourceOption semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.RESOURCE_OPTION__VALS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.RESOURCE_OPTION__VALS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getResourceOptionAccess().getValsValueParserRuleCall_2_0(), semanticObject.getVals());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN vals=Value)
+	 */
+	protected void sequence_ResourceOption_VisualCustomOption(EObject context, VisualCustomOption semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1021,7 +1707,23 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((name=ID | int_val=INT | str_val=STRING) res_ops=ResourceOptions?)
+	 *     (
+	 *         name='LOGICALFILE' | 
+	 *         name='INDEX' | 
+	 *         name='SUPERFILE' | 
+	 *         name='ECL' | 
+	 *         name='FILE' | 
+	 *         name='IMAGE'
+	 *     )
+	 */
+	protected void sequence_ResourceType(EObject context, ResourceType semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((name=UTOKEN | name=TOKEN | int_val=INT | str_val=STRING) res_ops=ResourceOptions?)
 	 */
 	protected void sequence_ResourceValue_Value(EObject context, Value semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1030,9 +1732,54 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     (maps+=SelectOptionMapping maps+=SelectOptionMapping*)
+	 */
+	protected void sequence_SelectOption(EObject context, SelectOption semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     ((name=UTOKEN | name=TOKEN | int_val=INT | str_val=STRING) maps+=SelectOptionMapping maps+=SelectOptionMapping*)
+	 */
+	protected void sequence_SelectOption_Value(EObject context, Value semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     servs+=ServiceInputValue+
+	 */
+	protected void sequence_ServiceInputSection(EObject context, ServiceInputSection semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN ops=OutputOptions serv=ServiceInputSection?)
+	 */
+	protected void sequence_Service(EObject context, Service semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
 	 */
 	protected void sequence_StringVar(EObject context, StringVar semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN in_ops=InputOptions?)
+	 */
+	protected void sequence_StringVar_VisInputValue(EObject context, StringVar semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1048,7 +1795,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name=ID | int_val=INT | str_val=STRING)
+	 *     (name=UTOKEN | name=TOKEN | int_val=INT | str_val=STRING)
 	 */
 	protected void sequence_Value(EObject context, Value semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1057,7 +1804,23 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (funcs+=Function funcs+=Function*)
+	 *     input=VisBasis
+	 */
+	protected void sequence_VisBasisParens(EObject context, VisBasisParens semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VIS_BASIS_PARENS__INPUT) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VIS_BASIS_PARENS__INPUT));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getVisBasisParensAccess().getInputVisBasisParserRuleCall_1_0(), semanticObject.getInput());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (funcs=Function qfuncs+=QFunction*)
 	 */
 	protected void sequence_VisBasisQualifiers(EObject context, VisBasisQualifiers semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1066,9 +1829,45 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (basis=[OutDataset|ID] quals=VisBasisQualifiers?)
+	 *     (basis=[OutDataset|TOKEN] filter=VisFilter? quals=VisBasisQualifiers?)
 	 */
 	protected void sequence_VisBasis(EObject context, VisBasis semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     vals+=Value+
+	 */
+	protected void sequence_VisFilter(EObject context, VisFilter semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='MODAL' | name='VISIBLE')
+	 */
+	protected void sequence_VisibilityOption(EObject context, VisibilityOption semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=TOKEN
+	 */
+	protected void sequence_VisualCustomOption(EObject context, VisualCustomOption semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=TOKEN funcs+=Function funcs+=Function*)
+	 */
+	protected void sequence_VisualCustomOption_VisualOption(EObject context, VisualCustomOption semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1082,10 +1881,35 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *         name='RANGE' | 
 	 *         name='FILTER' | 
 	 *         name='LABEL' | 
-	 *         name='VALUE'
+	 *         name='VALUE' | 
+	 *         name='SORT' | 
+	 *         name='BRANCHES'
 	 *     )
 	 */
 	protected void sequence_VisualMultival(EObject context, VisualMultival semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         (
+	 *             name='X' | 
+	 *             name='Y' | 
+	 *             name='COLOR' | 
+	 *             name='RANGE' | 
+	 *             name='FILTER' | 
+	 *             name='LABEL' | 
+	 *             name='VALUE' | 
+	 *             name='SORT' | 
+	 *             name='BRANCHES'
+	 *         ) 
+	 *         funcs+=Function 
+	 *         funcs+=Function*
+	 *     )
+	 */
+	protected void sequence_VisualMultival_VisualOption(EObject context, VisualMultival semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1101,13 +1925,21 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *                 name='PICTURE' | 
 	 *                 name='STATE' | 
 	 *                 name='COUNTY' | 
+	 *                 name='FIRST' | 
 	 *                 name='WEIGHT' | 
-	 *                 name='SIZE'
+	 *                 name='SIZE' | 
+	 *                 name='LEVELS' | 
+	 *                 name='LEVEL' | 
+	 *                 name='UID' | 
+	 *                 name='TYPE'
 	 *             ) 
 	 *             funcs+=Function
 	 *         ) | 
-	 *         (vis_mult=VisualMultival funcs+=Function funcs+=Function*) | 
-	 *         name='SELECTS'
+	 *         ((name='ICON' | name='FLAG' | name='TYPE') funcs+=Function decl=VizEnumDecl?) | 
+	 *         vis_cust=VisualCustomOption | 
+	 *         name='COLLAPSE' | 
+	 *         (name='VISIBILITY' visibility_op=VisibilityOption) | 
+	 *         (name='ENABLE' assigns+=AssignList)
 	 *     )
 	 */
 	protected void sequence_VisualOption(EObject context, VisualOption semanticObject) {
@@ -1126,20 +1958,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (name='LABEL' vals=Value)
+	 *     (((name='LABEL' | name='TITLE') vals=Value) | (name='ENABLE' assigns=AssignList) | name='EXPLORE' | name='PRIMARY')
 	 */
 	protected void sequence_VisualSectionOption(EObject context, VisualSectionOption semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VISUAL_SECTION_OPTION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VISUAL_SECTION_OPTION__NAME));
-			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VISUAL_SECTION_OPTION__VALS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VISUAL_SECTION_OPTION__VALS));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getVisualSectionOptionAccess().getNameLABELKeyword_0_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getVisualSectionOptionAccess().getValsValueParserRuleCall_2_0(), semanticObject.getVals());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	
@@ -1163,9 +1985,56 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((name=ID input=VisBasis vis_op=VisualOptions?) | (name=ID vis_op=VisualOptions?))
+	 *     ((name=TOKEN parens=VisBasisParens? vis_op=VisualOptions?) | (name=TOKEN parens=VisBasisParens? vis_op=VisualOptions? input_val+=VisInputValue+))
 	 */
 	protected void sequence_Visualization(EObject context, Visualization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (assigns+=VizAssign assigns+=VizAssign*)
+	 */
+	protected void sequence_VizAssignList(EObject context, VizAssignList semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (val_l=Value val_r=ValueList)
+	 */
+	protected void sequence_VizAssign(EObject context, VizAssign semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VIZ_ASSIGN__VAL_L) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VIZ_ASSIGN__VAL_L));
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VIZ_ASSIGN__VAL_R) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VIZ_ASSIGN__VAL_R));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getVizAssignAccess().getVal_lValueParserRuleCall_0_0(), semanticObject.getVal_l());
+		feeder.accept(grammarAccess.getVizAssignAccess().getVal_rValueListParserRuleCall_2_0(), semanticObject.getVal_r());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name='ENUM' assigns=VizAssignList)
+	 */
+	protected void sequence_VizEnumDecl(EObject context, VizEnumDecl semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VIZ_ENUM_DECL__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VIZ_ENUM_DECL__NAME));
+			if(transientValues.isValueTransient(semanticObject, HIPIEPackage.Literals.VIZ_ENUM_DECL__ASSIGNS) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, HIPIEPackage.Literals.VIZ_ENUM_DECL__ASSIGNS));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getVizEnumDeclAccess().getNameENUMKeyword_0_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getVizEnumDeclAccess().getAssignsVizAssignListParserRuleCall_2_0(), semanticObject.getAssigns());
+		feeder.finish();
 	}
 }

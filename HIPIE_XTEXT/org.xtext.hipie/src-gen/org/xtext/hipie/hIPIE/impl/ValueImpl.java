@@ -21,7 +21,6 @@ import org.xtext.hipie.hIPIE.Value;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.ValueImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ValueImpl#getInt_val <em>Int val</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ValueImpl#getStr_val <em>Str val</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ValueImpl#getRes_ops <em>Res ops</em>}</li>
@@ -30,28 +29,8 @@ import org.xtext.hipie.hIPIE.Value;
  *
  * @generated
  */
-public class ValueImpl extends CustomValueImpl implements Value
+public class ValueImpl extends SelectEventImpl implements Value
 {
-  /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
-
   /**
    * The default value of the '{@link #getInt_val() <em>Int val</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -121,29 +100,6 @@ public class ValueImpl extends CustomValueImpl implements Value
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.VALUE;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VALUE__NAME, oldName, name));
   }
 
   /**
@@ -266,8 +222,6 @@ public class ValueImpl extends CustomValueImpl implements Value
   {
     switch (featureID)
     {
-      case HIPIEPackage.VALUE__NAME:
-        return getName();
       case HIPIEPackage.VALUE__INT_VAL:
         return getInt_val();
       case HIPIEPackage.VALUE__STR_VAL:
@@ -288,9 +242,6 @@ public class ValueImpl extends CustomValueImpl implements Value
   {
     switch (featureID)
     {
-      case HIPIEPackage.VALUE__NAME:
-        setName((String)newValue);
-        return;
       case HIPIEPackage.VALUE__INT_VAL:
         setInt_val((Integer)newValue);
         return;
@@ -314,9 +265,6 @@ public class ValueImpl extends CustomValueImpl implements Value
   {
     switch (featureID)
     {
-      case HIPIEPackage.VALUE__NAME:
-        setName(NAME_EDEFAULT);
-        return;
       case HIPIEPackage.VALUE__INT_VAL:
         setInt_val(INT_VAL_EDEFAULT);
         return;
@@ -340,8 +288,6 @@ public class ValueImpl extends CustomValueImpl implements Value
   {
     switch (featureID)
     {
-      case HIPIEPackage.VALUE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.VALUE__INT_VAL:
         return int_val != INT_VAL_EDEFAULT;
       case HIPIEPackage.VALUE__STR_VAL:
@@ -363,9 +309,7 @@ public class ValueImpl extends CustomValueImpl implements Value
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", int_val: ");
+    result.append(" (int_val: ");
     result.append(int_val);
     result.append(", str_val: ");
     result.append(str_val);

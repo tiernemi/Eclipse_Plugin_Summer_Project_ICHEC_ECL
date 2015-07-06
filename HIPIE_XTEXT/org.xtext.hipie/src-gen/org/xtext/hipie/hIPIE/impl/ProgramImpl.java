@@ -4,6 +4,7 @@ package org.xtext.hipie.hIPIE.impl;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -11,6 +12,7 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -23,7 +25,9 @@ import org.xtext.hipie.hIPIE.CustomSection;
 import org.xtext.hipie.hIPIE.GenerateSection;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.InputSection;
+import org.xtext.hipie.hIPIE.IntegrateSection;
 import org.xtext.hipie.hIPIE.OutputSection;
+import org.xtext.hipie.hIPIE.Permissions;
 import org.xtext.hipie.hIPIE.Program;
 import org.xtext.hipie.hIPIE.ResourceSection;
 import org.xtext.hipie.hIPIE.VisualSection;
@@ -37,13 +41,15 @@ import org.xtext.hipie.hIPIE.VisualSection;
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getComposition_header <em>Composition header</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getBase_props <em>Base props</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getContract_instances <em>Contract instances</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getPermissions <em>Permissions</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getInput_section <em>Input section</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getContract_instances <em>Contract instances</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getOutput_section <em>Output section</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getIntegrate_section <em>Integrate section</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getVisual_section <em>Visual section</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getGenerate_section <em>Generate section</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getCustom_section <em>Custom section</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getSesource_section <em>Sesource section</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.ProgramImpl#getResource_section <em>Resource section</em>}</li>
  * </ul>
  * </p>
  *
@@ -72,14 +78,14 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   protected EList<BaseProp> base_props;
 
   /**
-   * The cached value of the '{@link #getContract_instances() <em>Contract instances</em>}' containment reference list.
+   * The cached value of the '{@link #getPermissions() <em>Permissions</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getContract_instances()
+   * @see #getPermissions()
    * @generated
    * @ordered
    */
-  protected EList<ContractInstance> contract_instances;
+  protected Permissions permissions;
 
   /**
    * The cached value of the '{@link #getInput_section() <em>Input section</em>}' containment reference list.
@@ -92,6 +98,16 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   protected EList<InputSection> input_section;
 
   /**
+   * The cached value of the '{@link #getContract_instances() <em>Contract instances</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getContract_instances()
+   * @generated
+   * @ordered
+   */
+  protected EList<ContractInstance> contract_instances;
+
+  /**
    * The cached value of the '{@link #getOutput_section() <em>Output section</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -100,6 +116,16 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * @ordered
    */
   protected EList<OutputSection> output_section;
+
+  /**
+   * The cached value of the '{@link #getIntegrate_section() <em>Integrate section</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIntegrate_section()
+   * @generated
+   * @ordered
+   */
+  protected IntegrateSection integrate_section;
 
   /**
    * The cached value of the '{@link #getVisual_section() <em>Visual section</em>}' containment reference list.
@@ -132,14 +158,14 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
   protected EList<CustomSection> custom_section;
 
   /**
-   * The cached value of the '{@link #getSesource_section() <em>Sesource section</em>}' containment reference list.
+   * The cached value of the '{@link #getResource_section() <em>Resource section</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSesource_section()
+   * @see #getResource_section()
    * @generated
    * @ordered
    */
-  protected EList<ResourceSection> sesource_section;
+  protected EList<ResourceSection> resource_section;
 
   /**
    * <!-- begin-user-doc -->
@@ -195,13 +221,47 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ContractInstance> getContract_instances()
+  public Permissions getPermissions()
   {
-    if (contract_instances == null)
+    return permissions;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetPermissions(Permissions newPermissions, NotificationChain msgs)
+  {
+    Permissions oldPermissions = permissions;
+    permissions = newPermissions;
+    if (eNotificationRequired())
     {
-      contract_instances = new EObjectContainmentEList<ContractInstance>(ContractInstance.class, this, HIPIEPackage.PROGRAM__CONTRACT_INSTANCES);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.PROGRAM__PERMISSIONS, oldPermissions, newPermissions);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return contract_instances;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPermissions(Permissions newPermissions)
+  {
+    if (newPermissions != permissions)
+    {
+      NotificationChain msgs = null;
+      if (permissions != null)
+        msgs = ((InternalEObject)permissions).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.PROGRAM__PERMISSIONS, null, msgs);
+      if (newPermissions != null)
+        msgs = ((InternalEObject)newPermissions).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.PROGRAM__PERMISSIONS, null, msgs);
+      msgs = basicSetPermissions(newPermissions, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.PROGRAM__PERMISSIONS, newPermissions, newPermissions));
   }
 
   /**
@@ -223,6 +283,20 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<ContractInstance> getContract_instances()
+  {
+    if (contract_instances == null)
+    {
+      contract_instances = new EObjectContainmentEList<ContractInstance>(ContractInstance.class, this, HIPIEPackage.PROGRAM__CONTRACT_INSTANCES);
+    }
+    return contract_instances;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<OutputSection> getOutput_section()
   {
     if (output_section == null)
@@ -230,6 +304,54 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
       output_section = new EObjectContainmentEList<OutputSection>(OutputSection.class, this, HIPIEPackage.PROGRAM__OUTPUT_SECTION);
     }
     return output_section;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntegrateSection getIntegrate_section()
+  {
+    return integrate_section;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIntegrate_section(IntegrateSection newIntegrate_section, NotificationChain msgs)
+  {
+    IntegrateSection oldIntegrate_section = integrate_section;
+    integrate_section = newIntegrate_section;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.PROGRAM__INTEGRATE_SECTION, oldIntegrate_section, newIntegrate_section);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setIntegrate_section(IntegrateSection newIntegrate_section)
+  {
+    if (newIntegrate_section != integrate_section)
+    {
+      NotificationChain msgs = null;
+      if (integrate_section != null)
+        msgs = ((InternalEObject)integrate_section).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.PROGRAM__INTEGRATE_SECTION, null, msgs);
+      if (newIntegrate_section != null)
+        msgs = ((InternalEObject)newIntegrate_section).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.PROGRAM__INTEGRATE_SECTION, null, msgs);
+      msgs = basicSetIntegrate_section(newIntegrate_section, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.PROGRAM__INTEGRATE_SECTION, newIntegrate_section, newIntegrate_section));
   }
 
   /**
@@ -279,13 +401,13 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ResourceSection> getSesource_section()
+  public EList<ResourceSection> getResource_section()
   {
-    if (sesource_section == null)
+    if (resource_section == null)
     {
-      sesource_section = new EObjectContainmentEList<ResourceSection>(ResourceSection.class, this, HIPIEPackage.PROGRAM__SESOURCE_SECTION);
+      resource_section = new EObjectContainmentEList<ResourceSection>(ResourceSection.class, this, HIPIEPackage.PROGRAM__RESOURCE_SECTION);
     }
-    return sesource_section;
+    return resource_section;
   }
 
   /**
@@ -302,20 +424,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         return ((InternalEList<?>)getComposition_header()).basicRemove(otherEnd, msgs);
       case HIPIEPackage.PROGRAM__BASE_PROPS:
         return ((InternalEList<?>)getBase_props()).basicRemove(otherEnd, msgs);
-      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
-        return ((InternalEList<?>)getContract_instances()).basicRemove(otherEnd, msgs);
+      case HIPIEPackage.PROGRAM__PERMISSIONS:
+        return basicSetPermissions(null, msgs);
       case HIPIEPackage.PROGRAM__INPUT_SECTION:
         return ((InternalEList<?>)getInput_section()).basicRemove(otherEnd, msgs);
+      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
+        return ((InternalEList<?>)getContract_instances()).basicRemove(otherEnd, msgs);
       case HIPIEPackage.PROGRAM__OUTPUT_SECTION:
         return ((InternalEList<?>)getOutput_section()).basicRemove(otherEnd, msgs);
+      case HIPIEPackage.PROGRAM__INTEGRATE_SECTION:
+        return basicSetIntegrate_section(null, msgs);
       case HIPIEPackage.PROGRAM__VISUAL_SECTION:
         return ((InternalEList<?>)getVisual_section()).basicRemove(otherEnd, msgs);
       case HIPIEPackage.PROGRAM__GENERATE_SECTION:
         return ((InternalEList<?>)getGenerate_section()).basicRemove(otherEnd, msgs);
       case HIPIEPackage.PROGRAM__CUSTOM_SECTION:
         return ((InternalEList<?>)getCustom_section()).basicRemove(otherEnd, msgs);
-      case HIPIEPackage.PROGRAM__SESOURCE_SECTION:
-        return ((InternalEList<?>)getSesource_section()).basicRemove(otherEnd, msgs);
+      case HIPIEPackage.PROGRAM__RESOURCE_SECTION:
+        return ((InternalEList<?>)getResource_section()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -334,20 +460,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         return getComposition_header();
       case HIPIEPackage.PROGRAM__BASE_PROPS:
         return getBase_props();
-      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
-        return getContract_instances();
+      case HIPIEPackage.PROGRAM__PERMISSIONS:
+        return getPermissions();
       case HIPIEPackage.PROGRAM__INPUT_SECTION:
         return getInput_section();
+      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
+        return getContract_instances();
       case HIPIEPackage.PROGRAM__OUTPUT_SECTION:
         return getOutput_section();
+      case HIPIEPackage.PROGRAM__INTEGRATE_SECTION:
+        return getIntegrate_section();
       case HIPIEPackage.PROGRAM__VISUAL_SECTION:
         return getVisual_section();
       case HIPIEPackage.PROGRAM__GENERATE_SECTION:
         return getGenerate_section();
       case HIPIEPackage.PROGRAM__CUSTOM_SECTION:
         return getCustom_section();
-      case HIPIEPackage.PROGRAM__SESOURCE_SECTION:
-        return getSesource_section();
+      case HIPIEPackage.PROGRAM__RESOURCE_SECTION:
+        return getResource_section();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -371,17 +501,23 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         getBase_props().clear();
         getBase_props().addAll((Collection<? extends BaseProp>)newValue);
         return;
-      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
-        getContract_instances().clear();
-        getContract_instances().addAll((Collection<? extends ContractInstance>)newValue);
+      case HIPIEPackage.PROGRAM__PERMISSIONS:
+        setPermissions((Permissions)newValue);
         return;
       case HIPIEPackage.PROGRAM__INPUT_SECTION:
         getInput_section().clear();
         getInput_section().addAll((Collection<? extends InputSection>)newValue);
         return;
+      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
+        getContract_instances().clear();
+        getContract_instances().addAll((Collection<? extends ContractInstance>)newValue);
+        return;
       case HIPIEPackage.PROGRAM__OUTPUT_SECTION:
         getOutput_section().clear();
         getOutput_section().addAll((Collection<? extends OutputSection>)newValue);
+        return;
+      case HIPIEPackage.PROGRAM__INTEGRATE_SECTION:
+        setIntegrate_section((IntegrateSection)newValue);
         return;
       case HIPIEPackage.PROGRAM__VISUAL_SECTION:
         getVisual_section().clear();
@@ -395,9 +531,9 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         getCustom_section().clear();
         getCustom_section().addAll((Collection<? extends CustomSection>)newValue);
         return;
-      case HIPIEPackage.PROGRAM__SESOURCE_SECTION:
-        getSesource_section().clear();
-        getSesource_section().addAll((Collection<? extends ResourceSection>)newValue);
+      case HIPIEPackage.PROGRAM__RESOURCE_SECTION:
+        getResource_section().clear();
+        getResource_section().addAll((Collection<? extends ResourceSection>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -419,14 +555,20 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
       case HIPIEPackage.PROGRAM__BASE_PROPS:
         getBase_props().clear();
         return;
-      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
-        getContract_instances().clear();
+      case HIPIEPackage.PROGRAM__PERMISSIONS:
+        setPermissions((Permissions)null);
         return;
       case HIPIEPackage.PROGRAM__INPUT_SECTION:
         getInput_section().clear();
         return;
+      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
+        getContract_instances().clear();
+        return;
       case HIPIEPackage.PROGRAM__OUTPUT_SECTION:
         getOutput_section().clear();
+        return;
+      case HIPIEPackage.PROGRAM__INTEGRATE_SECTION:
+        setIntegrate_section((IntegrateSection)null);
         return;
       case HIPIEPackage.PROGRAM__VISUAL_SECTION:
         getVisual_section().clear();
@@ -437,8 +579,8 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
       case HIPIEPackage.PROGRAM__CUSTOM_SECTION:
         getCustom_section().clear();
         return;
-      case HIPIEPackage.PROGRAM__SESOURCE_SECTION:
-        getSesource_section().clear();
+      case HIPIEPackage.PROGRAM__RESOURCE_SECTION:
+        getResource_section().clear();
         return;
     }
     super.eUnset(featureID);
@@ -458,20 +600,24 @@ public class ProgramImpl extends MinimalEObjectImpl.Container implements Program
         return composition_header != null && !composition_header.isEmpty();
       case HIPIEPackage.PROGRAM__BASE_PROPS:
         return base_props != null && !base_props.isEmpty();
-      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
-        return contract_instances != null && !contract_instances.isEmpty();
+      case HIPIEPackage.PROGRAM__PERMISSIONS:
+        return permissions != null;
       case HIPIEPackage.PROGRAM__INPUT_SECTION:
         return input_section != null && !input_section.isEmpty();
+      case HIPIEPackage.PROGRAM__CONTRACT_INSTANCES:
+        return contract_instances != null && !contract_instances.isEmpty();
       case HIPIEPackage.PROGRAM__OUTPUT_SECTION:
         return output_section != null && !output_section.isEmpty();
+      case HIPIEPackage.PROGRAM__INTEGRATE_SECTION:
+        return integrate_section != null;
       case HIPIEPackage.PROGRAM__VISUAL_SECTION:
         return visual_section != null && !visual_section.isEmpty();
       case HIPIEPackage.PROGRAM__GENERATE_SECTION:
         return generate_section != null && !generate_section.isEmpty();
       case HIPIEPackage.PROGRAM__CUSTOM_SECTION:
         return custom_section != null && !custom_section.isEmpty();
-      case HIPIEPackage.PROGRAM__SESOURCE_SECTION:
-        return sesource_section != null && !sesource_section.isEmpty();
+      case HIPIEPackage.PROGRAM__RESOURCE_SECTION:
+        return resource_section != null && !resource_section.isEmpty();
     }
     return super.eIsSet(featureID);
   }

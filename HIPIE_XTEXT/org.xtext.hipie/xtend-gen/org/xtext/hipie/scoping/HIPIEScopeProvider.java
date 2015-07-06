@@ -3,30 +3,17 @@
  */
 package org.xtext.hipie.scoping;
 
-import com.google.common.base.Objects;
-import com.google.common.collect.Iterables;
 import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EReference;
 import org.eclipse.emf.ecore.util.EcoreUtil;
-import org.eclipse.xtext.resource.IEObjectDescription;
 import org.eclipse.xtext.scoping.IScope;
-import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
-import org.eclipse.xtext.scoping.impl.MapBasedScope;
 import org.eclipse.xtext.xbase.lib.Conversions;
 import org.eclipse.xtext.xbase.lib.ExclusiveRange;
-import org.xtext.hipie.hIPIE.Datatype;
 import org.xtext.hipie.hIPIE.InputSection;
-import org.xtext.hipie.hIPIE.OutDataset;
-import org.xtext.hipie.hIPIE.OutputBase;
 import org.xtext.hipie.hIPIE.OutputSection;
-import org.xtext.hipie.hIPIE.VisBasis;
-import org.xtext.hipie.hIPIE.VisBasisQualifiers;
-import org.xtext.hipie.hIPIE.VisualOption;
-import org.xtext.hipie.hIPIE.VisualOptions;
 import org.xtext.hipie.hIPIE.VisualSection;
-import org.xtext.hipie.hIPIE.Visualization;
 
 /**
  * This class contains custom scoping description.
@@ -65,63 +52,6 @@ public class HIPIEScopeProvider extends AbstractDeclarativeScopeProvider {
         EList<EObject> _eContents_2 = parent.eContents();
         EObject _get_1 = _eContents_2.get((i).intValue());
         return this.getScope(_get_1, ref);
-      }
-    }
-    return null;
-  }
-  
-  public IScope scope_Function_vars(final VisBasisQualifiers context, final EReference ref) {
-    final EObject parent = context.eContainer();
-    if ((parent instanceof VisBasis)) {
-      final VisBasis function_container = ((VisBasis) parent);
-      OutDataset _basis = function_container.getBasis();
-      OutputBase _out_base = _basis.getOut_base();
-      boolean _notEquals = (!Objects.equal(_out_base, null));
-      if (_notEquals) {
-        OutDataset _basis_1 = function_container.getBasis();
-        OutputBase _out_base_1 = _basis_1.getOut_base();
-        final Datatype origin = _out_base_1.getBase();
-        EList<EObject> _eContents = origin.eContents();
-        final Iterable<IEObjectDescription> list_1 = Scopes.scopedElementsFor(_eContents);
-        OutDataset _basis_2 = function_container.getBasis();
-        EList<EObject> _eContents_1 = _basis_2.eContents();
-        final Iterable<IEObjectDescription> list_2 = Scopes.scopedElementsFor(_eContents_1);
-        final Iterable<IEObjectDescription> list = Iterables.<IEObjectDescription>concat(list_1, list_2);
-        return MapBasedScope.createScope(IScope.NULLSCOPE, list);
-      } else {
-        OutDataset _basis_3 = function_container.getBasis();
-        return this.getScope(_basis_3, ref);
-      }
-    }
-    return null;
-  }
-  
-  public IScope scope_Function_vars(final VisualOption context, final EReference ref) {
-    final EObject parent = context.eContainer();
-    if ((parent instanceof VisualOptions)) {
-      EObject _eContainer = ((VisualOptions)parent).eContainer();
-      final Visualization function_container = ((Visualization) _eContainer);
-      VisBasis _input = function_container.getInput();
-      OutDataset _basis = _input.getBasis();
-      OutputBase _out_base = _basis.getOut_base();
-      boolean _notEquals = (!Objects.equal(_out_base, null));
-      if (_notEquals) {
-        VisBasis _input_1 = function_container.getInput();
-        OutDataset _basis_1 = _input_1.getBasis();
-        OutputBase _out_base_1 = _basis_1.getOut_base();
-        final Datatype origin = _out_base_1.getBase();
-        EList<EObject> _eContents = origin.eContents();
-        final Iterable<IEObjectDescription> list_1 = Scopes.scopedElementsFor(_eContents);
-        VisBasis _input_2 = function_container.getInput();
-        OutDataset _basis_2 = _input_2.getBasis();
-        EList<EObject> _eContents_1 = _basis_2.eContents();
-        final Iterable<IEObjectDescription> list_2 = Scopes.scopedElementsFor(_eContents_1);
-        final Iterable<IEObjectDescription> list = Iterables.<IEObjectDescription>concat(list_1, list_2);
-        return MapBasedScope.createScope(IScope.NULLSCOPE, list);
-      } else {
-        VisBasis _input_3 = function_container.getInput();
-        OutDataset _basis_3 = _input_3.getBasis();
-        return this.getScope(_basis_3, ref);
       }
     }
     return null;

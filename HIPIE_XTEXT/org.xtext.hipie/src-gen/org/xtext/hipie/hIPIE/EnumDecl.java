@@ -2,7 +2,6 @@
  */
 package org.xtext.hipie.hIPIE;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,8 +12,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.EnumDecl#getEnum_dec <em>Enum dec</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.EnumDecl#getVals <em>Vals</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.EnumDecl#getAssigns <em>Assigns</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.EnumDecl#getEnum_list <em>Enum list</em>}</li>
  * </ul>
  * </p>
  *
@@ -22,7 +20,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface EnumDecl extends InputValue
+public interface EnumDecl extends InputSimpleTypes
 {
   /**
    * Returns the value of the '<em><b>Enum dec</b></em>' attribute.
@@ -51,35 +49,29 @@ public interface EnumDecl extends InputValue
   void setEnum_dec(String value);
 
   /**
-   * Returns the value of the '<em><b>Vals</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.ValueList}.
+   * Returns the value of the '<em><b>Enum list</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vals</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Enum list</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vals</em>' containment reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getEnumDecl_Vals()
+   * @return the value of the '<em>Enum list</em>' containment reference.
+   * @see #setEnum_list(EnumList)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getEnumDecl_Enum_list()
    * @model containment="true"
    * @generated
    */
-  EList<ValueList> getVals();
+  EnumList getEnum_list();
 
   /**
-   * Returns the value of the '<em><b>Assigns</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.AssignList}.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.EnumDecl#getEnum_list <em>Enum list</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Assigns</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Assigns</em>' containment reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getEnumDecl_Assigns()
-   * @model containment="true"
+   * @param value the new value of the '<em>Enum list</em>' containment reference.
+   * @see #getEnum_list()
    * @generated
    */
-  EList<AssignList> getAssigns();
+  void setEnum_list(EnumList value);
 
 } // EnumDecl

@@ -2,8 +2,12 @@
  */
 package org.xtext.hipie.hIPIE.impl;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -11,8 +15,12 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
+
 import org.xtext.hipie.hIPIE.HIPIEPackage;
-import org.xtext.hipie.hIPIE.VisBasis;
+import org.xtext.hipie.hIPIE.VisBasisParens;
+import org.xtext.hipie.hIPIE.VisInputValue;
 import org.xtext.hipie.hIPIE.VisualOptions;
 import org.xtext.hipie.hIPIE.Visualization;
 
@@ -24,8 +32,9 @@ import org.xtext.hipie.hIPIE.Visualization;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getInput <em>Input</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getParens <em>Parens</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getVis_op <em>Vis op</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getInput_val <em>Input val</em>}</li>
  * </ul>
  * </p>
  *
@@ -54,14 +63,14 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getInput() <em>Input</em>}' containment reference.
+   * The cached value of the '{@link #getParens() <em>Parens</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getInput()
+   * @see #getParens()
    * @generated
    * @ordered
    */
-  protected VisBasis input;
+  protected VisBasisParens parens;
 
   /**
    * The cached value of the '{@link #getVis_op() <em>Vis op</em>}' containment reference.
@@ -72,6 +81,16 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
    * @ordered
    */
   protected VisualOptions vis_op;
+
+  /**
+   * The cached value of the '{@link #getInput_val() <em>Input val</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInput_val()
+   * @generated
+   * @ordered
+   */
+  protected EList<VisInputValue> input_val;
 
   /**
    * <!-- begin-user-doc -->
@@ -122,9 +141,9 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public VisBasis getInput()
+  public VisBasisParens getParens()
   {
-    return input;
+    return parens;
   }
 
   /**
@@ -132,13 +151,13 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetInput(VisBasis newInput, NotificationChain msgs)
+  public NotificationChain basicSetParens(VisBasisParens newParens, NotificationChain msgs)
   {
-    VisBasis oldInput = input;
-    input = newInput;
+    VisBasisParens oldParens = parens;
+    parens = newParens;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUALIZATION__INPUT, oldInput, newInput);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUALIZATION__PARENS, oldParens, newParens);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -149,20 +168,20 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setInput(VisBasis newInput)
+  public void setParens(VisBasisParens newParens)
   {
-    if (newInput != input)
+    if (newParens != parens)
     {
       NotificationChain msgs = null;
-      if (input != null)
-        msgs = ((InternalEObject)input).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUALIZATION__INPUT, null, msgs);
-      if (newInput != null)
-        msgs = ((InternalEObject)newInput).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUALIZATION__INPUT, null, msgs);
-      msgs = basicSetInput(newInput, msgs);
+      if (parens != null)
+        msgs = ((InternalEObject)parens).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUALIZATION__PARENS, null, msgs);
+      if (newParens != null)
+        msgs = ((InternalEObject)newParens).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUALIZATION__PARENS, null, msgs);
+      msgs = basicSetParens(newParens, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUALIZATION__INPUT, newInput, newInput));
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUALIZATION__PARENS, newParens, newParens));
   }
 
   /**
@@ -218,15 +237,31 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<VisInputValue> getInput_val()
+  {
+    if (input_val == null)
+    {
+      input_val = new EObjectContainmentEList<VisInputValue>(VisInputValue.class, this, HIPIEPackage.VISUALIZATION__INPUT_VAL);
+    }
+    return input_val;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
     {
-      case HIPIEPackage.VISUALIZATION__INPUT:
-        return basicSetInput(null, msgs);
+      case HIPIEPackage.VISUALIZATION__PARENS:
+        return basicSetParens(null, msgs);
       case HIPIEPackage.VISUALIZATION__VIS_OP:
         return basicSetVis_op(null, msgs);
+      case HIPIEPackage.VISUALIZATION__INPUT_VAL:
+        return ((InternalEList<?>)getInput_val()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -243,10 +278,12 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
     {
       case HIPIEPackage.VISUALIZATION__NAME:
         return getName();
-      case HIPIEPackage.VISUALIZATION__INPUT:
-        return getInput();
+      case HIPIEPackage.VISUALIZATION__PARENS:
+        return getParens();
       case HIPIEPackage.VISUALIZATION__VIS_OP:
         return getVis_op();
+      case HIPIEPackage.VISUALIZATION__INPUT_VAL:
+        return getInput_val();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -256,6 +293,7 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -264,11 +302,15 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
       case HIPIEPackage.VISUALIZATION__NAME:
         setName((String)newValue);
         return;
-      case HIPIEPackage.VISUALIZATION__INPUT:
-        setInput((VisBasis)newValue);
+      case HIPIEPackage.VISUALIZATION__PARENS:
+        setParens((VisBasisParens)newValue);
         return;
       case HIPIEPackage.VISUALIZATION__VIS_OP:
         setVis_op((VisualOptions)newValue);
+        return;
+      case HIPIEPackage.VISUALIZATION__INPUT_VAL:
+        getInput_val().clear();
+        getInput_val().addAll((Collection<? extends VisInputValue>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -287,11 +329,14 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
       case HIPIEPackage.VISUALIZATION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case HIPIEPackage.VISUALIZATION__INPUT:
-        setInput((VisBasis)null);
+      case HIPIEPackage.VISUALIZATION__PARENS:
+        setParens((VisBasisParens)null);
         return;
       case HIPIEPackage.VISUALIZATION__VIS_OP:
         setVis_op((VisualOptions)null);
+        return;
+      case HIPIEPackage.VISUALIZATION__INPUT_VAL:
+        getInput_val().clear();
         return;
     }
     super.eUnset(featureID);
@@ -309,10 +354,12 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
     {
       case HIPIEPackage.VISUALIZATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case HIPIEPackage.VISUALIZATION__INPUT:
-        return input != null;
+      case HIPIEPackage.VISUALIZATION__PARENS:
+        return parens != null;
       case HIPIEPackage.VISUALIZATION__VIS_OP:
         return vis_op != null;
+      case HIPIEPackage.VISUALIZATION__INPUT_VAL:
+        return input_val != null && !input_val.isEmpty();
     }
     return super.eIsSet(featureID);
   }

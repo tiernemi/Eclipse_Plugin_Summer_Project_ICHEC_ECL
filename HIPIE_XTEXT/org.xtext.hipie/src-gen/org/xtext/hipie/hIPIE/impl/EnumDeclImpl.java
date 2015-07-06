@@ -2,25 +2,17 @@
  */
 package org.xtext.hipie.hIPIE.impl;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
-import org.xtext.hipie.hIPIE.AssignList;
 import org.xtext.hipie.hIPIE.EnumDecl;
+import org.xtext.hipie.hIPIE.EnumList;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
-import org.xtext.hipie.hIPIE.ValueList;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,14 +22,13 @@ import org.xtext.hipie.hIPIE.ValueList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.EnumDeclImpl#getEnum_dec <em>Enum dec</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.EnumDeclImpl#getVals <em>Vals</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.EnumDeclImpl#getAssigns <em>Assigns</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.EnumDeclImpl#getEnum_list <em>Enum list</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class EnumDeclImpl extends InputValueImpl implements EnumDecl
+public class EnumDeclImpl extends InputSimpleTypesImpl implements EnumDecl
 {
   /**
    * The default value of the '{@link #getEnum_dec() <em>Enum dec</em>}' attribute.
@@ -60,24 +51,14 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
   protected String enum_dec = ENUM_DEC_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference list.
+   * The cached value of the '{@link #getEnum_list() <em>Enum list</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVals()
+   * @see #getEnum_list()
    * @generated
    * @ordered
    */
-  protected EList<ValueList> vals;
-
-  /**
-   * The cached value of the '{@link #getAssigns() <em>Assigns</em>}' containment reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getAssigns()
-   * @generated
-   * @ordered
-   */
-  protected EList<AssignList> assigns;
+  protected EnumList enum_list;
 
   /**
    * <!-- begin-user-doc -->
@@ -128,13 +109,9 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<ValueList> getVals()
+  public EnumList getEnum_list()
   {
-    if (vals == null)
-    {
-      vals = new EObjectContainmentEList<ValueList>(ValueList.class, this, HIPIEPackage.ENUM_DECL__VALS);
-    }
-    return vals;
+    return enum_list;
   }
 
   /**
@@ -142,13 +119,37 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<AssignList> getAssigns()
+  public NotificationChain basicSetEnum_list(EnumList newEnum_list, NotificationChain msgs)
   {
-    if (assigns == null)
+    EnumList oldEnum_list = enum_list;
+    enum_list = newEnum_list;
+    if (eNotificationRequired())
     {
-      assigns = new EObjectContainmentEList<AssignList>(AssignList.class, this, HIPIEPackage.ENUM_DECL__ASSIGNS);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.ENUM_DECL__ENUM_LIST, oldEnum_list, newEnum_list);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return assigns;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setEnum_list(EnumList newEnum_list)
+  {
+    if (newEnum_list != enum_list)
+    {
+      NotificationChain msgs = null;
+      if (enum_list != null)
+        msgs = ((InternalEObject)enum_list).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.ENUM_DECL__ENUM_LIST, null, msgs);
+      if (newEnum_list != null)
+        msgs = ((InternalEObject)newEnum_list).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.ENUM_DECL__ENUM_LIST, null, msgs);
+      msgs = basicSetEnum_list(newEnum_list, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.ENUM_DECL__ENUM_LIST, newEnum_list, newEnum_list));
   }
 
   /**
@@ -161,10 +162,8 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
   {
     switch (featureID)
     {
-      case HIPIEPackage.ENUM_DECL__VALS:
-        return ((InternalEList<?>)getVals()).basicRemove(otherEnd, msgs);
-      case HIPIEPackage.ENUM_DECL__ASSIGNS:
-        return ((InternalEList<?>)getAssigns()).basicRemove(otherEnd, msgs);
+      case HIPIEPackage.ENUM_DECL__ENUM_LIST:
+        return basicSetEnum_list(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -181,10 +180,8 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
     {
       case HIPIEPackage.ENUM_DECL__ENUM_DEC:
         return getEnum_dec();
-      case HIPIEPackage.ENUM_DECL__VALS:
-        return getVals();
-      case HIPIEPackage.ENUM_DECL__ASSIGNS:
-        return getAssigns();
+      case HIPIEPackage.ENUM_DECL__ENUM_LIST:
+        return getEnum_list();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -194,7 +191,6 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -203,13 +199,8 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
       case HIPIEPackage.ENUM_DECL__ENUM_DEC:
         setEnum_dec((String)newValue);
         return;
-      case HIPIEPackage.ENUM_DECL__VALS:
-        getVals().clear();
-        getVals().addAll((Collection<? extends ValueList>)newValue);
-        return;
-      case HIPIEPackage.ENUM_DECL__ASSIGNS:
-        getAssigns().clear();
-        getAssigns().addAll((Collection<? extends AssignList>)newValue);
+      case HIPIEPackage.ENUM_DECL__ENUM_LIST:
+        setEnum_list((EnumList)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -228,11 +219,8 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
       case HIPIEPackage.ENUM_DECL__ENUM_DEC:
         setEnum_dec(ENUM_DEC_EDEFAULT);
         return;
-      case HIPIEPackage.ENUM_DECL__VALS:
-        getVals().clear();
-        return;
-      case HIPIEPackage.ENUM_DECL__ASSIGNS:
-        getAssigns().clear();
+      case HIPIEPackage.ENUM_DECL__ENUM_LIST:
+        setEnum_list((EnumList)null);
         return;
     }
     super.eUnset(featureID);
@@ -250,10 +238,8 @@ public class EnumDeclImpl extends InputValueImpl implements EnumDecl
     {
       case HIPIEPackage.ENUM_DECL__ENUM_DEC:
         return ENUM_DEC_EDEFAULT == null ? enum_dec != null : !ENUM_DEC_EDEFAULT.equals(enum_dec);
-      case HIPIEPackage.ENUM_DECL__VALS:
-        return vals != null && !vals.isEmpty();
-      case HIPIEPackage.ENUM_DECL__ASSIGNS:
-        return assigns != null && !assigns.isEmpty();
+      case HIPIEPackage.ENUM_DECL__ENUM_LIST:
+        return enum_list != null;
     }
     return super.eIsSet(featureID);
   }

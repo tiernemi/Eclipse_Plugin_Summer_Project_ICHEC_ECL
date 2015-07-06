@@ -19,7 +19,7 @@ package org.xtext.hipie.hIPIE;
  * @model
  * @generated
  */
-public interface Bool extends Datatype, InputValue, OutfieldDecl
+public interface Bool extends InputSimpleTypes, OutfieldDecl
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.

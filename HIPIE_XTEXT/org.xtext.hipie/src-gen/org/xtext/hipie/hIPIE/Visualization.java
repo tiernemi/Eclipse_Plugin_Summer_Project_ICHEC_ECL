@@ -2,6 +2,8 @@
  */
 package org.xtext.hipie.hIPIE;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -13,8 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.Visualization#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.Visualization#getInput <em>Input</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Visualization#getParens <em>Parens</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Visualization#getVis_op <em>Vis op</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Visualization#getInput_val <em>Input val</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,30 +54,30 @@ public interface Visualization extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Input</b></em>' containment reference.
+   * Returns the value of the '<em><b>Parens</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Input</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Parens</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Input</em>' containment reference.
-   * @see #setInput(VisBasis)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisualization_Input()
+   * @return the value of the '<em>Parens</em>' containment reference.
+   * @see #setParens(VisBasisParens)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisualization_Parens()
    * @model containment="true"
    * @generated
    */
-  VisBasis getInput();
+  VisBasisParens getParens();
 
   /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Visualization#getInput <em>Input</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Visualization#getParens <em>Parens</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Input</em>' containment reference.
-   * @see #getInput()
+   * @param value the new value of the '<em>Parens</em>' containment reference.
+   * @see #getParens()
    * @generated
    */
-  void setInput(VisBasis value);
+  void setParens(VisBasisParens value);
 
   /**
    * Returns the value of the '<em><b>Vis op</b></em>' containment reference.
@@ -101,5 +104,21 @@ public interface Visualization extends EObject
    * @generated
    */
   void setVis_op(VisualOptions value);
+
+  /**
+   * Returns the value of the '<em><b>Input val</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.hipie.hIPIE.VisInputValue}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Input val</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Input val</em>' containment reference list.
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisualization_Input_val()
+   * @model containment="true"
+   * @generated
+   */
+  EList<VisInputValue> getInput_val();
 
 } // Visualization

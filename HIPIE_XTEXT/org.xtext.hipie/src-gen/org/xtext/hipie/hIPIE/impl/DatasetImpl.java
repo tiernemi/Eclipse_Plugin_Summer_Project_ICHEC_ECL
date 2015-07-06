@@ -21,7 +21,6 @@ import org.xtext.hipie.hIPIE.Dataset;
 import org.xtext.hipie.hIPIE.FieldDecl;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.InputOptions;
-import org.xtext.hipie.hIPIE.InputValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -30,8 +29,8 @@ import org.xtext.hipie.hIPIE.InputValue;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.DatasetImpl#getInput_op_list <em>Input op list</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.DatasetImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.DatasetImpl#getInput_op_list <em>Input op list</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.DatasetImpl#getFields <em>Fields</em>}</li>
  * </ul>
  * </p>
@@ -40,16 +39,6 @@ import org.xtext.hipie.hIPIE.InputValue;
  */
 public class DatasetImpl extends DatatypeImpl implements Dataset
 {
-  /**
-   * The cached value of the '{@link #getInput_op_list() <em>Input op list</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInput_op_list()
-   * @generated
-   * @ordered
-   */
-  protected InputOptions input_op_list;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -69,6 +58,16 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getInput_op_list() <em>Input op list</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInput_op_list()
+   * @generated
+   * @ordered
+   */
+  protected InputOptions input_op_list;
 
   /**
    * The cached value of the '{@link #getFields() <em>Fields</em>}' containment reference list.
@@ -99,6 +98,29 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.DATASET;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.DATASET__NAME, oldName, name));
   }
 
   /**
@@ -154,29 +176,6 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.DATASET__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EList<FieldDecl> getFields()
   {
     if (fields == null)
@@ -214,10 +213,10 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.DATASET__INPUT_OP_LIST:
-        return getInput_op_list();
       case HIPIEPackage.DATASET__NAME:
         return getName();
+      case HIPIEPackage.DATASET__INPUT_OP_LIST:
+        return getInput_op_list();
       case HIPIEPackage.DATASET__FIELDS:
         return getFields();
     }
@@ -235,11 +234,11 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.DATASET__INPUT_OP_LIST:
-        setInput_op_list((InputOptions)newValue);
-        return;
       case HIPIEPackage.DATASET__NAME:
         setName((String)newValue);
+        return;
+      case HIPIEPackage.DATASET__INPUT_OP_LIST:
+        setInput_op_list((InputOptions)newValue);
         return;
       case HIPIEPackage.DATASET__FIELDS:
         getFields().clear();
@@ -259,11 +258,11 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.DATASET__INPUT_OP_LIST:
-        setInput_op_list((InputOptions)null);
-        return;
       case HIPIEPackage.DATASET__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case HIPIEPackage.DATASET__INPUT_OP_LIST:
+        setInput_op_list((InputOptions)null);
         return;
       case HIPIEPackage.DATASET__FIELDS:
         getFields().clear();
@@ -282,52 +281,14 @@ public class DatasetImpl extends DatatypeImpl implements Dataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.DATASET__INPUT_OP_LIST:
-        return input_op_list != null;
       case HIPIEPackage.DATASET__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case HIPIEPackage.DATASET__INPUT_OP_LIST:
+        return input_op_list != null;
       case HIPIEPackage.DATASET__FIELDS:
         return fields != null && !fields.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == InputValue.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case HIPIEPackage.DATASET__INPUT_OP_LIST: return HIPIEPackage.INPUT_VALUE__INPUT_OP_LIST;
-        default: return -1;
-      }
-    }
-    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == InputValue.class)
-    {
-      switch (baseFeatureID)
-      {
-        case HIPIEPackage.INPUT_VALUE__INPUT_OP_LIST: return HIPIEPackage.DATASET__INPUT_OP_LIST;
-        default: return -1;
-      }
-    }
-    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**

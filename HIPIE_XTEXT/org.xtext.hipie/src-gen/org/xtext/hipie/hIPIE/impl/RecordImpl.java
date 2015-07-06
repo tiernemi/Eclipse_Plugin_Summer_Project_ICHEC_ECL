@@ -12,7 +12,6 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.InputOptions;
-import org.xtext.hipie.hIPIE.InputValue;
 import org.xtext.hipie.hIPIE.Record;
 
 /**
@@ -22,8 +21,8 @@ import org.xtext.hipie.hIPIE.Record;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.RecordImpl#getInput_op_list <em>Input op list</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.RecordImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.RecordImpl#getInput_op_list <em>Input op list</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,16 +30,6 @@ import org.xtext.hipie.hIPIE.Record;
  */
 public class RecordImpl extends DatatypeImpl implements Record
 {
-  /**
-   * The cached value of the '{@link #getInput_op_list() <em>Input op list</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInput_op_list()
-   * @generated
-   * @ordered
-   */
-  protected InputOptions input_op_list;
-
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -62,6 +51,16 @@ public class RecordImpl extends DatatypeImpl implements Record
   protected String name = NAME_EDEFAULT;
 
   /**
+   * The cached value of the '{@link #getInput_op_list() <em>Input op list</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getInput_op_list()
+   * @generated
+   * @ordered
+   */
+  protected InputOptions input_op_list;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -80,6 +79,29 @@ public class RecordImpl extends DatatypeImpl implements Record
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.RECORD;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.RECORD__NAME, oldName, name));
   }
 
   /**
@@ -135,29 +157,6 @@ public class RecordImpl extends DatatypeImpl implements Record
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
-  {
-    return name;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setName(String newName)
-  {
-    String oldName = name;
-    name = newName;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.RECORD__NAME, oldName, name));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -179,10 +178,10 @@ public class RecordImpl extends DatatypeImpl implements Record
   {
     switch (featureID)
     {
-      case HIPIEPackage.RECORD__INPUT_OP_LIST:
-        return getInput_op_list();
       case HIPIEPackage.RECORD__NAME:
         return getName();
+      case HIPIEPackage.RECORD__INPUT_OP_LIST:
+        return getInput_op_list();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -197,11 +196,11 @@ public class RecordImpl extends DatatypeImpl implements Record
   {
     switch (featureID)
     {
-      case HIPIEPackage.RECORD__INPUT_OP_LIST:
-        setInput_op_list((InputOptions)newValue);
-        return;
       case HIPIEPackage.RECORD__NAME:
         setName((String)newValue);
+        return;
+      case HIPIEPackage.RECORD__INPUT_OP_LIST:
+        setInput_op_list((InputOptions)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -217,11 +216,11 @@ public class RecordImpl extends DatatypeImpl implements Record
   {
     switch (featureID)
     {
-      case HIPIEPackage.RECORD__INPUT_OP_LIST:
-        setInput_op_list((InputOptions)null);
-        return;
       case HIPIEPackage.RECORD__NAME:
         setName(NAME_EDEFAULT);
+        return;
+      case HIPIEPackage.RECORD__INPUT_OP_LIST:
+        setInput_op_list((InputOptions)null);
         return;
     }
     super.eUnset(featureID);
@@ -237,50 +236,12 @@ public class RecordImpl extends DatatypeImpl implements Record
   {
     switch (featureID)
     {
-      case HIPIEPackage.RECORD__INPUT_OP_LIST:
-        return input_op_list != null;
       case HIPIEPackage.RECORD__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case HIPIEPackage.RECORD__INPUT_OP_LIST:
+        return input_op_list != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == InputValue.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case HIPIEPackage.RECORD__INPUT_OP_LIST: return HIPIEPackage.INPUT_VALUE__INPUT_OP_LIST;
-        default: return -1;
-      }
-    }
-    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == InputValue.class)
-    {
-      switch (baseFeatureID)
-      {
-        case HIPIEPackage.INPUT_VALUE__INPUT_OP_LIST: return HIPIEPackage.RECORD__INPUT_OP_LIST;
-        default: return -1;
-      }
-    }
-    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**

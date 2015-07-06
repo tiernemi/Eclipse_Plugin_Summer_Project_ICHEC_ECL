@@ -12,9 +12,10 @@ import org.eclipse.emf.common.util.EList;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link org.xtext.hipie.hIPIE.OutDataset#getOptions <em>Options</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.OutDataset#getDecl <em>Decl</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.OutDataset#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.OutDataset#getOut_base <em>Out base</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.OutDataset#getOps <em>Ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.OutDataset#getEcl_vars <em>Ecl vars</em>}</li>
  * </ul>
  * </p>
@@ -23,8 +24,50 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface OutDataset extends OutputValue
+public interface OutDataset extends NestedDatasetDecl, OutputValue
 {
+  /**
+   * Returns the value of the '<em><b>Options</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Options</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Options</em>' containment reference.
+   * @see #setOptions(OutputOptions)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutDataset_Options()
+   * @model containment="true"
+   * @generated
+   */
+  OutputOptions getOptions();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.OutDataset#getOptions <em>Options</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Options</em>' containment reference.
+   * @see #getOptions()
+   * @generated
+   */
+  void setOptions(OutputOptions value);
+
+  /**
+   * Returns the value of the '<em><b>Decl</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.hipie.hIPIE.ECLOutputDecl}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Decl</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Decl</em>' containment reference list.
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutDataset_Decl()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ECLOutputDecl> getDecl();
+
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
    * <!-- begin-user-doc -->
@@ -76,22 +119,6 @@ public interface OutDataset extends OutputValue
    * @generated
    */
   void setOut_base(OutputBase value);
-
-  /**
-   * Returns the value of the '<em><b>Ops</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.OutputOptions}.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Ops</em>' containment reference list isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Ops</em>' containment reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutDataset_Ops()
-   * @model containment="true"
-   * @generated
-   */
-  EList<OutputOptions> getOps();
 
   /**
    * Returns the value of the '<em><b>Ecl vars</b></em>' containment reference list.

@@ -49,9 +49,9 @@ public class HIPIEGenerator implements IGenerator {
       int _length_1 = filepath.length();
       int _minus_1 = (_length_1 - 3);
       String _substring = filepath.substring(0, _minus_1);
-      final String filepath_output = (_substring + "out");
+      final String filepath_output = (_substring + "json");
       Runtime _runtime = Runtime.getRuntime();
-      Process _exec = _runtime.exec((((("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -c " + filepath) + " -o ") + filepath_output) + " -verbose"));
+      Process _exec = _runtime.exec((((("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -databomb " + filepath) + " -o ") + filepath_output) + " -verbose"));
       final Process proc = ((Process) _exec);
       final InputStream in = proc.getInputStream();
       final InputStream er = proc.getErrorStream();
@@ -91,7 +91,7 @@ public class HIPIEGenerator implements IGenerator {
       FileSystem _default = FileSystems.getDefault();
       java.nio.file.Path _path_1 = _default.getPath(filepath_output);
       Files.delete(_path_1);
-      fsa.generateFile((filename + "out"), streamString_in);
+      fsa.generateFile((filename + "json"), streamString_in);
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);
     }

@@ -6,15 +6,15 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.xtext.hipie.hIPIE.Datatype;
+import org.xtext.hipie.hIPIE.AssignList;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.OutputOption;
-import org.xtext.hipie.hIPIE.Value;
 
 /**
  * <!-- begin-user-doc -->
@@ -24,7 +24,7 @@ import org.xtext.hipie.hIPIE.Value;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getName <em>Name</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getAssigns <em>Assigns</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
@@ -54,14 +54,14 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getVars() <em>Vars</em>}' reference.
+   * The cached value of the '{@link #getAssigns() <em>Assigns</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVars()
+   * @see #getAssigns()
    * @generated
    * @ordered
    */
-  protected Datatype vars;
+  protected AssignList assigns;
 
   /**
    * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference.
@@ -71,7 +71,7 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
    * @generated
    * @ordered
    */
-  protected Value vals;
+  protected EObject vals;
 
   /**
    * <!-- begin-user-doc -->
@@ -122,19 +122,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
    * <!-- end-user-doc -->
    * @generated
    */
-  public Datatype getVars()
+  public AssignList getAssigns()
   {
-    if (vars != null && vars.eIsProxy())
-    {
-      InternalEObject oldVars = (InternalEObject)vars;
-      vars = (Datatype)eResolveProxy(oldVars);
-      if (vars != oldVars)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, HIPIEPackage.OUTPUT_OPTION__VARS, oldVars, vars));
-      }
-    }
-    return vars;
+    return assigns;
   }
 
   /**
@@ -142,22 +132,16 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
    * <!-- end-user-doc -->
    * @generated
    */
-  public Datatype basicGetVars()
+  public NotificationChain basicSetAssigns(AssignList newAssigns, NotificationChain msgs)
   {
-    return vars;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVars(Datatype newVars)
-  {
-    Datatype oldVars = vars;
-    vars = newVars;
+    AssignList oldAssigns = assigns;
+    assigns = newAssigns;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUTPUT_OPTION__VARS, oldVars, vars));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUTPUT_OPTION__ASSIGNS, oldAssigns, newAssigns);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -165,7 +149,28 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
    * <!-- end-user-doc -->
    * @generated
    */
-  public Value getVals()
+  public void setAssigns(AssignList newAssigns)
+  {
+    if (newAssigns != assigns)
+    {
+      NotificationChain msgs = null;
+      if (assigns != null)
+        msgs = ((InternalEObject)assigns).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUTPUT_OPTION__ASSIGNS, null, msgs);
+      if (newAssigns != null)
+        msgs = ((InternalEObject)newAssigns).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUTPUT_OPTION__ASSIGNS, null, msgs);
+      msgs = basicSetAssigns(newAssigns, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUTPUT_OPTION__ASSIGNS, newAssigns, newAssigns));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EObject getVals()
   {
     return vals;
   }
@@ -175,9 +180,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVals(Value newVals, NotificationChain msgs)
+  public NotificationChain basicSetVals(EObject newVals, NotificationChain msgs)
   {
-    Value oldVals = vals;
+    EObject oldVals = vals;
     vals = newVals;
     if (eNotificationRequired())
     {
@@ -192,7 +197,7 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVals(Value newVals)
+  public void setVals(EObject newVals)
   {
     if (newVals != vals)
     {
@@ -218,6 +223,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
+        return basicSetAssigns(null, msgs);
       case HIPIEPackage.OUTPUT_OPTION__VALS:
         return basicSetVals(null, msgs);
     }
@@ -236,9 +243,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
     {
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         return getName();
-      case HIPIEPackage.OUTPUT_OPTION__VARS:
-        if (resolve) return getVars();
-        return basicGetVars();
+      case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
+        return getAssigns();
       case HIPIEPackage.OUTPUT_OPTION__VALS:
         return getVals();
     }
@@ -258,11 +264,11 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         setName((String)newValue);
         return;
-      case HIPIEPackage.OUTPUT_OPTION__VARS:
-        setVars((Datatype)newValue);
+      case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
+        setAssigns((AssignList)newValue);
         return;
       case HIPIEPackage.OUTPUT_OPTION__VALS:
-        setVals((Value)newValue);
+        setVals((EObject)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -281,11 +287,11 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case HIPIEPackage.OUTPUT_OPTION__VARS:
-        setVars((Datatype)null);
+      case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
+        setAssigns((AssignList)null);
         return;
       case HIPIEPackage.OUTPUT_OPTION__VALS:
-        setVals((Value)null);
+        setVals((EObject)null);
         return;
     }
     super.eUnset(featureID);
@@ -303,8 +309,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
     {
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case HIPIEPackage.OUTPUT_OPTION__VARS:
-        return vars != null;
+      case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
+        return assigns != null;
       case HIPIEPackage.OUTPUT_OPTION__VALS:
         return vals != null;
     }

@@ -27,9 +27,9 @@ class HIPIEGenerator implements IGenerator {
 		var resolvedFile = CommonPlugin.resolve(resource.URI);
 		val filepath = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(resolvedFile.toFileString())).fullPath.toString
 		val filename = resolvedFile.lastSegment.substring(0, resolvedFile.lastSegment.length-3)		
-		val filepath_output = filepath.substring(0 , filepath.length-3) + "out" 
+		val filepath_output = filepath.substring(0 , filepath.length-3) + "json" 
 								
-		val proc = Runtime.getRuntime().exec("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -c " + filepath + " -o " + filepath_output + " -verbose") as Process ;
+		val proc = Runtime.getRuntime().exec("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -databomb " + filepath + " -o " + filepath_output + " -verbose") as Process ;
 		val in = proc.inputStream
 		val er = proc.errorStream
 		val sc_verbose = new Scanner(in)
@@ -58,7 +58,7 @@ class HIPIEGenerator implements IGenerator {
 		sc_er.close()
 		
 		Files.delete(FileSystems.getDefault().getPath(filepath_output))
-		fsa.generateFile(filename + 'out' , streamString_in)
+		fsa.generateFile(filename + 'json' , streamString_in)
 		
 	}
 }

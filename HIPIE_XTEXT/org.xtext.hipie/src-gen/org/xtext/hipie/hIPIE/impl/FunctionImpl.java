@@ -9,11 +9,9 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.xtext.hipie.hIPIE.Function;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
-import org.xtext.hipie.hIPIE.PosVizData;
 import org.xtext.hipie.hIPIE.Value;
 
 /**
@@ -23,25 +21,14 @@ import org.xtext.hipie.hIPIE.Value;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.FunctionImpl#getVars <em>Vars</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.FunctionImpl#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class FunctionImpl extends MinimalEObjectImpl.Container implements Function
+public class FunctionImpl extends QFunctionImpl implements Function
 {
-  /**
-   * The cached value of the '{@link #getVars() <em>Vars</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getVars()
-   * @generated
-   * @ordered
-   */
-  protected PosVizData vars;
-
   /**
    * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -71,49 +58,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.FUNCTION;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PosVizData getVars()
-  {
-    if (vars != null && vars.eIsProxy())
-    {
-      InternalEObject oldVars = (InternalEObject)vars;
-      vars = (PosVizData)eResolveProxy(oldVars);
-      if (vars != oldVars)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, HIPIEPackage.FUNCTION__VARS, oldVars, vars));
-      }
-    }
-    return vars;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public PosVizData basicGetVars()
-  {
-    return vars;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setVars(PosVizData newVars)
-  {
-    PosVizData oldVars = vars;
-    vars = newVars;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.FUNCTION__VARS, oldVars, vars));
   }
 
   /**
@@ -190,9 +134,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case HIPIEPackage.FUNCTION__VARS:
-        if (resolve) return getVars();
-        return basicGetVars();
       case HIPIEPackage.FUNCTION__VALS:
         return getVals();
     }
@@ -209,9 +150,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case HIPIEPackage.FUNCTION__VARS:
-        setVars((PosVizData)newValue);
-        return;
       case HIPIEPackage.FUNCTION__VALS:
         setVals((Value)newValue);
         return;
@@ -229,9 +167,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case HIPIEPackage.FUNCTION__VARS:
-        setVars((PosVizData)null);
-        return;
       case HIPIEPackage.FUNCTION__VALS:
         setVals((Value)null);
         return;
@@ -249,8 +184,6 @@ public class FunctionImpl extends MinimalEObjectImpl.Container implements Functi
   {
     switch (featureID)
     {
-      case HIPIEPackage.FUNCTION__VARS:
-        return vars != null;
       case HIPIEPackage.FUNCTION__VALS:
         return vals != null;
     }

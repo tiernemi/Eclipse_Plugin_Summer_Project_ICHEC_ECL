@@ -39,6 +39,8 @@ class HIPIEScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarat
     			return getScope(parent.eContents.get(i), ref)
     }
 
+
+	/* 
     def scope_Function_vars(VisBasisQualifiers context, EReference ref) {
  		val parent = context.eContainer
     	if (parent instanceof VisBasis)
@@ -62,17 +64,19 @@ class HIPIEScopeProvider extends org.eclipse.xtext.scoping.impl.AbstractDeclarat
     	if (parent instanceof VisualOptions)
     	{	    		
 			val function_container = parent.eContainer as Visualization
-			if (function_container.input.basis.out_base != null)
+			if (function_container.parens.input.basis.out_base != null)
 			{
-				val origin = function_container.input.basis.out_base.base		
+				val origin = function_container.parens.input.basis.out_base.base		
 				val list_1 = Scopes::scopedElementsFor(origin.eContents)
-				val list_2 = Scopes::scopedElementsFor(function_container.input.basis.eContents)
+				val list_2 = Scopes::scopedElementsFor(function_container.parens.input.basis.eContents)
 				val list = list_1 + list_2 
 				return MapBasedScope::createScope(IScope::NULLSCOPE , list)
 			}
 			else
-				return getScope(function_container.input.basis , ref)
+				return getScope(function_container.parens.input.basis , ref)
     	}
     }
+    
+    */
       
 }

@@ -15,8 +15,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.ContractInstance#getSec_name <em>Sec name</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.ContractInstance#getVals <em>Vals</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.ContractInstance#getVars <em>Vars</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.ContractInstance#getInstId <em>Inst Id</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.ContractInstance#getInstance_ops <em>Instance ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.ContractInstance#getAssigns <em>Assigns</em>}</li>
  * </ul>
  * </p>
@@ -54,36 +54,56 @@ public interface ContractInstance extends EObject
   void setSec_name(String value);
 
   /**
-   * Returns the value of the '<em><b>Vals</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.Value}.
+   * Returns the value of the '<em><b>Inst Id</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vals</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Inst Id</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vals</em>' containment reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getContractInstance_Vals()
+   * @return the value of the '<em>Inst Id</em>' containment reference.
+   * @see #setInstId(InstanceID)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getContractInstance_InstId()
    * @model containment="true"
    * @generated
    */
-  EList<Value> getVals();
+  InstanceID getInstId();
 
   /**
-   * Returns the value of the '<em><b>Vars</b></em>' reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.Value}.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.ContractInstance#getInstId <em>Inst Id</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Inst Id</em>' containment reference.
+   * @see #getInstId()
+   * @generated
+   */
+  void setInstId(InstanceID value);
+
+  /**
+   * Returns the value of the '<em><b>Instance ops</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Vars</em>' reference list isn't clear,
+   * If the meaning of the '<em>Instance ops</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Vars</em>' reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getContractInstance_Vars()
-   * @model
+   * @return the value of the '<em>Instance ops</em>' containment reference.
+   * @see #setInstance_ops(InstanceOptions)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getContractInstance_Instance_ops()
+   * @model containment="true"
    * @generated
    */
-  EList<Value> getVars();
+  InstanceOptions getInstance_ops();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.ContractInstance#getInstance_ops <em>Instance ops</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Instance ops</em>' containment reference.
+   * @see #getInstance_ops()
+   * @generated
+   */
+  void setInstance_ops(InstanceOptions value);
 
   /**
    * Returns the value of the '<em><b>Assigns</b></em>' containment reference list.

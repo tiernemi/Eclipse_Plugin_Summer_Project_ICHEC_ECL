@@ -16,13 +16,15 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getComposition_header <em>Composition header</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getBase_props <em>Base props</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.Program#getContract_instances <em>Contract instances</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Program#getPermissions <em>Permissions</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getInput_section <em>Input section</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Program#getContract_instances <em>Contract instances</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getOutput_section <em>Output section</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Program#getIntegrate_section <em>Integrate section</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getVisual_section <em>Visual section</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getGenerate_section <em>Generate section</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.Program#getCustom_section <em>Custom section</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.Program#getSesource_section <em>Sesource section</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.Program#getResource_section <em>Resource section</em>}</li>
  * </ul>
  * </p>
  *
@@ -65,20 +67,30 @@ public interface Program extends EObject
   EList<BaseProp> getBase_props();
 
   /**
-   * Returns the value of the '<em><b>Contract instances</b></em>' containment reference list.
-   * The list contents are of type {@link org.xtext.hipie.hIPIE.ContractInstance}.
+   * Returns the value of the '<em><b>Permissions</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Contract instances</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Permissions</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Contract instances</em>' containment reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getProgram_Contract_instances()
+   * @return the value of the '<em>Permissions</em>' containment reference.
+   * @see #setPermissions(Permissions)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getProgram_Permissions()
    * @model containment="true"
    * @generated
    */
-  EList<ContractInstance> getContract_instances();
+  Permissions getPermissions();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Program#getPermissions <em>Permissions</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Permissions</em>' containment reference.
+   * @see #getPermissions()
+   * @generated
+   */
+  void setPermissions(Permissions value);
 
   /**
    * Returns the value of the '<em><b>Input section</b></em>' containment reference list.
@@ -97,6 +109,22 @@ public interface Program extends EObject
   EList<InputSection> getInput_section();
 
   /**
+   * Returns the value of the '<em><b>Contract instances</b></em>' containment reference list.
+   * The list contents are of type {@link org.xtext.hipie.hIPIE.ContractInstance}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Contract instances</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Contract instances</em>' containment reference list.
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getProgram_Contract_instances()
+   * @model containment="true"
+   * @generated
+   */
+  EList<ContractInstance> getContract_instances();
+
+  /**
    * Returns the value of the '<em><b>Output section</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.hipie.hIPIE.OutputSection}.
    * <!-- begin-user-doc -->
@@ -111,6 +139,32 @@ public interface Program extends EObject
    * @generated
    */
   EList<OutputSection> getOutput_section();
+
+  /**
+   * Returns the value of the '<em><b>Integrate section</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Integrate section</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Integrate section</em>' containment reference.
+   * @see #setIntegrate_section(IntegrateSection)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getProgram_Integrate_section()
+   * @model containment="true"
+   * @generated
+   */
+  IntegrateSection getIntegrate_section();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.Program#getIntegrate_section <em>Integrate section</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Integrate section</em>' containment reference.
+   * @see #getIntegrate_section()
+   * @generated
+   */
+  void setIntegrate_section(IntegrateSection value);
 
   /**
    * Returns the value of the '<em><b>Visual section</b></em>' containment reference list.
@@ -161,19 +215,19 @@ public interface Program extends EObject
   EList<CustomSection> getCustom_section();
 
   /**
-   * Returns the value of the '<em><b>Sesource section</b></em>' containment reference list.
+   * Returns the value of the '<em><b>Resource section</b></em>' containment reference list.
    * The list contents are of type {@link org.xtext.hipie.hIPIE.ResourceSection}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sesource section</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Resource section</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Sesource section</em>' containment reference list.
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getProgram_Sesource_section()
+   * @return the value of the '<em>Resource section</em>' containment reference list.
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getProgram_Resource_section()
    * @model containment="true"
    * @generated
    */
-  EList<ResourceSection> getSesource_section();
+  EList<ResourceSection> getResource_section();
 
 } // Program
