@@ -15,8 +15,9 @@ import java.io.FileInputStream
 import java.nio.file.Files
 import java.nio.file.FileSystems
 import java.net.URL
-import org.eclipse.core.runtime.FileLocator
-import java.io.File
+import com.google.common.collect.Iterables
+import com.google.common.base.Predicate
+import org.eclipse.core.resources.IResource
 
 /**
  * Generates code from your model files on save.
@@ -62,15 +63,17 @@ class HIPIEGenerator implements IGenerator {
 		Files.delete(FileSystems.getDefault().getPath(filepath_output))
 		fsa.generateFile(filename + 'json' , streamString_ddl)
 			
-		var datapath =  ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(resolvedFile.toFileString())).parent.parent.fullPath.toString
-		datapath += '/data/'
-		var data_folder = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(new Path(datapath))
-		val cont_files = data_folder.members
-		val output_filepath = datapath + 'databomb.json'
+		var project_path =  ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(resolvedFile.toFileString())).parent.parent.fullPath
+		var project_folder = ResourcesPlugin.getWorkspace().getRoot().getFolder(project_path)
+	 	var data_folder = project_folder.getFolder('data')
+	 	var data_folder_container = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(data_folder.fullPath)
+		val cont_files = data_folder_container.members
+		val data_folder_path = data_folder_container.rawLocation.toString
 		var data_file_paths = ""
 		for (i : 0..<cont_files.size)
-			data_file_paths += " " + datapath + cont_files.get(i).name
-		
+			data_file_paths += " " +  cont_files.get(i).rawLocation.toString
+
+		val output_filepath = data_folder_path + 'databomb.json'		
 		val proc_data = Runtime.getRuntime().exec('java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -csv ' + data_file_paths + ' -separator \\t -escape / -quote \" -lineseparator \\n -o ' + output_filepath) as Process ;
 		in.close()
 		er.close() 	
@@ -110,5 +113,7 @@ class HIPIEGenerator implements IGenerator {
 		streamString_html = streamString_html.replace("%_data_%" , streamString_data) ;
 		streamString_html = streamString_html.replace("%_ddl_%" , streamString_ddl) ;
 		fsa.generateFile('Visualization_stub.html', 'HTML', streamString_html)
+		
+		
 	}
 }
