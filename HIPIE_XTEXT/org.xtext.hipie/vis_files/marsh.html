@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="http://rawgit.com/jrburke/requirejs/2.1.17/require.js"></script>
+    <script src="../src/config.js"></script>
+    <link rel="stylesheet" type="text/css" href="../test.css">
+</head>
+<body>
+<script>
+
+	var ddl = '%_ddl_%' ;
+	var data = '%_data_%' ;
+    require(["src/marshaller/HTML"], function (Graph) {
+        new Graph()
+                .size({width: 800, height: 500})
+                .target("widget-wrapper")
+                .ddlUrl(ddl)
+                .databomb(data)
+                .render()
+        ;
+    });
+</script>
+<!--<button onclick="myFunction()">Try it</button>-->
+<!--<p id="demo"></p>-->
+
+<div id="widget-wrapper"></div>
+</body>
+</html>
