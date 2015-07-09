@@ -4,6 +4,7 @@
 package org.xtext.hipie.ui;
 
 import org.eclipse.ui.plugin.AbstractUIPlugin;
+import org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration;
 import org.eclipse.xtext.ui.editor.syntaxcoloring.ISemanticHighlightingCalculator;
 
@@ -18,9 +19,13 @@ public class HIPIEUiModule extends org.xtext.hipie.ui.AbstractHIPIEUiModule {
 	 public Class<? extends IHighlightingConfiguration> bindIHighlightingConfiguration () {
 		 return HIPIEHighlightingConfig.class;
 		 }
-		 public Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator(){
+		 
+	 public Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator(){
 		 return HIPIEHighlightingCalc.class;
 		 }
-		
+		 
+	 public Class<? extends LanguageRootPreferencePage> bindLanguageRootPreferencePage() {
+		 return HIPIEPrefPage.class;
+		 }
 }
 

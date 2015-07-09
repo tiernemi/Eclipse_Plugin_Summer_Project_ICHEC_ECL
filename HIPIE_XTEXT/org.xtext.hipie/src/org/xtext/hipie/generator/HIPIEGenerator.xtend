@@ -15,9 +15,6 @@ import java.io.FileInputStream
 import java.nio.file.Files
 import java.nio.file.FileSystems
 import java.net.URL
-import com.google.common.collect.Iterables
-import com.google.common.base.Predicate
-import org.eclipse.core.resources.IResource
 
 /**
  * Generates code from your model files on save.
@@ -28,92 +25,95 @@ class HIPIEGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) 
 	{
-		var resolvedFile = CommonPlugin.resolve(resource.URI);
-		val filepath = ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(resolvedFile.toFileString())).fullPath.toString
-		val filename = resolvedFile.lastSegment.substring(0, resolvedFile.lastSegment.length-3)		
-		val filepath_output = filepath.substring(0 , filepath.length-3) + "json" 
-								
-		var proc = Runtime.getRuntime().exec("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -databomb " + filepath + " -o " + filepath_output + " -verbose") as Process ;
-		var in = proc.inputStream
-		var er = proc.errorStream
-		var sc_verbose = new Scanner(in)
-		var sc_er = new Scanner(er)
-		var streamString = new String
-		var streamString_er = new String
-		if (sc_verbose.hasNext())
-			streamString = sc_verbose.useDelimiter("\\Z").next() ;
-		if (sc_er.hasNext())
-				streamString_er = sc_er.useDelimiter("\\Z").next() ;
-		System.out.println(streamString)
-		System.out.println(streamString_er)	
-		
-		var in_stream = new FileInputStream(filepath_output);
-		var streamString_ddl = new String
-		var sc_in = new Scanner(in_stream)
-		if (sc_in.hasNext())
-			streamString_ddl = sc_in.useDelimiter("\\Z").next() ;
-		
-		in.close()
-		er.close()
-		in_stream.close() 
-		sc_in.close()
-		sc_verbose.close()
-		sc_er.close()
-		
-		Files.delete(FileSystems.getDefault().getPath(filepath_output))
-		fsa.generateFile(filename + 'json' , streamString_ddl)
-			
-		var project_path =  ResourcesPlugin.getWorkspace().getRoot().getFile(new Path(resolvedFile.toFileString())).parent.parent.fullPath
-		var project_folder = ResourcesPlugin.getWorkspace().getRoot().getFolder(project_path)
-	 	var data_folder = project_folder.getFolder('data')
-	 	var data_folder_container = ResourcesPlugin.getWorkspace().getRoot().getContainerForLocation(data_folder.fullPath)
-		val cont_files = data_folder_container.members
-		val data_folder_path = data_folder_container.rawLocation.toString
-		var data_file_paths = ""
-		for (i : 0..<cont_files.size)
-			data_file_paths += " " +  cont_files.get(i).rawLocation.toString
 
-		val output_filepath = data_folder_path + 'databomb.json'		
-		val proc_data = Runtime.getRuntime().exec('java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -csv ' + data_file_paths + ' -separator \\t -escape / -quote \" -lineseparator \\n -o ' + output_filepath) as Process ;
-		in.close()
-		er.close() 	
-		in = proc_data.inputStream
-		er = proc_data.errorStream
-		sc_verbose = new Scanner(in)
-		sc_er = new Scanner(er)
-		streamString = new String
-		streamString_er = new String
-		if (sc_verbose.hasNext())
-			streamString = sc_verbose.useDelimiter("\\Z").next() ;
-		if (sc_er.hasNext())
+		var ws_root = ResourcesPlugin.getWorkspace().getRoot();
+         if (resource.URI.isPlatformResource()) 
+         {
+         	var platformString = resource.URI.toPlatformString(true);
+            var resourceFile = ws_root.findMember(platformString);
+            var project = resourceFile.project;
+            var dataFolder = project.getFolder("data");
+         
+			val filepath = resourceFile.rawLocation.toOSString 
+			val filename = resourceFile.rawLocation.removeFileExtension.lastSegment;		
+			val filepath_output = resourceFile.rawLocation.removeFileExtension + ".json" 
+								
+			var proc = Runtime.getRuntime().exec("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -databomb " + filepath + " -o " + filepath_output + " -verbose") as Process ;
+			var in = proc.inputStream
+			var er = proc.errorStream
+			var sc_verbose = new Scanner(in)
+			var sc_er = new Scanner(er)
+			var streamString = new String
+			var streamString_er = new String
+			if (sc_verbose.hasNext())
+				streamString = sc_verbose.useDelimiter("\\Z").next() ;
+			if (sc_er.hasNext())
 				streamString_er = sc_er.useDelimiter("\\Z").next() ;
-		System.out.println(streamString)
-		System.out.println(streamString_er)	
-	
-		in_stream = new FileInputStream(output_filepath);
-		var streamString_data = new String
-		sc_in = new Scanner(in_stream)
-		if (sc_in.hasNext())
-			streamString_data = sc_in.useDelimiter("\\Z").next() ;
+			System.out.println(streamString)
+			System.out.println(streamString_er)	
 		
-		streamString_data = streamString_data.replace("\n" , "") ;
-		streamString_data = streamString_data.replace(" " , "") ;
-		streamString_data = streamString_data.replace("\t" , "") ;
-		streamString_data = streamString_data.replace("\r" , "") ;
-		Files.delete(FileSystems.getDefault().getPath(output_filepath))
-		fsa.generateFile('databomb.json', 'Databomb', streamString_data)
+			var in_stream = new FileInputStream(filepath_output);
+			var streamString_ddl = new String
+			var sc_in = new Scanner(in_stream)
+			if (sc_in.hasNext())
+				streamString_ddl = sc_in.useDelimiter("\\Z").next() ;
 		
-		var url = new URL("platform:/plugin/org.xtext.hipie/vis_files/marsh.html")		
-		var n = url.openConnection().getInputStream()
-		var streamString_html = new String
-		sc_in = new Scanner(n)
-		if (sc_in.hasNext())
-			streamString_html = sc_in.useDelimiter("\\Z").next() ;
+			in.close()
+			er.close()
+			in_stream.close() 
+			sc_in.close()
+			sc_verbose.close()
+			sc_er.close()
+		
+			Files.delete(FileSystems.getDefault().getPath(filepath_output))
+			fsa.generateFile(filename + '.json' , streamString_ddl)
 			
-		streamString_html = streamString_html.replace("%_data_%" , streamString_data) ;
-		streamString_html = streamString_html.replace("%_ddl_%" , streamString_ddl) ;
-		fsa.generateFile('Visualization_stub.html', 'HTML', streamString_html)
+			val cont_files = dataFolder.members
+			val data_folder_path = dataFolder.rawLocation.toOSString
+			var data_file_paths = ""
+			for (i : 0..<cont_files.size)
+				data_file_paths += " " +  cont_files.get(i).rawLocation.toOSString
+
+			val output_filepath = data_folder_path + 'databomb.json'		
+			val proc_data = Runtime.getRuntime().exec('java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -csv ' + data_file_paths + ' -separator \\t -escape / -quote \" -lineseparator \\n -o ' + output_filepath) as Process ;
+			in.close()
+			er.close() 	
+			in = proc_data.inputStream
+			er = proc_data.errorStream
+			sc_verbose = new Scanner(in)
+			sc_er = new Scanner(er)
+			streamString = new String
+			streamString_er = new String
+			if (sc_verbose.hasNext())
+				streamString = sc_verbose.useDelimiter("\\Z").next() ;
+			if (sc_er.hasNext())
+				streamString_er = sc_er.useDelimiter("\\Z").next() ;
+			System.out.println(streamString)
+			System.out.println(streamString_er)	
+	
+			in_stream = new FileInputStream(output_filepath);
+			var streamString_data = new String
+			sc_in = new Scanner(in_stream)
+			if (sc_in.hasNext())
+				streamString_data = sc_in.useDelimiter("\\Z").next() ;
 		
+			streamString_data = streamString_data.replace("\n" , "") ;
+			streamString_data = streamString_data.replace(" " , "") ;
+			streamString_data = streamString_data.replace("\t" , "") ;
+			streamString_data = streamString_data.replace("\r" , "") ;
+			Files.delete(FileSystems.getDefault().getPath(output_filepath))
+			fsa.generateFile('databomb.json', 'Databomb', streamString_data)
 		
+			var url = new URL("platform:/plugin/org.xtext.hipie/vis_files/marsh.html")		
+			var n = url.openConnection().getInputStream()
+			var streamString_html = new String
+			sc_in = new Scanner(n)
+			if (sc_in.hasNext())
+				streamString_html = sc_in.useDelimiter("\\Z").next()
+			
+			streamString_html = streamString_html.replace("%_data_%" , streamString_data)
+			streamString_html = streamString_html.replace("%_ddl_%" , streamString_ddl)
+			fsa.generateFile('Visualization_stub.html', 'HTML', streamString_html)
+		}	
 	}
 }

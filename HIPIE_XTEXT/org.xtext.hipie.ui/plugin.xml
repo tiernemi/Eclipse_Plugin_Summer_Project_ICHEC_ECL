@@ -258,10 +258,10 @@
    <extension
             point="org.eclipse.ui.preferencePages">
         <page
-            category="org.xtext.hipie.HIPIE"
-            class="org.xtext.hipie.ui.HIPIEExecutableExtensionFactory:org.eclipse.xtext.builder.preferences.BuilderPreferencePage"
-            id="org.xtext.hipie.HIPIE.compiler.preferencePage"
-            name="Compiler">
+              category="org.xtext.hipie.HIPIE"
+              class="org.xtext.hipie.ui.HIPIEExecutableExtensionFactory:org.eclipse.xtext.ui.editor.preferences.LanguageRootPreferencePage"
+              id="org.xtext.hipie.HIPIE.compiler.preferencePage"
+              name="Compiler">
             <keywordReference id="org.xtext.hipie.ui.keyword_HIPIE"/>
         </page>
     </extension>
