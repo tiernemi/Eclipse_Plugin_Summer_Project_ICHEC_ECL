@@ -12,7 +12,7 @@ package org.xtext.hipie.hIPIE;
  * The following features are supported:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.OutTypeSimple#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVal <em>Val</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
  *
@@ -49,29 +49,29 @@ public interface OutTypeSimple extends OutputValue
   void setType(String value);
 
   /**
-   * Returns the value of the '<em><b>Val</b></em>' containment reference.
+   * Returns the value of the '<em><b>Vals</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Val</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Vals</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Val</em>' containment reference.
-   * @see #setVal(Value)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutTypeSimple_Val()
+   * @return the value of the '<em>Vals</em>' containment reference.
+   * @see #setVals(Value)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getOutTypeSimple_Vals()
    * @model containment="true"
    * @generated
    */
-  Value getVal();
+  Value getVals();
 
   /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVal <em>Val</em>}' containment reference.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVals <em>Vals</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Val</em>' containment reference.
-   * @see #getVal()
+   * @param value the new value of the '<em>Vals</em>' containment reference.
+   * @see #getVals()
    * @generated
    */
-  void setVal(Value value);
+  void setVals(Value value);
 
 } // OutTypeSimple

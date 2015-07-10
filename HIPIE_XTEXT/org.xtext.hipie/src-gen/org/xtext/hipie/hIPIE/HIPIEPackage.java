@@ -2628,13 +2628,22 @@ public interface HIPIEPackage extends EPackage
   int OUTPUT_OPTION = 55;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_OPTION__TYPE = 0;
+
+  /**
    * The feature id for the '<em><b>Atr</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__ATR = 0;
+  int OUTPUT_OPTION__ATR = 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2643,7 +2652,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__NAME = 1;
+  int OUTPUT_OPTION__NAME = 2;
 
   /**
    * The feature id for the '<em><b>Assigns</b></em>' containment reference.
@@ -2652,7 +2661,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__ASSIGNS = 2;
+  int OUTPUT_OPTION__ASSIGNS = 3;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference.
@@ -2661,7 +2670,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__VALS = 3;
+  int OUTPUT_OPTION__VALS = 4;
 
   /**
    * The number of structural features of the '<em>Output Option</em>' class.
@@ -2670,7 +2679,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION_FEATURE_COUNT = 4;
+  int OUTPUT_OPTION_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.OutputOptionsImpl <em>Output Options</em>}' class.
@@ -2739,13 +2748,13 @@ public interface HIPIEPackage extends EPackage
   int OUT_TYPE_SIMPLE__TYPE = OUTPUT_VALUE_FEATURE_COUNT + 0;
 
   /**
-   * The feature id for the '<em><b>Val</b></em>' containment reference.
+   * The feature id for the '<em><b>Vals</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUT_TYPE_SIMPLE__VAL = OUTPUT_VALUE_FEATURE_COUNT + 1;
+  int OUT_TYPE_SIMPLE__VALS = OUTPUT_VALUE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Out Type Simple</em>' class.
@@ -5624,6 +5633,17 @@ public interface HIPIEPackage extends EPackage
   EClass getOutputOption();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.OutputOption#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.hipie.hIPIE.OutputOption#getType()
+   * @see #getOutputOption()
+   * @generated
+   */
+  EAttribute getOutputOption_Type();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.OutputOption#getAtr <em>Atr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5710,15 +5730,15 @@ public interface HIPIEPackage extends EPackage
   EAttribute getOutTypeSimple_Type();
 
   /**
-   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVal <em>Val</em>}'.
+   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVals <em>Vals</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Val</em>'.
-   * @see org.xtext.hipie.hIPIE.OutTypeSimple#getVal()
+   * @return the meta object for the containment reference '<em>Vals</em>'.
+   * @see org.xtext.hipie.hIPIE.OutTypeSimple#getVals()
    * @see #getOutTypeSimple()
    * @generated
    */
-  EReference getOutTypeSimple_Val();
+  EReference getOutTypeSimple_Vals();
 
   /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.OutDataset <em>Out Dataset</em>}'.
@@ -8075,6 +8095,14 @@ public interface HIPIEPackage extends EPackage
     EClass OUTPUT_OPTION = eINSTANCE.getOutputOption();
 
     /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OUTPUT_OPTION__TYPE = eINSTANCE.getOutputOption_Type();
+
+    /**
      * The meta object literal for the '<em><b>Atr</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -8143,12 +8171,12 @@ public interface HIPIEPackage extends EPackage
     EAttribute OUT_TYPE_SIMPLE__TYPE = eINSTANCE.getOutTypeSimple_Type();
 
     /**
-     * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>Vals</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference OUT_TYPE_SIMPLE__VAL = eINSTANCE.getOutTypeSimple_Val();
+    EReference OUT_TYPE_SIMPLE__VALS = eINSTANCE.getOutTypeSimple_Vals();
 
     /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl <em>Out Dataset</em>}' class.

@@ -1523,7 +1523,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((type='BOOL' | type='INT' | type='STRING' | type='ACTION')? val=Value)
+	 *     ((type='BOOL' | type='INT' | type='STRING' | type='ACTION')? vals=Value)
 	 */
 	protected void sequence_OutTypeSimple(EObject context, OutTypeSimple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1558,15 +1558,15 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (
-	 *         atr='SIDE' | 
-	 *         atr='LARGE' | 
-	 *         atr='SMALL' | 
-	 *         atr='FEW' | 
-	 *         atr='WUID' | 
-	 *         atr='APPEND' | 
-	 *         atr='SCOREDSEARCH' | 
-	 *         atr='DATABOMB' | 
-	 *         atr='OPTIONAL' | 
+	 *         type='SIDE' | 
+	 *         type='LARGE' | 
+	 *         type='SMALL' | 
+	 *         type='FEW' | 
+	 *         type='WUID' | 
+	 *         type='APPEND' | 
+	 *         type='SCOREDSEARCH' | 
+	 *         type='DATABOMB' | 
+	 *         type='OPTIONAL' | 
 	 *         ((atr='WUID' | atr='FROM') name=TOKEN) | 
 	 *         (atr='ENABLE' assigns=AssignList) | 
 	 *         (atr='PREFIX' name=TOKEN) | 

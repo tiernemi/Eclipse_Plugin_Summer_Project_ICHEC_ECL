@@ -13,6 +13,7 @@ import org.xtext.hipie.hIPIE.BaseProp;
 import org.xtext.hipie.hIPIE.CategoryType;
 import org.xtext.hipie.hIPIE.CategoryTypeList;
 import org.xtext.hipie.hIPIE.OutDataset;
+import org.xtext.hipie.hIPIE.OutTypeSimple;
 import org.xtext.hipie.hIPIE.OutputOption;
 import org.xtext.hipie.hIPIE.OutputOptions;
 import org.xtext.hipie.hIPIE.Value;
@@ -168,26 +169,27 @@ public class HIPIELabelProvider extends DefaultEObjectLabelProvider {
         OutputOptions _ops_1 = out_dataset.getOps();
         EList<OutputOption> _output_ops_1 = _ops_1.getOutput_ops();
         OutputOption _get = _output_ops_1.get((i).intValue());
-        String _atr = _get.getAtr();
-        boolean _notEquals = (!Objects.equal(_atr, null));
+        String _type = _get.getType();
+        boolean _notEquals = (!Objects.equal(_type, null));
         if (_notEquals) {
           int _length = out_string.length();
           boolean _notEquals_1 = (_length != 0);
           if (_notEquals_1) {
             String _out_string = out_string;
             out_string = (_out_string + ", ");
+          } else {
+            out_string = " : ";
           }
           String _out_string_1 = out_string;
           OutputOptions _ops_2 = out_dataset.getOps();
           EList<OutputOption> _output_ops_2 = _ops_2.getOutput_ops();
           OutputOption _get_1 = _output_ops_2.get((i).intValue());
-          String _atr_1 = _get_1.getAtr();
-          out_string = (_out_string_1 + _atr_1);
+          String _type_1 = _get_1.getType();
+          out_string = (_out_string_1 + _type_1);
         }
       }
       String _name = out_dataset.getName();
-      String _plus = (_name + " : ");
-      _xblockexpression = (_plus + out_string);
+      _xblockexpression = (_name + out_string);
     }
     return _xblockexpression;
   }
@@ -224,6 +226,34 @@ public class HIPIELabelProvider extends DefaultEObjectLabelProvider {
       String sec_name = vis.getSection_name();
       String sec_id = vis.getName();
       _xblockexpression = ((sec_name + " : ") + sec_id);
+    }
+    return _xblockexpression;
+  }
+  
+  public String text(final OutTypeSimple out) {
+    String _xblockexpression = null;
+    {
+      String out_string = "";
+      String _xifexpression = null;
+      String _type = out.getType();
+      boolean _notEquals = (!Objects.equal(_type, null));
+      if (_notEquals) {
+        String _xifexpression_1 = null;
+        Value _vals = out.getVals();
+        String _name = _vals.getName();
+        boolean _notEquals_1 = (!Objects.equal(_name, null));
+        if (_notEquals_1) {
+          String _out_string = out_string;
+          Value _vals_1 = out.getVals();
+          String _name_1 = _vals_1.getName();
+          String _plus = (_name_1 + " : ");
+          String _type_1 = out.getType();
+          String _plus_1 = (_plus + _type_1);
+          _xifexpression_1 = out_string = (_out_string + _plus_1);
+        }
+        _xifexpression = _xifexpression_1;
+      }
+      _xblockexpression = _xifexpression;
     }
     return _xblockexpression;
   }

@@ -22,7 +22,7 @@ import org.xtext.hipie.hIPIE.Value;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutTypeSimpleImpl#getType <em>Type</em>}</li>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.OutTypeSimpleImpl#getVal <em>Val</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.OutTypeSimpleImpl#getVals <em>Vals</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,14 +51,14 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   protected String type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
+   * The cached value of the '{@link #getVals() <em>Vals</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getVal()
+   * @see #getVals()
    * @generated
    * @ordered
    */
-  protected Value val;
+  protected Value vals;
 
   /**
    * <!-- begin-user-doc -->
@@ -109,9 +109,9 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
    * <!-- end-user-doc -->
    * @generated
    */
-  public Value getVal()
+  public Value getVals()
   {
-    return val;
+    return vals;
   }
 
   /**
@@ -119,13 +119,13 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetVal(Value newVal, NotificationChain msgs)
+  public NotificationChain basicSetVals(Value newVals, NotificationChain msgs)
   {
-    Value oldVal = val;
-    val = newVal;
+    Value oldVals = vals;
+    vals = newVals;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_TYPE_SIMPLE__VAL, oldVal, newVal);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_TYPE_SIMPLE__VALS, oldVals, newVals);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -136,20 +136,20 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setVal(Value newVal)
+  public void setVals(Value newVals)
   {
-    if (newVal != val)
+    if (newVals != vals)
     {
       NotificationChain msgs = null;
-      if (val != null)
-        msgs = ((InternalEObject)val).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_TYPE_SIMPLE__VAL, null, msgs);
-      if (newVal != null)
-        msgs = ((InternalEObject)newVal).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_TYPE_SIMPLE__VAL, null, msgs);
-      msgs = basicSetVal(newVal, msgs);
+      if (vals != null)
+        msgs = ((InternalEObject)vals).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_TYPE_SIMPLE__VALS, null, msgs);
+      if (newVals != null)
+        msgs = ((InternalEObject)newVals).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_TYPE_SIMPLE__VALS, null, msgs);
+      msgs = basicSetVals(newVals, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_TYPE_SIMPLE__VAL, newVal, newVal));
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_TYPE_SIMPLE__VALS, newVals, newVals));
   }
 
   /**
@@ -162,8 +162,8 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   {
     switch (featureID)
     {
-      case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
-        return basicSetVal(null, msgs);
+      case HIPIEPackage.OUT_TYPE_SIMPLE__VALS:
+        return basicSetVals(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -180,8 +180,8 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
     {
       case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
         return getType();
-      case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
-        return getVal();
+      case HIPIEPackage.OUT_TYPE_SIMPLE__VALS:
+        return getVals();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -199,8 +199,8 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
       case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
         setType((String)newValue);
         return;
-      case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
-        setVal((Value)newValue);
+      case HIPIEPackage.OUT_TYPE_SIMPLE__VALS:
+        setVals((Value)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -219,8 +219,8 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
       case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
-        setVal((Value)null);
+      case HIPIEPackage.OUT_TYPE_SIMPLE__VALS:
+        setVals((Value)null);
         return;
     }
     super.eUnset(featureID);
@@ -238,8 +238,8 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
     {
       case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
         return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
-        return val != null;
+      case HIPIEPackage.OUT_TYPE_SIMPLE__VALS:
+        return vals != null;
     }
     return super.eIsSet(featureID);
   }

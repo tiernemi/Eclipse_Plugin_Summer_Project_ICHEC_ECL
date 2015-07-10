@@ -181,6 +181,7 @@
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//NestedDatasetDecl"/>
     <genClasses ecoreClass="HIPIE.ecore#//OutputOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputOption/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputOption/atr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputOption/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOption/assigns"/>
@@ -191,7 +192,7 @@
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//OutTypeSimple">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutTypeSimple/type"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutTypeSimple/val"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutTypeSimple/vals"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//OutDataset">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/options"/>

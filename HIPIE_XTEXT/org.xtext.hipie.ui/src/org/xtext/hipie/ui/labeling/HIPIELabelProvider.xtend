@@ -79,14 +79,16 @@ class HIPIELabelProvider extends org.eclipse.xtext.ui.label.DefaultEObjectLabelP
 		var out_string = ""
 		for (i : 0..<out_dataset.ops.output_ops.size)
 		{
-			if (out_dataset.ops.output_ops.get(i).atr != null)
+			if (out_dataset.ops.output_ops.get(i).type != null)
 			{
 				if(out_string.length != 0)
-							out_string += ", "
-				out_string += out_dataset.ops.output_ops.get(i).atr
+					out_string += ", "
+				else
+					out_string = " : "
+				out_string += out_dataset.ops.output_ops.get(i).type
 			}
 		}
-		out_dataset.name + " : " + out_string
+		out_dataset.name + out_string
 	}
 	
 	def text(Visualization vis)
@@ -107,9 +109,16 @@ class HIPIELabelProvider extends org.eclipse.xtext.ui.label.DefaultEObjectLabelP
 		sec_name + " : " + sec_id
 	}
 
-	/*def text(OutTypeSimple out)
+	def text(OutTypeSimple out)
 	{
+		var out_string = ""
 		if (out.type != null)
+		{
+			if (out.vals.name != null)
+			{
+				out_string += out.vals.name + ' : ' + out.type
+			}
+		}
 	}
-	*/
+	
 }

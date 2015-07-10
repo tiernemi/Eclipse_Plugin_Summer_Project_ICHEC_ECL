@@ -8,6 +8,7 @@ import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
 import org.xtext.hipie.hIPIE.BaseProp;
 import org.xtext.hipie.hIPIE.InputOptions;
+import org.xtext.hipie.hIPIE.OutTypeSimple;
 import org.xtext.hipie.hIPIE.OutputOptions;
 import org.xtext.hipie.hIPIE.Value;
 import org.xtext.hipie.hIPIE.ValueList;
@@ -40,6 +41,10 @@ public class HIPIEOutlineTreeProvider extends DefaultOutlineTreeProvider {
   }
   
   protected boolean _isLeaf(final Visualization vis) {
+    return true;
+  }
+  
+  protected boolean _isLeaf(final OutTypeSimple out_type) {
     return true;
   }
   

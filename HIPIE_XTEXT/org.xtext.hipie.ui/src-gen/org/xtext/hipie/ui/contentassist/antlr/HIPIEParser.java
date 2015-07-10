@@ -57,7 +57,7 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getECLOutputDeclAccess().getAlternatives(), "rule__ECLOutputDecl__Alternatives");
 					put(grammarAccess.getServiceInputValueAccess().getAlternatives(), "rule__ServiceInputValue__Alternatives");
 					put(grammarAccess.getOutputOptionAccess().getAlternatives(), "rule__OutputOption__Alternatives");
-					put(grammarAccess.getOutputOptionAccess().getAlternatives_0(), "rule__OutputOption__Alternatives_0");
+					put(grammarAccess.getOutputOptionAccess().getTypeAlternatives_0_0(), "rule__OutputOption__TypeAlternatives_0_0");
 					put(grammarAccess.getOutputOptionAccess().getAtrAlternatives_1_0_0(), "rule__OutputOption__AtrAlternatives_1_0_0");
 					put(grammarAccess.getOutputOptionAccess().getAtrAlternatives_4_0_0(), "rule__OutputOption__AtrAlternatives_4_0_0");
 					put(grammarAccess.getOutputOptionAccess().getAtrAlternatives_5_0_0(), "rule__OutputOption__AtrAlternatives_5_0_0");
@@ -354,15 +354,7 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getServiceInputSectionAccess().getServsAssignment_1(), "rule__ServiceInputSection__ServsAssignment_1");
 					put(grammarAccess.getNestedDatasetDeclAccess().getOptionsAssignment_1(), "rule__NestedDatasetDecl__OptionsAssignment_1");
 					put(grammarAccess.getNestedDatasetDeclAccess().getDeclAssignment_2(), "rule__NestedDatasetDecl__DeclAssignment_2");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_0(), "rule__OutputOption__AtrAssignment_0_0");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_1(), "rule__OutputOption__AtrAssignment_0_1");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_2(), "rule__OutputOption__AtrAssignment_0_2");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_3(), "rule__OutputOption__AtrAssignment_0_3");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_4(), "rule__OutputOption__AtrAssignment_0_4");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_5(), "rule__OutputOption__AtrAssignment_0_5");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_6(), "rule__OutputOption__AtrAssignment_0_6");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_7(), "rule__OutputOption__AtrAssignment_0_7");
-					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_0_8(), "rule__OutputOption__AtrAssignment_0_8");
+					put(grammarAccess.getOutputOptionAccess().getTypeAssignment_0(), "rule__OutputOption__TypeAssignment_0");
 					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_1_0(), "rule__OutputOption__AtrAssignment_1_0");
 					put(grammarAccess.getOutputOptionAccess().getNameAssignment_1_2(), "rule__OutputOption__NameAssignment_1_2");
 					put(grammarAccess.getOutputOptionAccess().getAtrAssignment_2_0(), "rule__OutputOption__AtrAssignment_2_0");
@@ -376,7 +368,7 @@ public class HIPIEParser extends AbstractContentAssistParser {
 					put(grammarAccess.getOutputOptionsAccess().getOutput_opsAssignment_1(), "rule__OutputOptions__Output_opsAssignment_1");
 					put(grammarAccess.getOutputOptionsAccess().getOutput_opsAssignment_2_1(), "rule__OutputOptions__Output_opsAssignment_2_1");
 					put(grammarAccess.getOutTypeSimpleAccess().getTypeAssignment_0(), "rule__OutTypeSimple__TypeAssignment_0");
-					put(grammarAccess.getOutTypeSimpleAccess().getValAssignment_1(), "rule__OutTypeSimple__ValAssignment_1");
+					put(grammarAccess.getOutTypeSimpleAccess().getValsAssignment_1(), "rule__OutTypeSimple__ValsAssignment_1");
 					put(grammarAccess.getOutDatasetAccess().getNameAssignment_1(), "rule__OutDataset__NameAssignment_1");
 					put(grammarAccess.getOutDatasetAccess().getOut_baseAssignment_2(), "rule__OutDataset__Out_baseAssignment_2");
 					put(grammarAccess.getOutDatasetAccess().getOpsAssignment_3(), "rule__OutDataset__OpsAssignment_3");

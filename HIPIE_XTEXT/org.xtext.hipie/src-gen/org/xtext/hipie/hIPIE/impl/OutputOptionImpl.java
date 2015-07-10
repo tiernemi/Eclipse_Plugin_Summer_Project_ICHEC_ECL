@@ -23,6 +23,7 @@ import org.xtext.hipie.hIPIE.OutputOption;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getAtr <em>Atr</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getAssigns <em>Assigns</em>}</li>
@@ -34,6 +35,26 @@ import org.xtext.hipie.hIPIE.OutputOption;
  */
 public class OutputOptionImpl extends MinimalEObjectImpl.Container implements OutputOption
 {
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
+
   /**
    * The default value of the '{@link #getAtr() <em>Atr</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -113,6 +134,29 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.OUTPUT_OPTION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUTPUT_OPTION__TYPE, oldType, type));
   }
 
   /**
@@ -285,6 +329,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__TYPE:
+        return getType();
       case HIPIEPackage.OUTPUT_OPTION__ATR:
         return getAtr();
       case HIPIEPackage.OUTPUT_OPTION__NAME:
@@ -307,6 +353,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__TYPE:
+        setType((String)newValue);
+        return;
       case HIPIEPackage.OUTPUT_OPTION__ATR:
         setAtr((String)newValue);
         return;
@@ -333,6 +382,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case HIPIEPackage.OUTPUT_OPTION__ATR:
         setAtr(ATR_EDEFAULT);
         return;
@@ -359,6 +411,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case HIPIEPackage.OUTPUT_OPTION__ATR:
         return ATR_EDEFAULT == null ? atr != null : !ATR_EDEFAULT.equals(atr);
       case HIPIEPackage.OUTPUT_OPTION__NAME:
@@ -382,7 +436,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (atr: ");
+    result.append(" (type: ");
+    result.append(type);
+    result.append(", atr: ");
     result.append(atr);
     result.append(", name: ");
     result.append(name);

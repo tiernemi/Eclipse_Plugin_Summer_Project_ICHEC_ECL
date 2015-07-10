@@ -26,6 +26,9 @@ class HIPIEOutlineTreeProvider extends org.eclipse.xtext.ui.editor.outline.impl.
     def protected boolean _isLeaf(Visualization vis) {
 		return true 
     }
+    def protected boolean _isLeaf(OutTypeSimple out_type) {
+		return true 
+    }
     def protected void _createNode(IOutlineNode parentNode, OutputOptions out)
     {
     	
@@ -53,5 +56,5 @@ class HIPIEOutlineTreeProvider extends org.eclipse.xtext.ui.editor.outline.impl.
     def protected void _createNode(IOutlineNode parentNode, InputOptions input_ops)
     {
     	
-    }
+    }   
 }

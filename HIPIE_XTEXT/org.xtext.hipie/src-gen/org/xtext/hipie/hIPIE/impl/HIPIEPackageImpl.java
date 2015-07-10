@@ -2266,7 +2266,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getOutputOption_Atr()
+  public EAttribute getOutputOption_Type()
   {
     return (EAttribute)outputOptionEClass.getEStructuralFeatures().get(0);
   }
@@ -2276,7 +2276,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getOutputOption_Name()
+  public EAttribute getOutputOption_Atr()
   {
     return (EAttribute)outputOptionEClass.getEStructuralFeatures().get(1);
   }
@@ -2286,9 +2286,19 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getOutputOption_Name()
+  {
+    return (EAttribute)outputOptionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EReference getOutputOption_Assigns()
   {
-    return (EReference)outputOptionEClass.getEStructuralFeatures().get(2);
+    return (EReference)outputOptionEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -2298,7 +2308,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    */
   public EReference getOutputOption_Vals()
   {
-    return (EReference)outputOptionEClass.getEStructuralFeatures().get(3);
+    return (EReference)outputOptionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -2346,7 +2356,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getOutTypeSimple_Val()
+  public EReference getOutTypeSimple_Vals()
   {
     return (EReference)outTypeSimpleEClass.getEStructuralFeatures().get(1);
   }
@@ -3633,6 +3643,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
     nestedDatasetDeclEClass = createEClass(NESTED_DATASET_DECL);
 
     outputOptionEClass = createEClass(OUTPUT_OPTION);
+    createEAttribute(outputOptionEClass, OUTPUT_OPTION__TYPE);
     createEAttribute(outputOptionEClass, OUTPUT_OPTION__ATR);
     createEAttribute(outputOptionEClass, OUTPUT_OPTION__NAME);
     createEReference(outputOptionEClass, OUTPUT_OPTION__ASSIGNS);
@@ -3643,7 +3654,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
 
     outTypeSimpleEClass = createEClass(OUT_TYPE_SIMPLE);
     createEAttribute(outTypeSimpleEClass, OUT_TYPE_SIMPLE__TYPE);
-    createEReference(outTypeSimpleEClass, OUT_TYPE_SIMPLE__VAL);
+    createEReference(outTypeSimpleEClass, OUT_TYPE_SIMPLE__VALS);
 
     outDatasetEClass = createEClass(OUT_DATASET);
     createEReference(outDatasetEClass, OUT_DATASET__OPTIONS);
@@ -4075,6 +4086,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
     initEClass(nestedDatasetDeclEClass, NestedDatasetDecl.class, "NestedDatasetDecl", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(outputOptionEClass, OutputOption.class, "OutputOption", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getOutputOption_Type(), ecorePackage.getEString(), "type", null, 0, 1, OutputOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getOutputOption_Atr(), ecorePackage.getEString(), "atr", null, 0, 1, OutputOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getOutputOption_Name(), ecorePackage.getEString(), "name", null, 0, 1, OutputOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getOutputOption_Assigns(), this.getAssignList(), null, "assigns", null, 0, 1, OutputOption.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -4085,7 +4097,7 @@ public class HIPIEPackageImpl extends EPackageImpl implements HIPIEPackage
 
     initEClass(outTypeSimpleEClass, OutTypeSimple.class, "OutTypeSimple", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getOutTypeSimple_Type(), ecorePackage.getEString(), "type", null, 0, 1, OutTypeSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getOutTypeSimple_Val(), this.getValue(), null, "val", null, 0, 1, OutTypeSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getOutTypeSimple_Vals(), this.getValue(), null, "vals", null, 0, 1, OutTypeSimple.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(outDatasetEClass, OutDataset.class, "OutDataset", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getOutDataset_Options(), this.getOutputOptions(), null, "options", null, 0, 1, OutDataset.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

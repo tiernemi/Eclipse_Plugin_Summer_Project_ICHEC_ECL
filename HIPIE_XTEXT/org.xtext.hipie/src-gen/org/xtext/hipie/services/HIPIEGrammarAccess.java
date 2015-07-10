@@ -1207,19 +1207,19 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	public class RecordElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Record");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cRecordKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cRECORDKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameTOKENParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		
 		//Record:
-		//	"Record" name=TOKEN;
+		//	"RECORD" name=TOKEN;
 		@Override public ParserRule getRule() { return rule; }
 
-		//"Record" name=TOKEN
+		//"RECORD" name=TOKEN
 		public Group getGroup() { return cGroup; }
 
-		//"Record"
-		public Keyword getRecordKeyword_0() { return cRecordKeyword_0; }
+		//"RECORD"
+		public Keyword getRECORDKeyword_0() { return cRECORDKeyword_0; }
 
 		//name=TOKEN
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -2479,25 +2479,17 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	public class OutputOptionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "OutputOption");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cAlternatives.eContents().get(0);
-		private final Assignment cAtrAssignment_0_0 = (Assignment)cAlternatives_0.eContents().get(0);
-		private final Keyword cAtrSIDEKeyword_0_0_0 = (Keyword)cAtrAssignment_0_0.eContents().get(0);
-		private final Assignment cAtrAssignment_0_1 = (Assignment)cAlternatives_0.eContents().get(1);
-		private final Keyword cAtrLARGEKeyword_0_1_0 = (Keyword)cAtrAssignment_0_1.eContents().get(0);
-		private final Assignment cAtrAssignment_0_2 = (Assignment)cAlternatives_0.eContents().get(2);
-		private final Keyword cAtrSMALLKeyword_0_2_0 = (Keyword)cAtrAssignment_0_2.eContents().get(0);
-		private final Assignment cAtrAssignment_0_3 = (Assignment)cAlternatives_0.eContents().get(3);
-		private final Keyword cAtrFEWKeyword_0_3_0 = (Keyword)cAtrAssignment_0_3.eContents().get(0);
-		private final Assignment cAtrAssignment_0_4 = (Assignment)cAlternatives_0.eContents().get(4);
-		private final Keyword cAtrWUIDKeyword_0_4_0 = (Keyword)cAtrAssignment_0_4.eContents().get(0);
-		private final Assignment cAtrAssignment_0_5 = (Assignment)cAlternatives_0.eContents().get(5);
-		private final Keyword cAtrAPPENDKeyword_0_5_0 = (Keyword)cAtrAssignment_0_5.eContents().get(0);
-		private final Assignment cAtrAssignment_0_6 = (Assignment)cAlternatives_0.eContents().get(6);
-		private final Keyword cAtrSCOREDSEARCHKeyword_0_6_0 = (Keyword)cAtrAssignment_0_6.eContents().get(0);
-		private final Assignment cAtrAssignment_0_7 = (Assignment)cAlternatives_0.eContents().get(7);
-		private final Keyword cAtrDATABOMBKeyword_0_7_0 = (Keyword)cAtrAssignment_0_7.eContents().get(0);
-		private final Assignment cAtrAssignment_0_8 = (Assignment)cAlternatives_0.eContents().get(8);
-		private final Keyword cAtrOPTIONALKeyword_0_8_0 = (Keyword)cAtrAssignment_0_8.eContents().get(0);
+		private final Assignment cTypeAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final Alternatives cTypeAlternatives_0_0 = (Alternatives)cTypeAssignment_0.eContents().get(0);
+		private final Keyword cTypeSIDEKeyword_0_0_0 = (Keyword)cTypeAlternatives_0_0.eContents().get(0);
+		private final Keyword cTypeLARGEKeyword_0_0_1 = (Keyword)cTypeAlternatives_0_0.eContents().get(1);
+		private final Keyword cTypeSMALLKeyword_0_0_2 = (Keyword)cTypeAlternatives_0_0.eContents().get(2);
+		private final Keyword cTypeFEWKeyword_0_0_3 = (Keyword)cTypeAlternatives_0_0.eContents().get(3);
+		private final Keyword cTypeWUIDKeyword_0_0_4 = (Keyword)cTypeAlternatives_0_0.eContents().get(4);
+		private final Keyword cTypeAPPENDKeyword_0_0_5 = (Keyword)cTypeAlternatives_0_0.eContents().get(5);
+		private final Keyword cTypeSCOREDSEARCHKeyword_0_0_6 = (Keyword)cTypeAlternatives_0_0.eContents().get(6);
+		private final Keyword cTypeDATABOMBKeyword_0_0_7 = (Keyword)cTypeAlternatives_0_0.eContents().get(7);
+		private final Keyword cTypeOPTIONALKeyword_0_0_8 = (Keyword)cTypeAlternatives_0_0.eContents().get(8);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Assignment cAtrAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
 		private final Alternatives cAtrAlternatives_1_0_0 = (Alternatives)cAtrAssignment_1_0.eContents().get(0);
@@ -2545,75 +2537,49 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightParenthesisKeyword_5_3 = (Keyword)cGroup_5.eContents().get(3);
 		
 		//OutputOption:
-		//	(atr="SIDE" | atr="LARGE" | atr="SMALL" | atr="FEW" | atr="WUID" | atr="APPEND" | atr="SCOREDSEARCH" | atr="DATABOMB"
-		//	| atr="OPTIONAL") | atr=("WUID" | "FROM") "(" name=TOKEN ")" | atr="ENABLE" "(" assigns=AssignList ")" | atr="PREFIX"
-		//	"(" name=TOKEN ")" | atr=("WUID" | "FILLS" | "SOAP") "(" vals=ValueList ")" | atr=("DESCRIPTION" | "SOAP" | "JSON" |
-		//	"ROXIE" | "XPATH") "(" vals=Value ")";
+		//	type=("SIDE" | "LARGE" | "SMALL" | "FEW" | "WUID" | "APPEND" | "SCOREDSEARCH" | "DATABOMB" | "OPTIONAL") | atr=("WUID"
+		//	| "FROM") "(" name=TOKEN ")" | atr="ENABLE" "(" assigns=AssignList ")" | atr="PREFIX" "(" name=TOKEN ")" | atr=("WUID"
+		//	| "FILLS" | "SOAP") "(" vals=ValueList ")" | atr=("DESCRIPTION" | "SOAP" | "JSON" | "ROXIE" | "XPATH") "(" vals=Value
+		//	")";
 		@Override public ParserRule getRule() { return rule; }
 
-		//(atr="SIDE" | atr="LARGE" | atr="SMALL" | atr="FEW" | atr="WUID" | atr="APPEND" | atr="SCOREDSEARCH" | atr="DATABOMB" |
-		//atr="OPTIONAL") | atr=("WUID" | "FROM") "(" name=TOKEN ")" | atr="ENABLE" "(" assigns=AssignList ")" | atr="PREFIX" "("
-		//name=TOKEN ")" | atr=("WUID" | "FILLS" | "SOAP") "(" vals=ValueList ")" | atr=("DESCRIPTION" | "SOAP" | "JSON" |
-		//"ROXIE" | "XPATH") "(" vals=Value ")"
+		//type=("SIDE" | "LARGE" | "SMALL" | "FEW" | "WUID" | "APPEND" | "SCOREDSEARCH" | "DATABOMB" | "OPTIONAL") | atr=("WUID" |
+		//"FROM") "(" name=TOKEN ")" | atr="ENABLE" "(" assigns=AssignList ")" | atr="PREFIX" "(" name=TOKEN ")" | atr=("WUID" |
+		//"FILLS" | "SOAP") "(" vals=ValueList ")" | atr=("DESCRIPTION" | "SOAP" | "JSON" | "ROXIE" | "XPATH") "(" vals=Value ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//atr="SIDE" | atr="LARGE" | atr="SMALL" | atr="FEW" | atr="WUID" | atr="APPEND" | atr="SCOREDSEARCH" | atr="DATABOMB" |
-		//atr="OPTIONAL"
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		//type=("SIDE" | "LARGE" | "SMALL" | "FEW" | "WUID" | "APPEND" | "SCOREDSEARCH" | "DATABOMB" | "OPTIONAL")
+		public Assignment getTypeAssignment_0() { return cTypeAssignment_0; }
 
-		//atr="SIDE"
-		public Assignment getAtrAssignment_0_0() { return cAtrAssignment_0_0; }
+		//"SIDE" | "LARGE" | "SMALL" | "FEW" | "WUID" | "APPEND" | "SCOREDSEARCH" | "DATABOMB" | "OPTIONAL"
+		public Alternatives getTypeAlternatives_0_0() { return cTypeAlternatives_0_0; }
 
 		//"SIDE"
-		public Keyword getAtrSIDEKeyword_0_0_0() { return cAtrSIDEKeyword_0_0_0; }
-
-		//atr="LARGE"
-		public Assignment getAtrAssignment_0_1() { return cAtrAssignment_0_1; }
+		public Keyword getTypeSIDEKeyword_0_0_0() { return cTypeSIDEKeyword_0_0_0; }
 
 		//"LARGE"
-		public Keyword getAtrLARGEKeyword_0_1_0() { return cAtrLARGEKeyword_0_1_0; }
-
-		//atr="SMALL"
-		public Assignment getAtrAssignment_0_2() { return cAtrAssignment_0_2; }
+		public Keyword getTypeLARGEKeyword_0_0_1() { return cTypeLARGEKeyword_0_0_1; }
 
 		//"SMALL"
-		public Keyword getAtrSMALLKeyword_0_2_0() { return cAtrSMALLKeyword_0_2_0; }
-
-		//atr="FEW"
-		public Assignment getAtrAssignment_0_3() { return cAtrAssignment_0_3; }
+		public Keyword getTypeSMALLKeyword_0_0_2() { return cTypeSMALLKeyword_0_0_2; }
 
 		//"FEW"
-		public Keyword getAtrFEWKeyword_0_3_0() { return cAtrFEWKeyword_0_3_0; }
-
-		//atr="WUID"
-		public Assignment getAtrAssignment_0_4() { return cAtrAssignment_0_4; }
+		public Keyword getTypeFEWKeyword_0_0_3() { return cTypeFEWKeyword_0_0_3; }
 
 		//"WUID"
-		public Keyword getAtrWUIDKeyword_0_4_0() { return cAtrWUIDKeyword_0_4_0; }
-
-		//atr="APPEND"
-		public Assignment getAtrAssignment_0_5() { return cAtrAssignment_0_5; }
+		public Keyword getTypeWUIDKeyword_0_0_4() { return cTypeWUIDKeyword_0_0_4; }
 
 		//"APPEND"
-		public Keyword getAtrAPPENDKeyword_0_5_0() { return cAtrAPPENDKeyword_0_5_0; }
-
-		//atr="SCOREDSEARCH"
-		public Assignment getAtrAssignment_0_6() { return cAtrAssignment_0_6; }
+		public Keyword getTypeAPPENDKeyword_0_0_5() { return cTypeAPPENDKeyword_0_0_5; }
 
 		//"SCOREDSEARCH"
-		public Keyword getAtrSCOREDSEARCHKeyword_0_6_0() { return cAtrSCOREDSEARCHKeyword_0_6_0; }
-
-		//atr="DATABOMB"
-		public Assignment getAtrAssignment_0_7() { return cAtrAssignment_0_7; }
+		public Keyword getTypeSCOREDSEARCHKeyword_0_0_6() { return cTypeSCOREDSEARCHKeyword_0_0_6; }
 
 		//"DATABOMB"
-		public Keyword getAtrDATABOMBKeyword_0_7_0() { return cAtrDATABOMBKeyword_0_7_0; }
-
-		//atr="OPTIONAL"
-		public Assignment getAtrAssignment_0_8() { return cAtrAssignment_0_8; }
+		public Keyword getTypeDATABOMBKeyword_0_0_7() { return cTypeDATABOMBKeyword_0_0_7; }
 
 		//"OPTIONAL"
-		public Keyword getAtrOPTIONALKeyword_0_8_0() { return cAtrOPTIONALKeyword_0_8_0; }
+		public Keyword getTypeOPTIONALKeyword_0_0_8() { return cTypeOPTIONALKeyword_0_0_8; }
 
 		//atr=("WUID" | "FROM") "(" name=TOKEN ")"
 		public Group getGroup_1() { return cGroup_1; }
@@ -2800,14 +2766,14 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cTypeINTKeyword_0_0_1 = (Keyword)cTypeAlternatives_0_0.eContents().get(1);
 		private final Keyword cTypeSTRINGKeyword_0_0_2 = (Keyword)cTypeAlternatives_0_0.eContents().get(2);
 		private final Keyword cTypeACTIONKeyword_0_0_3 = (Keyword)cTypeAlternatives_0_0.eContents().get(3);
-		private final Assignment cValAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cValValueParserRuleCall_1_0 = (RuleCall)cValAssignment_1.eContents().get(0);
+		private final Assignment cValsAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cValsValueParserRuleCall_1_0 = (RuleCall)cValsAssignment_1.eContents().get(0);
 		
 		//OutTypeSimple:
-		//	type=("BOOL" | "INT" | "STRING" | "ACTION")? val=Value;
+		//	type=("BOOL" | "INT" | "STRING" | "ACTION")? vals=Value;
 		@Override public ParserRule getRule() { return rule; }
 
-		//type=("BOOL" | "INT" | "STRING" | "ACTION")? val=Value
+		//type=("BOOL" | "INT" | "STRING" | "ACTION")? vals=Value
 		public Group getGroup() { return cGroup; }
 
 		//type=("BOOL" | "INT" | "STRING" | "ACTION")?
@@ -2828,11 +2794,11 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 		//"ACTION"
 		public Keyword getTypeACTIONKeyword_0_0_3() { return cTypeACTIONKeyword_0_0_3; }
 
-		//val=Value
-		public Assignment getValAssignment_1() { return cValAssignment_1; }
+		//vals=Value
+		public Assignment getValsAssignment_1() { return cValsAssignment_1; }
 
 		//Value
-		public RuleCall getValValueParserRuleCall_1_0() { return cValValueParserRuleCall_1_0; }
+		public RuleCall getValsValueParserRuleCall_1_0() { return cValsValueParserRuleCall_1_0; }
 	}
 
 	public class OutDatasetElements extends AbstractParserRuleElementFinder {
@@ -5778,7 +5744,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//Record:
-	//	"Record" name=TOKEN;
+	//	"RECORD" name=TOKEN;
 	public RecordElements getRecordAccess() {
 		return pRecord;
 	}
@@ -6075,10 +6041,10 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//OutputOption:
-	//	(atr="SIDE" | atr="LARGE" | atr="SMALL" | atr="FEW" | atr="WUID" | atr="APPEND" | atr="SCOREDSEARCH" | atr="DATABOMB"
-	//	| atr="OPTIONAL") | atr=("WUID" | "FROM") "(" name=TOKEN ")" | atr="ENABLE" "(" assigns=AssignList ")" | atr="PREFIX"
-	//	"(" name=TOKEN ")" | atr=("WUID" | "FILLS" | "SOAP") "(" vals=ValueList ")" | atr=("DESCRIPTION" | "SOAP" | "JSON" |
-	//	"ROXIE" | "XPATH") "(" vals=Value ")";
+	//	type=("SIDE" | "LARGE" | "SMALL" | "FEW" | "WUID" | "APPEND" | "SCOREDSEARCH" | "DATABOMB" | "OPTIONAL") | atr=("WUID"
+	//	| "FROM") "(" name=TOKEN ")" | atr="ENABLE" "(" assigns=AssignList ")" | atr="PREFIX" "(" name=TOKEN ")" | atr=("WUID"
+	//	| "FILLS" | "SOAP") "(" vals=ValueList ")" | atr=("DESCRIPTION" | "SOAP" | "JSON" | "ROXIE" | "XPATH") "(" vals=Value
+	//	")";
 	public OutputOptionElements getOutputOptionAccess() {
 		return pOutputOption;
 	}
@@ -6098,7 +6064,7 @@ public class HIPIEGrammarAccess extends AbstractGrammarElementFinder {
 	}
 
 	//OutTypeSimple:
-	//	type=("BOOL" | "INT" | "STRING" | "ACTION")? val=Value;
+	//	type=("BOOL" | "INT" | "STRING" | "ACTION")? vals=Value;
 	public OutTypeSimpleElements getOutTypeSimpleAccess() {
 		return pOutTypeSimple;
 	}

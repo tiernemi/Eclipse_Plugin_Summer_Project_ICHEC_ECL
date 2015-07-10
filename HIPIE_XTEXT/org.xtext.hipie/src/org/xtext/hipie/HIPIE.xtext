@@ -136,11 +136,11 @@ Real :
 ;
 
 InputSimpleTypes : 
-	Bool|IntVar|EnumDecl|StringVar|Real
+	(Bool|IntVar|EnumDecl|StringVar|Real)
 ;
 
 Record :
-	'Record' name=TOKEN
+	'RECORD' name=TOKEN
 ;
 
 KelBase :
@@ -151,7 +151,6 @@ Datatype :
 	(InputSimpleTypes| Record | Dataset | KelBase | Group)
 ;
 
- 
 InputValue: 
 	(InputSimpleTypes| Record | Dataset) (input_op_list=InputOptions)? ';' |
       Dataset (input_op_list=InputOptions)? (fields+=FieldDecl)* => 'END' |
@@ -266,9 +265,8 @@ NestedDatasetDecl:
 	OutDataset (options=OutputOptions)? (decl+=ECLOutputDecl)+ => 'END'
 ;
 				
-
 OutputOption: 
-	(atr='SIDE'|atr='LARGE'|atr='SMALL'|atr='FEW'|atr='WUID' | atr='APPEND' | atr='SCOREDSEARCH' | atr='DATABOMB' | atr='OPTIONAL') | 
+	type=('SIDE'|'LARGE'|'SMALL'|'FEW'|'WUID'|'APPEND'|'SCOREDSEARCH'|'DATABOMB'|'OPTIONAL') | 
     (atr=('WUID'|'FROM') '(' name=TOKEN ')') |
     (atr='ENABLE' '(' assigns=AssignList ')') |
     (atr='PREFIX' '(' (name=TOKEN) ')') |
@@ -282,7 +280,7 @@ OutputOptions:
 
 
 OutTypeSimple :
-	 type=('BOOL'|'INT'|'STRING'|'ACTION')? val=Value 
+	 type=('BOOL'|'INT'|'STRING'|'ACTION')? vals=Value 
 ;
 
 OutDataset :
