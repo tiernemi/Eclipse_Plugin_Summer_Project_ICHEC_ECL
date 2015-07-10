@@ -23,6 +23,7 @@ import org.xtext.hipie.hIPIE.OutputOption;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getAtr <em>Atr</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getAssigns <em>Assigns</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutputOptionImpl#getVals <em>Vals</em>}</li>
@@ -33,6 +34,26 @@ import org.xtext.hipie.hIPIE.OutputOption;
  */
 public class OutputOptionImpl extends MinimalEObjectImpl.Container implements OutputOption
 {
+  /**
+   * The default value of the '{@link #getAtr() <em>Atr</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAtr()
+   * @generated
+   * @ordered
+   */
+  protected static final String ATR_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getAtr() <em>Atr</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAtr()
+   * @generated
+   * @ordered
+   */
+  protected String atr = ATR_EDEFAULT;
+
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -92,6 +113,29 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.OUTPUT_OPTION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getAtr()
+  {
+    return atr;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAtr(String newAtr)
+  {
+    String oldAtr = atr;
+    atr = newAtr;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUTPUT_OPTION__ATR, oldAtr, atr));
   }
 
   /**
@@ -241,6 +285,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__ATR:
+        return getAtr();
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         return getName();
       case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
@@ -261,6 +307,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__ATR:
+        setAtr((String)newValue);
+        return;
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         setName((String)newValue);
         return;
@@ -284,6 +333,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__ATR:
+        setAtr(ATR_EDEFAULT);
+        return;
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -307,6 +359,8 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUTPUT_OPTION__ATR:
+        return ATR_EDEFAULT == null ? atr != null : !ATR_EDEFAULT.equals(atr);
       case HIPIEPackage.OUTPUT_OPTION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.OUTPUT_OPTION__ASSIGNS:
@@ -328,7 +382,9 @@ public class OutputOptionImpl extends MinimalEObjectImpl.Container implements Ou
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
+    result.append(" (atr: ");
+    result.append(atr);
+    result.append(", name: ");
     result.append(name);
     result.append(')');
     return result.toString();

@@ -14,9 +14,12 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getAtr <em>Atr</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getForm <em>Form</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getForm_op <em>Form op</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getEnab <em>Enab</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getAssigns_list <em>Assigns list</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getType_op <em>Type op</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.InputOption#getVals <em>Vals</em>}</li>
  * </ul>
@@ -29,30 +32,56 @@ import org.eclipse.emf.ecore.EObject;
 public interface InputOption extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Atr</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Atr</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getInputOption_Name()
+   * @return the value of the '<em>Atr</em>' attribute.
+   * @see #setAtr(String)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getInputOption_Atr()
    * @model
    * @generated
    */
-  String getName();
+  String getAtr();
 
   /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.InputOption#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.InputOption#getAtr <em>Atr</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Atr</em>' attribute.
+   * @see #getAtr()
    * @generated
    */
-  void setName(String value);
+  void setAtr(String value);
+
+  /**
+   * Returns the value of the '<em><b>Form</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Form</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Form</em>' attribute.
+   * @see #setForm(String)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getInputOption_Form()
+   * @model
+   * @generated
+   */
+  String getForm();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.InputOption#getForm <em>Form</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Form</em>' attribute.
+   * @see #getForm()
+   * @generated
+   */
+  void setForm(String value);
 
   /**
    * Returns the value of the '<em><b>Form op</b></em>' attribute.
@@ -81,6 +110,32 @@ public interface InputOption extends EObject
   void setForm_op(String value);
 
   /**
+   * Returns the value of the '<em><b>Enab</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Enab</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Enab</em>' attribute.
+   * @see #setEnab(String)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getInputOption_Enab()
+   * @model
+   * @generated
+   */
+  String getEnab();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.InputOption#getEnab <em>Enab</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Enab</em>' attribute.
+   * @see #getEnab()
+   * @generated
+   */
+  void setEnab(String value);
+
+  /**
    * Returns the value of the '<em><b>Assigns list</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -105,6 +160,32 @@ public interface InputOption extends EObject
    * @generated
    */
   void setAssigns_list(AssignList value);
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getInputOption_Type()
+   * @model
+   * @generated
+   */
+  String getType();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.InputOption#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
+   * @generated
+   */
+  void setType(String value);
 
   /**
    * Returns the value of the '<em><b>Type op</b></em>' containment reference.

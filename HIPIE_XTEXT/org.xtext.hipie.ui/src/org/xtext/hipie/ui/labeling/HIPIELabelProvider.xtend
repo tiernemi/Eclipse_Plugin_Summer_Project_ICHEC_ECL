@@ -4,6 +4,7 @@
 package org.xtext.hipie.ui.labeling
 
 import com.google.inject.Inject
+import org.eclipse.emf.common.util.EList
 import org.xtext.hipie.hIPIE.*
 
 /**
@@ -29,13 +30,86 @@ class HIPIELabelProvider extends org.eclipse.xtext.ui.label.DefaultEObjectLabelP
 				'INT : ' + v.int_val 
 		}
 	}
+	
+	def text(BaseProp base)
+	{
+		var out_string = ""
+		if (base.val_list != null)
+		{
+			for (i : 0..<base.val_list.vals.size)
+			{
+				if (base.val_list.vals.get(i).name != null)
+				{
+					if(out_string.length != 0)
+						out_string += ", "
+					out_string += base.val_list.vals.get(i).name
+				}
+				else if (base.val_list.vals.get(i).str_val != null)
+				{
+					if(out_string.length != 0)
+						out_string += ", "
+					out_string += base.val_list.vals.get(i).str_val
+				}
+				else 
+				{
+					if(out_string.length != 0)
+						out_string += ", "
+					out_string += base.val_list.vals.get(i).int_val
+				}
+			}
+		}
+		
+		if (base.cat_list != null)
+		{
+			for (i : 0..<base.cat_list.cats.size)
+				{
+					if(base.cat_list.cats.get(i) != null)
+					{
+						if(out_string.length != 0)
+							out_string += ", "
+						out_string += base.cat_list.cats.get(i).name
+					}
+				}
+		}
+		base.name + " : " + out_string 
+	}
+	
+	def text(OutDataset out_dataset)
+	{
+		var out_string = ""
+		for (i : 0..<out_dataset.ops.output_ops.size)
+		{
+			if (out_dataset.ops.output_ops.get(i).atr != null)
+			{
+				if(out_string.length != 0)
+							out_string += ", "
+				out_string += out_dataset.ops.output_ops.get(i).atr
+			}
+		}
+		out_dataset.name + " : " + out_string
+	}
+	
+	def text(Visualization vis)
+	{
+		var vis_type = vis.type.name
+		var out_string = ""
+		var vis_basis  = "";
+		if (vis.parens != null)
+			vis_basis =  vis.parens.input.basis.name
+		out_string = vis.name + " : " + vis_type + " - " + vis_basis
+	}
+	
+	def text(VisualSection vis)
+	{
+		var sec_name = vis.section_name 
+		var sec_id = vis.name
+		
+		sec_name + " : " + sec_id
+	}
 
-	def text(VisualSection v)
+	/*def text(OutTypeSimple out)
 	{
-		v.sec_name ;
+		if (out.type != null)
 	}
-	def text(ContractInstance v)
-	{
-		v.sec_name ;
-	}
+	*/
 }

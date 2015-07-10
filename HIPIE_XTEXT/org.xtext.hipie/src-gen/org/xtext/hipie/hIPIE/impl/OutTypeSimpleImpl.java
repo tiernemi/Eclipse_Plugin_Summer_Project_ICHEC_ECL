@@ -21,6 +21,7 @@ import org.xtext.hipie.hIPIE.Value;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.OutTypeSimpleImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutTypeSimpleImpl#getVal <em>Val</em>}</li>
  * </ul>
  * </p>
@@ -29,6 +30,26 @@ import org.xtext.hipie.hIPIE.Value;
  */
 public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
 {
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
+
   /**
    * The cached value of the '{@link #getVal() <em>Val</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -58,6 +79,29 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.OUT_TYPE_SIMPLE;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_TYPE_SIMPLE__TYPE, oldType, type));
   }
 
   /**
@@ -134,6 +178,8 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
+        return getType();
       case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
         return getVal();
     }
@@ -150,6 +196,9 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
+        setType((String)newValue);
+        return;
       case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
         setVal((Value)newValue);
         return;
@@ -167,6 +216,9 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
         setVal((Value)null);
         return;
@@ -184,10 +236,29 @@ public class OutTypeSimpleImpl extends OutputValueImpl implements OutTypeSimple
   {
     switch (featureID)
     {
+      case HIPIEPackage.OUT_TYPE_SIMPLE__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case HIPIEPackage.OUT_TYPE_SIMPLE__VAL:
         return val != null;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (type: ");
+    result.append(type);
+    result.append(')');
+    return result.toString();
   }
 
 } //OutTypeSimpleImpl

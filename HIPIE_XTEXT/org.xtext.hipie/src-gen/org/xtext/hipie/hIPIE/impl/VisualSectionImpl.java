@@ -30,7 +30,8 @@ import org.xtext.hipie.hIPIE.Visualization;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionImpl#getSec_name <em>Sec name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionImpl#getSection_name <em>Section name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionImpl#getVis_ops <em>Vis ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualSectionImpl#getVis_elements <em>Vis elements</em>}</li>
  * </ul>
@@ -41,24 +42,44 @@ import org.xtext.hipie.hIPIE.Visualization;
 public class VisualSectionImpl extends MinimalEObjectImpl.Container implements VisualSection
 {
   /**
-   * The default value of the '{@link #getSec_name() <em>Sec name</em>}' attribute.
+   * The default value of the '{@link #getSection_name() <em>Section name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSec_name()
+   * @see #getSection_name()
    * @generated
    * @ordered
    */
-  protected static final String SEC_NAME_EDEFAULT = null;
+  protected static final String SECTION_NAME_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getSec_name() <em>Sec name</em>}' attribute.
+   * The cached value of the '{@link #getSection_name() <em>Section name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSec_name()
+   * @see #getSection_name()
    * @generated
    * @ordered
    */
-  protected String sec_name = SEC_NAME_EDEFAULT;
+  protected String section_name = SECTION_NAME_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getVis_ops() <em>Vis ops</em>}' containment reference.
@@ -106,9 +127,9 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSec_name()
+  public String getSection_name()
   {
-    return sec_name;
+    return section_name;
   }
 
   /**
@@ -116,12 +137,35 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSec_name(String newSec_name)
+  public void setSection_name(String newSection_name)
   {
-    String oldSec_name = sec_name;
-    sec_name = newSec_name;
+    String oldSection_name = section_name;
+    section_name = newSection_name;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUAL_SECTION__SEC_NAME, oldSec_name, sec_name));
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUAL_SECTION__SECTION_NAME, oldSection_name, section_name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUAL_SECTION__NAME, oldName, name));
   }
 
   /**
@@ -214,8 +258,10 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case HIPIEPackage.VISUAL_SECTION__SEC_NAME:
-        return getSec_name();
+      case HIPIEPackage.VISUAL_SECTION__SECTION_NAME:
+        return getSection_name();
+      case HIPIEPackage.VISUAL_SECTION__NAME:
+        return getName();
       case HIPIEPackage.VISUAL_SECTION__VIS_OPS:
         return getVis_ops();
       case HIPIEPackage.VISUAL_SECTION__VIS_ELEMENTS:
@@ -235,8 +281,11 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case HIPIEPackage.VISUAL_SECTION__SEC_NAME:
-        setSec_name((String)newValue);
+      case HIPIEPackage.VISUAL_SECTION__SECTION_NAME:
+        setSection_name((String)newValue);
+        return;
+      case HIPIEPackage.VISUAL_SECTION__NAME:
+        setName((String)newValue);
         return;
       case HIPIEPackage.VISUAL_SECTION__VIS_OPS:
         setVis_ops((VisualSectionOptions)newValue);
@@ -259,8 +308,11 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case HIPIEPackage.VISUAL_SECTION__SEC_NAME:
-        setSec_name(SEC_NAME_EDEFAULT);
+      case HIPIEPackage.VISUAL_SECTION__SECTION_NAME:
+        setSection_name(SECTION_NAME_EDEFAULT);
+        return;
+      case HIPIEPackage.VISUAL_SECTION__NAME:
+        setName(NAME_EDEFAULT);
         return;
       case HIPIEPackage.VISUAL_SECTION__VIS_OPS:
         setVis_ops((VisualSectionOptions)null);
@@ -282,8 +334,10 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
-      case HIPIEPackage.VISUAL_SECTION__SEC_NAME:
-        return SEC_NAME_EDEFAULT == null ? sec_name != null : !SEC_NAME_EDEFAULT.equals(sec_name);
+      case HIPIEPackage.VISUAL_SECTION__SECTION_NAME:
+        return SECTION_NAME_EDEFAULT == null ? section_name != null : !SECTION_NAME_EDEFAULT.equals(section_name);
+      case HIPIEPackage.VISUAL_SECTION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.VISUAL_SECTION__VIS_OPS:
         return vis_ops != null;
       case HIPIEPackage.VISUAL_SECTION__VIS_ELEMENTS:
@@ -303,8 +357,10 @@ public class VisualSectionImpl extends MinimalEObjectImpl.Container implements V
     if (eIsProxy()) return super.toString();
 
     StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (sec_name: ");
-    result.append(sec_name);
+    result.append(" (section_name: ");
+    result.append(section_name);
+    result.append(", name: ");
+    result.append(name);
     result.append(')');
     return result.toString();
   }

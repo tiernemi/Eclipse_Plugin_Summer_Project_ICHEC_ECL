@@ -22,7 +22,6 @@ import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.OutDataset;
 import org.xtext.hipie.hIPIE.OutputBase;
 import org.xtext.hipie.hIPIE.OutputOptions;
-import org.xtext.hipie.hIPIE.OutputValue;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,11 +30,11 @@ import org.xtext.hipie.hIPIE.OutputValue;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getOps <em>Ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getOptions <em>Options</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getDecl <em>Decl</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getOut_base <em>Out base</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getOps <em>Ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl#getEcl_vars <em>Ecl vars</em>}</li>
  * </ul>
  * </p>
@@ -44,16 +43,6 @@ import org.xtext.hipie.hIPIE.OutputValue;
  */
 public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
 {
-  /**
-   * The cached value of the '{@link #getOps() <em>Ops</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getOps()
-   * @generated
-   * @ordered
-   */
-  protected OutputOptions ops;
-
   /**
    * The cached value of the '{@link #getOptions() <em>Options</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -105,6 +94,16 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   protected OutputBase out_base;
 
   /**
+   * The cached value of the '{@link #getOps() <em>Ops</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOps()
+   * @generated
+   * @ordered
+   */
+  protected OutputOptions ops;
+
+  /**
    * The cached value of the '{@link #getEcl_vars() <em>Ecl vars</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -133,54 +132,6 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.OUT_DATASET;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public OutputOptions getOps()
-  {
-    return ops;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetOps(OutputOptions newOps, NotificationChain msgs)
-  {
-    OutputOptions oldOps = ops;
-    ops = newOps;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_DATASET__OPS, oldOps, newOps);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setOps(OutputOptions newOps)
-  {
-    if (newOps != ops)
-    {
-      NotificationChain msgs = null;
-      if (ops != null)
-        msgs = ((InternalEObject)ops).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_DATASET__OPS, null, msgs);
-      if (newOps != null)
-        msgs = ((InternalEObject)newOps).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_DATASET__OPS, null, msgs);
-      msgs = basicSetOps(newOps, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_DATASET__OPS, newOps, newOps));
   }
 
   /**
@@ -321,6 +272,54 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
    * <!-- end-user-doc -->
    * @generated
    */
+  public OutputOptions getOps()
+  {
+    return ops;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOps(OutputOptions newOps, NotificationChain msgs)
+  {
+    OutputOptions oldOps = ops;
+    ops = newOps;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_DATASET__OPS, oldOps, newOps);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOps(OutputOptions newOps)
+  {
+    if (newOps != ops)
+    {
+      NotificationChain msgs = null;
+      if (ops != null)
+        msgs = ((InternalEObject)ops).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_DATASET__OPS, null, msgs);
+      if (newOps != null)
+        msgs = ((InternalEObject)newOps).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.OUT_DATASET__OPS, null, msgs);
+      msgs = basicSetOps(newOps, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.OUT_DATASET__OPS, newOps, newOps));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<ECLOutputDecl> getEcl_vars()
   {
     if (ecl_vars == null)
@@ -340,14 +339,14 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.OUT_DATASET__OPS:
-        return basicSetOps(null, msgs);
       case HIPIEPackage.OUT_DATASET__OPTIONS:
         return basicSetOptions(null, msgs);
       case HIPIEPackage.OUT_DATASET__DECL:
         return ((InternalEList<?>)getDecl()).basicRemove(otherEnd, msgs);
       case HIPIEPackage.OUT_DATASET__OUT_BASE:
         return basicSetOut_base(null, msgs);
+      case HIPIEPackage.OUT_DATASET__OPS:
+        return basicSetOps(null, msgs);
       case HIPIEPackage.OUT_DATASET__ECL_VARS:
         return ((InternalEList<?>)getEcl_vars()).basicRemove(otherEnd, msgs);
     }
@@ -364,8 +363,6 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.OUT_DATASET__OPS:
-        return getOps();
       case HIPIEPackage.OUT_DATASET__OPTIONS:
         return getOptions();
       case HIPIEPackage.OUT_DATASET__DECL:
@@ -374,6 +371,8 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
         return getName();
       case HIPIEPackage.OUT_DATASET__OUT_BASE:
         return getOut_base();
+      case HIPIEPackage.OUT_DATASET__OPS:
+        return getOps();
       case HIPIEPackage.OUT_DATASET__ECL_VARS:
         return getEcl_vars();
     }
@@ -391,9 +390,6 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.OUT_DATASET__OPS:
-        setOps((OutputOptions)newValue);
-        return;
       case HIPIEPackage.OUT_DATASET__OPTIONS:
         setOptions((OutputOptions)newValue);
         return;
@@ -406,6 +402,9 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
         return;
       case HIPIEPackage.OUT_DATASET__OUT_BASE:
         setOut_base((OutputBase)newValue);
+        return;
+      case HIPIEPackage.OUT_DATASET__OPS:
+        setOps((OutputOptions)newValue);
         return;
       case HIPIEPackage.OUT_DATASET__ECL_VARS:
         getEcl_vars().clear();
@@ -425,9 +424,6 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.OUT_DATASET__OPS:
-        setOps((OutputOptions)null);
-        return;
       case HIPIEPackage.OUT_DATASET__OPTIONS:
         setOptions((OutputOptions)null);
         return;
@@ -439,6 +435,9 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
         return;
       case HIPIEPackage.OUT_DATASET__OUT_BASE:
         setOut_base((OutputBase)null);
+        return;
+      case HIPIEPackage.OUT_DATASET__OPS:
+        setOps((OutputOptions)null);
         return;
       case HIPIEPackage.OUT_DATASET__ECL_VARS:
         getEcl_vars().clear();
@@ -457,8 +456,6 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
   {
     switch (featureID)
     {
-      case HIPIEPackage.OUT_DATASET__OPS:
-        return ops != null;
       case HIPIEPackage.OUT_DATASET__OPTIONS:
         return options != null;
       case HIPIEPackage.OUT_DATASET__DECL:
@@ -467,48 +464,12 @@ public class OutDatasetImpl extends NestedDatasetDeclImpl implements OutDataset
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.OUT_DATASET__OUT_BASE:
         return out_base != null;
+      case HIPIEPackage.OUT_DATASET__OPS:
+        return ops != null;
       case HIPIEPackage.OUT_DATASET__ECL_VARS:
         return ecl_vars != null && !ecl_vars.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eBaseStructuralFeatureID(int derivedFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == OutputValue.class)
-    {
-      switch (derivedFeatureID)
-      {
-        case HIPIEPackage.OUT_DATASET__OPS: return HIPIEPackage.OUTPUT_VALUE__OPS;
-        default: return -1;
-      }
-    }
-    return super.eBaseStructuralFeatureID(derivedFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public int eDerivedStructuralFeatureID(int baseFeatureID, Class<?> baseClass)
-  {
-    if (baseClass == OutputValue.class)
-    {
-      switch (baseFeatureID)
-      {
-        case HIPIEPackage.OUTPUT_VALUE__OPS: return HIPIEPackage.OUT_DATASET__OPS;
-        default: return -1;
-      }
-    }
-    return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
   }
 
   /**

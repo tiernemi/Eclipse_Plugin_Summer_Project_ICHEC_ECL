@@ -2,55 +2,57 @@
  */
 package org.xtext.hipie.hIPIE.impl;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
-
 import org.xtext.hipie.hIPIE.CategoryType;
-import org.xtext.hipie.hIPIE.CategoryTypeList;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Category Type List</b></em>'.
+ * An implementation of the model object '<em><b>Category Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.impl.CategoryTypeListImpl#getCats <em>Cats</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.CategoryTypeImpl#getName <em>Name</em>}</li>
  * </ul>
  * </p>
  *
  * @generated
  */
-public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implements CategoryTypeList
+public class CategoryTypeImpl extends MinimalEObjectImpl.Container implements CategoryType
 {
   /**
-   * The cached value of the '{@link #getCats() <em>Cats</em>}' containment reference list.
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getCats()
+   * @see #getName()
    * @generated
    * @ordered
    */
-  protected EList<CategoryType> cats;
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected CategoryTypeListImpl()
+  protected CategoryTypeImpl()
   {
     super();
   }
@@ -63,7 +65,7 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
   @Override
   protected EClass eStaticClass()
   {
-    return HIPIEPackage.Literals.CATEGORY_TYPE_LIST;
+    return HIPIEPackage.Literals.CATEGORY_TYPE;
   }
 
   /**
@@ -71,13 +73,9 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<CategoryType> getCats()
+  public String getName()
   {
-    if (cats == null)
-    {
-      cats = new EObjectContainmentEList<CategoryType>(CategoryType.class, this, HIPIEPackage.CATEGORY_TYPE_LIST__CATS);
-    }
-    return cats;
+    return name;
   }
 
   /**
@@ -85,15 +83,12 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  public void setName(String newName)
   {
-    switch (featureID)
-    {
-      case HIPIEPackage.CATEGORY_TYPE_LIST__CATS:
-        return ((InternalEList<?>)getCats()).basicRemove(otherEnd, msgs);
-    }
-    return super.eInverseRemove(otherEnd, featureID, msgs);
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.CATEGORY_TYPE__NAME, oldName, name));
   }
 
   /**
@@ -106,8 +101,8 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case HIPIEPackage.CATEGORY_TYPE_LIST__CATS:
-        return getCats();
+      case HIPIEPackage.CATEGORY_TYPE__NAME:
+        return getName();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,15 +112,13 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
-      case HIPIEPackage.CATEGORY_TYPE_LIST__CATS:
-        getCats().clear();
-        getCats().addAll((Collection<? extends CategoryType>)newValue);
+      case HIPIEPackage.CATEGORY_TYPE__NAME:
+        setName((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -141,8 +134,8 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case HIPIEPackage.CATEGORY_TYPE_LIST__CATS:
-        getCats().clear();
+      case HIPIEPackage.CATEGORY_TYPE__NAME:
+        setName(NAME_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -158,10 +151,27 @@ public class CategoryTypeListImpl extends MinimalEObjectImpl.Container implement
   {
     switch (featureID)
     {
-      case HIPIEPackage.CATEGORY_TYPE_LIST__CATS:
-        return cats != null && !cats.isEmpty();
+      case HIPIEPackage.CATEGORY_TYPE__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
     }
     return super.eIsSet(featureID);
   }
 
-} //CategoryTypeListImpl
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (name: ");
+    result.append(name);
+    result.append(')');
+    return result.toString();
+  }
+
+} //CategoryTypeImpl

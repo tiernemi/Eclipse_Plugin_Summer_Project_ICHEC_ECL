@@ -421,5 +421,11 @@
             type="text">
     </fileTypes>
   </extension>
+  <extension
+        point="org.eclipse.core.runtime.preferences">
+     <initializer
+           class="org.xtext.hipie.ui.CompilerPreferenceInitialiser">
+     </initializer>
+  </extension>
 
 </plugin>

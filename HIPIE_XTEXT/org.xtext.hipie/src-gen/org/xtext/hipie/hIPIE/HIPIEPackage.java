@@ -221,6 +221,34 @@ public interface HIPIEPackage extends EPackage
   int BASE_PROP_FEATURE_COUNT = 3;
 
   /**
+   * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.CategoryTypeImpl <em>Category Type</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.hipie.hIPIE.impl.CategoryTypeImpl
+   * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCategoryType()
+   * @generated
+   */
+  int CATEGORY_TYPE = 2;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CATEGORY_TYPE__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Category Type</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int CATEGORY_TYPE_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.CategoryTypeListImpl <em>Category Type List</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -228,10 +256,10 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCategoryTypeList()
    * @generated
    */
-  int CATEGORY_TYPE_LIST = 2;
+  int CATEGORY_TYPE_LIST = 3;
 
   /**
-   * The feature id for the '<em><b>Cats</b></em>' attribute list.
+   * The feature id for the '<em><b>Cats</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -256,7 +284,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualOption()
    * @generated
    */
-  int VISUAL_OPTION = 85;
+  int VISUAL_OPTION = 87;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -329,7 +357,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getSelectOption()
    * @generated
    */
-  int SELECT_OPTION = 87;
+  int SELECT_OPTION = 89;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -411,7 +439,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getSelectEvent()
    * @generated
    */
-  int SELECT_EVENT = 86;
+  int SELECT_EVENT = 88;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -493,7 +521,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getValue()
    * @generated
    */
-  int VALUE = 3;
+  int VALUE = 4;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -602,7 +630,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInstanceOption()
    * @generated
    */
-  int INSTANCE_OPTION = 10;
+  int INSTANCE_OPTION = 11;
 
   /**
    * The number of structural features of the '<em>Instance Option</em>' class.
@@ -621,7 +649,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getValueList()
    * @generated
    */
-  int VALUE_LIST = 4;
+  int VALUE_LIST = 5;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference list.
@@ -649,7 +677,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getAssign()
    * @generated
    */
-  int ASSIGN = 5;
+  int ASSIGN = 6;
 
   /**
    * The feature id for the '<em><b>Vals l</b></em>' containment reference.
@@ -686,7 +714,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getAssignList()
    * @generated
    */
-  int ASSIGN_LIST = 6;
+  int ASSIGN_LIST = 7;
 
   /**
    * The feature id for the '<em><b>Assigns</b></em>' containment reference list.
@@ -714,7 +742,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCompositionHeader()
    * @generated
    */
-  int COMPOSITION_HEADER = 7;
+  int COMPOSITION_HEADER = 8;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -751,7 +779,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInstanceID()
    * @generated
    */
-  int INSTANCE_ID = 8;
+  int INSTANCE_ID = 9;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -779,7 +807,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInstanceOptions()
    * @generated
    */
-  int INSTANCE_OPTIONS = 9;
+  int INSTANCE_OPTIONS = 10;
 
   /**
    * The feature id for the '<em><b>In ops</b></em>' containment reference list.
@@ -807,7 +835,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getContractInstance()
    * @generated
    */
-  int CONTRACT_INSTANCE = 11;
+  int CONTRACT_INSTANCE = 12;
 
   /**
    * The feature id for the '<em><b>Sec name</b></em>' attribute.
@@ -862,7 +890,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getPosVizData()
    * @generated
    */
-  int POS_VIZ_DATA = 75;
+  int POS_VIZ_DATA = 77;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -890,7 +918,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getFieldDecl()
    * @generated
    */
-  int FIELD_DECL = 12;
+  int FIELD_DECL = 13;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -927,7 +955,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getKelAttrDecl()
    * @generated
    */
-  int KEL_ATTR_DECL = 13;
+  int KEL_ATTR_DECL = 14;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -964,7 +992,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getKelEntityDeclSimple()
    * @generated
    */
-  int KEL_ENTITY_DECL_SIMPLE = 14;
+  int KEL_ENTITY_DECL_SIMPLE = 15;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1001,7 +1029,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getKelEntityDecl()
    * @generated
    */
-  int KEL_ENTITY_DECL = 15;
+  int KEL_ENTITY_DECL = 16;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1047,7 +1075,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getEnumEntry()
    * @generated
    */
-  int ENUM_ENTRY = 16;
+  int ENUM_ENTRY = 17;
 
   /**
    * The feature id for the '<em><b>Val l</b></em>' containment reference.
@@ -1084,7 +1112,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getEnumList()
    * @generated
    */
-  int ENUM_LIST = 17;
+  int ENUM_LIST = 18;
 
   /**
    * The feature id for the '<em><b>En ents</b></em>' containment reference list.
@@ -1112,7 +1140,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getDatatype()
    * @generated
    */
-  int DATATYPE = 29;
+  int DATATYPE = 30;
 
   /**
    * The number of structural features of the '<em>Datatype</em>' class.
@@ -1131,7 +1159,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInputSimpleTypes()
    * @generated
    */
-  int INPUT_SIMPLE_TYPES = 26;
+  int INPUT_SIMPLE_TYPES = 27;
 
   /**
    * The feature id for the '<em><b>Input op list</b></em>' containment reference.
@@ -1168,7 +1196,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getEnumDecl()
    * @generated
    */
-  int ENUM_DECL = 18;
+  int ENUM_DECL = 19;
 
   /**
    * The feature id for the '<em><b>Input op list</b></em>' containment reference.
@@ -1223,7 +1251,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInputSection()
    * @generated
    */
-  int INPUT_SECTION = 19;
+  int INPUT_SECTION = 20;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1260,7 +1288,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getBool()
    * @generated
    */
-  int BOOL = 20;
+  int BOOL = 21;
 
   /**
    * The feature id for the '<em><b>Input op list</b></em>' containment reference.
@@ -1315,7 +1343,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getIntVar()
    * @generated
    */
-  int INT_VAR = 21;
+  int INT_VAR = 22;
 
   /**
    * The feature id for the '<em><b>Input op list</b></em>' containment reference.
@@ -1370,7 +1398,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getStringVar()
    * @generated
    */
-  int STRING_VAR = 22;
+  int STRING_VAR = 23;
 
   /**
    * The feature id for the '<em><b>Input op list</b></em>' containment reference.
@@ -1425,7 +1453,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getDataset()
    * @generated
    */
-  int DATASET = 23;
+  int DATASET = 24;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1471,7 +1499,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getGroup()
    * @generated
    */
-  int GROUP = 24;
+  int GROUP = 25;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1517,7 +1545,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getReal()
    * @generated
    */
-  int REAL = 25;
+  int REAL = 26;
 
   /**
    * The feature id for the '<em><b>Input op list</b></em>' containment reference.
@@ -1563,7 +1591,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getRecord()
    * @generated
    */
-  int RECORD = 27;
+  int RECORD = 28;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1600,7 +1628,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getKelBase()
    * @generated
    */
-  int KEL_BASE = 28;
+  int KEL_BASE = 29;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1646,7 +1674,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInputValue()
    * @generated
    */
-  int INPUT_VALUE = 30;
+  int INPUT_VALUE = 31;
 
   /**
    * The number of structural features of the '<em>Input Value</em>' class.
@@ -1665,7 +1693,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInputOptions()
    * @generated
    */
-  int INPUT_OPTIONS = 31;
+  int INPUT_OPTIONS = 32;
 
   /**
    * The feature id for the '<em><b>Input ops</b></em>' containment reference list.
@@ -1693,16 +1721,25 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInputOption()
    * @generated
    */
-  int INPUT_OPTION = 32;
+  int INPUT_OPTION = 33;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Atr</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INPUT_OPTION__NAME = 0;
+  int INPUT_OPTION__ATR = 0;
+
+  /**
+   * The feature id for the '<em><b>Form</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_OPTION__FORM = 1;
 
   /**
    * The feature id for the '<em><b>Form op</b></em>' attribute.
@@ -1711,7 +1748,16 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT_OPTION__FORM_OP = 1;
+  int INPUT_OPTION__FORM_OP = 2;
+
+  /**
+   * The feature id for the '<em><b>Enab</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_OPTION__ENAB = 3;
 
   /**
    * The feature id for the '<em><b>Assigns list</b></em>' containment reference.
@@ -1720,7 +1766,16 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT_OPTION__ASSIGNS_LIST = 2;
+  int INPUT_OPTION__ASSIGNS_LIST = 4;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INPUT_OPTION__TYPE = 5;
 
   /**
    * The feature id for the '<em><b>Type op</b></em>' containment reference.
@@ -1729,7 +1784,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT_OPTION__TYPE_OP = 3;
+  int INPUT_OPTION__TYPE_OP = 6;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference list.
@@ -1738,7 +1793,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT_OPTION__VALS = 4;
+  int INPUT_OPTION__VALS = 7;
 
   /**
    * The number of structural features of the '<em>Input Option</em>' class.
@@ -1747,7 +1802,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int INPUT_OPTION_FEATURE_COUNT = 5;
+  int INPUT_OPTION_FEATURE_COUNT = 8;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.InputtypeOptionsImpl <em>Inputtype Options</em>}' class.
@@ -1757,7 +1812,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getInputtypeOptions()
    * @generated
    */
-  int INPUTTYPE_OPTIONS = 33;
+  int INPUTTYPE_OPTIONS = 34;
 
   /**
    * The feature id for the '<em><b>In type op</b></em>' attribute list.
@@ -1785,7 +1840,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getIntegrateSection()
    * @generated
    */
-  int INTEGRATE_SECTION = 34;
+  int INTEGRATE_SECTION = 35;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1822,7 +1877,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutputSection()
    * @generated
    */
-  int OUTPUT_SECTION = 35;
+  int OUTPUT_SECTION = 36;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1859,7 +1914,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutfieldDecl()
    * @generated
    */
-  int OUTFIELD_DECL = 36;
+  int OUTFIELD_DECL = 37;
 
   /**
    * The feature id for the '<em><b>Fields</b></em>' containment reference list.
@@ -1887,7 +1942,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLOutputDecl()
    * @generated
    */
-  int ECL_OUTPUT_DECL = 50;
+  int ECL_OUTPUT_DECL = 51;
 
   /**
    * The number of structural features of the '<em>ECL Output Decl</em>' class.
@@ -1906,7 +1961,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLfieldType()
    * @generated
    */
-  int EC_LFIELD_TYPE = 49;
+  int EC_LFIELD_TYPE = 50;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1952,7 +2007,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLInteger()
    * @generated
    */
-  int ECL_INTEGER = 37;
+  int ECL_INTEGER = 38;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1998,7 +2053,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLUnsigned()
    * @generated
    */
-  int ECL_UNSIGNED = 38;
+  int ECL_UNSIGNED = 39;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2044,7 +2099,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLString()
    * @generated
    */
-  int ECL_STRING = 39;
+  int ECL_STRING = 40;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2090,7 +2145,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLQstring()
    * @generated
    */
-  int ECL_QSTRING = 40;
+  int ECL_QSTRING = 41;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2136,7 +2191,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLVarstring()
    * @generated
    */
-  int ECL_VARSTRING = 41;
+  int ECL_VARSTRING = 42;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2182,7 +2237,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLUnicode()
    * @generated
    */
-  int ECL_UNICODE = 42;
+  int ECL_UNICODE = 43;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2228,7 +2283,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLVarunicode()
    * @generated
    */
-  int ECL_VARUNICODE = 43;
+  int ECL_VARUNICODE = 44;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2274,7 +2329,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLData()
    * @generated
    */
-  int ECL_DATA = 44;
+  int ECL_DATA = 45;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2320,7 +2375,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLReal()
    * @generated
    */
-  int ECL_REAL = 45;
+  int ECL_REAL = 46;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2366,7 +2421,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLBoolean()
    * @generated
    */
-  int ECL_BOOLEAN = 46;
+  int ECL_BOOLEAN = 47;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2412,7 +2467,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLNumType()
    * @generated
    */
-  int ECL_NUM_TYPE = 47;
+  int ECL_NUM_TYPE = 48;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2458,7 +2513,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getECLDecType()
    * @generated
    */
-  int ECL_DEC_TYPE = 48;
+  int ECL_DEC_TYPE = 49;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2504,7 +2559,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getServiceInputValue()
    * @generated
    */
-  int SERVICE_INPUT_VALUE = 51;
+  int SERVICE_INPUT_VALUE = 52;
 
   /**
    * The number of structural features of the '<em>Service Input Value</em>' class.
@@ -2523,7 +2578,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getServiceInputSection()
    * @generated
    */
-  int SERVICE_INPUT_SECTION = 52;
+  int SERVICE_INPUT_SECTION = 53;
 
   /**
    * The feature id for the '<em><b>Servs</b></em>' containment reference list.
@@ -2551,7 +2606,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getNestedDatasetDecl()
    * @generated
    */
-  int NESTED_DATASET_DECL = 53;
+  int NESTED_DATASET_DECL = 54;
 
   /**
    * The number of structural features of the '<em>Nested Dataset Decl</em>' class.
@@ -2570,7 +2625,16 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutputOption()
    * @generated
    */
-  int OUTPUT_OPTION = 54;
+  int OUTPUT_OPTION = 55;
+
+  /**
+   * The feature id for the '<em><b>Atr</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUTPUT_OPTION__ATR = 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2579,7 +2643,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__NAME = 0;
+  int OUTPUT_OPTION__NAME = 1;
 
   /**
    * The feature id for the '<em><b>Assigns</b></em>' containment reference.
@@ -2588,7 +2652,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__ASSIGNS = 1;
+  int OUTPUT_OPTION__ASSIGNS = 2;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference.
@@ -2597,7 +2661,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION__VALS = 2;
+  int OUTPUT_OPTION__VALS = 3;
 
   /**
    * The number of structural features of the '<em>Output Option</em>' class.
@@ -2606,7 +2670,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_OPTION_FEATURE_COUNT = 3;
+  int OUTPUT_OPTION_FEATURE_COUNT = 4;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.OutputOptionsImpl <em>Output Options</em>}' class.
@@ -2616,7 +2680,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutputOptions()
    * @generated
    */
-  int OUTPUT_OPTIONS = 55;
+  int OUTPUT_OPTIONS = 56;
 
   /**
    * The feature id for the '<em><b>Output ops</b></em>' containment reference list.
@@ -2644,16 +2708,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutputValue()
    * @generated
    */
-  int OUTPUT_VALUE = 59;
-
-  /**
-   * The feature id for the '<em><b>Ops</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUTPUT_VALUE__OPS = 0;
+  int OUTPUT_VALUE = 60;
 
   /**
    * The number of structural features of the '<em>Output Value</em>' class.
@@ -2662,7 +2717,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUTPUT_VALUE_FEATURE_COUNT = 1;
+  int OUTPUT_VALUE_FEATURE_COUNT = 0;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.OutTypeSimpleImpl <em>Out Type Simple</em>}' class.
@@ -2672,16 +2727,16 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutTypeSimple()
    * @generated
    */
-  int OUT_TYPE_SIMPLE = 56;
+  int OUT_TYPE_SIMPLE = 57;
 
   /**
-   * The feature id for the '<em><b>Ops</b></em>' containment reference.
+   * The feature id for the '<em><b>Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int OUT_TYPE_SIMPLE__OPS = OUTPUT_VALUE__OPS;
+  int OUT_TYPE_SIMPLE__TYPE = OUTPUT_VALUE_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Val</b></em>' containment reference.
@@ -2690,7 +2745,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUT_TYPE_SIMPLE__VAL = OUTPUT_VALUE_FEATURE_COUNT + 0;
+  int OUT_TYPE_SIMPLE__VAL = OUTPUT_VALUE_FEATURE_COUNT + 1;
 
   /**
    * The number of structural features of the '<em>Out Type Simple</em>' class.
@@ -2699,7 +2754,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUT_TYPE_SIMPLE_FEATURE_COUNT = OUTPUT_VALUE_FEATURE_COUNT + 1;
+  int OUT_TYPE_SIMPLE_FEATURE_COUNT = OUTPUT_VALUE_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.OutDatasetImpl <em>Out Dataset</em>}' class.
@@ -2709,16 +2764,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutDataset()
    * @generated
    */
-  int OUT_DATASET = 57;
-
-  /**
-   * The feature id for the '<em><b>Ops</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int OUT_DATASET__OPS = NESTED_DATASET_DECL_FEATURE_COUNT + 0;
+  int OUT_DATASET = 58;
 
   /**
    * The feature id for the '<em><b>Options</b></em>' containment reference.
@@ -2727,7 +2773,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUT_DATASET__OPTIONS = NESTED_DATASET_DECL_FEATURE_COUNT + 1;
+  int OUT_DATASET__OPTIONS = NESTED_DATASET_DECL_FEATURE_COUNT + 0;
 
   /**
    * The feature id for the '<em><b>Decl</b></em>' containment reference list.
@@ -2736,7 +2782,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUT_DATASET__DECL = NESTED_DATASET_DECL_FEATURE_COUNT + 2;
+  int OUT_DATASET__DECL = NESTED_DATASET_DECL_FEATURE_COUNT + 1;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2745,7 +2791,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUT_DATASET__NAME = NESTED_DATASET_DECL_FEATURE_COUNT + 3;
+  int OUT_DATASET__NAME = NESTED_DATASET_DECL_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Out base</b></em>' containment reference.
@@ -2754,7 +2800,16 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int OUT_DATASET__OUT_BASE = NESTED_DATASET_DECL_FEATURE_COUNT + 4;
+  int OUT_DATASET__OUT_BASE = NESTED_DATASET_DECL_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Ops</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int OUT_DATASET__OPS = NESTED_DATASET_DECL_FEATURE_COUNT + 4;
 
   /**
    * The feature id for the '<em><b>Ecl vars</b></em>' containment reference list.
@@ -2782,16 +2837,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getService()
    * @generated
    */
-  int SERVICE = 58;
-
-  /**
-   * The feature id for the '<em><b>Ops</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   * @ordered
-   */
-  int SERVICE__OPS = OUTPUT_VALUE__OPS;
+  int SERVICE = 59;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2803,13 +2849,22 @@ public interface HIPIEPackage extends EPackage
   int SERVICE__NAME = OUTPUT_VALUE_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Ops</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int SERVICE__OPS = OUTPUT_VALUE_FEATURE_COUNT + 1;
+
+  /**
    * The feature id for the '<em><b>Serv</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int SERVICE__SERV = OUTPUT_VALUE_FEATURE_COUNT + 1;
+  int SERVICE__SERV = OUTPUT_VALUE_FEATURE_COUNT + 2;
 
   /**
    * The feature id for the '<em><b>Ecl vars</b></em>' containment reference list.
@@ -2818,7 +2873,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SERVICE__ECL_VARS = OUTPUT_VALUE_FEATURE_COUNT + 2;
+  int SERVICE__ECL_VARS = OUTPUT_VALUE_FEATURE_COUNT + 3;
 
   /**
    * The number of structural features of the '<em>Service</em>' class.
@@ -2827,7 +2882,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int SERVICE_FEATURE_COUNT = OUTPUT_VALUE_FEATURE_COUNT + 3;
+  int SERVICE_FEATURE_COUNT = OUTPUT_VALUE_FEATURE_COUNT + 4;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.OutputBaseImpl <em>Output Base</em>}' class.
@@ -2837,7 +2892,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getOutputBase()
    * @generated
    */
-  int OUTPUT_BASE = 60;
+  int OUTPUT_BASE = 61;
 
   /**
    * The feature id for the '<em><b>Base</b></em>' reference.
@@ -2865,7 +2920,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getPermissions()
    * @generated
    */
-  int PERMISSIONS = 61;
+  int PERMISSIONS = 62;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2902,7 +2957,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getPermission()
    * @generated
    */
-  int PERMISSION = 62;
+  int PERMISSION = 63;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2939,7 +2994,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCustomPermissionLevel()
    * @generated
    */
-  int CUSTOM_PERMISSION_LEVEL = 63;
+  int CUSTOM_PERMISSION_LEVEL = 64;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference list.
@@ -2967,7 +3022,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getGenerateSection()
    * @generated
    */
-  int GENERATE_SECTION = 64;
+  int GENERATE_SECTION = 65;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2995,7 +3050,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getGenerateBodyInline()
    * @generated
    */
-  int GENERATE_BODY_INLINE = 65;
+  int GENERATE_BODY_INLINE = 66;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3023,7 +3078,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getGenerateBodySalt()
    * @generated
    */
-  int GENERATE_BODY_SALT = 66;
+  int GENERATE_BODY_SALT = 67;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3051,7 +3106,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getGenerateBodyKel()
    * @generated
    */
-  int GENERATE_BODY_KEL = 67;
+  int GENERATE_BODY_KEL = 68;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3079,16 +3134,25 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualSection()
    * @generated
    */
-  int VISUAL_SECTION = 68;
+  int VISUAL_SECTION = 69;
 
   /**
-   * The feature id for the '<em><b>Sec name</b></em>' attribute.
+   * The feature id for the '<em><b>Section name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int VISUAL_SECTION__SEC_NAME = 0;
+  int VISUAL_SECTION__SECTION_NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VISUAL_SECTION__NAME = 1;
 
   /**
    * The feature id for the '<em><b>Vis ops</b></em>' containment reference.
@@ -3097,7 +3161,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUAL_SECTION__VIS_OPS = 1;
+  int VISUAL_SECTION__VIS_OPS = 2;
 
   /**
    * The feature id for the '<em><b>Vis elements</b></em>' containment reference list.
@@ -3106,7 +3170,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUAL_SECTION__VIS_ELEMENTS = 2;
+  int VISUAL_SECTION__VIS_ELEMENTS = 3;
 
   /**
    * The number of structural features of the '<em>Visual Section</em>' class.
@@ -3115,7 +3179,35 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUAL_SECTION_FEATURE_COUNT = 3;
+  int VISUAL_SECTION_FEATURE_COUNT = 4;
+
+  /**
+   * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.VisNameImpl <em>Vis Name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see org.xtext.hipie.hIPIE.impl.VisNameImpl
+   * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisName()
+   * @generated
+   */
+  int VIS_NAME = 70;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VIS_NAME__NAME = 0;
+
+  /**
+   * The number of structural features of the '<em>Vis Name</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VIS_NAME_FEATURE_COUNT = 1;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.VisInputValueImpl <em>Vis Input Value</em>}' class.
@@ -3125,7 +3217,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisInputValue()
    * @generated
    */
-  int VIS_INPUT_VALUE = 69;
+  int VIS_INPUT_VALUE = 71;
 
   /**
    * The number of structural features of the '<em>Vis Input Value</em>' class.
@@ -3144,7 +3236,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisBasisParens()
    * @generated
    */
-  int VIS_BASIS_PARENS = 70;
+  int VIS_BASIS_PARENS = 72;
 
   /**
    * The feature id for the '<em><b>Input</b></em>' containment reference.
@@ -3172,7 +3264,16 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualization()
    * @generated
    */
-  int VISUALIZATION = 71;
+  int VISUALIZATION = 73;
+
+  /**
+   * The feature id for the '<em><b>Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int VISUALIZATION__TYPE = 0;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3181,7 +3282,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUALIZATION__NAME = 0;
+  int VISUALIZATION__NAME = 1;
 
   /**
    * The feature id for the '<em><b>Parens</b></em>' containment reference.
@@ -3190,7 +3291,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUALIZATION__PARENS = 1;
+  int VISUALIZATION__PARENS = 2;
 
   /**
    * The feature id for the '<em><b>Vis op</b></em>' containment reference.
@@ -3199,7 +3300,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUALIZATION__VIS_OP = 2;
+  int VISUALIZATION__VIS_OP = 3;
 
   /**
    * The feature id for the '<em><b>Input val</b></em>' containment reference list.
@@ -3208,7 +3309,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUALIZATION__INPUT_VAL = 3;
+  int VISUALIZATION__INPUT_VAL = 4;
 
   /**
    * The number of structural features of the '<em>Visualization</em>' class.
@@ -3217,7 +3318,7 @@ public interface HIPIEPackage extends EPackage
    * @generated
    * @ordered
    */
-  int VISUALIZATION_FEATURE_COUNT = 4;
+  int VISUALIZATION_FEATURE_COUNT = 5;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.VisBasisImpl <em>Vis Basis</em>}' class.
@@ -3227,7 +3328,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisBasis()
    * @generated
    */
-  int VIS_BASIS = 72;
+  int VIS_BASIS = 74;
 
   /**
    * The feature id for the '<em><b>Basis</b></em>' reference.
@@ -3273,7 +3374,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisFilter()
    * @generated
    */
-  int VIS_FILTER = 73;
+  int VIS_FILTER = 75;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference list.
@@ -3301,7 +3402,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getQFunction()
    * @generated
    */
-  int QFUNCTION = 77;
+  int QFUNCTION = 79;
 
   /**
    * The number of structural features of the '<em>QFunction</em>' class.
@@ -3320,7 +3421,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getNestBasisQualifier()
    * @generated
    */
-  int NEST_BASIS_QUALIFIER = 78;
+  int NEST_BASIS_QUALIFIER = 80;
 
   /**
    * The number of structural features of the '<em>Nest Basis Qualifier</em>' class.
@@ -3339,7 +3440,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisBasisQualifiers()
    * @generated
    */
-  int VIS_BASIS_QUALIFIERS = 74;
+  int VIS_BASIS_QUALIFIERS = 76;
 
   /**
    * The feature id for the '<em><b>Funcs</b></em>' containment reference.
@@ -3376,7 +3477,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getFunction()
    * @generated
    */
-  int FUNCTION = 76;
+  int FUNCTION = 78;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference.
@@ -3388,13 +3489,22 @@ public interface HIPIEPackage extends EPackage
   int FUNCTION__VALS = QFUNCTION_FEATURE_COUNT + 0;
 
   /**
+   * The feature id for the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FUNCTION__TYPE = QFUNCTION_FEATURE_COUNT + 1;
+
+  /**
    * The number of structural features of the '<em>Function</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FUNCTION_FEATURE_COUNT = QFUNCTION_FEATURE_COUNT + 1;
+  int FUNCTION_FEATURE_COUNT = QFUNCTION_FEATURE_COUNT + 2;
 
   /**
    * The meta object id for the '{@link org.xtext.hipie.hIPIE.impl.VisualSectionOptionsImpl <em>Visual Section Options</em>}' class.
@@ -3404,7 +3514,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualSectionOptions()
    * @generated
    */
-  int VISUAL_SECTION_OPTIONS = 79;
+  int VISUAL_SECTION_OPTIONS = 81;
 
   /**
    * The feature id for the '<em><b>Vis ops</b></em>' containment reference list.
@@ -3432,7 +3542,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualSectionOption()
    * @generated
    */
-  int VISUAL_SECTION_OPTION = 80;
+  int VISUAL_SECTION_OPTION = 82;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3478,7 +3588,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVizAssign()
    * @generated
    */
-  int VIZ_ASSIGN = 81;
+  int VIZ_ASSIGN = 83;
 
   /**
    * The feature id for the '<em><b>Val l</b></em>' containment reference.
@@ -3515,7 +3625,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVizAssignList()
    * @generated
    */
-  int VIZ_ASSIGN_LIST = 82;
+  int VIZ_ASSIGN_LIST = 84;
 
   /**
    * The feature id for the '<em><b>Assigns</b></em>' containment reference list.
@@ -3543,7 +3653,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVizEnumDecl()
    * @generated
    */
-  int VIZ_ENUM_DECL = 83;
+  int VIZ_ENUM_DECL = 85;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3580,7 +3690,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualOptions()
    * @generated
    */
-  int VISUAL_OPTIONS = 84;
+  int VISUAL_OPTIONS = 86;
 
   /**
    * The feature id for the '<em><b>Vis ops</b></em>' containment reference list.
@@ -3608,7 +3718,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getLinkOption()
    * @generated
    */
-  int LINK_OPTION = 88;
+  int LINK_OPTION = 90;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3690,7 +3800,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualMultival()
    * @generated
    */
-  int VISUAL_MULTIVAL = 89;
+  int VISUAL_MULTIVAL = 91;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3763,7 +3873,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisibilityOption()
    * @generated
    */
-  int VISIBILITY_OPTION = 90;
+  int VISIBILITY_OPTION = 92;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3791,7 +3901,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisualCustomOption()
    * @generated
    */
-  int VISUAL_CUSTOM_OPTION = 91;
+  int VISUAL_CUSTOM_OPTION = 93;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3873,7 +3983,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCustomSection()
    * @generated
    */
-  int CUSTOM_SECTION = 92;
+  int CUSTOM_SECTION = 94;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3910,7 +4020,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCustomValue()
    * @generated
    */
-  int CUSTOM_VALUE = 93;
+  int CUSTOM_VALUE = 95;
 
   /**
    * The number of structural features of the '<em>Custom Value</em>' class.
@@ -3929,7 +4039,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getResourceType()
    * @generated
    */
-  int RESOURCE_TYPE = 94;
+  int RESOURCE_TYPE = 96;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -3957,7 +4067,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getResourceOption()
    * @generated
    */
-  int RESOURCE_OPTION = 95;
+  int RESOURCE_OPTION = 97;
 
   /**
    * The feature id for the '<em><b>Vals</b></em>' containment reference.
@@ -3985,7 +4095,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getResourceOptions()
    * @generated
    */
-  int RESOURCE_OPTIONS = 96;
+  int RESOURCE_OPTIONS = 98;
 
   /**
    * The feature id for the '<em><b>Res ops</b></em>' containment reference list.
@@ -4013,7 +4123,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getResourceValue()
    * @generated
    */
-  int RESOURCE_VALUE = 97;
+  int RESOURCE_VALUE = 99;
 
   /**
    * The number of structural features of the '<em>Resource Value</em>' class.
@@ -4032,7 +4142,7 @@ public interface HIPIEPackage extends EPackage
    * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getResourceSection()
    * @generated
    */
-  int RESOURCE_SECTION = 98;
+  int RESOURCE_SECTION = 100;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -4237,6 +4347,27 @@ public interface HIPIEPackage extends EPackage
   EReference getBaseProp_Cat_list();
 
   /**
+   * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.CategoryType <em>Category Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Category Type</em>'.
+   * @see org.xtext.hipie.hIPIE.CategoryType
+   * @generated
+   */
+  EClass getCategoryType();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.CategoryType#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.hipie.hIPIE.CategoryType#getName()
+   * @see #getCategoryType()
+   * @generated
+   */
+  EAttribute getCategoryType_Name();
+
+  /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.CategoryTypeList <em>Category Type List</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -4247,15 +4378,15 @@ public interface HIPIEPackage extends EPackage
   EClass getCategoryTypeList();
 
   /**
-   * Returns the meta object for the attribute list '{@link org.xtext.hipie.hIPIE.CategoryTypeList#getCats <em>Cats</em>}'.
+   * Returns the meta object for the containment reference list '{@link org.xtext.hipie.hIPIE.CategoryTypeList#getCats <em>Cats</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute list '<em>Cats</em>'.
+   * @return the meta object for the containment reference list '<em>Cats</em>'.
    * @see org.xtext.hipie.hIPIE.CategoryTypeList#getCats()
    * @see #getCategoryTypeList()
    * @generated
    */
-  EAttribute getCategoryTypeList_Cats();
+  EReference getCategoryTypeList_Cats();
 
   /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.Value <em>Value</em>}'.
@@ -5086,15 +5217,26 @@ public interface HIPIEPackage extends EPackage
   EClass getInputOption();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.InputOption#getName <em>Name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.InputOption#getAtr <em>Atr</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see org.xtext.hipie.hIPIE.InputOption#getName()
+   * @return the meta object for the attribute '<em>Atr</em>'.
+   * @see org.xtext.hipie.hIPIE.InputOption#getAtr()
    * @see #getInputOption()
    * @generated
    */
-  EAttribute getInputOption_Name();
+  EAttribute getInputOption_Atr();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.InputOption#getForm <em>Form</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Form</em>'.
+   * @see org.xtext.hipie.hIPIE.InputOption#getForm()
+   * @see #getInputOption()
+   * @generated
+   */
+  EAttribute getInputOption_Form();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.InputOption#getForm_op <em>Form op</em>}'.
@@ -5108,6 +5250,17 @@ public interface HIPIEPackage extends EPackage
   EAttribute getInputOption_Form_op();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.InputOption#getEnab <em>Enab</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Enab</em>'.
+   * @see org.xtext.hipie.hIPIE.InputOption#getEnab()
+   * @see #getInputOption()
+   * @generated
+   */
+  EAttribute getInputOption_Enab();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.InputOption#getAssigns_list <em>Assigns list</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5117,6 +5270,17 @@ public interface HIPIEPackage extends EPackage
    * @generated
    */
   EReference getInputOption_Assigns_list();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.InputOption#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.hipie.hIPIE.InputOption#getType()
+   * @see #getInputOption()
+   * @generated
+   */
+  EAttribute getInputOption_Type();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.InputOption#getType_op <em>Type op</em>}'.
@@ -5460,6 +5624,17 @@ public interface HIPIEPackage extends EPackage
   EClass getOutputOption();
 
   /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.OutputOption#getAtr <em>Atr</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Atr</em>'.
+   * @see org.xtext.hipie.hIPIE.OutputOption#getAtr()
+   * @see #getOutputOption()
+   * @generated
+   */
+  EAttribute getOutputOption_Atr();
+
+  /**
    * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.OutputOption#getName <em>Name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5522,6 +5697,17 @@ public interface HIPIEPackage extends EPackage
    * @generated
    */
   EClass getOutTypeSimple();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.OutTypeSimple#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.hipie.hIPIE.OutTypeSimple#getType()
+   * @see #getOutTypeSimple()
+   * @generated
+   */
+  EAttribute getOutTypeSimple_Type();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.OutTypeSimple#getVal <em>Val</em>}'.
@@ -5589,6 +5775,17 @@ public interface HIPIEPackage extends EPackage
   EReference getOutDataset_Out_base();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.OutDataset#getOps <em>Ops</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ops</em>'.
+   * @see org.xtext.hipie.hIPIE.OutDataset#getOps()
+   * @see #getOutDataset()
+   * @generated
+   */
+  EReference getOutDataset_Ops();
+
+  /**
    * Returns the meta object for the containment reference list '{@link org.xtext.hipie.hIPIE.OutDataset#getEcl_vars <em>Ecl vars</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5621,6 +5818,17 @@ public interface HIPIEPackage extends EPackage
   EAttribute getService_Name();
 
   /**
+   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.Service#getOps <em>Ops</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ops</em>'.
+   * @see org.xtext.hipie.hIPIE.Service#getOps()
+   * @see #getService()
+   * @generated
+   */
+  EReference getService_Ops();
+
+  /**
    * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.Service#getServ <em>Serv</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -5651,17 +5859,6 @@ public interface HIPIEPackage extends EPackage
    * @generated
    */
   EClass getOutputValue();
-
-  /**
-   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.OutputValue#getOps <em>Ops</em>}'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Ops</em>'.
-   * @see org.xtext.hipie.hIPIE.OutputValue#getOps()
-   * @see #getOutputValue()
-   * @generated
-   */
-  EReference getOutputValue_Ops();
 
   /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.OutputBase <em>Output Base</em>}'.
@@ -5831,15 +6028,26 @@ public interface HIPIEPackage extends EPackage
   EClass getVisualSection();
 
   /**
-   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.VisualSection#getSec_name <em>Sec name</em>}'.
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.VisualSection#getSection_name <em>Section name</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Sec name</em>'.
-   * @see org.xtext.hipie.hIPIE.VisualSection#getSec_name()
+   * @return the meta object for the attribute '<em>Section name</em>'.
+   * @see org.xtext.hipie.hIPIE.VisualSection#getSection_name()
    * @see #getVisualSection()
    * @generated
    */
-  EAttribute getVisualSection_Sec_name();
+  EAttribute getVisualSection_Section_name();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.VisualSection#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.hipie.hIPIE.VisualSection#getName()
+   * @see #getVisualSection()
+   * @generated
+   */
+  EAttribute getVisualSection_Name();
 
   /**
    * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.VisualSection#getVis_ops <em>Vis ops</em>}'.
@@ -5862,6 +6070,27 @@ public interface HIPIEPackage extends EPackage
    * @generated
    */
   EReference getVisualSection_Vis_elements();
+
+  /**
+   * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.VisName <em>Vis Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Vis Name</em>'.
+   * @see org.xtext.hipie.hIPIE.VisName
+   * @generated
+   */
+  EClass getVisName();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.VisName#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see org.xtext.hipie.hIPIE.VisName#getName()
+   * @see #getVisName()
+   * @generated
+   */
+  EAttribute getVisName_Name();
 
   /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.VisInputValue <em>Vis Input Value</em>}'.
@@ -5903,6 +6132,17 @@ public interface HIPIEPackage extends EPackage
    * @generated
    */
   EClass getVisualization();
+
+  /**
+   * Returns the meta object for the containment reference '{@link org.xtext.hipie.hIPIE.Visualization#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Type</em>'.
+   * @see org.xtext.hipie.hIPIE.Visualization#getType()
+   * @see #getVisualization()
+   * @generated
+   */
+  EReference getVisualization_Type();
 
   /**
    * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.Visualization#getName <em>Name</em>}'.
@@ -6085,6 +6325,17 @@ public interface HIPIEPackage extends EPackage
    * @generated
    */
   EReference getFunction_Vals();
+
+  /**
+   * Returns the meta object for the attribute '{@link org.xtext.hipie.hIPIE.Function#getType <em>Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Type</em>'.
+   * @see org.xtext.hipie.hIPIE.Function#getType()
+   * @see #getFunction()
+   * @generated
+   */
+  EAttribute getFunction_Type();
 
   /**
    * Returns the meta object for class '{@link org.xtext.hipie.hIPIE.QFunction <em>QFunction</em>}'.
@@ -6748,6 +6999,24 @@ public interface HIPIEPackage extends EPackage
     EReference BASE_PROP__CAT_LIST = eINSTANCE.getBaseProp_Cat_list();
 
     /**
+     * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.CategoryTypeImpl <em>Category Type</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.hipie.hIPIE.impl.CategoryTypeImpl
+     * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getCategoryType()
+     * @generated
+     */
+    EClass CATEGORY_TYPE = eINSTANCE.getCategoryType();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute CATEGORY_TYPE__NAME = eINSTANCE.getCategoryType_Name();
+
+    /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.CategoryTypeListImpl <em>Category Type List</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -6758,12 +7027,12 @@ public interface HIPIEPackage extends EPackage
     EClass CATEGORY_TYPE_LIST = eINSTANCE.getCategoryTypeList();
 
     /**
-     * The meta object literal for the '<em><b>Cats</b></em>' attribute list feature.
+     * The meta object literal for the '<em><b>Cats</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute CATEGORY_TYPE_LIST__CATS = eINSTANCE.getCategoryTypeList_Cats();
+    EReference CATEGORY_TYPE_LIST__CATS = eINSTANCE.getCategoryTypeList_Cats();
 
     /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.ValueImpl <em>Value</em>}' class.
@@ -7450,12 +7719,20 @@ public interface HIPIEPackage extends EPackage
     EClass INPUT_OPTION = eINSTANCE.getInputOption();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Atr</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute INPUT_OPTION__NAME = eINSTANCE.getInputOption_Name();
+    EAttribute INPUT_OPTION__ATR = eINSTANCE.getInputOption_Atr();
+
+    /**
+     * The meta object literal for the '<em><b>Form</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INPUT_OPTION__FORM = eINSTANCE.getInputOption_Form();
 
     /**
      * The meta object literal for the '<em><b>Form op</b></em>' attribute feature.
@@ -7466,12 +7743,28 @@ public interface HIPIEPackage extends EPackage
     EAttribute INPUT_OPTION__FORM_OP = eINSTANCE.getInputOption_Form_op();
 
     /**
+     * The meta object literal for the '<em><b>Enab</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INPUT_OPTION__ENAB = eINSTANCE.getInputOption_Enab();
+
+    /**
      * The meta object literal for the '<em><b>Assigns list</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
     EReference INPUT_OPTION__ASSIGNS_LIST = eINSTANCE.getInputOption_Assigns_list();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INPUT_OPTION__TYPE = eINSTANCE.getInputOption_Type();
 
     /**
      * The meta object literal for the '<em><b>Type op</b></em>' containment reference feature.
@@ -7782,6 +8075,14 @@ public interface HIPIEPackage extends EPackage
     EClass OUTPUT_OPTION = eINSTANCE.getOutputOption();
 
     /**
+     * The meta object literal for the '<em><b>Atr</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OUTPUT_OPTION__ATR = eINSTANCE.getOutputOption_Atr();
+
+    /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7834,6 +8135,14 @@ public interface HIPIEPackage extends EPackage
     EClass OUT_TYPE_SIMPLE = eINSTANCE.getOutTypeSimple();
 
     /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute OUT_TYPE_SIMPLE__TYPE = eINSTANCE.getOutTypeSimple_Type();
+
+    /**
      * The meta object literal for the '<em><b>Val</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7884,6 +8193,14 @@ public interface HIPIEPackage extends EPackage
     EReference OUT_DATASET__OUT_BASE = eINSTANCE.getOutDataset_Out_base();
 
     /**
+     * The meta object literal for the '<em><b>Ops</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference OUT_DATASET__OPS = eINSTANCE.getOutDataset_Ops();
+
+    /**
      * The meta object literal for the '<em><b>Ecl vars</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7910,6 +8227,14 @@ public interface HIPIEPackage extends EPackage
     EAttribute SERVICE__NAME = eINSTANCE.getService_Name();
 
     /**
+     * The meta object literal for the '<em><b>Ops</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference SERVICE__OPS = eINSTANCE.getService_Ops();
+
+    /**
      * The meta object literal for the '<em><b>Serv</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -7934,14 +8259,6 @@ public interface HIPIEPackage extends EPackage
      * @generated
      */
     EClass OUTPUT_VALUE = eINSTANCE.getOutputValue();
-
-    /**
-     * The meta object literal for the '<em><b>Ops</b></em>' containment reference feature.
-     * <!-- begin-user-doc -->
-     * <!-- end-user-doc -->
-     * @generated
-     */
-    EReference OUTPUT_VALUE__OPS = eINSTANCE.getOutputValue_Ops();
 
     /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.OutputBaseImpl <em>Output Base</em>}' class.
@@ -8090,12 +8407,20 @@ public interface HIPIEPackage extends EPackage
     EClass VISUAL_SECTION = eINSTANCE.getVisualSection();
 
     /**
-     * The meta object literal for the '<em><b>Sec name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Section name</b></em>' attribute feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute VISUAL_SECTION__SEC_NAME = eINSTANCE.getVisualSection_Sec_name();
+    EAttribute VISUAL_SECTION__SECTION_NAME = eINSTANCE.getVisualSection_Section_name();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VISUAL_SECTION__NAME = eINSTANCE.getVisualSection_Name();
 
     /**
      * The meta object literal for the '<em><b>Vis ops</b></em>' containment reference feature.
@@ -8112,6 +8437,24 @@ public interface HIPIEPackage extends EPackage
      * @generated
      */
     EReference VISUAL_SECTION__VIS_ELEMENTS = eINSTANCE.getVisualSection_Vis_elements();
+
+    /**
+     * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.VisNameImpl <em>Vis Name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see org.xtext.hipie.hIPIE.impl.VisNameImpl
+     * @see org.xtext.hipie.hIPIE.impl.HIPIEPackageImpl#getVisName()
+     * @generated
+     */
+    EClass VIS_NAME = eINSTANCE.getVisName();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute VIS_NAME__NAME = eINSTANCE.getVisName_Name();
 
     /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.VisInputValueImpl <em>Vis Input Value</em>}' class.
@@ -8150,6 +8493,14 @@ public interface HIPIEPackage extends EPackage
      * @generated
      */
     EClass VISUALIZATION = eINSTANCE.getVisualization();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference VISUALIZATION__TYPE = eINSTANCE.getVisualization_Type();
 
     /**
      * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -8296,6 +8647,14 @@ public interface HIPIEPackage extends EPackage
      * @generated
      */
     EReference FUNCTION__VALS = eINSTANCE.getFunction_Vals();
+
+    /**
+     * The meta object literal for the '<em><b>Type</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FUNCTION__TYPE = eINSTANCE.getFunction_Type();
 
     /**
      * The meta object literal for the '{@link org.xtext.hipie.hIPIE.impl.QFunctionImpl <em>QFunction</em>}' class.

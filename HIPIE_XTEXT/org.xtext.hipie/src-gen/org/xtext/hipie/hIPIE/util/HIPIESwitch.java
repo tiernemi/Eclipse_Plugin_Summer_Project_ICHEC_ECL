@@ -86,6 +86,13 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.CATEGORY_TYPE:
+      {
+        CategoryType categoryType = (CategoryType)theEObject;
+        T result = caseCategoryType(categoryType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.CATEGORY_TYPE_LIST:
       {
         CategoryTypeList categoryTypeList = (CategoryTypeList)theEObject;
@@ -658,6 +665,13 @@ public class HIPIESwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case HIPIEPackage.VIS_NAME:
+      {
+        VisName visName = (VisName)theEObject;
+        T result = caseVisName(visName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case HIPIEPackage.VIS_INPUT_VALUE:
       {
         VisInputValue visInputValue = (VisInputValue)theEObject;
@@ -911,6 +925,22 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseBaseProp(BaseProp object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Category Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Category Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseCategoryType(CategoryType object)
   {
     return null;
   }
@@ -1983,6 +2013,22 @@ public class HIPIESwitch<T> extends Switch<T>
    * @generated
    */
   public T caseVisualSection(VisualSection object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Vis Name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Vis Name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseVisName(VisName object)
   {
     return null;
   }

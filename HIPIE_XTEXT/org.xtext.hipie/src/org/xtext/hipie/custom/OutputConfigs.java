@@ -11,7 +11,7 @@ import org.eclipse.xtext.generator.OutputConfiguration;
 
 public class OutputConfigs implements IOutputConfigurationProvider {
 
-	  public static final String DATABOMB_OUTPUT = "Databomb";
+	  public static final String Databomb_OUTPUT = "Databomb";
 	  public static final String HTML_OUTPUT = "HTML";
 
 	  /**
@@ -19,30 +19,29 @@ public class OutputConfigs implements IOutputConfigurationProvider {
 	   */
 	   public Set<OutputConfiguration> getOutputConfigurations() {
 	    OutputConfiguration defaultOutput = new OutputConfiguration(IFileSystemAccess.DEFAULT_OUTPUT);
-	    defaultOutput.setDescription("Output Folder");
+	    defaultOutput.setDescription("Output folder for generated src.");
 	    defaultOutput.setOutputDirectory("./src-gen");
 	    defaultOutput.setOverrideExistingResources(true);
 	    defaultOutput.setCreateOutputDirectory(true);
 	    defaultOutput.setCleanUpDerivedResources(true);
 	    defaultOutput.setSetDerivedProperty(true);
 
-	    OutputConfiguration databomb = new OutputConfiguration(DATABOMB_OUTPUT);
-	    databomb.setDescription("Output for databombs");
-	    databomb.setOutputDirectory("./data_gen");
-	    databomb.setOverrideExistingResources(true);
-	    databomb.setCreateOutputDirectory(true);
-	    databomb.setCleanUpDerivedResources(false);
-	    databomb.setSetDerivedProperty(false);
+	    OutputConfiguration Databomb = new OutputConfiguration(Databomb_OUTPUT);
+	    Databomb.setDescription("Output folder for databombs.");
+	    Databomb.setOutputDirectory("./data_gen");
+	    Databomb.setOverrideExistingResources(true);
+	    Databomb.setCreateOutputDirectory(true);
+	    Databomb.setCleanUpDerivedResources(false);
+	    Databomb.setSetDerivedProperty(false);
 	    
 	    OutputConfiguration htmlgen = new OutputConfiguration(HTML_OUTPUT);
-	    htmlgen.setDescription("Output for HTML");
+	    htmlgen.setDescription("Output folder for HTML");
 	    htmlgen.setOutputDirectory("./vis_gen");
 	    htmlgen.setOverrideExistingResources(true);
 	    htmlgen.setCreateOutputDirectory(true);
 	    htmlgen.setCleanUpDerivedResources(false);
 	    htmlgen.setSetDerivedProperty(false);    
 	    
-	    return newHashSet(defaultOutput, databomb, htmlgen);
-	    
+	    return newHashSet(defaultOutput, Databomb, htmlgen);   
 	  }
 	}

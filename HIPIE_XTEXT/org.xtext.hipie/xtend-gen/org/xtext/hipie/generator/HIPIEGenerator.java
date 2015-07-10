@@ -7,12 +7,9 @@ import java.io.FileInputStream;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
-import java.nio.file.FileSystem;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.util.List;
 import java.util.Scanner;
+import org.eclipse.core.resources.IFile;
 import org.eclipse.core.resources.IFolder;
 import org.eclipse.core.resources.IProject;
 import org.eclipse.core.resources.IResource;
@@ -20,6 +17,10 @@ import org.eclipse.core.resources.IWorkspace;
 import org.eclipse.core.resources.IWorkspaceRoot;
 import org.eclipse.core.resources.ResourcesPlugin;
 import org.eclipse.core.runtime.IPath;
+import org.eclipse.core.runtime.NullProgressMonitor;
+import org.eclipse.core.runtime.Path;
+import org.eclipse.core.runtime.preferences.IEclipsePreferences;
+import org.eclipse.core.runtime.preferences.InstanceScope;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.IFileSystemAccess;
@@ -39,7 +40,17 @@ public class HIPIEGenerator implements IGenerator {
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
     try {
       IWorkspace _workspace = ResourcesPlugin.getWorkspace();
-      IWorkspaceRoot ws_root = _workspace.getRoot();
+      IWorkspaceRoot _root = _workspace.getRoot();
+      IPath _rawLocation = _root.getRawLocation();
+      final String defaultCompilerPath = _rawLocation.toOSString();
+      IEclipsePreferences prefs = InstanceScope.INSTANCE.getNode("org.xtext.hipie.ui");
+      String _get = prefs.get("Compiler Location", defaultCompilerPath);
+      final Path compilerPath = new Path(_get);
+      IPath _addTrailingSeparator = compilerPath.addTrailingSeparator();
+      String _oSString = _addTrailingSeparator.toOSString();
+      final String compilerPathString = (_oSString + "HIPIE.jar");
+      IWorkspace _workspace_1 = ResourcesPlugin.getWorkspace();
+      IWorkspaceRoot ws_root = _workspace_1.getRoot();
       URI _uRI = resource.getURI();
       boolean _isPlatformResource = _uRI.isPlatformResource();
       if (_isPlatformResource) {
@@ -47,17 +58,31 @@ public class HIPIEGenerator implements IGenerator {
         String platformString = _uRI_1.toPlatformString(true);
         IResource resourceFile = ws_root.findMember(platformString);
         IProject project = resourceFile.getProject();
+        IFolder genFolder = project.getFolder("gen");
+        boolean _exists = genFolder.exists();
+        boolean _not = (!_exists);
+        if (_not) {
+          genFolder.create(true, true, null);
+        }
         IFolder dataFolder = project.getFolder("data");
-        IPath _rawLocation = resourceFile.getRawLocation();
-        final String filepath = _rawLocation.toOSString();
-        IPath _rawLocation_1 = resourceFile.getRawLocation();
-        IPath _removeFileExtension = _rawLocation_1.removeFileExtension();
-        final String filename = _removeFileExtension.lastSegment();
-        IPath _rawLocation_2 = resourceFile.getRawLocation();
-        IPath _removeFileExtension_1 = _rawLocation_2.removeFileExtension();
-        final String filepath_output = (_removeFileExtension_1 + ".json");
+        IPath ddlFilePath = resourceFile.getFullPath();
+        String ddlFileName = ddlFilePath.lastSegment();
+        IFile _file = genFolder.getFile(ddlFileName);
+        IPath _projectRelativePath = _file.getProjectRelativePath();
+        IPath _removeFileExtension = _projectRelativePath.removeFileExtension();
+        IPath _addFileExtension = _removeFileExtension.addFileExtension("ddl");
+        ddlFilePath = _addFileExtension;
+        IFile ddlFile = project.getFile(ddlFilePath);
         Runtime _runtime = Runtime.getRuntime();
-        Process _exec = _runtime.exec((((("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -databomb " + filepath) + " -o ") + filepath_output) + " -verbose"));
+        IPath _rawLocation_1 = resourceFile.getRawLocation();
+        String _oSString_1 = _rawLocation_1.toOSString();
+        String _plus = ((("java -cp " + compilerPathString) + " org/hpcc/HIPIE/commandline/CommandLineService -databomb ") + _oSString_1);
+        String _plus_1 = (_plus + " -o ");
+        IPath _rawLocation_2 = ddlFile.getRawLocation();
+        String _oSString_2 = _rawLocation_2.toOSString();
+        String _plus_2 = (_plus_1 + _oSString_2);
+        String _plus_3 = (_plus_2 + " -verbose");
+        Process _exec = _runtime.exec(_plus_3);
         Process proc = ((Process) _exec);
         InputStream in = proc.getInputStream();
         InputStream er = proc.getErrorStream();
@@ -79,42 +104,30 @@ public class HIPIEGenerator implements IGenerator {
         }
         System.out.println(streamString);
         System.out.println(streamString_er);
-        FileInputStream in_stream = new FileInputStream(filepath_output);
-        String streamString_ddl = new String();
-        Scanner sc_in = new Scanner(in_stream);
-        boolean _hasNext_2 = sc_in.hasNext();
-        if (_hasNext_2) {
-          Scanner _useDelimiter_2 = sc_in.useDelimiter("\\Z");
-          String _next_2 = _useDelimiter_2.next();
-          streamString_ddl = _next_2;
-        }
-        in.close();
-        er.close();
-        in_stream.close();
-        sc_in.close();
-        sc_verbose.close();
-        sc_er.close();
-        FileSystem _default = FileSystems.getDefault();
-        Path _path = _default.getPath(filepath_output);
-        Files.delete(_path);
-        fsa.generateFile((filename + ".json"), streamString_ddl);
-        final IResource[] cont_files = dataFolder.members();
-        IPath _rawLocation_3 = dataFolder.getRawLocation();
-        final String data_folder_path = _rawLocation_3.toOSString();
+        IFile _file_1 = genFolder.getFile(ddlFileName);
+        IPath _projectRelativePath_1 = _file_1.getProjectRelativePath();
+        IPath _removeFileExtension_1 = _projectRelativePath_1.removeFileExtension();
+        IPath databombFilePath = _removeFileExtension_1.addFileExtension("databomb");
+        IFile databombFile = project.getFile(databombFilePath);
         String data_file_paths = "";
-        int _size = ((List<IResource>)Conversions.doWrapArray(cont_files)).size();
+        IResource[] _members = dataFolder.members();
+        int _size = ((List<IResource>)Conversions.doWrapArray(_members)).size();
         ExclusiveRange _doubleDotLessThan = new ExclusiveRange(0, _size, true);
         for (final Integer i : _doubleDotLessThan) {
           String _data_file_paths = data_file_paths;
-          IResource _get = cont_files[(i).intValue()];
-          IPath _rawLocation_4 = _get.getRawLocation();
-          String _oSString = _rawLocation_4.toOSString();
-          String _plus = (" " + _oSString);
-          data_file_paths = (_data_file_paths + _plus);
+          IResource[] _members_1 = dataFolder.members();
+          IResource _get_1 = _members_1[(i).intValue()];
+          IPath _rawLocation_3 = _get_1.getRawLocation();
+          String _oSString_3 = _rawLocation_3.toOSString();
+          String _plus_4 = (" " + _oSString_3);
+          data_file_paths = (_data_file_paths + _plus_4);
         }
-        final String output_filepath = (data_folder_path + "databomb.json");
+        IPath _rawLocation_4 = databombFile.getRawLocation();
+        String databombFileString = _rawLocation_4.toOSString();
+        String cmd = ((((("java -cp " + compilerPathString) + " org/hpcc/HIPIE/commandline/CommandLineService -csv") + data_file_paths) + " -separator \\t -escape / -quote \\\" -lineseparator \\n -o ") + databombFileString);
+        System.out.println(cmd);
         Runtime _runtime_1 = Runtime.getRuntime();
-        Process _exec_1 = _runtime_1.exec(((("java -cp ./libs/HIPIE.jar org/hpcc/HIPIE/commandline/CommandLineService -csv " + data_file_paths) + " -separator \\t -escape / -quote \" -lineseparator \\n -o ") + output_filepath));
+        Process _exec_1 = _runtime_1.exec(cmd);
         final Process proc_data = ((Process) _exec_1);
         in.close();
         er.close();
@@ -130,43 +143,60 @@ public class HIPIEGenerator implements IGenerator {
         streamString = _string;
         String _string_1 = new String();
         streamString_er = _string_1;
-        boolean _hasNext_3 = sc_verbose.hasNext();
-        if (_hasNext_3) {
-          Scanner _useDelimiter_3 = sc_verbose.useDelimiter("\\Z");
-          String _next_3 = _useDelimiter_3.next();
-          streamString = _next_3;
+        boolean _hasNext_2 = sc_verbose.hasNext();
+        if (_hasNext_2) {
+          Scanner _useDelimiter_2 = sc_verbose.useDelimiter("\\Z");
+          String _next_2 = _useDelimiter_2.next();
+          streamString = _next_2;
         }
-        boolean _hasNext_4 = sc_er.hasNext();
-        if (_hasNext_4) {
-          Scanner _useDelimiter_4 = sc_er.useDelimiter("\\Z");
-          String _next_4 = _useDelimiter_4.next();
-          streamString_er = _next_4;
+        boolean _hasNext_3 = sc_er.hasNext();
+        if (_hasNext_3) {
+          Scanner _useDelimiter_3 = sc_er.useDelimiter("\\Z");
+          String _next_3 = _useDelimiter_3.next();
+          streamString_er = _next_3;
         }
         System.out.println(streamString);
         System.out.println(streamString_er);
-        FileInputStream _fileInputStream = new FileInputStream(output_filepath);
+        IPath _rawLocation_5 = ddlFile.getRawLocation();
+        String _oSString_4 = _rawLocation_5.toOSString();
+        FileInputStream in_stream = new FileInputStream(_oSString_4);
+        String streamString_ddl = new String();
+        Scanner sc_in = new Scanner(in_stream);
+        boolean _hasNext_4 = sc_in.hasNext();
+        if (_hasNext_4) {
+          Scanner _useDelimiter_4 = sc_in.useDelimiter("\\Z");
+          String _next_4 = _useDelimiter_4.next();
+          streamString_ddl = _next_4;
+        }
+        String _replace = streamString_ddl.replace("\n", "");
+        streamString_ddl = _replace;
+        String _replace_1 = streamString_ddl.replace(" ", "");
+        streamString_ddl = _replace_1;
+        String _replace_2 = streamString_ddl.replace("\t", "");
+        streamString_ddl = _replace_2;
+        String _replace_3 = streamString_ddl.replace("\r", "");
+        streamString_ddl = _replace_3;
+        IPath _rawLocation_6 = databombFile.getRawLocation();
+        String _oSString_5 = _rawLocation_6.toOSString();
+        FileInputStream _fileInputStream = new FileInputStream(_oSString_5);
         in_stream = _fileInputStream;
-        String streamString_data = new String();
+        String streamString_databomb = new String();
         Scanner _scanner_2 = new Scanner(in_stream);
         sc_in = _scanner_2;
         boolean _hasNext_5 = sc_in.hasNext();
         if (_hasNext_5) {
           Scanner _useDelimiter_5 = sc_in.useDelimiter("\\Z");
           String _next_5 = _useDelimiter_5.next();
-          streamString_data = _next_5;
+          streamString_databomb = _next_5;
         }
-        String _replace = streamString_data.replace("\n", "");
-        streamString_data = _replace;
-        String _replace_1 = streamString_data.replace(" ", "");
-        streamString_data = _replace_1;
-        String _replace_2 = streamString_data.replace("\t", "");
-        streamString_data = _replace_2;
-        String _replace_3 = streamString_data.replace("\r", "");
-        streamString_data = _replace_3;
-        FileSystem _default_1 = FileSystems.getDefault();
-        Path _path_1 = _default_1.getPath(output_filepath);
-        Files.delete(_path_1);
-        fsa.generateFile("databomb.json", "Databomb", streamString_data);
+        String _replace_4 = streamString_databomb.replace("\n", "");
+        streamString_databomb = _replace_4;
+        String _replace_5 = streamString_databomb.replace(" ", "");
+        streamString_databomb = _replace_5;
+        String _replace_6 = streamString_databomb.replace("\t", "");
+        streamString_databomb = _replace_6;
+        String _replace_7 = streamString_databomb.replace("\r", "");
+        streamString_databomb = _replace_7;
         URL url = new URL("platform:/plugin/org.xtext.hipie/vis_files/marsh.html");
         URLConnection _openConnection = url.openConnection();
         InputStream n = _openConnection.getInputStream();
@@ -179,11 +209,13 @@ public class HIPIEGenerator implements IGenerator {
           String _next_6 = _useDelimiter_6.next();
           streamString_html = _next_6;
         }
-        String _replace_4 = streamString_html.replace("%_data_%", streamString_data);
-        streamString_html = _replace_4;
-        String _replace_5 = streamString_html.replace("%_ddl_%", streamString_ddl);
-        streamString_html = _replace_5;
-        fsa.generateFile("Visualization_stub.html", "HTML", streamString_html);
+        String _replace_8 = streamString_html.replace("%_data_%", streamString_databomb);
+        streamString_html = _replace_8;
+        String _replace_9 = streamString_html.replace("%_ddl_%", streamString_ddl);
+        streamString_html = _replace_9;
+        fsa.generateFile("marshaller.html", "HTML", streamString_html);
+        NullProgressMonitor _nullProgressMonitor = new NullProgressMonitor();
+        genFolder.refreshLocal(IResource.DEPTH_INFINITE, _nullProgressMonitor);
       }
     } catch (Throwable _e) {
       throw Exceptions.sneakyThrow(_e);

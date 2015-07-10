@@ -66,6 +66,7 @@ public class HIPIEFactoryImpl extends EFactoryImpl implements HIPIEFactory
     {
       case HIPIEPackage.PROGRAM: return createProgram();
       case HIPIEPackage.BASE_PROP: return createBaseProp();
+      case HIPIEPackage.CATEGORY_TYPE: return createCategoryType();
       case HIPIEPackage.CATEGORY_TYPE_LIST: return createCategoryTypeList();
       case HIPIEPackage.VALUE: return createValue();
       case HIPIEPackage.VALUE_LIST: return createValueList();
@@ -133,6 +134,7 @@ public class HIPIEFactoryImpl extends EFactoryImpl implements HIPIEFactory
       case HIPIEPackage.GENERATE_BODY_SALT: return createGenerateBodySalt();
       case HIPIEPackage.GENERATE_BODY_KEL: return createGenerateBodyKel();
       case HIPIEPackage.VISUAL_SECTION: return createVisualSection();
+      case HIPIEPackage.VIS_NAME: return createVisName();
       case HIPIEPackage.VIS_INPUT_VALUE: return createVisInputValue();
       case HIPIEPackage.VIS_BASIS_PARENS: return createVisBasisParens();
       case HIPIEPackage.VISUALIZATION: return createVisualization();
@@ -188,6 +190,17 @@ public class HIPIEFactoryImpl extends EFactoryImpl implements HIPIEFactory
   {
     BasePropImpl baseProp = new BasePropImpl();
     return baseProp;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CategoryType createCategoryType()
+  {
+    CategoryTypeImpl categoryType = new CategoryTypeImpl();
+    return categoryType;
   }
 
   /**
@@ -925,6 +938,17 @@ public class HIPIEFactoryImpl extends EFactoryImpl implements HIPIEFactory
   {
     VisualSectionImpl visualSection = new VisualSectionImpl();
     return visualSection;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VisName createVisName()
+  {
+    VisNameImpl visName = new VisNameImpl();
+    return visName;
   }
 
   /**

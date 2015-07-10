@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 import org.xtext.hipie.hIPIE.ECLOutputDecl;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
+import org.xtext.hipie.hIPIE.OutputOptions;
 import org.xtext.hipie.hIPIE.Service;
 import org.xtext.hipie.hIPIE.ServiceInputSection;
 
@@ -30,6 +31,7 @@ import org.xtext.hipie.hIPIE.ServiceInputSection;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ServiceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.ServiceImpl#getOps <em>Ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ServiceImpl#getServ <em>Serv</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.ServiceImpl#getEcl_vars <em>Ecl vars</em>}</li>
  * </ul>
@@ -58,6 +60,16 @@ public class ServiceImpl extends OutputValueImpl implements Service
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getOps() <em>Ops</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getOps()
+   * @generated
+   * @ordered
+   */
+  protected OutputOptions ops;
 
   /**
    * The cached value of the '{@link #getServ() <em>Serv</em>}' containment reference.
@@ -121,6 +133,54 @@ public class ServiceImpl extends OutputValueImpl implements Service
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.SERVICE__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public OutputOptions getOps()
+  {
+    return ops;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetOps(OutputOptions newOps, NotificationChain msgs)
+  {
+    OutputOptions oldOps = ops;
+    ops = newOps;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.SERVICE__OPS, oldOps, newOps);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setOps(OutputOptions newOps)
+  {
+    if (newOps != ops)
+    {
+      NotificationChain msgs = null;
+      if (ops != null)
+        msgs = ((InternalEObject)ops).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.SERVICE__OPS, null, msgs);
+      if (newOps != null)
+        msgs = ((InternalEObject)newOps).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.SERVICE__OPS, null, msgs);
+      msgs = basicSetOps(newOps, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.SERVICE__OPS, newOps, newOps));
   }
 
   /**
@@ -195,6 +255,8 @@ public class ServiceImpl extends OutputValueImpl implements Service
   {
     switch (featureID)
     {
+      case HIPIEPackage.SERVICE__OPS:
+        return basicSetOps(null, msgs);
       case HIPIEPackage.SERVICE__SERV:
         return basicSetServ(null, msgs);
       case HIPIEPackage.SERVICE__ECL_VARS:
@@ -215,6 +277,8 @@ public class ServiceImpl extends OutputValueImpl implements Service
     {
       case HIPIEPackage.SERVICE__NAME:
         return getName();
+      case HIPIEPackage.SERVICE__OPS:
+        return getOps();
       case HIPIEPackage.SERVICE__SERV:
         return getServ();
       case HIPIEPackage.SERVICE__ECL_VARS:
@@ -236,6 +300,9 @@ public class ServiceImpl extends OutputValueImpl implements Service
     {
       case HIPIEPackage.SERVICE__NAME:
         setName((String)newValue);
+        return;
+      case HIPIEPackage.SERVICE__OPS:
+        setOps((OutputOptions)newValue);
         return;
       case HIPIEPackage.SERVICE__SERV:
         setServ((ServiceInputSection)newValue);
@@ -261,6 +328,9 @@ public class ServiceImpl extends OutputValueImpl implements Service
       case HIPIEPackage.SERVICE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case HIPIEPackage.SERVICE__OPS:
+        setOps((OutputOptions)null);
+        return;
       case HIPIEPackage.SERVICE__SERV:
         setServ((ServiceInputSection)null);
         return;
@@ -283,6 +353,8 @@ public class ServiceImpl extends OutputValueImpl implements Service
     {
       case HIPIEPackage.SERVICE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case HIPIEPackage.SERVICE__OPS:
+        return ops != null;
       case HIPIEPackage.SERVICE__SERV:
         return serv != null;
       case HIPIEPackage.SERVICE__ECL_VARS:

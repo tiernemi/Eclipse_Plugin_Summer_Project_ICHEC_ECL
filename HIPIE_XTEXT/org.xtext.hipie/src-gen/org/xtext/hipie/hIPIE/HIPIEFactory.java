@@ -41,6 +41,15 @@ public interface HIPIEFactory extends EFactory
   BaseProp createBaseProp();
 
   /**
+   * Returns a new object of class '<em>Category Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Category Type</em>'.
+   * @generated
+   */
+  CategoryType createCategoryType();
+
+  /**
    * Returns a new object of class '<em>Category Type List</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -642,6 +651,15 @@ public interface HIPIEFactory extends EFactory
    * @generated
    */
   VisualSection createVisualSection();
+
+  /**
+   * Returns a new object of class '<em>Vis Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Vis Name</em>'.
+   * @generated
+   */
+  VisName createVisName();
 
   /**
    * Returns a new object of class '<em>Vis Input Value</em>'.

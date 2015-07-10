@@ -32,9 +32,12 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="cat_list" eType="#//CategoryTypeList"
         containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="CategoryType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="CategoryTypeList">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cats" unique="false" upperBound="-1"
-        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="cats" upperBound="-1" eType="#//CategoryType"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Value" eSuperTypes="#//SelectEvent #//CustomValue #//ResourceValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="int_val" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
@@ -170,10 +173,13 @@
         eType="#//InputOption" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="InputOption">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="form" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="form_op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="enab" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assigns_list" eType="#//AssignList"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="type_op" eType="#//InputtypeOptions"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vals" upperBound="-1" eType="#//ValueList"
@@ -223,6 +229,7 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="NestedDatasetDecl" eSuperTypes="#//ECLOutputDecl #//ServiceInputValue"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutputOption">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="atr" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="assigns" eType="#//AssignList"
         containment="true"/>
@@ -234,6 +241,7 @@
         eType="#//OutputOption" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutTypeSimple" eSuperTypes="#//OutputValue">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="val" eType="#//Value" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="OutDataset" eSuperTypes="#//NestedDatasetDecl #//OutputValue">
@@ -244,20 +252,21 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="out_base" eType="#//OutputBase"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ops" eType="#//OutputOptions"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecl_vars" upperBound="-1"
         eType="#//ECLOutputDecl" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Service" eSuperTypes="#//OutputValue">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ops" eType="#//OutputOptions"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="serv" eType="#//ServiceInputSection"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ecl_vars" upperBound="-1"
         eType="#//ECLOutputDecl" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="OutputValue">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ops" eType="#//OutputOptions"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="OutputValue"/>
   <eClassifiers xsi:type="ecore:EClass" name="OutputBase">
     <eStructuralFeatures xsi:type="ecore:EReference" name="base" eType="#//Datatype"/>
   </eClassifiers>
@@ -282,11 +291,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="GenerateBodySalt" eSuperTypes="#//GenerateSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="GenerateBodyKel" eSuperTypes="#//GenerateSection"/>
   <eClassifiers xsi:type="ecore:EClass" name="VisualSection">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="sec_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="section_name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vis_ops" eType="#//VisualSectionOptions"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="vis_elements" upperBound="-1"
         eType="#//Visualization" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="VisName">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="VisInputValue"/>
   <eClassifiers xsi:type="ecore:EClass" name="VisBasisParens">
@@ -294,6 +307,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Visualization">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="#//VisName"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="parens" eType="#//VisBasisParens"
         containment="true"/>
@@ -325,6 +340,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="Function" eSuperTypes="#//QFunction">
     <eStructuralFeatures xsi:type="ecore:EReference" name="vals" eType="#//Value"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="type" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="QFunction"/>
   <eClassifiers xsi:type="ecore:EClass" name="NestBasisQualifier" eSuperTypes="#//QFunction"/>

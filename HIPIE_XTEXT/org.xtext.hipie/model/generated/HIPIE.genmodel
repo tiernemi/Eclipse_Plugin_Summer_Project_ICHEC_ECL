@@ -25,8 +25,11 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//BaseProp/val_list"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//BaseProp/cat_list"/>
     </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//CategoryType">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//CategoryType/name"/>
+    </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//CategoryTypeList">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//CategoryTypeList/cats"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//CategoryTypeList/cats"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//Value">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Value/int_val"/>
@@ -132,9 +135,12 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOptions/input_ops"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//InputOption">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/atr"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/form"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/form_op"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/enab"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOption/assigns_list"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//InputOption/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOption/type_op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//InputOption/vals"/>
     </genClasses>
@@ -175,6 +181,7 @@
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//NestedDatasetDecl"/>
     <genClasses ecoreClass="HIPIE.ecore#//OutputOption">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputOption/atr"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutputOption/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOption/assigns"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOption/vals"/>
@@ -183,6 +190,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputOptions/output_ops"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//OutTypeSimple">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutTypeSimple/type"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutTypeSimple/val"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//OutDataset">
@@ -190,16 +198,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/decl"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//OutDataset/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/out_base"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/ops"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutDataset/ecl_vars"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//Service">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Service/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Service/ops"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Service/serv"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Service/ecl_vars"/>
     </genClasses>
-    <genClasses ecoreClass="HIPIE.ecore#//OutputValue">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputValue/ops"/>
-    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//OutputValue"/>
     <genClasses ecoreClass="HIPIE.ecore#//OutputBase">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference HIPIE.ecore#//OutputBase/base"/>
     </genClasses>
@@ -221,15 +229,20 @@
     <genClasses ecoreClass="HIPIE.ecore#//GenerateBodySalt"/>
     <genClasses ecoreClass="HIPIE.ecore#//GenerateBodyKel"/>
     <genClasses ecoreClass="HIPIE.ecore#//VisualSection">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualSection/sec_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualSection/section_name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisualSection/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualSection/vis_ops"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisualSection/vis_elements"/>
+    </genClasses>
+    <genClasses ecoreClass="HIPIE.ecore#//VisName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//VisName/name"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//VisInputValue"/>
     <genClasses ecoreClass="HIPIE.ecore#//VisBasisParens">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//VisBasisParens/input"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//Visualization">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Visualization/type"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Visualization/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Visualization/parens"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Visualization/vis_op"/>
@@ -252,6 +265,7 @@
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//Function">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference HIPIE.ecore#//Function/vals"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute HIPIE.ecore#//Function/type"/>
     </genClasses>
     <genClasses ecoreClass="HIPIE.ecore#//QFunction"/>
     <genClasses ecoreClass="HIPIE.ecore#//NestBasisQualifier"/>

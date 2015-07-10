@@ -32,12 +32,10 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_ECLUnsigned_INTTerminalRuleCall_1_q;
 	protected AbstractElementAlias match_ECLVarstring_INTTerminalRuleCall_1_q;
 	protected AbstractElementAlias match_ECLVarunicode_INTTerminalRuleCall_1_q;
-	protected AbstractElementAlias match_Function___SCALEKeyword_6_0_LeftParenthesisKeyword_6_1___AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0___CommaKeyword_6_3_INTTerminalRuleCall_6_4_RightParenthesisKeyword_6_5___or_____AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1____;
+	protected AbstractElementAlias match_Function_AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0;
+	protected AbstractElementAlias match_Function___AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1__;
 	protected AbstractElementAlias match_GenerateBodySalt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0;
 	protected AbstractElementAlias match_InstanceOption_LABELKeyword_0_0_or_VERSIONKeyword_0_1;
-	protected AbstractElementAlias match_OutTypeSimple___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q;
-	protected AbstractElementAlias match_OutputOption_FILLSKeyword_4_0_1_or_SOAPKeyword_4_0_2_or_WUIDKeyword_4_0_0;
-	protected AbstractElementAlias match_OutputOption_FROMKeyword_1_0_1_or_WUIDKeyword_1_0_0;
 	protected AbstractElementAlias match_Permission_PRIVATEKeyword_2_1_or_PUBLICKeyword_2_0;
 	protected AbstractElementAlias match_ResourceOption_CLUSTERKeyword_0_7_or_DALIIPKeyword_0_6_or_DESCRIPTIONKeyword_0_2_or_FILENAMEKeyword_0_3_or_FONTKeyword_0_0_or_LABELKeyword_0_4_or_URLKeyword_0_5_or_VALUEKeyword_0_1;
 	protected AbstractElementAlias match_VisFilter_LeftParenthesisKeyword_0_p;
@@ -55,12 +53,10 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 		match_ECLUnsigned_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getECLUnsignedAccess().getINTTerminalRuleCall_1());
 		match_ECLVarstring_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getECLVarstringAccess().getINTTerminalRuleCall_1());
 		match_ECLVarunicode_INTTerminalRuleCall_1_q = new TokenAlias(false, true, grammarAccess.getECLVarunicodeAccess().getINTTerminalRuleCall_1());
-		match_Function___SCALEKeyword_6_0_LeftParenthesisKeyword_6_1___AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0___CommaKeyword_6_3_INTTerminalRuleCall_6_4_RightParenthesisKeyword_6_5___or_____AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1____ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getAggFunctionParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCountFunctionParserRuleCall_4())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getHyphenMinusKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getAggFunctionParserRuleCall_3_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getHyphenMinusKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCountFunctionParserRuleCall_5_1()))), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getSCALEKeyword_6_0()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getLeftParenthesisKeyword_6_1()), new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getAggFunctionParserRuleCall_6_2_1()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCountFunctionParserRuleCall_6_2_0())), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCommaKeyword_6_3()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getINTTerminalRuleCall_6_4()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getRightParenthesisKeyword_6_5())));
+		match_Function_AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getAggFunctionParserRuleCall_6_2_1()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCountFunctionParserRuleCall_6_2_0()));
+		match_Function___AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1__ = new AlternativeAlias(false, false, new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getAggFunctionParserRuleCall_2()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCountFunctionParserRuleCall_4())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getHyphenMinusKeyword_3_0()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getAggFunctionParserRuleCall_3_1())), new GroupAlias(false, false, new TokenAlias(false, false, grammarAccess.getFunctionAccess().getHyphenMinusKeyword_5_0()), new TokenAlias(false, false, grammarAccess.getFunctionAccess().getCountFunctionParserRuleCall_5_1())));
 		match_GenerateBodySalt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getGenerateBodySaltAccess().getPROFILEKeyword_6_1()), new TokenAlias(false, false, grammarAccess.getGenerateBodySaltAccess().getSCOREDSEARCHKeyword_6_0()));
 		match_InstanceOption_LABELKeyword_0_0_or_VERSIONKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getInstanceOptionAccess().getLABELKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getInstanceOptionAccess().getVERSIONKeyword_0_1()));
-		match_OutTypeSimple___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q = new AlternativeAlias(false, true, new TokenAlias(false, false, grammarAccess.getOutTypeSimpleAccess().getACTIONKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getOutTypeSimpleAccess().getBOOLKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getOutTypeSimpleAccess().getINTKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getOutTypeSimpleAccess().getSTRINGKeyword_0_2()));
-		match_OutputOption_FILLSKeyword_4_0_1_or_SOAPKeyword_4_0_2_or_WUIDKeyword_4_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getOutputOptionAccess().getFILLSKeyword_4_0_1()), new TokenAlias(false, false, grammarAccess.getOutputOptionAccess().getSOAPKeyword_4_0_2()), new TokenAlias(false, false, grammarAccess.getOutputOptionAccess().getWUIDKeyword_4_0_0()));
-		match_OutputOption_FROMKeyword_1_0_1_or_WUIDKeyword_1_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getOutputOptionAccess().getFROMKeyword_1_0_1()), new TokenAlias(false, false, grammarAccess.getOutputOptionAccess().getWUIDKeyword_1_0_0()));
 		match_Permission_PRIVATEKeyword_2_1_or_PUBLICKeyword_2_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getPermissionAccess().getPRIVATEKeyword_2_1()), new TokenAlias(false, false, grammarAccess.getPermissionAccess().getPUBLICKeyword_2_0()));
 		match_ResourceOption_CLUSTERKeyword_0_7_or_DALIIPKeyword_0_6_or_DESCRIPTIONKeyword_0_2_or_FILENAMEKeyword_0_3_or_FONTKeyword_0_0_or_LABELKeyword_0_4_or_URLKeyword_0_5_or_VALUEKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getCLUSTERKeyword_0_7()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getDALIIPKeyword_0_6()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getDESCRIPTIONKeyword_0_2()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getFILENAMEKeyword_0_3()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getFONTKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getLABELKeyword_0_4()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getURLKeyword_0_5()), new TokenAlias(false, false, grammarAccess.getResourceOptionAccess().getVALUEKeyword_0_1()));
 		match_VisFilter_LeftParenthesisKeyword_0_p = new TokenAlias(true, false, grammarAccess.getVisFilterAccess().getLeftParenthesisKeyword_0());
@@ -82,8 +78,6 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 			return getINTToken(semanticObject, ruleCall, node);
 		else if(ruleCall.getRule() == grammarAccess.getTOKENRule())
 			return getTOKENToken(semanticObject, ruleCall, node);
-		else if(ruleCall.getRule() == grammarAccess.getVisNameRule())
-			return getVisNameToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
@@ -164,17 +158,6 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 		return "";
 	}
 	
-	/**
-	 * VisName :
-	 * 	('CHORO'|'LINE'|'TIMELINE'|'PIE'|'BAR'|'TABLE'|'GRAPH'|'FORM'|'GROUP'|'SLIDER')
-	 * ;
-	 */
-	protected String getVisNameToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "CHORO";
-	}
-	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
 		if (transition.getAmbiguousSyntaxes().isEmpty()) return;
@@ -201,18 +184,14 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_ECLVarstring_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ECLVarunicode_INTTerminalRuleCall_1_q.equals(syntax))
 				emit_ECLVarunicode_INTTerminalRuleCall_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_Function___SCALEKeyword_6_0_LeftParenthesisKeyword_6_1___AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0___CommaKeyword_6_3_INTTerminalRuleCall_6_4_RightParenthesisKeyword_6_5___or_____AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1____.equals(syntax))
-				emit_Function___SCALEKeyword_6_0_LeftParenthesisKeyword_6_1___AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0___CommaKeyword_6_3_INTTerminalRuleCall_6_4_RightParenthesisKeyword_6_5___or_____AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1____(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Function_AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0.equals(syntax))
+				emit_Function_AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if(match_Function___AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1__.equals(syntax))
+				emit_Function___AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1__(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_GenerateBodySalt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0.equals(syntax))
 				emit_GenerateBodySalt_PROFILEKeyword_6_1_or_SCOREDSEARCHKeyword_6_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_InstanceOption_LABELKeyword_0_0_or_VERSIONKeyword_0_1.equals(syntax))
 				emit_InstanceOption_LABELKeyword_0_0_or_VERSIONKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_OutTypeSimple___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q.equals(syntax))
-				emit_OutTypeSimple___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_OutputOption_FILLSKeyword_4_0_1_or_SOAPKeyword_4_0_2_or_WUIDKeyword_4_0_0.equals(syntax))
-				emit_OutputOption_FILLSKeyword_4_0_1_or_SOAPKeyword_4_0_2_or_WUIDKeyword_4_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if(match_OutputOption_FROMKeyword_1_0_1_or_WUIDKeyword_1_0_0.equals(syntax))
-				emit_OutputOption_FROMKeyword_1_0_1_or_WUIDKeyword_1_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_Permission_PRIVATEKeyword_2_1_or_PUBLICKeyword_2_0.equals(syntax))
 				emit_Permission_PRIVATEKeyword_2_1_or_PUBLICKeyword_2_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if(match_ResourceOption_CLUSTERKeyword_0_7_or_DALIIPKeyword_0_6_or_DESCRIPTIONKeyword_0_2_or_FILENAMEKeyword_0_3_or_FONTKeyword_0_0_or_LABELKeyword_0_4_or_URLKeyword_0_5_or_VALUEKeyword_0_1.equals(syntax))
@@ -335,22 +314,23 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     (
-	  *         (
-	  *             'SCALE' 
-	  *             '(' 
-	  *             (CountFunction | AggFunction) 
-	  *             ',' 
-	  *             INT 
-	  *             ')'
-	  *         ) | 
-	  *         (('-' AggFunction) | ('-' CountFunction) | (AggFunction | CountFunction))
-	  *     )
+	 *     CountFunction | AggFunction
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) 'SCALE' '(' (ambiguity) ',' type=INT
+	 */
+	protected void emit_Function_AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ('-' AggFunction) | ('-' CountFunction) | (AggFunction | CountFunction)
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
 	 */
-	protected void emit_Function___SCALEKeyword_6_0_LeftParenthesisKeyword_6_1___AggFunctionParserRuleCall_6_2_1_or_CountFunctionParserRuleCall_6_2_0___CommaKeyword_6_3_INTTerminalRuleCall_6_4_RightParenthesisKeyword_6_5___or_____AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1____(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Function___AggFunctionParserRuleCall_2_or_CountFunctionParserRuleCall_4___or___HyphenMinusKeyword_3_0_AggFunctionParserRuleCall_3_1___or___HyphenMinusKeyword_5_0_CountFunctionParserRuleCall_5_1__(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -373,39 +353,6 @@ public class HIPIESyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) '(' vals+=Value
 	 */
 	protected void emit_InstanceOption_LABELKeyword_0_0_or_VERSIONKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ('BOOL' | 'INT' | 'STRING' | 'ACTION')?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) val=Value
-	 */
-	protected void emit_OutTypeSimple___ACTIONKeyword_0_3_or_BOOLKeyword_0_0_or_INTKeyword_0_1_or_STRINGKeyword_0_2__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'WUID' | 'FILLS' | 'SOAP'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '(' vals=ValueList
-	 */
-	protected void emit_OutputOption_FILLSKeyword_4_0_1_or_SOAPKeyword_4_0_2_or_WUIDKeyword_4_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     'WUID' | 'FROM'
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) '(' name=TOKEN
-	 */
-	protected void emit_OutputOption_FROMKeyword_1_0_1_or_WUIDKeyword_1_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

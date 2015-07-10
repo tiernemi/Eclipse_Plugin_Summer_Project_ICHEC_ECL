@@ -21,6 +21,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
 import org.xtext.hipie.hIPIE.HIPIEPackage;
 import org.xtext.hipie.hIPIE.VisBasisParens;
 import org.xtext.hipie.hIPIE.VisInputValue;
+import org.xtext.hipie.hIPIE.VisName;
 import org.xtext.hipie.hIPIE.VisualOptions;
 import org.xtext.hipie.hIPIE.Visualization;
 
@@ -31,6 +32,7 @@ import org.xtext.hipie.hIPIE.Visualization;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getType <em>Type</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getParens <em>Parens</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.VisualizationImpl#getVis_op <em>Vis op</em>}</li>
@@ -42,6 +44,16 @@ import org.xtext.hipie.hIPIE.Visualization;
  */
 public class VisualizationImpl extends MinimalEObjectImpl.Container implements Visualization
 {
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected VisName type;
+
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -111,6 +123,54 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   protected EClass eStaticClass()
   {
     return HIPIEPackage.Literals.VISUALIZATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public VisName getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetType(VisName newType, NotificationChain msgs)
+  {
+    VisName oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUALIZATION__TYPE, oldType, newType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(VisName newType)
+  {
+    if (newType != type)
+    {
+      NotificationChain msgs = null;
+      if (type != null)
+        msgs = ((InternalEObject)type).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUALIZATION__TYPE, null, msgs);
+      if (newType != null)
+        msgs = ((InternalEObject)newType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - HIPIEPackage.VISUALIZATION__TYPE, null, msgs);
+      msgs = basicSetType(newType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.VISUALIZATION__TYPE, newType, newType));
   }
 
   /**
@@ -256,6 +316,8 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
+      case HIPIEPackage.VISUALIZATION__TYPE:
+        return basicSetType(null, msgs);
       case HIPIEPackage.VISUALIZATION__PARENS:
         return basicSetParens(null, msgs);
       case HIPIEPackage.VISUALIZATION__VIS_OP:
@@ -276,6 +338,8 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
+      case HIPIEPackage.VISUALIZATION__TYPE:
+        return getType();
       case HIPIEPackage.VISUALIZATION__NAME:
         return getName();
       case HIPIEPackage.VISUALIZATION__PARENS:
@@ -299,6 +363,9 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
+      case HIPIEPackage.VISUALIZATION__TYPE:
+        setType((VisName)newValue);
+        return;
       case HIPIEPackage.VISUALIZATION__NAME:
         setName((String)newValue);
         return;
@@ -326,6 +393,9 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
+      case HIPIEPackage.VISUALIZATION__TYPE:
+        setType((VisName)null);
+        return;
       case HIPIEPackage.VISUALIZATION__NAME:
         setName(NAME_EDEFAULT);
         return;
@@ -352,6 +422,8 @@ public class VisualizationImpl extends MinimalEObjectImpl.Container implements V
   {
     switch (featureID)
     {
+      case HIPIEPackage.VISUALIZATION__TYPE:
+        return type != null;
       case HIPIEPackage.VISUALIZATION__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case HIPIEPackage.VISUALIZATION__PARENS:

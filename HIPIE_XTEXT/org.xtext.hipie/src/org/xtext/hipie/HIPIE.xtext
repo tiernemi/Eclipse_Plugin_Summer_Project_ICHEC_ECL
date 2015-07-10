@@ -24,7 +24,7 @@ BaseProp:
 ;
    
 CategoryType: 
-	'CLEAN' | 'INPUT' | 'APPEND' | 'LINK' | 'ANALYSIS' | 'CUSTOM' | 'VISUALIZE' | 'OUTPUT' 
+	name=('CLEAN' | 'INPUT' | 'APPEND' | 'LINK' | 'ANALYSIS' | 'CUSTOM' | 'VISUALIZE' | 'OUTPUT')
 ;
 
 CategoryTypeList: 
@@ -165,11 +165,11 @@ InputOptions:
 ;
 
 InputOption:
-	  (name='OPTIONAL'|name='DEFINED'|name='DISABLED'|name='MAPBYTYPE'|name='MAPBYNAME'|name='MANY') |
-		name='FORMFIELD' '(' form_op=FormfieldOption ')' | 
-		name='ENABLE' '('  (assigns_list=AssignList)  ')' | 
-        name='TYPE' '(' type_op=InputtypeOptions ')' | 
-        (name='RANGE'|name='DEFAULT'|name='MAXLENGTH'|name='DISABLED' | name='DESCRIPTION' |name='NULL'| name='FIELDLENGTH' | name='ROWS'  | name='COLS' | name='_HTML_STYLECLASS' | name='LABEL') '(' vals+=ValueList ')'
+	  (atr='OPTIONAL'|atr='DEFINED'|atr='DISABLED'|atr='MAPBYTYPE'|atr='MAPBYNAME'|atr='MANY') |
+		form='FORMFIELD' '(' form_op=FormfieldOption ')' | 
+		enab='ENABLE' '('  (assigns_list=AssignList)  ')' | 
+        type='TYPE' '(' type_op=InputtypeOptions ')' | 
+        (atr='RANGE'|atr='DEFAULT'|atr='MAXLENGTH'|atr='DISABLED' | atr='DESCRIPTION' |atr='NULL'| atr='FIELDLENGTH' | atr='ROWS'  | atr='COLS' | atr='_HTML_STYLECLASS' | atr='LABEL') '(' vals+=ValueList ')'
 ;
 
 FormfieldOption: 
@@ -268,12 +268,12 @@ NestedDatasetDecl:
 				
 
 OutputOption: 
-	(name='SIDE'|name='LARGE'|name='SMALL'|name='FEW'|name='WUID' | name='APPEND' | name='SCOREDSEARCH' | name='DATABOMB' | name='OPTIONAL') | 
-    (('WUID'|'FROM') '(' name=TOKEN ')') |
-    ('ENABLE' '(' assigns=AssignList ')') |
-    ('PREFIX' '(' (name=TOKEN) ')') |
-    (('WUID'|'FILLS'|'SOAP') '(' vals=ValueList ')') |
-    ((name='DESCRIPTION'|name='SOAP'|name='JSON'|name='ROXIE'|name='XPATH') '(' vals=Value ')')
+	(atr='SIDE'|atr='LARGE'|atr='SMALL'|atr='FEW'|atr='WUID' | atr='APPEND' | atr='SCOREDSEARCH' | atr='DATABOMB' | atr='OPTIONAL') | 
+    (atr=('WUID'|'FROM') '(' name=TOKEN ')') |
+    (atr='ENABLE' '(' assigns=AssignList ')') |
+    (atr='PREFIX' '(' (name=TOKEN) ')') |
+    (atr=('WUID'|'FILLS'|'SOAP') '(' vals=ValueList ')') |
+    (atr=('DESCRIPTION'|'SOAP'|'JSON'|'ROXIE'|'XPATH') '(' vals=Value ')')
 ;
                 
 OutputOptions: 
@@ -282,7 +282,7 @@ OutputOptions:
 
 
 OutTypeSimple :
-	 ('BOOL'|'INT'|'STRING'|'ACTION')? val=Value 
+	 type=('BOOL'|'INT'|'STRING'|'ACTION')? val=Value 
 ;
 
 OutDataset :
@@ -294,7 +294,7 @@ Service :
 ;
 
 OutputValue: 
- 	OutTypeSimple (ops=OutputOptions)? ';' |     
+ 	OutTypeSimple  ';' |     
     OutDataset (ecl_vars+=ECLOutputDecl)* => 'END' |
     OutDataset ';' |
     Service (ecl_vars+=ECLOutputDecl)* => 'END' |
@@ -336,11 +336,11 @@ GenerateBodyKel :
 ;
 
 VisualSection: 
-	sec_name='VISUALIZE' TOKEN (vis_ops=VisualSectionOptions)? (vis_elements+=Visualization)+ => 'END'
+	section_name='VISUALIZE' name=TOKEN (vis_ops=VisualSectionOptions)? (vis_elements+=Visualization)+ => 'END'
 ;
 
 VisName :
-	('CHORO'|'LINE'|'TIMELINE'|'PIE'|'BAR'|'TABLE'|'GRAPH'|'FORM'|'GROUP'|'SLIDER')
+	name=('CHORO'|'LINE'|'TIMELINE'|'PIE'|'BAR'|'TABLE'|'GRAPH'|'FORM'|'GROUP'|'SLIDER')
 ;
 
 VisInputValue:
@@ -352,8 +352,8 @@ VisBasisParens:
 ;
 
 Visualization: 
-	VisName name=TOKEN  (parens=VisBasisParens)? (vis_op=VisualOptions)? ';' |
-    VisName name=TOKEN (parens=VisBasisParens)? (vis_op=VisualOptions)? (input_val+=VisInputValue)+ => 'END' 
+	type=VisName name=TOKEN  (parens=VisBasisParens)? (vis_op=VisualOptions)? ';' |
+    type=VisName name=TOKEN (parens=VisBasisParens)? (vis_op=VisualOptions)? (input_val+=VisInputValue)+ => 'END' 
 ;
 
 VisBasis: 
@@ -377,7 +377,7 @@ Function:
 	/*'-' vars=[PosVizData] |*/  '-' vals=Value |
     AggFunction | '-' AggFunction |
     CountFunction | '-' CountFunction |
-    'SCALE' '(' (/*(vars=[PosVizData])|*/CountFunction|AggFunction) ',' INT ')'
+    'SCALE' '(' (/*(vars=[PosVizData])|*/CountFunction|AggFunction) ',' type=INT ')'
 ;
 
 QFunction:

@@ -20,6 +20,7 @@ import org.xtext.hipie.hIPIE.Assign;
 import org.xtext.hipie.hIPIE.AssignList;
 import org.xtext.hipie.hIPIE.BaseProp;
 import org.xtext.hipie.hIPIE.Bool;
+import org.xtext.hipie.hIPIE.CategoryType;
 import org.xtext.hipie.hIPIE.CategoryTypeList;
 import org.xtext.hipie.hIPIE.CompositionHeader;
 import org.xtext.hipie.hIPIE.ContractInstance;
@@ -87,6 +88,7 @@ import org.xtext.hipie.hIPIE.VisBasis;
 import org.xtext.hipie.hIPIE.VisBasisParens;
 import org.xtext.hipie.hIPIE.VisBasisQualifiers;
 import org.xtext.hipie.hIPIE.VisFilter;
+import org.xtext.hipie.hIPIE.VisName;
 import org.xtext.hipie.hIPIE.VisibilityOption;
 import org.xtext.hipie.hIPIE.VisualCustomOption;
 import org.xtext.hipie.hIPIE.VisualMultival;
@@ -136,6 +138,9 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 					return; 
 				}
 				else break;
+			case HIPIEPackage.CATEGORY_TYPE:
+				sequence_CategoryType(context, (CategoryType) semanticObject); 
+				return; 
 			case HIPIEPackage.CATEGORY_TYPE_LIST:
 				sequence_CategoryTypeList(context, (CategoryTypeList) semanticObject); 
 				return; 
@@ -480,15 +485,8 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				}
 				else break;
 			case HIPIEPackage.OUT_TYPE_SIMPLE:
-				if(context == grammarAccess.getOutTypeSimpleRule()) {
-					sequence_OutTypeSimple(context, (OutTypeSimple) semanticObject); 
-					return; 
-				}
-				else if(context == grammarAccess.getOutputValueRule()) {
-					sequence_OutTypeSimple_OutputValue(context, (OutTypeSimple) semanticObject); 
-					return; 
-				}
-				else break;
+				sequence_OutTypeSimple(context, (OutTypeSimple) semanticObject); 
+				return; 
 			case HIPIEPackage.OUTFIELD_DECL:
 				sequence_OutfieldDecl(context, (OutfieldDecl) semanticObject); 
 				return; 
@@ -616,6 +614,9 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 				return; 
 			case HIPIEPackage.VIS_FILTER:
 				sequence_VisFilter(context, (VisFilter) semanticObject); 
+				return; 
+			case HIPIEPackage.VIS_NAME:
+				sequence_VisName(context, (VisName) semanticObject); 
 				return; 
 			case HIPIEPackage.VISIBILITY_OPTION:
 				sequence_VisibilityOption(context, (VisibilityOption) semanticObject); 
@@ -760,6 +761,24 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	 *     (cats+=CategoryType cats+=CategoryType*)
 	 */
 	protected void sequence_CategoryTypeList(EObject context, CategoryTypeList semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (
+	 *         name='CLEAN' | 
+	 *         name='INPUT' | 
+	 *         name='APPEND' | 
+	 *         name='LINK' | 
+	 *         name='ANALYSIS' | 
+	 *         name='CUSTOM' | 
+	 *         name='VISUALIZE' | 
+	 *         name='OUTPUT'
+	 *     )
+	 */
+	protected void sequence_CategoryType(EObject context, CategoryType semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1198,7 +1217,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (vals=Value | vals=Value)?
+	 *     (vals=Value | vals=Value | type=INT)?
 	 */
 	protected void sequence_Function(EObject context, Function semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1274,28 +1293,28 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (
-	 *         name='OPTIONAL' | 
-	 *         name='DEFINED' | 
-	 *         name='DISABLED' | 
-	 *         name='MAPBYTYPE' | 
-	 *         name='MAPBYNAME' | 
-	 *         name='MANY' | 
-	 *         (name='FORMFIELD' form_op=FormfieldOption) | 
-	 *         (name='ENABLE' assigns_list=AssignList) | 
-	 *         (name='TYPE' type_op=InputtypeOptions) | 
+	 *         atr='OPTIONAL' | 
+	 *         atr='DEFINED' | 
+	 *         atr='DISABLED' | 
+	 *         atr='MAPBYTYPE' | 
+	 *         atr='MAPBYNAME' | 
+	 *         atr='MANY' | 
+	 *         (form='FORMFIELD' form_op=FormfieldOption) | 
+	 *         (enab='ENABLE' assigns_list=AssignList) | 
+	 *         (type='TYPE' type_op=InputtypeOptions) | 
 	 *         (
 	 *             (
-	 *                 name='RANGE' | 
-	 *                 name='DEFAULT' | 
-	 *                 name='MAXLENGTH' | 
-	 *                 name='DISABLED' | 
-	 *                 name='DESCRIPTION' | 
-	 *                 name='NULL' | 
-	 *                 name='FIELDLENGTH' | 
-	 *                 name='ROWS' | 
-	 *                 name='COLS' | 
-	 *                 name='_HTML_STYLECLASS' | 
-	 *                 name='LABEL'
+	 *                 atr='RANGE' | 
+	 *                 atr='DEFAULT' | 
+	 *                 atr='MAXLENGTH' | 
+	 *                 atr='DISABLED' | 
+	 *                 atr='DESCRIPTION' | 
+	 *                 atr='NULL' | 
+	 *                 atr='FIELDLENGTH' | 
+	 *                 atr='ROWS' | 
+	 *                 atr='COLS' | 
+	 *                 atr='_HTML_STYLECLASS' | 
+	 *                 atr='LABEL'
 	 *             ) 
 	 *             vals+=ValueList
 	 *         )
@@ -1504,18 +1523,9 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     val=Value
+	 *     ((type='BOOL' | type='INT' | type='STRING' | type='ACTION')? val=Value)
 	 */
 	protected void sequence_OutTypeSimple(EObject context, OutTypeSimple semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Constraint:
-	 *     (val=Value ops=OutputOptions?)
-	 */
-	protected void sequence_OutTypeSimple_OutputValue(EObject context, OutTypeSimple semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -1548,20 +1558,20 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	/**
 	 * Constraint:
 	 *     (
-	 *         name='SIDE' | 
-	 *         name='LARGE' | 
-	 *         name='SMALL' | 
-	 *         name='FEW' | 
-	 *         name='WUID' | 
-	 *         name='APPEND' | 
-	 *         name='SCOREDSEARCH' | 
-	 *         name='DATABOMB' | 
-	 *         name='OPTIONAL' | 
-	 *         name=TOKEN | 
-	 *         assigns=AssignList | 
-	 *         name=TOKEN | 
-	 *         vals=ValueList | 
-	 *         ((name='DESCRIPTION' | name='SOAP' | name='JSON' | name='ROXIE' | name='XPATH') vals=Value)
+	 *         atr='SIDE' | 
+	 *         atr='LARGE' | 
+	 *         atr='SMALL' | 
+	 *         atr='FEW' | 
+	 *         atr='WUID' | 
+	 *         atr='APPEND' | 
+	 *         atr='SCOREDSEARCH' | 
+	 *         atr='DATABOMB' | 
+	 *         atr='OPTIONAL' | 
+	 *         ((atr='WUID' | atr='FROM') name=TOKEN) | 
+	 *         (atr='ENABLE' assigns=AssignList) | 
+	 *         (atr='PREFIX' name=TOKEN) | 
+	 *         ((atr='WUID' | atr='FILLS' | atr='SOAP') vals=ValueList) | 
+	 *         ((atr='DESCRIPTION' | atr='SOAP' | atr='JSON' | atr='ROXIE' | atr='XPATH') vals=Value)
 	 *     )
 	 */
 	protected void sequence_OutputOption(EObject context, OutputOption semanticObject) {
@@ -1847,6 +1857,26 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
+	 *     (
+	 *         name='CHORO' | 
+	 *         name='LINE' | 
+	 *         name='TIMELINE' | 
+	 *         name='PIE' | 
+	 *         name='BAR' | 
+	 *         name='TABLE' | 
+	 *         name='GRAPH' | 
+	 *         name='FORM' | 
+	 *         name='GROUP' | 
+	 *         name='SLIDER'
+	 *     )
+	 */
+	protected void sequence_VisName(EObject context, VisName semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name='MODAL' | name='VISIBLE')
 	 */
 	protected void sequence_VisibilityOption(EObject context, VisibilityOption semanticObject) {
@@ -1976,7 +2006,7 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     (sec_name='VISUALIZE' vis_ops=VisualSectionOptions? vis_elements+=Visualization+)
+	 *     (section_name='VISUALIZE' name=TOKEN vis_ops=VisualSectionOptions? vis_elements+=Visualization+)
 	 */
 	protected void sequence_VisualSection(EObject context, VisualSection semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1985,7 +2015,10 @@ public class HIPIESemanticSequencer extends AbstractDelegatingSemanticSequencer 
 	
 	/**
 	 * Constraint:
-	 *     ((name=TOKEN parens=VisBasisParens? vis_op=VisualOptions?) | (name=TOKEN parens=VisBasisParens? vis_op=VisualOptions? input_val+=VisInputValue+))
+	 *     (
+	 *         (type=VisName name=TOKEN parens=VisBasisParens? vis_op=VisualOptions?) | 
+	 *         (type=VisName name=TOKEN parens=VisBasisParens? vis_op=VisualOptions? input_val+=VisInputValue+)
+	 *     )
 	 */
 	protected void sequence_Visualization(EObject context, Visualization semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

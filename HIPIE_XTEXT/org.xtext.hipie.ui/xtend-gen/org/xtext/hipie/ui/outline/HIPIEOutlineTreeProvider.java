@@ -3,7 +3,20 @@
  */
 package org.xtext.hipie.ui.outline;
 
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.xtext.ui.editor.outline.IOutlineNode;
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
+import org.xtext.hipie.hIPIE.BaseProp;
+import org.xtext.hipie.hIPIE.InputOptions;
+import org.xtext.hipie.hIPIE.OutputOptions;
+import org.xtext.hipie.hIPIE.Value;
+import org.xtext.hipie.hIPIE.ValueList;
+import org.xtext.hipie.hIPIE.VisBasisParens;
+import org.xtext.hipie.hIPIE.VisInputValue;
+import org.xtext.hipie.hIPIE.VisName;
+import org.xtext.hipie.hIPIE.VisualOptions;
+import org.xtext.hipie.hIPIE.VisualSectionOptions;
+import org.xtext.hipie.hIPIE.Visualization;
 
 /**
  * Customization of the default outline structure.
@@ -12,4 +25,42 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider;
  */
 @SuppressWarnings("all")
 public class HIPIEOutlineTreeProvider extends DefaultOutlineTreeProvider {
+  protected void _createChildren(final IOutlineNode parentNode, final BaseProp prop) {
+    ValueList _val_list = prop.getVal_list();
+    EList<Value> _vals = _val_list.getVals();
+    for (final Value out_val : _vals) {
+      IOutlineNode _parent = parentNode.getParent();
+      IOutlineNode _parent_1 = _parent.getParent();
+      this.createEObjectNode(_parent_1, out_val);
+    }
+  }
+  
+  protected boolean _isLeaf(final BaseProp prop) {
+    return true;
+  }
+  
+  protected boolean _isLeaf(final Visualization vis) {
+    return true;
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final OutputOptions out) {
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final VisName vis_name) {
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final VisualOptions vis_ops) {
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final VisBasisParens vis_parents) {
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final VisInputValue vis_in) {
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final VisualSectionOptions vis_sec_ops) {
+  }
+  
+  protected void _createNode(final IOutlineNode parentNode, final InputOptions input_ops) {
+  }
 }

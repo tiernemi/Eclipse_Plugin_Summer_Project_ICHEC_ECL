@@ -85,6 +85,11 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createBasePropAdapter();
       }
       @Override
+      public Adapter caseCategoryType(CategoryType object)
+      {
+        return createCategoryTypeAdapter();
+      }
+      @Override
       public Adapter caseCategoryTypeList(CategoryTypeList object)
       {
         return createCategoryTypeListAdapter();
@@ -420,6 +425,11 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
         return createVisualSectionAdapter();
       }
       @Override
+      public Adapter caseVisName(VisName object)
+      {
+        return createVisNameAdapter();
+      }
+      @Override
       public Adapter caseVisInputValue(VisInputValue object)
       {
         return createVisInputValueAdapter();
@@ -617,6 +627,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createBasePropAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.CategoryType <em>Category Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.CategoryType
+   * @generated
+   */
+  public Adapter createCategoryTypeAdapter()
   {
     return null;
   }
@@ -1622,6 +1647,21 @@ public class HIPIEAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createVisualSectionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link org.xtext.hipie.hIPIE.VisName <em>Vis Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see org.xtext.hipie.hIPIE.VisName
+   * @generated
+   */
+  public Adapter createVisNameAdapter()
   {
     return null;
   }

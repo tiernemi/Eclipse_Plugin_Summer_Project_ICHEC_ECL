@@ -14,7 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link org.xtext.hipie.hIPIE.VisualSection#getSec_name <em>Sec name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.VisualSection#getSection_name <em>Section name</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.VisualSection#getName <em>Name</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.VisualSection#getVis_ops <em>Vis ops</em>}</li>
  *   <li>{@link org.xtext.hipie.hIPIE.VisualSection#getVis_elements <em>Vis elements</em>}</li>
  * </ul>
@@ -27,30 +28,56 @@ import org.eclipse.emf.ecore.EObject;
 public interface VisualSection extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Sec name</b></em>' attribute.
+   * Returns the value of the '<em><b>Section name</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sec name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Section name</em>' attribute isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Sec name</em>' attribute.
-   * @see #setSec_name(String)
-   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisualSection_Sec_name()
+   * @return the value of the '<em>Section name</em>' attribute.
+   * @see #setSection_name(String)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisualSection_Section_name()
    * @model
    * @generated
    */
-  String getSec_name();
+  String getSection_name();
 
   /**
-   * Sets the value of the '{@link org.xtext.hipie.hIPIE.VisualSection#getSec_name <em>Sec name</em>}' attribute.
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.VisualSection#getSection_name <em>Section name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Sec name</em>' attribute.
-   * @see #getSec_name()
+   * @param value the new value of the '<em>Section name</em>' attribute.
+   * @see #getSection_name()
    * @generated
    */
-  void setSec_name(String value);
+  void setSection_name(String value);
+
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see org.xtext.hipie.hIPIE.HIPIEPackage#getVisualSection_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link org.xtext.hipie.hIPIE.VisualSection#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
 
   /**
    * Returns the value of the '<em><b>Vis ops</b></em>' containment reference.

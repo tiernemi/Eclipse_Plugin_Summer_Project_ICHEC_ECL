@@ -3484,10 +3484,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8753:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8753:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8967:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8967:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8753:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8967:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt1=0;
             loop1:
             do {
@@ -3541,10 +3541,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8755:10: ( ( '0' .. '9' )+ )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8755:12: ( '0' .. '9' )+
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8969:10: ( ( '0' .. '9' )+ )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8969:12: ( '0' .. '9' )+
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8755:12: ( '0' .. '9' )+
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8969:12: ( '0' .. '9' )+
             int cnt2=0;
             loop2:
             do {
@@ -3558,7 +3558,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt2) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8755:13: '0' .. '9'
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8969:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3590,10 +3590,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:13: ( ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:15: ( '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt5=2;
             int LA5_0 = input.LA(1);
 
@@ -3611,10 +3611,10 @@ public class InternalHIPIELexer extends Lexer {
             }
             switch (alt5) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:16: '\"' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:20: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop3:
                     do {
                         int alt3=3;
@@ -3630,7 +3630,7 @@ public class InternalHIPIELexer extends Lexer {
 
                         switch (alt3) {
                     	case 1 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:21: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -3646,7 +3646,7 @@ public class InternalHIPIELexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:66: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:66: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3671,10 +3671,10 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:86: '\\'' ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:91: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' ) | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop4:
                     do {
                         int alt4=3;
@@ -3690,7 +3690,7 @@ public class InternalHIPIELexer extends Lexer {
 
                         switch (alt4) {
                     	case 1 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:92: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | 'u' | '\"' | '\\'' | '\\\\' )
                     	    {
                     	    match('\\'); 
                     	    if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||(input.LA(1)>='t' && input.LA(1)<='u') ) {
@@ -3706,7 +3706,7 @@ public class InternalHIPIELexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8757:137: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8971:137: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -3749,15 +3749,15 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ECLNUMBEREDTYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:22: ( ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' ) ( '0' .. '9' )* )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:24: ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' ) ( '0' .. '9' )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:22: ( ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' ) ( '0' .. '9' )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:24: ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' ) ( '0' .. '9' )*
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:24: ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:24: ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' )
             int alt6=8;
             alt6 = dfa6.predict(input);
             switch (alt6) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:25: 'UNICODE'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:25: 'UNICODE'
                     {
                     match("UNICODE"); 
 
@@ -3765,7 +3765,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:35: 'STRING'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:35: 'STRING'
                     {
                     match("STRING"); 
 
@@ -3773,7 +3773,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 3 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:44: 'UNSIGNED'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:44: 'UNSIGNED'
                     {
                     match("UNSIGNED"); 
 
@@ -3781,7 +3781,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 4 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:55: 'INTEGER'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:55: 'INTEGER'
                     {
                     match("INTEGER"); 
 
@@ -3789,7 +3789,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 5 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:65: 'QSTRING'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:65: 'QSTRING'
                     {
                     match("QSTRING"); 
 
@@ -3797,7 +3797,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 6 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:75: 'VARSTRING'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:75: 'VARSTRING'
                     {
                     match("VARSTRING"); 
 
@@ -3805,7 +3805,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 7 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:87: 'VARUNICODE'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:87: 'VARUNICODE'
                     {
                     match("VARUNICODE"); 
 
@@ -3813,7 +3813,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     break;
                 case 8 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:100: 'REAL'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:100: 'REAL'
                     {
                     match("REAL"); 
 
@@ -3823,7 +3823,7 @@ public class InternalHIPIELexer extends Lexer {
 
             }
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:108: ( '0' .. '9' )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:108: ( '0' .. '9' )*
             loop7:
             do {
                 int alt7=2;
@@ -3836,7 +3836,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt7) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8759:109: '0' .. '9'
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8973:109: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3864,12 +3864,12 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ECLDECIMALTYPE;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8761:21: ( 'DECIMAL' ( '0' .. '9' )* )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8761:23: 'DECIMAL' ( '0' .. '9' )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8975:21: ( 'DECIMAL' ( '0' .. '9' )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8975:23: 'DECIMAL' ( '0' .. '9' )*
             {
             match("DECIMAL"); 
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8761:33: ( '0' .. '9' )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8975:33: ( '0' .. '9' )*
             loop8:
             do {
                 int alt8=2;
@@ -3882,7 +3882,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8761:34: '0' .. '9'
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8975:34: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -3910,19 +3910,19 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_GEN_BLOCK;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8763:16: ( 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8763:18: 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8977:16: ( 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8977:18: 'INLINE' ( options {greedy=false; } : . )* 'ENDGENERATES'
             {
             match("INLINE"); 
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8763:27: ( options {greedy=false; } : . )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8977:27: ( options {greedy=false; } : . )*
             loop9:
             do {
                 int alt9=2;
                 alt9 = dfa9.predict(input);
                 switch (alt9) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8763:55: .
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8977:55: .
             	    {
             	    matchAny(); 
 
@@ -3952,10 +3952,10 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8765:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8765:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8979:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8979:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8765:11: ( '^' )?
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8979:11: ( '^' )?
             int alt10=2;
             int LA10_0 = input.LA(1);
 
@@ -3964,7 +3964,7 @@ public class InternalHIPIELexer extends Lexer {
             }
             switch (alt10) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8765:11: '^'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8979:11: '^'
                     {
                     match('^'); 
 
@@ -3982,7 +3982,7 @@ public class InternalHIPIELexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8765:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8979:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop11:
             do {
                 int alt11=2;
@@ -4031,12 +4031,12 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8767:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8767:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8981:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8981:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8767:24: ( options {greedy=false; } : . )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8981:24: ( options {greedy=false; } : . )*
             loop12:
             do {
                 int alt12=2;
@@ -4061,7 +4061,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt12) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8767:52: .
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8981:52: .
             	    {
             	    matchAny(); 
 
@@ -4091,12 +4091,12 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop13:
             do {
                 int alt13=2;
@@ -4109,7 +4109,7 @@ public class InternalHIPIELexer extends Lexer {
 
                 switch (alt13) {
             	case 1 :
-            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -4129,7 +4129,7 @@ public class InternalHIPIELexer extends Lexer {
                 }
             } while (true);
 
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:40: ( ( '\\r' )? '\\n' )?
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:40: ( ( '\\r' )? '\\n' )?
             int alt15=2;
             int LA15_0 = input.LA(1);
 
@@ -4138,9 +4138,9 @@ public class InternalHIPIELexer extends Lexer {
             }
             switch (alt15) {
                 case 1 :
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:41: ( '\\r' )? '\\n'
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:41: ( '\\r' )? '\\n'
                     {
-                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:41: ( '\\r' )?
+                    // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:41: ( '\\r' )?
                     int alt14=2;
                     int LA14_0 = input.LA(1);
 
@@ -4149,7 +4149,7 @@ public class InternalHIPIELexer extends Lexer {
                     }
                     switch (alt14) {
                         case 1 :
-                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8769:41: '\\r'
+                            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8983:41: '\\r'
                             {
                             match('\r'); 
 
@@ -4181,8 +4181,8 @@ public class InternalHIPIELexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8771:16: ( . )
-            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8771:18: .
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8985:16: ( . )
+            // ../org.xtext.hipie/src-gen/org/xtext/hipie/parser/antlr/internal/InternalHIPIE.g:8985:18: .
             {
             matchAny(); 
 
@@ -5438,7 +5438,7 @@ public class InternalHIPIELexer extends Lexer {
             this.transition = DFA6_transition;
         }
         public String getDescription() {
-            return "8759:24: ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' )";
+            return "8973:24: ( 'UNICODE' | 'STRING' | 'UNSIGNED' | 'INTEGER' | 'QSTRING' | 'VARSTRING' | 'VARUNICODE' | 'REAL' )";
         }
     }
     static final String DFA9_eotS =
@@ -5500,7 +5500,7 @@ public class InternalHIPIELexer extends Lexer {
             this.transition = DFA9_transition;
         }
         public String getDescription() {
-            return "()* loopback of 8763:27: ( options {greedy=false; } : . )*";
+            return "()* loopback of 8977:27: ( options {greedy=false; } : . )*";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;

@@ -22,6 +22,7 @@ import org.xtext.hipie.hIPIE.Value;
  * The following features are implemented:
  * <ul>
  *   <li>{@link org.xtext.hipie.hIPIE.impl.FunctionImpl#getVals <em>Vals</em>}</li>
+ *   <li>{@link org.xtext.hipie.hIPIE.impl.FunctionImpl#getType <em>Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -38,6 +39,26 @@ public class FunctionImpl extends QFunctionImpl implements Function
    * @ordered
    */
   protected Value vals;
+
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final int TYPE_EDEFAULT = 0;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected int type = TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -113,6 +134,29 @@ public class FunctionImpl extends QFunctionImpl implements Function
    * <!-- end-user-doc -->
    * @generated
    */
+  public int getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(int newType)
+  {
+    int oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, HIPIEPackage.FUNCTION__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -136,6 +180,8 @@ public class FunctionImpl extends QFunctionImpl implements Function
     {
       case HIPIEPackage.FUNCTION__VALS:
         return getVals();
+      case HIPIEPackage.FUNCTION__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -152,6 +198,9 @@ public class FunctionImpl extends QFunctionImpl implements Function
     {
       case HIPIEPackage.FUNCTION__VALS:
         setVals((Value)newValue);
+        return;
+      case HIPIEPackage.FUNCTION__TYPE:
+        setType((Integer)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -170,6 +219,9 @@ public class FunctionImpl extends QFunctionImpl implements Function
       case HIPIEPackage.FUNCTION__VALS:
         setVals((Value)null);
         return;
+      case HIPIEPackage.FUNCTION__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -186,8 +238,27 @@ public class FunctionImpl extends QFunctionImpl implements Function
     {
       case HIPIEPackage.FUNCTION__VALS:
         return vals != null;
+      case HIPIEPackage.FUNCTION__TYPE:
+        return type != TYPE_EDEFAULT;
     }
     return super.eIsSet(featureID);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String toString()
+  {
+    if (eIsProxy()) return super.toString();
+
+    StringBuffer result = new StringBuffer(super.toString());
+    result.append(" (type: ");
+    result.append(type);
+    result.append(')');
+    return result.toString();
   }
 
 } //FunctionImpl
